@@ -8,7 +8,7 @@ While it's been completly rebuilt by DevOps artisans, Digital Rebar history incl
 Getting Started
 ---------------
 
-Want to **install Digital Rebar**? Here's the `Install Guide <ZEHICLE>`_
+Want to **install Digital Rebar**? Here's the `Install Guide <install.rst>`_
 
 Join Our Community
 ------------------
@@ -16,6 +16,7 @@ Join Our Community
 * `Live Weekly Planning and Design Meetings <http://bit.ly/digitalrebarcalendar>`_
 * `Mailing List <http://bit.ly/digitalrebarlist>`_
 * `Live Chat <https://gitter.im/digitalrebar/core?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge>`_  (Gitter.im)
+* `Issues and Roadmap <https://waffle.io/digitalrebar/core>`_
 * ``#digitalrebar`` IRC channel on `Freenode <https://webchat.freenode.net/>`_ (hint: Gitter.im is more active).
 
 Exec Summary
