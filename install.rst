@@ -10,6 +10,8 @@ The fast-path install steps are:
 
 Rather than cover every operating system, we are assuming that you can translate between differences in major distributions.
 
+*Need help?* Jump over to our `live chat <https://gitter.im/digitalrebar/core>`_  (Gitter.im)
+
 **RECOMMENDATION:** Review the `RackN maintained deploy scripts <https://github.com/rackn/digitalrebar-deploy>`_ for updated step-by-step install examples.
 
 Admin In a Container!
