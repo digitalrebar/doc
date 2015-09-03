@@ -1,176 +1,89 @@
-Admin Node in Docker
---------------------
+Digital Rebar Install
+=====================
 
-The install steps are:
+The fast-path install steps are:
 
 1. Install Docker
-2. Download Prerequists
-3. Attach to external network (need to boot metal)
-4. Start Admin Container
-5. Boot Nodes (kvm slaves for testing)
-
-Admin In a Container!
-~~~~~~~~~~~~~~~~~~~~~
-
-Digital Rebar operates the administrative functions in Docker containers; consequently, you need to be running in a development environment that can run Docker.
-
-    Once the admin node is running in a container, it will keep running
-    until you kill the container using ``docker kill [cid]`` or ``exit``
-    from the container prompt. We recommend looking at the Docker
-    commands for additional options.
+#. Download Code & Prerequists (operating systems to install)
+#. Deploy Admin container
+#. Provision Nodes! (just testing? use fast virtual nodes)
 
 Rather than cover every operating system, we are assuming that you can translate between differences in major distributions.
 
-Install Docker
-~~~~~~~~~~~~~~
+**RECOMMENDATION:** Review the `RackN maintained deploy scripts <https://github.com/rackn/digitalrebar-deploy>`_ for updated step-by-step install examples.
 
-Instructions for installing Docker on the most common Linux
-distributions are at [http://docs.docker.io/en/latest/installation/]
+Admin In a Container!
+---------------------
 
-Configure Docker in your development environment
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+The goal for this document is getting a basic Digital Rebar admin running quickly.  For that reason, many options and configuration choices have been omitted in the interest in brevity.
 
-Given yourself permission to run docker without sudo.
+Digital Rebar operates the administrative functions in Docker containers; consequently, you need to be running in an environment that can run Docker.
 
--  ``sudo usermod -a -G docker <your-user>``
--  if you don't want to reboot, also run ``sudo chmod 666 /var/run/docker.sock``
+    To improve support, the `Digital Rebar team <https://github.com/orgs/digitalrebar/teams>`_ is no longer creating or documenting install packages.
 
-The docker-admin command and its environment
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    For developers, we've collected some `additional guidance <development/advanced-install>`_ to review after you've got your first install working.
 
-The ``docker-admin`` command (located in the ``tools`` directory in the
-core repository) is responsible for managing the interaction between the
-development environment and the Docker container. Among other things, it
-ensures that:
+We are going to assume that you know how to use basic Docker commands to keep these instructions concise.
 
--  The contents of the ``core`` repository in the development
-   environment is visible in the Docker container at
-   ``/opt/digitalrebar/core``. This makes it trivial to edit the code in
-   your development environment and have the changes be instantly
-   visible in the Docker container.
--  The contents of ``$HOME/.cache/digitalrebar/tftpboot`` is visible in
-   the Docker container at ``/tftpboot``. This keeps the Docker
-   container from getting too bloated when setting up parts of the
-   provisioner.
--  The UID and GID of the Digital Rebar user in the container are
-   identical to your UID and GID in your development environment.
--  Your SSH public key in your development environment is added to
-   ``/root/.ssh/authorized_keys``
--  Your ``http_proxy``, ``https_proxy`` and ``no_proxy`` environment
-   variables will be visible in the Docker container. If your
-   ``http_proxy`` and ``https_proxy`` environment variables refer to
-   ``localhost``, ``127.0.0.1``, or ``[::1]``, then they will be
-   rewritten to refer to the IP address of the bridge that Docker is
-   using. In that case, your local proxy should be configured to allow
-   connections from ``172.16.0.0/12``.
+Step 1. Install Docker
+----------------------
 
-Ensuring that the admin node can deploy operating systems to slaves
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Follow the `community instructions for installing Docker <http://docs.docker.io/en/latest/installation/>`_ on the most common Linux
+distributions.
 
-    More complete instructions in (Deployment
-    Guide)[../../deployment-guide/adding-operating-systems.md]
+- Get permission to run Docker without sudo. [1]_
+- Turn off Apparmor [2]_ (`production deploy <deployment/>`_ could be configured to leave on)
+- Map a local address (192.168.124.4/24) to the docker bridge. [7]_
 
-When deploying an admin node in production mode, you will want to be
-able to install operating systems on slave nodes. By default, the
-``provisioner-base-images`` role will look for OS install ISO images in
-``/tftpboot/isos``. The provisioner knows how to install several
-operating systems (partial list below) from the ISO images:
+Step 2. Download Code & Prerequists
+-----------------------------------
 
--  ``ubuntu-14.04``: ``ubuntu-14.04.1-server-amd64.iso``
--  ``centos-6.6``: ``CentOS-6.6-x86_64-bin-DVD1.iso``
--  ``centos-7.1.1503``: ``CentOS-7-x86_64-Minimal-1503-01.iso``
-
-    This list is subject to change! For the latest list, consult
-    `Provisioner Base
-    Images <https://github.com/digitalrebar/core/blob/master/chef/roles/provisioner-base-images/role-template.json>`__
-    template file.
-
-To enable the provisioner to install from those images, place them in
-``$HOME/.cache/digitalrebar/tftpboot/isos``, either directly or via a
-hard link (soft links do not work for Docker). These images will then be
-available inside the Docker container at ``/tftpboot/isos``, and the
-provisioner will be able to use them to install operating systems on
-slave nodes.
-
-If you do this AFTER the admin node is running, you must rerun the
-Provisioner OS Repos role.
-
-Running a production mode Digital Rebar admin node in Docker
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Once Docker is installed, configured, and you have ISO images in place,
-you are ready to run a Digital Rebar admin node on CentOS 6.5 in Docker.
-To do that, run the following command from the core repository:
-
-::
-
-    tools/docker-admin centos ./production.sh admin.smoke.test
-
-    note: the rebar-bootstrap step takes a while, be patient
-
-This will perform the following actions:
-
--  If needed, pull the latest digitalrebar/centos image from the public
-   Docker repository.
--  Spawn the container with all the parameters needed to set up the
-   environment as described above. The rest of the actions will take
-   place in the spawned container.
--  Ensure that the UID and GIDs of rebar user inside the container is
-   the same as your UID and GID in the development environment.
--  Append your SSH public key to root's authorized\_keys file.
--  Run ``./bootstrap.sh``, which will ensure that ruby and chef-solo are
-   installed, and then run the rebar-bootstrap cookbook to converge the
-   state of the container with our latest specifications.
--  Bring up the Digital Rebar webserver.
--  Create a default admin network on the ``192.168.124.0/24`` address
-   range.
--  Update the ``provisioner-server`` role template to use the passed-in
-   http proxy, if any.
--  Update the ``provisioner-os-install`` role template to default to
-   ``centos-7.1.1503``.
--  Create the admin node record.
--  Extract the addresses that were allocated to the admin node, and bind
-   them to eth0.
--  Mark the admin node as alive, and converge the default set of admin
-   noderoles.
--  You can turn off the TMUX launching using ``export TMUX=false``
+- Configure your no_proxy environment variable [3]_ (really, add it to .bashrc)
+- Make sure you have an ssh key [4]_
+- Enable passwordless sudo [5]_
+- Download at least one ISO from the list in `provisioner.yml <https://github.com/digitalrebar/core/blob/develop/barclamps/provisioner.yml#L135>`_ and copy to ``~/.cache/opencrowbar/tftpboot/isos``
+- Install git.
+- If you plan to run VMs as test nodes, then you'll also need "qemu-kvm libvirt-bin ubuntu-vm-builder bridge-utils ruby1.9.1-dev make"
+- Clone Digital Rebar core
+  - You *must* "git clone https://github.com/digitalrebar/core.git"
+- If you add workloads, they need to be in sibling directories to the core.  For example, "../workload1" or "../company/workload2"
+   - `Kubernetes <https://github.com/rackn/kubernetes>`_
+   - `Ceph <https://github.com/rackn/ceph>`_
+   - `Hardware <https://github.com/rackn/hardware>`_
+   - By request: StackEngine, DockerEngine, CloudFoundry BOSH Metal CPI
 
 
+Step 3. Deploy Admin container
+-------------------------------
 
-You should be able to monitor the progress of the admin node deployment
-at http://localhost:3000. Once the admin node is finished deploying (or
+From the Digital Rebar core directory, run the ``tools/docker-admin`` command. [6]_ 
+
+The ``docker-admin`` flags are:
+
+1. ``--daemon``   (optional, omit this flag to keep your terminal in the container)
+#. ``centos``     (required, the container O/S)
+#. ``./production.sh`` (required, the script to start in the container)
+#. ``pick.valid.fqdn`` (required, name of admin server for production.sh script)
+
+After the install has progressed, you should be able to monitor the progress of the admin node deployment at http://localhost:3000. Once the admin node is finished deploying (or
 if anything goes wrong), you will be left at a running shell inside the
-container.
+container unless you used the --daemon flag.
 
 You can ssh into the container from the host by finding its IP address
-through Docker, as below. The container should already have your ssh
-keys copied into the proper place.
+through Docker or 192.168.124.10 if you've mapped a host address to docker0.
 
-::
+Step 4. Provision Nodes!
+------------------------
 
-    $ docker ps
-    CONTAINER ID        IMAGE                       COMMAND                CREATED             STATUS              PORTS                                          NAMES
-    0db77a80acd0        digitalrebar/centos:6.5-11   "/opt/digitalrebar/co   32 minutes ago      Up 32 minutes       0.0.0.0:443->443/tcp, 0.0.0.0:3000->3000/tcp   evil_bohr           
-    $ docker inspect 0db77a80acd0 | grep IPAddress
-            "IPAddress": "172.17.0.7",
-    $ ssh root@172.17.0.7
-    Last login: Wed Aug 27 16:20:41 2014 from 172.17.42.1
-    [root@0db77a80acd0 ~]# 
+KVM Nodes (fast test)
+~~~~~~~~~~~~~~~~~~~~~
 
-Booting slave VMs from the admin node
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Prereq : ``sudo apt-get install bridge-utils``
-
-Bare Metal (the easy way)
-^^^^^^^^^^^^^^^^^^^^^^^^^
-
-If your development environment is running on bare metal (as opposed to
-running inside a VM), you can use ``tools/kvm-slave &`` to spawn a KVM
+If your environment is running on bare metal (as opposed to
+running inside a VM), you can spawn `virtual nodes <development/advanced-install/kvm-slaves.rst>`_ for testing using.  Use ``tools/kvm-slave &`` to spawn a KVM
 virtual machine that will boot from the freshly-deployed admin node.
 
-Real Hardware slaves
-^^^^^^^^^^^^^^^^^^^^
+Real Hardware
+~~~~~~~~~~~~~
 
 To boot Real Hardware, bind a physical interface to docker0 with brctl,
 make sure that interface is up and does not have an address, and plug it
@@ -181,17 +94,18 @@ Example Commands: 1. slave the eth2 to the docker bridge,
 ``sudo ip link set eth2 up`` 1. boot the physical nodes from a switch
 connected to eth2
 
-Virtual Box (the corporate way)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Virtual Box (generally for Windows users)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-    This approach expects that you've added an ethernet device (not
+    This approach expects that you've created a VM to host the
+    Admin container.  If so, make sure you added an ethernet device (not
     up'd) to your VM that will be the admin network for slave VMs. Also,
     if using vmware, you'll need to use E1000 Nics and make sure your
     network settings are set to "Allow" promiscuous mode.
 
 If your development environment is running in VMs then:
 
-1. make sure that your dev VM has an extra eth port connected to a
+1. make sure that your Admin VM has an extra eth port connected to a
    dedicated host only bridge (let's assume eth2)
 2. slave the eth2 to the docker bridge,
    ``sudo brctl addif docker0 eth2``
@@ -209,25 +123,16 @@ If your development environment is running in VMs then:
    3. if you have issues, review the ``/var/log/install.log`` for
       details
 
-Development Admin
-~~~~~~~~~~~~~~~~~
+Additional References
+---------------------
 
-1. Dev/Simulator allows you to play with the UI and BDD tests which is
-   good for developers working on the UI/API and Annealer logic
+**WARNING**: These suggestions may become out of date.  We strongly recommend reviewing the actively maintained `deploy scripts <https://github.com/rackn/digitalrebar-deploy>`_.
 
-   1.  (optionally) Disable TMUX mode using ``export TMUX=false``
-   2.  Start with ``tools/docker-admin centos ./development.sh``
-   3.  Dev mode creates a special user ``developer/Cr0wbar!``
-   4.  To monitor the logs inside the container, use
-       ``tail -f /var/log/rebar/development.log``
-   5.  Run the BDD system [see BDD test pages]
-   6.  ``sudo apt-get install erlang``
-   7.  compile the BDD code
-   8.  update the config file (copy example.config to default.config and
-       update)
-   9.  ``erl`` then ``bdd:test()``
-   10. Rails console in container:
-       ``su -l -c 'cd /opt/digitalrebar/core/rails; bundle exec rails c' rebar``
-       '
-
-
+.. [1] ``sudo usermod -a -G docker <your-user>``
+   plus, if you don't want to reboot, run ``sudo chmod 666 /var/run/docker.sock``
+.. [2] ``sudo service apparmor teardown`` and ``sudo update-rc.d -f apparmor remove``
+.. [3] ``export no_proxy="127.0.0.1,[::1],localhost,192.168.124.0/24,172.16.0.0/12"``
+.. [4] ``ssh-keygen -t rsa``
+.. [5] ``sudo sed -ie "s/%sudo\tALL=(ALL:ALL) ALL/%sudo ALL=(ALL) NOPASSWD:ALL/g" /etc/sudoers``
+.. [6] ``tools/docker-admin --daemon centos ./production.sh admin.rebar.digital``
+.. [7] ``sudo ip a add 192.168.124.4/24 dev docker0``
