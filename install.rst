@@ -46,14 +46,12 @@ Step 2. Download Code & Prerequists
 - Download at least one ISO from the list in `provisioner.yml <https://github.com/digitalrebar/core/blob/develop/barclamps/provisioner.yml#L135>`_ and copy to ``~/.cache/opencrowbar/tftpboot/isos``
 - Install git.
 - If you plan to run VMs as test nodes, then you'll also need "qemu-kvm libvirt-bin ubuntu-vm-builder bridge-utils ruby1.9.1-dev make"
-- Clone Digital Rebar core
-  - You *must* "git clone https://github.com/digitalrebar/core.git"
-- If you add workloads, they need to be in sibling directories to the core.  For example, "../workload1" or "../company/workload2"
-   - `Kubernetes <https://github.com/rackn/kubernetes>`_
-   - `Ceph <https://github.com/rackn/ceph>`_
-   - `Hardware <https://github.com/rackn/hardware>`_
+- Clone Digital Rebar core: ``git clone https://github.com/digitalrebar/core.git``
+- Clone optional workloads into core's sibling directories.  For example, "../workload1" or "../company/workload2"
+   - `Kubernetes <https://github.com/rackn/kubernetes>`_ : ``git clone https://github.com/rackn/kubernetes.git``
+   - `Ceph <https://github.com/rackn/ceph>`_ : ``git clone https://github.com/rackn/ceph.git``
+   - `Hardware <https://github.com/rackn/hardware>`_ : ``git clone https://github.com/rackn/hardware.git``
    - By request: StackEngine, DockerEngine, CloudFoundry BOSH Metal CPI
-
 
 Step 3. Deploy Admin container
 -------------------------------
@@ -67,22 +65,19 @@ The ``docker-admin`` flags are:
 #. ``./production.sh`` (required, the script to start in the container)
 #. ``pick.valid.fqdn`` (required, name of admin server for production.sh script)
 
-After the install has progressed, you should be able to monitor the progress of the admin node deployment at http://localhost:3000. Once the admin node is finished deploying (or
-if anything goes wrong), you will be left at a running shell inside the
-container unless you used the --daemon flag.
+After the install has progressed, you should be able to monitor the progress of the admin node deployment at http://localhost:3000. Once the admin node is finished deploying (or if anything goes wrong), you will be left at a running shell inside the container unless you used the --daemon flag.
 
-You can ssh into the container from the host by finding its IP address
-through Docker or 192.168.124.10 if you've mapped a host address to docker0.
+You can ssh into the container from the host by finding its IP addres through Docker or 192.168.124.10 if you've mapped a host address to docker0.
 
 Step 4. Provision Nodes!
 ------------------------
 
+And now, the real fun begins...
+
 KVM Nodes (fast test)
 ~~~~~~~~~~~~~~~~~~~~~
 
-If your environment is running on bare metal (as opposed to
-running inside a VM), you can spawn `virtual nodes <development/advanced-install/kvm-slaves.rst>`_ for testing using.  Use ``tools/kvm-slave &`` to spawn a KVM
-virtual machine that will boot from the freshly-deployed admin node.
+If your environment is running on bare metal (as opposed to running inside a VM), you can spawn `virtual nodes <development/advanced-install/kvm-slaves.rst>`_ for testing using KVM.  Use ``tools/kvm-slave &`` to spawn a KVM virtual machine that will boot from the freshly-deployed admin node.
 
 Real Hardware
 ~~~~~~~~~~~~~
@@ -99,7 +94,7 @@ connected to eth2
 Virtual Box (generally for Windows users)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-    This approach expects that you've created a VM to host the
+    This approach simulates the same steps as metal, so it expects that you've created a VM to host the
     Admin container.  If so, make sure you added an ethernet device (not
     up'd) to your VM that will be the admin network for slave VMs. Also,
     if using vmware, you'll need to use E1000 Nics and make sure your
