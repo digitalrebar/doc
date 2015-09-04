@@ -3,7 +3,7 @@ Status APIs
 
 Status APIs are used to provide lists of objects in optimized formats.
 They do not have a release contract and should not be used for external
-APIs that are not tightly integrated to the code base
+APIs that are not tightly integrated to the code base.
 
 The general pattern for the Status API calls is:
 
