@@ -1,8 +1,8 @@
-Sledgehammer is the component of Digital Rebar that we use as a
-bootstrapping tool to perform initial node discovery and to register its
+Sledgehammer is the component of Digital Rebar that is used as a
+bootstrapping tool to perform initial node discovery and register its
 discovered state within the Digital Rebar node provisioning framework.
-After it has been discovered Sledehammer can be controlled to prepare
-the hardward and to lay down the operating system and to assure correct
+After it has been discovered, Sledehammer can be controlled to prepare
+the hardware, lay down the operating system, and assure correct
 node configuration. It consists of a slightly modified Centos 6.5 live
 environment. To build Sledgehammer you need:
 
