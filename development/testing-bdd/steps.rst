@@ -258,9 +258,9 @@ Inspector
 
 The inspector inspects the system and returns a list of items that
 reflect it's current state. The goal of the inspector is to help detect
-testing artificats that should have been removed. The inpector method is
+testing artificats that should have been removed. The inspector method is
 called before any tests are run and again after all the tests have
-completed. If there is any new or missing artificat, the BDD inspector
+completed. If there is any new or missing artifact, the BDD inspector
 will alert you that the system was not left in a clean state.
 
 Setup and Teardown steps for the Feature.
