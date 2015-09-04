@@ -25,16 +25,16 @@ BarclampTest::Admin (or app/models/barclamp\_test/admin.rb). When the
 role is imported, Digital Rebar will automatically use this type if it
 has been defined.
 
-A barclamp specific override can be created using the name of the
+A Barclamp specific override can be created using the name of the
 barclamp and the class role. If present, this class will be used if no
 specific role class has been provided. This is very useful for barclamps
-that create roles dynamically like the network barclamp. For example,
+that create roles dynamically such as the network barclamp. For example,
 Digital Rebar will use the BarclampNetwork::Role (or
 app/models/barclamp\_network/role.rb) class when new Network roles are
 added. This allows Barclamp creators to add custom event handling
 without knowing the name of the roles in advance.
 
-    This is also related to how Role Events are handled
+    This is also related to how Role Events are handled.
 
 API Actions
 ^^^^^^^^^^^
