@@ -2,12 +2,12 @@ Test/Dev using Docker Worker Nodes
 ----------------------------------
 
 Digital Rebar developers are *strongly* encouraged to always build and test
-deployment code in multi-node situations; however, this practice on VMs
+deployment code in multi-node situations. However, this practice on VMs
 or physical servers has required significant computer resources. With
 Docker, developers and testers can spin up a working multi-node
-environment much more quickly and with much lower resource requirements.
+environment much more quickly and with lower resource requirements.
 While the containerized nodes are not fully equivalent, they are more
-than close enough for the vast majority of deployment scenarios.
+than enough for the vast majority of deployment scenarios.
 
 Benefits:
 
@@ -32,7 +32,7 @@ Using docker-slaves with *docker-slaves* script
 Prereqs
 ^^^^^^^
 
-1. Make sure that your docker is updated to at least docker 1.7. There
+1. Make sure that your Docker is updated to at least Docker 1.7. There
    are timing problems with previous versions and SSDs that cause the
    devicemapper or btrfs to not find volumes or mounts during the bring
    up process. You can update here:
@@ -51,7 +51,7 @@ From the dev system, ``tools/docker-slaves <number of slaves>``
 
 This creates the number of Docker nodes requested using the Digital Rebar CLI on
 the Admin node. This script relies on ``ssh root@172.17.0.2`` to access
-the Digital Rebar CLI and will fail if that access is not available; however
+the Digital Rebar CLI and will fail if that access is not available. However
 configuring keys and ssh is part of the normal ``docker-admin`` script
 process.
 
