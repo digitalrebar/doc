@@ -1,11 +1,11 @@
 Tips & Tricks (UI Developer)
 ----------------------------
 
-Dashboard No Polling
+Dashboard - No Polling
 ~~~~~~~~~~~~~~~~~~~~
 
 When you are troubleshooting the UI or REST APIs, the Node Dashboard
-(``dashboard``) polling can be a pain because it generates log traffic.
+(``dashboard``) polling can be challenging because it generates log traffic.
 You can disable polling for debug by using the ``nopoll`` parameter.
 
 For example, ``http://192.168.124.10:3000/dashboard/89?nopoll``
