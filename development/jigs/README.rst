@@ -5,10 +5,10 @@ Jigs are the interface between Digital Rebar and external work that
 needs to be done.
 
 Digital Rebar provides a pluggable model for interacting with nodes and
-other datacetner infrastructural components such as switches, power
+other datacetner infrastructure components such as switches, power
 controllers, failover controllers, etc. Each differing *configuration
 manager* has its own interfaces and control methods. Digital Rebar
-provides a defined API for the *configuration managers* meeded to
+provides a defined API for the *configuration managers* needed to
 control and manage a collection of machines and systems.
 
 For convenience the Digital Rebar method for initiating and controlling
@@ -20,8 +20,7 @@ Digital Rebar **Jigs** provide a platform-agnostic and operationally
 neutral method for initiating, monitoring, and completing a node-role
 state transition.
 
-Digital Rebar must have 1 or more Jigs that preform the work of Digital
-Rebar of node-role state transition operations, known as **Jobs**.
+Digital Rebar must have 1 or more Jigs that preform the work of node-role state transition operations, known as **Jobs**.
 
 For initial Digital Rebar work, the primary **Jigs** inclide:
 -------------------------------------------------------------
