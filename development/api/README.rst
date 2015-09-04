@@ -47,7 +47,7 @@ API Index
 Digital Rebar API Pattern
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The Digital Rebar API follows the following behavior pattern.
+The Digital Rebar API follows the following behavior patterns.
 
 Expectations:
 ^^^^^^^^^^^^^
@@ -69,7 +69,7 @@ To get the digest, make a HEAD or GET request to /api/v2/digest
 Common API URL Patterns:
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
-Digital Rebar uses a versioned URL pattern. By convention, resources
+Digital Rebar uses a versioned URL pattern. By convention, resource
 names are pluralized in the API. For example, the API will use =nodes=
 instead of =node= in paths.
 
