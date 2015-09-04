@@ -4,16 +4,16 @@ Digital Rebar Troubleshooting Tips
 Chef-Client Fails: cannot download Chef RPM
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-If the very first role applied to a new node fails, there are several
+If the very first role applied to a new node that fails, there are several
 possible causes.
 
-1. outbound network access is not working. Likely cause is that your
-   squid proxy is not configured
-2. set the http\_proxy (\`export http\_proxy="http://127.0.0.1:8123")
-   and attempt to access google.com from the admin server
-3. if that worked, try the same thing after ssh'ing to the node
-4. you are missing the /tftboot/files path
-5. this can be caused when you do not have the ISOs staged
+Problem: outbound network access is not working. 
+Cause: Likely cause is that the squid proxy is not configured
+Solution: set the http\_proxy (\`export http\_proxy="http://127.0.0.1:8123") and attempt to access google.com from the admin server. if that worked, try the same thing after ssh'ing to the node
+
+Problem: you are missing the /tftboot/files path
+Cause: this can be caused when you do not have the ISOs staged
+Solution: Refer to documentation on how to stage ISOs
 
 No OS? Installing an OS, the TFTP Process
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
