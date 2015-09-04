@@ -114,7 +114,7 @@ Teardown
 Common steps
 ^^^^^^^^^^^^
 
-Common steps are easy to create because thy can leverage existing steps
+Common steps are easy to create because they can leverage existing steps
 with minor changes. Even if the underlying step is simple, it's more
 maintainable to build steps based on other steps.
 
