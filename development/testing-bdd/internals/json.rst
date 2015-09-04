@@ -2,7 +2,7 @@ JSON Parser
 ^^^^^^^^^^^
 
 The BDD JSON parser is designed as a stand-alone JSON parser. It is used
-to support REST API calls
+to support REST API calls.
 
 The JSON parser turns JSON (``{Key1:Value1, Key2:Value2}``)into an
 Erlang Tuple List (``[{Key1, Value1}, {Key2, Value2}]``) where each
