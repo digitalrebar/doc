@@ -1,13 +1,13 @@
 Advanced Deployments
 ~~~~~~~~~~~~~~~~~~~~
 
-While docker-based developments or simple developments can function will
-with the default configuration, many cases will need customization. From
+While Docker-based developments or simple developments can function
+with the default configuration, in many cases some level of customization will be required. From
 networking to external services to initial configuration values, the
 rebar-config.sh script currently controls how the admin components are
 deployed.
 
-The production.sh script is used to stage, install, and configuration
+The production.sh script is used to stage, install, and configure
 the initial Digital Rebar admin server. Customizing rebar-config.sh
 script allows for additional configurations and modifications.
 
@@ -24,9 +24,9 @@ server. This allocation is done by the following line:
 
 Commenting this line out will not allocate an admin address for that
 network. The admin server providing the provisioner will need to be
-routable from the other admin networks to network the admin server is
+routable from the other admin networks to the network the admin server is
 on. The implication of this is that the admin node does not have to be
-on an admin network only routable to admin networks.
+on an admin network- only routable to admin networks.
 
 The network category system allows for the creation of multiple admin
 networks. Creating a new network is accomplished by adding a new network
