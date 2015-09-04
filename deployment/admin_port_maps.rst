@@ -13,7 +13,7 @@ Ports
 -  *443* - Chef API (externally mapped by docker)
 -  514 - SYSLOG
 -  953 - RNDC
--  *3000* - Rebar API & UI (externally mapped by docker)
+-  *3000* - Rebar API & UI (externally mapped by Docker)
 -  4646 - Chef Server
 -  5432 - Postgresql Database
 -  6754 - DNS Mgmt Server
