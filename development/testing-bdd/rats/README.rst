@@ -23,7 +23,7 @@ the HTML UI for testing. This is a desired practice!
     Capybara rendering engine. A Capybara is a giant rat.
 
 Serious test developers are strongly encouraged to submit new *rat
-steps! The more good steps the better the ftamework; however, you are
+steps! The more good steps, the better the framework. However, you are
 also encouraged to start with steps in the most narrow scope and
 gradually move them into larger scopes. Consequently, we expect that
 steps in the *\ rat routines have been throughly tested and vetted for
