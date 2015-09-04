@@ -1,9 +1,9 @@
 Development Guide
 =================
 
-Welcome to the amazing fuzziness of Digital Rebar!
+Welcome to the amazing world of Digital Rebar!
 
-This guide is targeted at people who want to *contribute and extend*
+This guide is targeted at individuals who wish to *contribute and extend*
 Digital Rebar. You should review the architectural and operator
 instructions as part of the learning process.
 
