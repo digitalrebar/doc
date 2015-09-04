@@ -15,7 +15,7 @@ In a new window, start erlang:
     ./linux_compile.sh
     [review default.config and update if needed]
 
-You can run the simulate interactively from 'erl' using 'dev:pop().' to create machines and 'dev:unpop().' to remove them.
+You simulate interactively from 'erl' using 'dev:pop().' to create machines and 'dev:unpop().' to remove them.
 
 You can change the nodes and other information created by the simulator by editing your copy of 'dev.config'.
 
