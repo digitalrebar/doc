@@ -305,7 +305,7 @@ To use the interactive debugger, you must:
 1. Compile the files using ``show_debug`` flag. For example,
    ``c(bdd, show_debug).``
 2. Start the debugger using ``debugger:start().``
-3. Use the GUI to monitor the module and injection point desired
+3. Use the GUI to monitor the module and injection point desired.
 
     **Note**: The debugger is a little flaky. Have patience!
 
@@ -322,7 +322,7 @@ objects that it will be acting on. These routines are called before and
 after the tests are run. If the list is different, then the BDD
 inspector will issue a warning and show the artifacts.
 
--  The pre-run artificat list is saved at ``../tmp/inspection.list``
+-  The pre-run artifact list is saved at ``../tmp/inspection.list``
 -  To retrieve the last inspector report, use ``bdd:is_clean(Config).``
 -  To generate the list used for the inspector report, use
    ``bdd:inspect(Config).``
