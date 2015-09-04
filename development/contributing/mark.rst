@@ -8,11 +8,11 @@ Digital Rebar usage options are as follows:
 
 1. The project name is "Digital Rebar" as two words, both capitalized
 2. Acceptable alternatives:
-3. digital\_rebar
-4. digitalRebar
-5. rebar.digital
-6. dR
-7. Internally within the project, it is acceptable to just say "Rebar"
+  digital\_rebar
+  digitalRebar
+  rebar.digital
+  dR
+  Internally within the project, it is acceptable to just say "Rebar"
 
 Mascot
 ------
