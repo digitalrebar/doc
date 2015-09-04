@@ -1,22 +1,22 @@
 This file documents the Digital Rebar smoketest framework
 
 **Note:** The default admin node memory allocation is 4G. It may be
-necessary to run smoke tests with more (6 or 8G) to get speedy or
+necessary to run smoke tests with more (6 or 8G) to get speedy or more
 reliable results.
 
 The smoketest framework lives on the admin node, and consists of:
 -----------------------------------------------------------------
 
--  smoketest This is the front-end to the in-cluster side of the
-   smoketest framework. It takes a single parameter, which is the name
+-  smoketest: This is the front-end to the in-cluster side of the
+   smoketest framework: It takes a single parameter, which is the name
    of a barclamp to smoketest. smoketest must be run as root.
--  check\_ready This checks to see if a node had transitioned to a given
+-  check\_ready: This checks to see if a node had transitioned to a given
    state. smoketest uses it internally.
--  run\_on This runs a command on a given node as root.
--  knife\_node\_find This is a very thin and stupid wrapper around knife
+-  run\_on: This runs a command on a given node as root.
+-  knife\_node\_find: This is a very thin and stupid wrapper around knife
    search node.
--  name\_to\_ip This translates an hostname into an IP address.
--  parse\_yml\_or\_json This is a cheesy little function that parses yml
+-  name\_to\_ip: This translates an hostname into an IP address.
+-  parse\_yml\_or\_json: This is a cheesy little function that parses yml
    (or JSON), extracts fields of interest, and prints them in a form
    suitable for bash's eval.
 
