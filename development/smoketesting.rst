@@ -48,30 +48,23 @@ The smoketest command works like this:
 Writing Barclamp Smoketests
 ---------------------------
 
-Barclamp smoketests consists of three parts: \* Smoketest Metadata. This
-consists of metadata in the barclamp's rebar.yml that declares any
-smoketest-specific barclamp dependencies and an overall timeout that the
-smoketest for this barclamp cannot exceed. The smoketests use the
-following metadata: \* barclamp.requires and smoketest.requires Any
-barclamps that are in these arrays will be deployed and smoketested
-before the current smoketest. \* barclamp.member This is used to satisfy
-group dependencies if a group is listed as a dependency in the
-barclamp.requires and smoketest.requires. \* smoketest.timeout This is
-the number of seconds that a smoketest can run before the framework
-decides that it is never going to finish and returns failure. \*
-smoketest/modify-json This executable should accept the proposal JSON on
-stdin, make whatever changes are needed to let it run in the framework
-(changing free space requirements, replication factors, etc), and write
-the modified JSON to stdout. \* smoketest/\*.test These executables
-should each perform a discrete test of the barclamp. The smoketest
-framework will run them in ascending order, and the first test that
-exits with a nonzero status will signal that the overall smoketest for
-this barclamp failed, and the framework will stop processing further
-tests. The framework does not care what language the tests are written
-in, as long as the build/test system can run them. The smoketest
-framework arranges for the rebar CLI and the framework helper commands
-to be available during the run. Any output from the test hooks will be
-captured and logged.
+\* Smoketest Metadata. This consists of metadata in the barclamp's rebar.yml that declares any
+smoketest-specific barclamp dependencies and an overall timeout that the smoketest for this barclamp cannot exceed. 
+
+The smoketests use the following metadata: 
+
+\* barclamp.requires and smoketest.requires Any barclamps that are in these arrays will be deployed and smoketested
+before the current smoketest. 
+
+\* barclamp.member: This is used to satisfy group dependencies if a group is listed as a dependency in the
+barclamp.requires and smoketest.requires. 
+
+\* smoketest.timeout: This is the number of seconds that a smoketest can run before the framework
+decides that it is never going to finish and returns failure. 
+
+\*smoketest/modify-json" This executable should accept the proposal JSON on stdin, make whatever changes are needed to let it run in the framework (changing free space requirements, replication factors, etc), and write the modified JSON to stdout. 
+
+\* smoketest/\*.test: These executables should each perform a discrete test of the barclamp. The smoketest framework will run them in ascending order, and the first test that exits with a nonzero status will signal that the overall smoketest for this barclamp failed, and the framework will stop processing further tests. The framework does not care what language the tests are written in, as long as the build/test system can run them. The smoketest framework arranges for the rebar CLI and the framework helper commands to be available during the run. Any output from the test hooks will be captured and logged.
 
 Any other files will be ignored by the smoketest framework -- you can
 use them for shared libraries, templates, etc. as the needs of your
