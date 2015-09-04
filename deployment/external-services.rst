@@ -3,7 +3,7 @@ External Services Configuration
 
 | The Digital Rebar System can be configured to utilize external (not
 installed or managed by Digital Rebar) services.
-| These configurations are made in the following file
+| These configurations are made in the following file: 
 /opt/digitalrebar/core/rebar-config.sh and must be made *PRIOR* to
 running production.sh to install the system. Users can configure any
 combination of of these services.
@@ -49,9 +49,9 @@ NTP (Network Time Protocol)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 By default Digital Rebar will utilize NTP (NTPd) on the Admin node and
-all clients will be configured to use this server to sync their time.
-Digital Rebar can be configured to not run NTP on the admin server and
-configure any nodes installed to point their clients to the IP address
+all clients will be configured to use this server to sync their times.
+Digital Rebar can be configured not run NTP on the admin server and
+configure any nodes installed so to point their clients to the IP address
 specified in this file.
 
 -  Edit /opt/digitalrebar/core/rebar-config.sh
@@ -74,7 +74,7 @@ DHCP (Dynamic Host Configuration Protocol)
 By default Digital Rebar will configure DHCP (dhcpd) on the Admin node
 and utilize it to preform boot sequences to nodes as they transition
 from discovery to OS installation. Additionally it will direct a system
-to use it's local drives to boot once an OS is installed. Digital Rebar
+to use it's local drives to boot once an OS has been installed. Digital Rebar
 can be configured to use an already existing DHCP Server however it
 becomes the responsability of the user to ensure that nodes keep the
 same IP address.
@@ -120,13 +120,13 @@ same IP address.
 Proxy Server
 ~~~~~~~~~~~~
 
-By Default Digital Rebar will install a Proxy server on the Admin server
+By default, Digital Rebar will install a Proxy server on the Admin server
 in order to facilitate access to packages on the internet by the target
 nodes. After installation Digital Rebar will install various packages
 based on the roles that are assigned to these devices. As Digital Rebar
-caches the packages they are downloaded from the internet they are only
-pulled down once even if many systems will be accessing them. It is
-possable for a user to define a different proxy server if one already
+caches the packages as they are downloaded from the internet (Note: they are only
+pulled down once even if multiple systems will be accessing them). It is
+possible for a user to define a different proxy server if one already
 exists in the enviornment.
 
 -  Edit /opt/digitalrebar/core/rebar-config.sh
@@ -148,7 +148,7 @@ AMQP Server and Service
 
 Optionally, Digital Rebar can be configured to send events to an AMQP
 server through the AMQP service. To do this, either Digital Rebar should
-run its own RabbitMQ server or a AMQP service can be injected into
+run its own RabbitMQ server or an AMQP service can be injected into
 Digital Rebar. The system currently assumes a user of *rebar*, a
 password of *rebar*, and a virtual host of */digitalrebar*.
 
