@@ -7,13 +7,13 @@ deployment code in multi-node situations.
 Using kvm-slaves with *kvm-slaves* script
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-    closing the KVM window will *not* stop the VM because the scripts
+    Closing the KVM window will *not* stop the VM because the scripts
     are designed to restart the VM if it halts.
 
 Prereqs
 ^^^^^^^
 
-There are some, run the script and it will tell you! 
+There are some. Run the script and it will tell you! 
 
 For reference, here are the current Ubuntu requirements:
 
