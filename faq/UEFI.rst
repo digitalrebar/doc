@@ -55,33 +55,33 @@ What Had to Be Changed:
 -  When systems operate in UEFI mode, we manage the boot order directly
    instead of assuming that we will always netboot.
 
-Each of the OSes we support uses a different bootloader for UEFI (CentOS
+Each of the OS flavors we support uses a different bootloader for UEFI (CentOS
 and Redhat use grub1, and Ubuntu uses grub2), and they do not have the
 right intersection of being able to netboot, being able to chainload,
 and operating reliably in a network environment to be useful. Instead we
-use elilo, and we grab the prcompiled EFI apps from Sourceforge instead
+use elilo, and we grab the precompiled EFI app from Sourceforge instead
 of trying to compile things ourselves, playing packaging shennanigans to
 keep our admin node bootable while juggling multiple bootloaders, or
 have the provisioner handle messing with boot templates for multiple
 different bootloaders.
 
-However, none of the UEFI capable bootloaders I have found have the
-ability just hand control back to UEFI to try the next thing in the boot
+However, none of the UEFI capable bootloaders have been found have the
+ability to hand control back to UEFI to try the next thing in the boot
 sequence, which means that we can no longer assume that we will always
-netboot. Instead, I have added efibootmgr to Sledgehammer and the
-default package installs for the operating systems, and added a piece of
-code to the rebar-hacks recipe in the deployer that knows how to change
-the boot order to either be nics-first or nics-last, and we set that
-based on the PXE state machine -- if it is in execute state, we will set
+netboot. Instead, efibootmgr has been added to Sledgehammer and the
+default package installs for the operating systems, and a piece of
+code has been added to the rebar-hacks recipe in the deployer that knows how to change
+the boot order to either be nics-first or nics-last. That is
+based on the PXE state machine -- if it is in execute state, it will set
 things to nics-last, otherwise it will set things to nics-first.
 
-In order to make that work reliably, I had to modify the provisioner
+In order to make that work reliably, the community to modify the provisioner
 state machine to run chef-client on every node that is transitioning out
 of the execute state in order to ensure that the boot sequence gets
 updated. This failed when transitioning into reset or delete, because
 those states deallocate all IP addresses to the nodes. To cope with
 that, the network barclamp recognizes when the admin network is being
-removed and arranges for the system to run dhclient on all the
+removed and arranges for the system to run dhcplient on all the
 interfaces until it gets an IP address. Since we run chef-client on the
 nodes before running it on the admin node, this should result in the
 system getting the same IP address it had before, which will let the
