@@ -1,7 +1,7 @@
 Configuration of Proxy Cache
 ============================
 
-Because Digital Rebar online access for packages, we *strongly*
+Because Digital Rebar requires online access for packages, we *strongly*
 recommend using a caching proxy such as Squid.
 
 If you are behind a firewall, you should have the cache access CNTLM or
@@ -15,7 +15,7 @@ Squid Proxy (on Ubuntu)
 3.  Update your configuration: ``sudo vi /etc/squid3/squid.conf``
 4.  make sure that you allow containers to use the proxy
 5.  example https://gist.github.com/cloudedge/1b46280b7dfbffe2d763
-6.  it is important to add BOTH your local subnet & the docker subnet to
+6.  it is important to add BOTH your local subnet & the Docker subnet to
     allowed
 7.  include the ``always_direct allow to_localnet`` line
 8.  order is very important in the configuration file
