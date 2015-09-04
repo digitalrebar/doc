@@ -5,7 +5,7 @@ This section documents the internal working of the BDD code framework.
 The audience for this section is for developers who are extended the BDD
 system and want to learn more about how it operates.
 
-Information about creating tests and tests should be included in other
+Information about tests and creating tests should be included in other
 parts of the guide.
 
 Logging (bdd\_utils:log)
@@ -24,7 +24,7 @@ for users the change the logging levels! The short cuts are:
 The logging system offers several levels:
 
 1. true - always show the message
-2. puts - always shows for debugging info that should be removed and not
+2. puts - always shows debugging info that should be removed and not
    left in the code
 3. dump - the lowest level of in-code statement used to output items
    that take up multiple lines
