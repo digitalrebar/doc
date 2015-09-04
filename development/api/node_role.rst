@@ -4,7 +4,7 @@ Node Role APIs
 Node Roles are the core of Digital Rebar deployment and orchestration
 engine
 
-There are four types of data that Digital Rebar tracks, three of them
+There are four types of data that Digital Rebar tracks while three 
 are maintained on related NodeRoleDatum mode.
 
 1. user data (node\_role.data) is set by users during the proposed state
@@ -13,7 +13,7 @@ are maintained on related NodeRoleDatum mode.
    (also known as "out bound data")
 3. wall data (node\_role.wall) is set by the jig after transistion (also
    known as "in bound data")
-4. discovery data (node.wall) is stored on the node instead of node role
+4. discovery data (node.wall) is stored on the node instead of in node role
    because it reflects node information aggregated from all the jigs.
    This information is available using the node.attrib\_[name] and
    Attrib model. Please see the node API docs for more about this type
