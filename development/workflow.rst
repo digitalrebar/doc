@@ -19,7 +19,7 @@ Requirements:
 
 -  A checkout of Digital Rebar.
 -  Bash 4, ruby, rubygems, and the json gem. Microsoft Windows users
-   shoul operate in either the cygwin or the msysgw enviromnent.
+   should operate in either the cygwin or the msysgw enviromnent.
 -  A github username and password.
 
 Releases, Builds, and Barclamps:
@@ -34,7 +34,7 @@ has a master build that contains references to the core rebar barclamps,
 along with other builds that may add other barclamps to add extra
 capabilities.
 
-Builds how a specific product in a release is built and what it
+Builds are how a specific product in a release is built and what it
 includes. It includes references to barclamps, and any build-specific
 metadata and infrastructure.
 
