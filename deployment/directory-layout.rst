@@ -5,7 +5,7 @@ A complete Digital Rebar installation consists of a **core** component,
 and optional workloads (such as **kubernetes**, **ceph**, **hardware**). 
 
 The workloads each have their own GIT repository. The Digital
-Rebar **core** repository is the essential, engine that drives Digital
+Rebar **core** repository is the essential engine that drives Digital
 Rebar and can operate alone from any of the workload components. The
 workload components of Digital Rebar have built-in dependencies on the
 **core**.  Workloads are not required to be part of the Digital Rebar project to run on the framework.
@@ -21,7 +21,7 @@ the */opt/digitalrebar/core* directory:
 +=================+=============================================================================+
 | BDD             | Business Driven Development Testing Infrastructre                           |
 +-----------------+-----------------------------------------------------------------------------+
-| barclamps       | Metadata that for barclamps that drive workload deployment                  |
+| barclamps       | Metadata that for barclamps which drive workload deployment                  |
 +-----------------+-----------------------------------------------------------------------------+
 | bin             | Digital Rebar executables and helper files                                  |
 +-----------------+-----------------------------------------------------------------------------+
@@ -49,7 +49,7 @@ the */opt/digitalrebar/core* directory:
 +-----------------+-----------------------------------------------------------------------------+
 | test            | Additional role test facilities                                             |
 +-----------------+-----------------------------------------------------------------------------+
-| tools           | Tools used to allow enable the *admin* node to manage OS installed slaves   |
+| tools           | Tools used to enable the *admin* node to manage OS installed slaves   |
 +-----------------+-----------------------------------------------------------------------------+
 | updates         | Merge tools                                                                 |
 +-----------------+-----------------------------------------------------------------------------+
