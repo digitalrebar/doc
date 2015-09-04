@@ -4,7 +4,7 @@ Test APIs
 Digital Rebar provides a comprehensive testing framework. While we make
 every effort to use the API for all test functions, some activities
 require speciailized testing hooks. It is not desired to change primary
-APIs to serve testing use-cases; consequently, the API has a reserved
+APIs to serve testing use-cases. Consequently, the API has a reserved
 area for specialized test interfaces.
 
 WARNING: The Test APIs (=/api/test/...=) are considered to be tightly
