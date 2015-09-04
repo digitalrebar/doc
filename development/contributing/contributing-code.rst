@@ -1,7 +1,7 @@
 Contributing to Digital Rebar
 -----------------------------
 
-Before `submitting pull requests <https://help.github.com/articles/using-pull-requests>`_, please make sure you understand the Apache license. We consider submitting a pull to be accepting the project license terms.
+Before `submitting pull requests <https://help.github.com/articles/using-pull-requests>`_, please make sure you understand the Apache license. We consider submitting a pull to be accepting the project's license terms.
 
 We are using this `style <http://nvie.com/posts/a-successful-git-branching-model/>`__
 branching model. The main goal is not to develop in *master*, but on the
