@@ -3,7 +3,7 @@ Connecting to the BMC Network
 
 | By default, Rebar sets up a BMC network on 192.168.128.xxx/24 named
 ``the_bmc`` in the category ``bmc`` and the group ``internal``.
-| You may, of course, modify this by changing values from the
+| You may modify this by changing values from the
 ``/networks`` page. These instructions have been created with the
 assumption that you are using the default network and should be modified
 to match your specific configuration.
@@ -17,7 +17,7 @@ that network. You need to add a gateway IP on the BMC network from the
 system you are using to connect to the BMC network.
 
 These instructions assume you are using a Linux desktop with the Admin
-node running in a docker container. The container is using docker0 as
+node running in a Docker container. The container is using docker0 as
 the network bridge to the nodes.
 
 You must add the bmc range the bridge from your workstation:
