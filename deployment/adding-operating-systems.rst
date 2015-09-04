@@ -44,7 +44,7 @@ container at ``/tftpboot/isos``, and the provisioner will be able to use
 them to install operating systems on slave nodes or if you do not want
 to copy the ISOs into place, you must hard link (not soft link) the ISO
 files because symlinks are not visible on file system paths mapped
-inside containers
+inside containers.
 
 Add a new OS after initial annealing
 ------------------------------------
