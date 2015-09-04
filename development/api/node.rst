@@ -4,7 +4,7 @@ Node API
 Node APIs are used to manage nodes (servers) within the Rebar system
 
 When Nodes are created, updated or deleted, roles and jigs are notified
-so they can tale appropriate actions.
+so they can tail appropriate actions.
 
 API Actions
 -----------
@@ -107,7 +107,7 @@ Target Role ID
 ~~~~~~~~~~~~~~
 
 TargetRole is used to troubleshoot problem nodes by putting them into a
-state *hopefully* known working state allows you to put the node back
-into sledgehammer so you can take the installed OS out of the picture..
+*hopefully* known working state which allows you to put the node back
+into sledgehammer so you can take the installed OS out of the picture.
 To do this, set the target role to TargetRole to "rebar managed node"
 and BootEnv to "sledgehammer" then reboot.
