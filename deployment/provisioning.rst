@@ -6,7 +6,7 @@ Provising Process
 The Provisioner provides the roles and recipes to set up the
 provisioning server and a base environment for all provisioned nodes.
 The Provisioner also provides the transition entry point for nodes that
-need to have DHCP transitions done. The Provisioner assumes that
+require DHCP transitions completed. The Provisioner assumes that
 addressing will be handled outside of this barclamp.
 
 **Roles**
@@ -49,8 +49,8 @@ The following node roles are defined:
 **Workflow**
 
 The provisioner provides the Sledgehammer discovery image. It is
-expected that there is a DHCP server, Digital Rebar provided or external
-to Digital Rebar, that will allocate an address and point to the
+expected that there is a DHCP server (provided by Digital Rebar or external
+to Digital Rebar) that will allocate an address and point to the
 provisioner.
 
 The Sledgehammer discovery image will register the node in Digital Rebar
@@ -63,6 +63,6 @@ New operating systems can be seen `Adding Operating
 Systems <../deployment-guide/adding-operating-systems.md>`__.
 
 After an operating system is installed, the system injects code to
-update Digital Rebar that the node has completed installation. The
-database roles will update the provisioner and DHCP servers to boot from
+update Digital Rebar and informs it that the node has completed installation. The
+database roles will update the provisioner and DHCP servers to automatically boot from
 local drives.
