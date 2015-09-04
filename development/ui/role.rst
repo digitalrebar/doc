@@ -112,7 +112,7 @@ data["map"]["to"]["value"] , :size => 30 ... = hidden\_field\_tag
    one of the hooks declared in
    `Role <https://github.com/rebar/barclamp-rebar/blob/master/rebar_framework/app/models/role.rb>`__.
 
-   For example in the messaging barclamp an encrypted databag needed to
+   For example in the messaging barclamp an encrypted databag needs to
    be created on the admin node populated with the user and password
    from the form. The data bag is then copied downstream to the node
    prior to a chef run.
@@ -181,28 +181,27 @@ Messaging Barclamp as an example:
     is 84
 9.  Validate the form fields and labels are correct that the form
     validation is working properly. Validation error messages should be
-    displayed to the right of the field in question. The tester should
-    know what each field's validation rules are supposed to be to
-    validate the rules.
+    displayed to the right of the field in question. In order to
+    validate the rules the tester should know what each field's validation rules are supposed to be.
 10. Test required fields by clearing them all and attempt to save the
     node role. You should see required messages for every field in the
     messaging server role for example as every field is required
 11. Validate and field length rules are working correctly, there are
     on-key-up event handlers on each field and when the length doesn't
-    meet the defined max/min length you should be notified.
+    meet the defined max/min length, you should be notified.
 12. Validate special case fields like password and email. In messaging
     there is a custom validator defined that will not allow special
     characters in the password. If you enter % you should see a
     validation error message.
 13. Enter all required information in the correct format and save the
-    node role. You should see a notification, in the standard global
-    notification section of the page, that the node role has been saved
+    node role. You should see a notification in the standard global
+    notification section of the page that the node role has been saved
     successfully.
 14. Navigate through the deployments menu to get back to the deployment
     node role list page again. Click the blue icon for the role you are
-    testing and validate the information you previously changed
-    repopulates the form.
-15. Make additional changes and repeat previous step the validate the
+    testing and validate the information you previously changed. This action will
+    repopulate the form.
+15. Make additional changes and repeat previous step to validate the
     additional update was successful. The reason for this is the first
     time you edited the node role you were overwriting the defaults,
     creating a new object. This second pass is an update of that object.
@@ -232,15 +231,15 @@ Messaging Barclamp as an example:
                 user: the_user
                 password: the_password
 
-21. If the information looks correct in the model commit the Deployment
-    in the UI. While the parent node is executing parent roles like
+21. If the information looks correct in the model commit of the Deployment
+    UI. While the parent node is executing, such as
     installing the operating system etc, you can take a look at the
     read-only node role view by clicking the grey circle icon
     (indicating blocked state) at the intersection of the node and role.
     This will take you to the read-only node role view. Validate the
     fields and data correct.
-22. When the Deployment is finished and active the last step is to
-    verify the settings set in the UI actually made it to the target
+22. When the Deployment is finished and active, the last step is to
+    verify the settings in the UI actually made it to the target
     node and configured the service correctly. The validation steps will
     be different for each role. For the Messaging Server role the
     following should be verified:
