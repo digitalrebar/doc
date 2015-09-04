@@ -18,14 +18,12 @@ Rebar and Berkshelf
 ~~~~~~~~~~~~~~~~~~~
 
 For each of your workloads (core, openstack, hardware, etc.) Rebar uses
-a centralized Berkshelf file for for all of your cookbooks. The
+a centralized Berkshelf file for all of your cookbooks. The
 Berksfile is in ``digitalrebar/<workload>/chef/cookbooks/Berksfile``.
 Rebar ignores Berksfiles in individual cookbooks.
 
 Berkshelf resolves cookbook dependencies by following the Berksfile
-instructions for local and remote dependent cookbooks. It stores
-dependencies in the Berkshelf (path.) If you're using a Chef Server, it
-can upload them to the Chef Server. If you're using chef-solo or
+instructions for local and remote dependent cookbooks. Dependencies are stored in the Berkshelf (path.) If you're using a Chef Server, it can upload them to the Chef Server. If you're using chef-solo or
 chef-client -x, it packages them on the filesystem and delivers them to
 your nodes.
 
@@ -61,7 +59,7 @@ Developing Cookbooks
        $ berks install
 
 -  Optional: You might want the cookbooks you indicated as dependents
-   and your cookbooks to be available to you for reference or running
+   and your cookbooks available to you for reference or running
    chef-solo while you're developing. The following example will
    download them and put them in the right place for you.
 
