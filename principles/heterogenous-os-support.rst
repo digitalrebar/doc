@@ -1,10 +1,10 @@
 Heterogenous Operating System Support
 =====================================
 
-This file documents how to deploy multiple different operating systems
+This section documents how to deploy multiple different operating systems
 in Digital Rebar.
 
-Right now deploying a hetrogenous OS cluster in Digital Rebar relies on
+Deploying a hetrogenous OS cluster in Digital Rebar relies on
 a few prerequisites:
 
 -  Online mode.
@@ -20,7 +20,7 @@ setting the provisioner to online-mode.
 
 These are needed so that the provisioner find the proper location to
 copy all the information needed to kick off a network-based installation
-of an operating system. The defaout proposal includes stanzas for the
+of an operating system. The default proposal includes stanzas for the
 Ubuntu and CentOS operating system releases Digital Rebar supports.
 
 -  Proper recipe supoprt for the OS in the provisioner. Right now we
