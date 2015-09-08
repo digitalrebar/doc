@@ -67,7 +67,7 @@ separation of duties) so please be patient, the default discovery
 process requires the system to boot the Sledgehammer image which
 requires time.
 
-Once the node is booted, Digital Rebar automaticallly adds the node into the
+Once the node is booted, Digital Rebar automatically adds the node into the
 system deployment. The system deployment is a special purpose deployment
 used for discovery and base management. Users have limited options to
 change it; however, you can easily monitor the discovery process
@@ -89,12 +89,12 @@ The Ready State Wizard performs multiple steps for provisioning
 discovered nodes from a single screen. This convenience eliminates
 several steps that are commonly performed together.
 
-From the Ready State Wizard Screen, 1. name the deployment (network will
-be named the same as the deployment) 1. describe the network settings
-(you can change this later from the Networks page) 1. check the nodes
-that you want to provision 1. select the o/s that you want to be
-installed 1. accept the changes (this takes you to the deployment page)
-1. commit the deployment to begin.
+From the Ready State Wizard Screen: 
+1. name the deployment (network will be named the same as the deployment) 
+2. describe the network settings (you can change this later from the Networks page) 
+3. check the nodes that you want to provision 
+4. select the o/s that you want to be installed 1. accept the changes (this takes you to the deployment page)
+5. commit the deployment to begin.
 
 Step by Step Instructions
 -------------------------
@@ -166,7 +166,7 @@ configuration changes if that role has configuration settings.
 Installing an OS on a Node
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-To install an operating system on a node, you must attch the
+To install an operating system on a node, you must attach the
 ``O/S Installed`` milestone role to the node.
 
 To attach the O/S role to the node, you much click the green plus
