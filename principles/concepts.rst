@@ -5,14 +5,14 @@ The operations challenge
 ------------------------
 
 A deployment framework is key to solving the problems of deploying,
-configuring, and scaling open source clusters for cloud computing.
+configuring, and scaling clusters for cloud computing.
 
-Deploying an open source cloud can be a complex undertaking. Manual
-processes, can take days or even weeks working to get a cloud fully
-operational. Even then, a cloud is never static, in the real world cloud
-solutions are constantly on an upgrade or improvement path. There is
+Deploying a cloud or cluster of containers or bare metal server clusters can be a complex undertaking. Manual
+processes can take days or even weeks working to get a cluster fully
+operational. Even then, the infrastructure is never static, in the real world clusters of
+solutions are constantly on an upgrade or improvement path. There is a
 continuous need to deploy new servers, add management capabilities, and
-track the upstream releases, while keeping the cloud running, and
+track the upstream releases, while keeping the cloud or cluster running, and
 providing reliable services to end users. Service continuity
 requirements dictate a need for automation and orchestration. There is
 no other way to reduce the cost while improving the uptime reliability
@@ -20,14 +20,14 @@ of a cloud.
 
 These were among the challenges that drove the development of the
 Digital Rebar software framework from it's roots as an
-`OpenStack <http://OpenStack.org>`__ installer into a much broader
-orchestration tool. Because of this evolution, Digital Rebar has a
+`OpenStack <http://OpenStack.org>`__ installer (Crowbar) into a much broader
+orchestration platform. Because of this evolution, Digital Rebar has a
 number of architectural features to address these challenges:
 
 -  Abstraction Around Orchestration
 
    Digital Rebar is designed to simplify the operations of large scale
-   cloud infrastructure by providing a higher level abstraction on top
+   infrastructure by providing a higher level abstraction on top
    of existing configuration management and orchestration tools based on
    a layered deployment model.
 
@@ -60,7 +60,7 @@ number of architectural features to address these challenges:
    The state machine is responsible for analyzing dependencies and
    scheduling state transition operations (transitions).
 
--  Data model
+-  Data Model
 
    Digital Rebar uses a dedicated database to track system state and
    data. As discovery and deployment progresses, system data is
