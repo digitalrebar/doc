@@ -11,16 +11,16 @@ emergent services.
 The topics in this guide help explain Rebar's core architectural
 principles.
 
-Rebar Objective
+Digital Rebar Objective
 ---------------
 
-Rebar delivers repeatable best practice deployments. Rebar is not just
+Digital Rebar delivers repeatable best practice deployments. Rebar is not just
 about installation: we define success as a sustainable operations model
 where we continuously improve how people use their infrastructure. The
 complexity and pace of technology change is accelerating so we must have
-an approach that embraces continuous delivery.
+an approach that embraces continuous delivery in the data center.
 
-Rebar’s objective is to help operators become more efficient, stable and
+Rebar’s objective is to help operators and technology become more efficient, stable and
 resilient over time.
 
 Background
@@ -43,23 +43,22 @@ First, we started with best of field DevOps infrastructure: Opscode
 Chef. There was already a remarkable open source community around this
 tool and an enthusiastic following for cloud and scale operators . Using
 Chef to do the majority of the installation left the Rebar team to focus
-on
+on infrastructure provisioning. 
 
-Key Features
+Key Features of Digital Rebar
 ------------
 
 -  *Heterogeneous Operating Systems* – chose which operating system you
    want to install on the target servers.
 -  *CMDB Flexibility* – don’t be locked in to a devops toolset.
-   Attribute injection allows clean abstraction boundaries so you can
+-  *Attribute injection* - allows clean abstraction boundaries so you can
    use multiple tools (Chef and Puppet, playing together).
 -  *Ops Annealer* –the orchestration at Rebar’s heart combines the best
    of directed graphs with late binding and parallel execution. We
    believe annealing is the key ingredient for repeatable and OpenOps
    shared code upgrades
 -  *Upstream Friendly* – infrastructure as code works best as a
-   community practice and Rebar use upstream code
--  without injecting “rebarisms” that were previously required. So you
+   community practice and Rebar use upstream code without injecting “rebarisms” that were previously required. So you
    can share your learning with the broader DevOps community even if
    they don’t use Rebar.
 -  *Node Discovery (or not)* – Rebar maintains the same proven discovery
@@ -69,7 +68,7 @@ Key Features
 -  *Hardware Configuration* – Rebar maintains the same optional hardware
    neutral approach to RAID and BIOS configuration. Configuring hardware
    with repeatability is difficult and requires much iterative testing.
-   While our approach is open and generic, the team at Dell works hard
+   While our approach is open and generic, the team works hard
    to validate a on specific set of gear: it’s impossible to make
    statements beyond that test matrix.
 -  *Network Abstraction* – Rebar dramatically extended our DevOps
@@ -89,13 +88,7 @@ Key Features
    developer environment that makes building a working Rebar environment
    fast and repeatable.
 
-Digital Rebar (CB2) vs Rebar (CB1)?
+Digital Rebar vs Crowbar/OpenCrowbar
 -----------------------------------
 
-Why change to Digital Rebar? This new generation of Rebar is
-structurally different from Rebar 1 and we’ve investing substantially in
-refactoring the tooling, paying down technical debt and cleanup up
-documentation. Since Rebar 1 is still being actively developed,
-splitting the repositories allow both versions to progress with less
-confusion. The majority of the principles and deployment code is very
-similar, I think of Rebar as a single community.
+Some of you may remember us from Dell when we founded the Crowbar Project. Since Crowbar was an "MVP" and is still being actively developed by SUSE and focuses solely on installing OpenStack, splitting the repositories allow both versions to progress with less confusion. This new generation is structurally and philosphically different from Crowbar and we’ve investing substantially in expanding the extensibility of the architecture, refactoring the tooling, paying down technical debt and cleanup up documentation. 
