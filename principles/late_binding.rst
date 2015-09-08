@@ -13,7 +13,7 @@ Ops is fluid and situational.
 Many DevOps tooling leverages eventual consistency to create stable
 deployments. This interative approach assumes that repeated attempts of
 executing the same idemnepotent scripts do deliver this result; however,
-they are do not deliver predictable upgrades in situations where there
+they do not deliver predictable upgrades in situations where there
 are circular dependencies to resolve.
 
 Its not realistic to predict the exact configuration of a system in
