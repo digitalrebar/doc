@@ -8,7 +8,9 @@ While it's been completly rebuilt by DevOps artisans, Digital Rebar history incl
 Getting Started
 ---------------
 
-Want to **install Digital Rebar**? Here's the `Install Guide <install.rst>`_
+Want to **install Digital Rebar**? Here's the `Install Guide <install_new.rst>`_
+
+> We're in transition to Docker Compose and it's faster but, just in case, here's the `original Install Guide <install.rst>`_
 
 Join Our Community
 ------------------
