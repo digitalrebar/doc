@@ -21,32 +21,7 @@ Join Our Community
 * `Issues and Roadmap <https://waffle.io/digitalrebar/core>`_
 * ``#digitalrebar`` IRC channel on `Freenode <https://webchat.freenode.net/>`_ (hint: Gitter.im is more active).
 
-Exec Summary
-------------
+More information?
+-----------------
 
-The principal motivation for creation of Digital Rebar is the transition a
-from bare metal installer into a platform that manages and orchestrates ongoing operations.
-Digital Rebar enables upgrade and continuous deployment automation. This
-capability is important for large scale deployments of evolving complex
-projects like OpenStack, Docker, Hadoop, and Ceph.
-
-Digital Rebar provides the foundation for operations automation.
-Digital Rebar is an open reference implementation that can be reliably
-deployed in large-scale, multi-site datacenters. The platform
-weaves in best practices in a way that allows creation of consistent
-and discoverable operating environments. Users benefit with fast
-time-to-value and we benefit by having consistent installations across
-the ecosystem.
-
-Benefits of Digital Rebar
--------------------------
-
-Digital Rebar reduces the cost of datacenter hardware infrastructure
-preparation. The immediate benefits of Digital Rebar are realized in the
-deployment of complex compute and storage clusters. Digital Rebar reduces
-the human resource cost of getting compute platform systems into
-productive use, automates continuous hardware redeployment, automates
-hypervisor, operating systems, and application layer software
-installation and management. All of these add up to significant gains in
-operational reliability, consistency, and concomitant reduction in
-defects handling costs.
+This project is composed of many parts.  Please visit the `Digital Rebar Project <http://digitalrebar.github.io>`_ home page.

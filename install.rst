@@ -1,12 +1,14 @@
 Digital Rebar Install
 =====================
 
-The fast-path install steps are:
+*Approximate install time: 15 minutes depending on bandwidth.*
 
-1. Install Docker
-#. Download Code & Prerequists (operating systems to install)
-#. Deploy Admin container
-#. Provision Nodes! (just testing? use fast virtual nodes)
+The install steps are:
+
+1. Install Docker & Docker-Compose
+#. Download code & prerequists (e.g.: operating systems to install)
+#. Start infrastructure containers
+#. Provision nodes! (just testing? use fast virtual nodes)
 
 Rather than cover every operating system, we are assuming that you can translate between differences in major distributions.
 
@@ -14,70 +16,110 @@ Rather than cover every operating system, we are assuming that you can translate
 
 **RECOMMENDATION:** Review the `RackN maintained deploy scripts <https://github.com/rackn/digitalrebar-deploy>`_ for updated step-by-step install examples.
 
-Admin In a Container!
----------------------
+Admin In Containers!
+--------------------
 
-The goal for this document is getting a basic Digital Rebar admin running quickly.  For that reason, many options and configuration choices have been omitted in the interest in brevity.
+The goal for this document is getting a basic Digital Rebar Infastructure running quickly.  For that reason, many options and configuration choices have been omitted in the interest in brevity.
 
-Digital Rebar operates the administrative functions in Docker containers; consequently, you need to be running in an environment that can run Docker.
+Digital Rebar operates all the infrastructure management functions in Docker containers; consequently, you need to be running in an environment that can run Docker.
 
     To improve support, the `Digital Rebar team <https://github.com/orgs/digitalrebar/teams>`_ is no longer creating or documenting install packages.
 
     For developers, we've collected some `additional guidance <development/advanced-install>`_ to review after you've got your first install working.
 
-We are going to assume that you know how to use basic Docker commands to keep these instructions concise.
+We are going to assume that you know how to use basic Docker and Docker Compose commands so that we can keep these instructions concise.  Please see the footnotes for command examples.
 
-Step 1. Install Docker
-----------------------
+Step 1. Install Docker & Docker Compose
+---------------------------------------
 
-Follow the `community instructions for installing Docker <http://docs.docker.io/en/latest/installation/>`_ on the most common Linux
-distributions.
+Follow the `Docker install guide <http://docs.docker.io/en/latest/installation/>`_
 
+- Install Docker. [8]_
 - Get permission to run Docker without sudo. [1]_
 - Turn off Apparmor [2]_ (`production deploy <deployment/>`_ could be configured to leave on)
-- Map a local address (192.168.124.4/24) to the docker bridge. [7]_
+- Map a local address (192.168.124.10/24) to the docker bridge. [7]_
+
+Follow the `Compose install guide <https://docs.docker.com/compose/install/>`_ 
 
 Step 2. Download Code & Prerequists
 -----------------------------------
 
-- Configure your no_proxy environment variable [3]_ (really, add it to .bashrc)
-- Make sure you have an ssh key [4]_
-- Enable passwordless sudo [5]_
+These steps are for **default** configuration.  Advanced configurations can adapt to more complex environments.
+
+- Make sure you have *disabled* the following services locally:
+   - bind: DNS server on :53 (e.g.: ``killall dnsmasq``)
+   - proxy: local proxy on :8123 (e.g.: ``service squid3 stop``) 
+   - ntp: Time server on :123 (e.g.: ``service ntp stop``)
+   - db: PostgreSQL on :5432
+   - rails: local web apps on :3000
+   - when starting Compose, you will be alerted of port conflicts with `assigned port conflicts <docker-compose-common.yml>`_ .
+- (optional) Create an ssh key [4]_ for Digital Rebar to copy into your nodes.
+- (optional) Enable passwordless sudo [5]_
 - Download at least one ISO from the list in `provisioner.yml <https://github.com/digitalrebar/core/blob/develop/barclamps/provisioner.yml#L135>`_ and copy to ``~/.cache/opencrowbar/tftpboot/isos``
 - Install git.
-- If you plan to run VMs as test nodes, then you'll also need "qemu-kvm libvirt-bin ubuntu-vm-builder bridge-utils ruby1.9.1-dev make"
-- Clone Digital Rebar core: ``git clone https://github.com/digitalrebar/core.git``
-- Clone optional workloads into core's sibling directories.  For example, "../workload1" or "../company/workload2"
-   - `Kubernetes <https://github.com/rackn/kubernetes>`_ : ``git clone https://github.com/rackn/kubernetes.git``
-   - `Ceph <https://github.com/rackn/ceph>`_ : ``git clone https://github.com/rackn/ceph.git``
-   - `Hardware <https://github.com/rackn/hardware>`_ : ``git clone https://github.com/rackn/hardware.git``
-   - By request: StackEngine, DockerEngine, CloudFoundry BOSH Metal CPI
+- Clone the RackN Digital Rebar Deploy: ``git clone https://https://github.com/rackn/digtalrebar-deploy.git deploy``
+- Run the ``./setup`` command under the ``compose`` directory in that repo.  This will also clone the Digital Rebar code base from Github into the ``components/rebar/digitalrebar/core`` directory.
+- (optional) Link the Digital Rebar code path [12]_ from the compose components directory to your home directory.  This makes it easier to update the Digital Rebar code and workloads.
+- Clone additional workloads
+  - From the ~/rebar directory
+  - Git clone workloads: RackN supports several including Kubernetes, Ceph, and Docker Swarm
 
-Step 3. Deploy Admin container
--------------------------------
 
-From the Digital Rebar core directory, run the ``tools/docker-admin`` command. [6]_ 
+Step 3. Deploy Digital Rebar infrastructure containers
+------------------------------------------------------
 
-The ``docker-admin`` flags are:
+From the Compose directory, run ``docker-compose up -d`` to start the process.  The first time is slower because you have to pull the images.
 
-1. ``--daemon``   (optional, omit this flag to keep your terminal in the container)
-#. ``centos``     (required, the container O/S)
-#. ``./production.sh`` (required, the script to start in the container)
-#. ``pick.valid.fqdn`` (required, name of admin server for production.sh script)
+You can monitor the progress in several ways:
 
-After the install has progressed, you should be able to monitor the progress of the admin node deployment at http://localhost:3000. Once the admin node is finished deploying (or if anything goes wrong), you will be left at a running shell inside the container unless you used the --daemon flag.
+#. Starting Compose without the ``-d`` flag will send logs to the screen.  In this mode, we suggest grepping the contents to eliminate logstash.  [9]_ 
+#. The Digital Rebar Consul service comes up quickly on http://127.0.0.1:8500
+#. A Kibana logstash service is running on http://127.0.0.1:5601
+#. ``docker-compose ps`` will show you the status of the services and associated port mappings.
+#. ``docker ps`` will show you the status of the containers
 
-You can ssh into the container from the host by finding its IP addres through Docker or 192.168.124.10 if you've mapped a host address to docker0.
+To reset the environment, you must stop [10]_ and then remove [11]_ the containers.
+
+After the install has progressed (the ``rebar-api-service`` is up in `Consul <http://127.0.0.1:8500>`_ ), you should be able to monitor the progress of the Admin container at http://localhost:3000.
+
+You can connect to any container using ``docker exec -it [name] bash``; however, we recommend using `Kibana <http://127.0.0.1:5601>`_ to check centralized logs first.
+
+Housekeeping Notes
+~~~~~~~~~~~~~~~~~~
+
+To remove Docker image cruft, we suggest running ``docker ps -q -a | xargs docker rm`` on a regular basis.
 
 Step 4. Provision Nodes!
 ------------------------
 
-And now, the real fun begins...
+And now, the real fun begins!  
 
-KVM Nodes (fast test)
-~~~~~~~~~~~~~~~~~~~~~
+If this is your first install, the Docker and KVM nodes approach will allow you to play with Digital Rebar with minimal network configuration.
 
-If your environment is running on bare metal (as opposed to running inside a VM), you can spawn `virtual nodes <development/advanced-install/kvm-slaves.rst>`_ for testing using KVM.  Use ``tools/kvm-slave &`` to spawn a KVM virtual machine that will boot from the freshly-deployed admin node.
+Docker Nodes (fast testing)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+From the deploy/compse directory:
+
+#. ``docker-compose scale node=5``
+
+You can turn the number of nodes up and down by changing the number.
+
+KVM Nodes (high fidelity test)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+> this only works on Linux environments that can run KVM.
+
+These instructions assume that you've linked [12]_ the Digital Rebar code to ~/rebar.
+
+#. Install prereqs: 
+
+   #. ``apt-get install qemu-kvm libvirt-bin ubuntu-vm-builder bridge-utils ruby1.9.1-dev make``
+   #. ``gem install json net-http-digest_auth``
+
+#. Under ~/rebar/core, use ``tools/kvm-slave &`` to spawn a KVM virtual machine that will boot from the freshly-deployed admin node.
+
+More details? See `virtual nodes <development/advanced-install/kvm-slaves.rst>`_ for testing using KVM.
 
 Real Hardware
 ~~~~~~~~~~~~~
@@ -102,22 +144,22 @@ Virtual Box (generally for Windows users)
 
 If your development environment is running in VMs then:
 
-1. make sure that your Admin VM has an extra eth port connected to a
+#. make sure that your Admin VM has an extra eth port connected to a
    dedicated host only bridge (let's assume eth2)
-2. slave the eth2 to the docker bridge,
+#. slave the eth2 to the docker bridge,
    ``sudo brctl addif docker0 eth2``
-3. turn on eth2 for the bridge, ``sudo ip link set eth2 up``
-4. create a VM with eth0
+#. turn on eth2 for the bridge, ``sudo ip link set eth2 up``
+#. create a VM with eth0
 
-   1. attached to the dedicated host only bridge
-   2. make sure it is able to network boot
+   #. attached to the dedicated host only bridge
+   #. make sure it is able to network boot
 
-5. boot the VM
+#. boot the VM
 
-   1. it should PXE boot
-   2. the VM should register and automatically progress in the system
+   #. it should PXE boot
+   #. the VM should register and automatically progress in the system
       deployment
-   3. if you have issues, review the ``/var/log/install.log`` for
+   #. if you have issues, review the ``/var/log/install.log`` for
       details
 
 Additional References
@@ -133,3 +175,8 @@ Additional References
 .. [5] ``sudo sed -ie "s/%sudo\tALL=(ALL:ALL) ALL/%sudo ALL=(ALL) NOPASSWD:ALL/g" /etc/sudoers``
 .. [6] ``tools/docker-admin --daemon centos ./production.sh admin.rebar.digital``
 .. [7] ``sudo ip a add 192.168.124.4/24 dev docker0``
+.. [8] ``curl -sSL https://get.docker.com/ -o /tmp/docker.sh || sh``
+.. [9] ``docker-compose up | grep -v logstash``
+.. [10] ``docker-compose stop``
+.. [11] ``docker-compose rm``
+.. [12] ``-s ~/deploy/compose/components/rebar_api/digitalrebar/ rebar``
