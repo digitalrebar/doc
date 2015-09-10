@@ -3,21 +3,17 @@ Digital Rebar Install
 
 *Approximate install time: 15 minutes depending on bandwidth.*
 
-The install steps are:
-
-1. Install Docker & Docker-Compose
-#. Download code & prerequists (e.g.: operating systems to install)
-#. Start infrastructure containers
-#. Provision nodes! (just testing? use fast virtual nodes)
+.. contents:: The install steps are:
+  :depth: 1
 
 Rather than cover every operating system, we are assuming that you can translate between differences in major distributions.
 
 *Need help?* Jump over to our `live chat <https://gitter.im/digitalrebar/core>`_  (Gitter.im)
 
-**RECOMMENDATION:** Review the `RackN maintained deploy scripts <https://github.com/rackn/digitalrebar-deploy>`_ for updated step-by-step install examples.
+**RECOMMENDATION:** Review the `RackN maintained deploy scripts <https://github.com/rackn/digitalrebar-deploy>`_ for updated step-by-step install examples.  If you are comfortable with `Ansible <http://ansibile.com>`_, you can use those directly on Ubuntu and Centos.
 
-Admin In Containers!
---------------------
+Intro: Provisioning from Containers!
+------------------------------------
 
 The goal for this document is getting a basic Digital Rebar Infastructure running quickly.  For that reason, many options and configuration choices have been omitted in the interest in brevity.
 
@@ -41,7 +37,9 @@ Follow the `Docker install guide <http://docs.docker.io/en/latest/installation/>
 - Turn off Apparmor [2]_ (`production deploy <deployment/>`_ could be configured to leave on)
 - Map a local address (192.168.124.10/24) to the docker bridge. [7]_
 
-Follow the `Compose install guide <https://docs.docker.com/compose/install/>`_ 
+Follow the `Compose install guide <https://docs.docker.com/compose/install/>`_ using VERSION = 1.4.0 (as of Sept 2015)
+
+Want to see step by step? See `RackN Docker Install Ansible Playbook <https://github.com/rackn/digitalrebar-deploy/blob/master/tasks/docker.yml>`_
 
 Step 2. Download Code & Prerequists
 -----------------------------------
@@ -57,7 +55,7 @@ These steps are for **default** configuration.  Advanced configurations can adap
    - when starting Compose, you will be alerted of port conflicts with `assigned port conflicts <docker-compose-common.yml>`_ .
 - (optional) Create an ssh key [4]_ for Digital Rebar to copy into your nodes.
 - (optional) Enable passwordless sudo [5]_
-- Download at least one ISO from the list in `provisioner.yml <https://github.com/digitalrebar/core/blob/develop/barclamps/provisioner.yml#L135>`_ and copy to ``~/.cache/opencrowbar/tftpboot/isos``
+- Download at least one ISO from the list in `provisioner.yml <https://github.com/digitalrebar/core/blob/develop/barclamps/provisioner.yml#L135>`_ and copy to ``~/.cache/digitalrebar/tftpboot/isos``
 - Install git.
 - Clone the RackN Digital Rebar Deploy: ``git clone https://github.com/rackn/digitalrebar-deploy.git deploy``
 - Run the ``./setup`` command under the ``compose`` directory in that repo.  This will also clone the Digital Rebar code base from Github into the ``components/rebar/digitalrebar/core`` directory.
@@ -164,13 +162,13 @@ If your development environment is running in VMs then:
    #. if you have issues, review the ``/var/log/install.log`` for
       details
 
-Additional References
----------------------
+Command Reference
+-----------------
 
 **WARNING**: These suggestions may become out of date.  We strongly recommend reviewing the actively maintained `deploy scripts <https://github.com/rackn/digitalrebar-deploy>`_.
 
 .. [1] ``sudo usermod -a -G docker <your-user>``
-   plus, if you don't want to reboot, run ``sudo chmod 666 /var/run/docker.sock``
+   plus, if you don't want to reboot right away, run ``sudo chmod 666 /var/run/docker.sock`` to temporarily allow everyone access.
 .. [2] ``sudo service apparmor teardown`` and ``sudo update-rc.d -f apparmor remove``
 .. [3] ``export no_proxy="127.0.0.1,[::1],localhost,192.168.124.0/24,172.16.0.0/12"``
 .. [4] ``ssh-keygen -t rsa``
@@ -182,3 +180,4 @@ Additional References
 .. [10] ``docker-compose stop``
 .. [11] ``docker-compose rm``
 .. [12] ``-s ~/deploy/compose/components/rebar_api/digitalrebar/ rebar``
+.. [13] ``mkdir -p .cache/digitalrebar/tftpboot/isos`` and ``cd .cache/digitalrebar/tftpboot/isos`` then ``wget http://mirrors.kernel.org/centos/7.1.1503/isos/x86_64/CentOS-7-x86_64-Minimal-1503-01.iso -nc`` and/or ``wget http://mirrors.kernel.org/ubuntu-releases/trusty/ubuntu-14.04.3-server-amd64.iso -nc``
