@@ -32,7 +32,9 @@ We are going to assume that you know how to use basic Docker and Docker Compose 
 Step 1. Install Docker & Docker Compose
 ---------------------------------------
 
-Follow the `Docker install guide <http://docs.docker.io/en/latest/installation/>`_
+WARNING: freshness matters, do NOT use *apt-get* or *yum*!
+
+Follow the `Docker install guide <http://docs.docker.io/en/latest/installation/>`_ 
 
 - Install Docker. [8]_
 - Get permission to run Docker without sudo. [1]_
