@@ -177,7 +177,7 @@ Additional References
 .. [5] ``sudo sed -ie "s/%sudo\tALL=(ALL:ALL) ALL/%sudo ALL=(ALL) NOPASSWD:ALL/g" /etc/sudoers``
 .. [6] ``tools/docker-admin --daemon centos ./production.sh admin.rebar.digital``
 .. [7] ``sudo ip a add 192.168.124.4/24 dev docker0``
-.. [8] ``curl -sSL https://get.docker.com/ -o /tmp/docker.sh || sh``
+.. [8] ``curl -sSL https://get.docker.com/ -o /tmp/docker.sh | sh``
 .. [9] ``docker-compose up | grep -v logstash``
 .. [10] ``docker-compose stop``
 .. [11] ``docker-compose rm``
