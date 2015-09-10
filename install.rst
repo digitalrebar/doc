@@ -57,7 +57,7 @@ These steps are for **default** configuration.  Advanced configurations can adap
 - (optional) Enable passwordless sudo [5]_
 - Download at least one ISO from the list in `provisioner.yml <https://github.com/digitalrebar/core/blob/develop/barclamps/provisioner.yml#L135>`_ and copy to ``~/.cache/opencrowbar/tftpboot/isos``
 - Install git.
-- Clone the RackN Digital Rebar Deploy: ``git clone https://https://github.com/rackn/digtalrebar-deploy.git deploy``
+- Clone the RackN Digital Rebar Deploy: ``git clone https://github.com/rackn/digitalrebar-deploy.git deploy``
 - Run the ``./setup`` command under the ``compose`` directory in that repo.  This will also clone the Digital Rebar code base from Github into the ``components/rebar/digitalrebar/core`` directory.
 - (optional) Link the Digital Rebar code path [12]_ from the compose components directory to your home directory.  This makes it easier to update the Digital Rebar code and workloads.
 - Clone additional workloads
