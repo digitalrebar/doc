@@ -12,8 +12,8 @@ Rather than cover every operating system, we are assuming that you can translate
 
 **RECOMMENDATION:** Review the `RackN maintained deploy scripts <https://github.com/rackn/digitalrebar-deploy>`_ for updated step-by-step install examples.  If you are comfortable with `Ansible <http://ansibile.com>`_, you can use those directly on Ubuntu and Centos.
 
-Intro: Provisioning from Containers!
-------------------------------------
+Provisioning from Containers
+----------------------------
 
 The goal for this document is getting a basic Digital Rebar Infastructure running quickly.  For that reason, many options and configuration choices have been omitted in the interest in brevity.
 
@@ -65,8 +65,8 @@ These steps are for **default** configuration.  Advanced configurations can adap
   - Git clone workloads: RackN supports several including Kubernetes, Ceph, and Docker Swarm
 
 
-Step 3. Deploy Digital Rebar infrastructure containers
-------------------------------------------------------
+Step 3. Deploy infrastructure containers
+----------------------------------------
 
 From the Compose directory, run ``docker-compose up -d`` to start the process.  The first time is slower because you have to pull the images.
 
