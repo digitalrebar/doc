@@ -1,16 +1,18 @@
 Digital Rebar Install
 =====================
 
-*Approximate install time: 15 minutes depending on bandwidth.*  Once cached, reset takes under 3 minutes.
+*Approximate install time: 15 minutes depending on bandwidth.*  Once cached, reset takes *under 3 minutes* on most systems.
 
 .. contents:: The install steps are:
   :depth: 1
 
-Rather than cover every operating system, we are assuming that you can translate between differences in major distributions.
+Rather than cover every operating system, we are assuming that you can translate between Ubuntu to other distributions.
 
 *Need help?* Jump over to our `live chat <https://gitter.im/digitalrebar/core>`_  (Gitter.im)
 
-**RECOMMENDATION:** Review the `RackN maintained deploy scripts <https://github.com/rackn/digitalrebar-deploy>`_ for updated step-by-step install examples.  If you are comfortable with `Ansible <http://ansibile.com>`_, you can use those directly on Ubuntu and Centos.
+**RECOMMENDATION:** Review the `RackN maintained deploy scripts <https://github.com/rackn/digitalrebar-deploy>`_ for updated step-by-step install examples.
+  * Use `Vagrant <https://www.vagrantup.com/>`_? We've automated all these steps for that too.
+  * Comfortable with `Ansible <http://ansibile.com>`_? Deploy these steps automatically to Ubuntu and Centos.
 
 Provisioning from Containers
 ----------------------------
@@ -28,14 +30,14 @@ We are going to assume that you know how to use basic Docker and Docker Compose 
 Step 1. Install Docker & Docker Compose
 ---------------------------------------
 
-WARNING: freshness matters, do NOT use *apt-get* or *yum*!
+WARNING: freshness matters for Docker, do NOT use *apt-get* or *yum*!
 
 Follow the `Docker install guide <http://docs.docker.io/en/latest/installation/>`_ 
 
 - Install Docker. [11]_
 - Get permission to run Docker without sudo. [12]_
 - Turn off Apparmor [13]_ (`production deploy <deployment/>`_ could be configured to leave on)
-- Map a local address (192.168.124.10/24) to the docker bridge. [14]_
+- Map a local address (192.168.124.10/24) to the docker bridge [14]_ (required to boot VMs or metal)
 
 Follow the `Compose install guide <https://docs.docker.com/compose/install/>`_ using VERSION = 1.4.0 (as of Sept 2015)
 
@@ -130,6 +132,9 @@ in to a switch that has the physical boxes you want to boot.
 Example Commands: 
 
   #. Install prereqs: ``sudo apt-get install bridge-utils``
+  #. (optional) To configure RAID or BIOS, you need the RackN Hardware workload.
+     #. Clone the RackN Hardware workload: ``compose/workload.sh rackn hardware``
+     #. Download the required tools.  See `RackN Hardware Docs <https://github.com/rackn/hardware/blob/master/doc/README.md>`_
   #. slave the eth2 to the docker bridge, ``sudo brctl addif docker0 eth2`` 
   #. turn on eth2 for the bridge, ``sudo ip link set eth2 up`` 
   #. boot the physical nodes from a switch connected to eth2
