@@ -1,7 +1,7 @@
 Digital Rebar Install
 =====================
 
-*Approximate install time: 15 minutes depending on bandwidth.*
+*Approximate install time: 15 minutes depending on bandwidth.*  Once cached, reset takes under 3 minutes.
 
 .. contents:: The install steps are:
   :depth: 1
@@ -32,10 +32,10 @@ WARNING: freshness matters, do NOT use *apt-get* or *yum*!
 
 Follow the `Docker install guide <http://docs.docker.io/en/latest/installation/>`_ 
 
-- Install Docker. [8]_
-- Get permission to run Docker without sudo. [1]_
-- Turn off Apparmor [2]_ (`production deploy <deployment/>`_ could be configured to leave on)
-- Map a local address (192.168.124.10/24) to the docker bridge. [7]_
+- Install Docker. [11]_
+- Get permission to run Docker without sudo. [12]_
+- Turn off Apparmor [13]_ (`production deploy <deployment/>`_ could be configured to leave on)
+- Map a local address (192.168.124.10/24) to the docker bridge. [14]_
 
 Follow the `Compose install guide <https://docs.docker.com/compose/install/>`_ using VERSION = 1.4.0 (as of Sept 2015)
 
@@ -47,22 +47,21 @@ Step 2. Download Code & Prerequists
 These steps are for **default** configuration.  Advanced configurations can adapt to more complex environments.
 
 - Make sure you have *disabled* the following services locally:
-   - bind: DNS server on :53 (e.g.: ``killall dnsmasq``)
-   - proxy: local proxy on :8123 (e.g.: ``service squid3 stop``) 
-   - ntp: Time server on :123 (e.g.: ``service ntp stop``)
-   - db: PostgreSQL on :5432
+   - bind: DNS server on :53 (e.g.: ``sudo killall dnsmasq``)
+   - proxy: local proxy on :8123 (e.g.: ``sudo service squid3 stop``) 
+   - ntp: Time server on :123 (e.g.: ``sudo service ntp stop``)
+   - db: PostgreSQL on :5432 (e.g.: ``sudo service postgresql stop`` )
    - rails: local web apps on :3000
    - when starting Compose, you will be alerted of port conflicts with `assigned port conflicts <docker-compose-common.yml>`_ .
-- (optional) Create an ssh key [4]_ for Digital Rebar to copy into your nodes.
-- (optional) Enable passwordless sudo [5]_
-- Download at least one ISO [13]_ from the list in `provisioner.yml <https://github.com/digitalrebar/core/blob/develop/barclamps/provisioner.yml#L135>`_ and copy to ``~/.cache/digitalrebar/tftpboot/isos``
+- (optional) Create an ssh key [21]_ for Digital Rebar to copy into your nodes.
+- (optional) Enable passwordless sudo [22]_
+- Download at least one ISO [23]_ from the list in `provisioner.yml <https://github.com/digitalrebar/core/blob/develop/barclamps/provisioner.yml#L135>`_ and copy to ``~/.cache/digitalrebar/tftpboot/isos``
 - Install git.
 - Clone the RackN Digital Rebar Deploy: ``git clone https://github.com/rackn/digitalrebar-deploy.git deploy``
-- Run the ``./setup`` command under the ``compose`` directory in that repo.  This will also clone the Digital Rebar code base from Github into the ``components/rebar/digitalrebar/core`` directory.
-- (optional) Link the Digital Rebar code path [12]_ from the compose components directory to your home directory.  This makes it easier to update the Digital Rebar code and workloads.
-- Clone additional workloads
-  - From the ~/rebar directory
-  - Git clone workloads: RackN supports several including Kubernetes, Ceph, and Docker Swarm
+- Run ``compose/setup.sh`` to clone the Digital Rebar code base from Github into the ``components/rebar/digitalrebar/core`` directory.
+  - Add workloads to the base by passing them as parameters.  Examples are Kubernetes, Ceph and Hardware.
+- (optional) Link the Digital Rebar code path [24]_ from the compose components directory to your home directory.
+  - Git clone additional workloads from the linked ~/rebar directory such as `RackN/Ceph <https://github.com/rackn/ceph.git>`_ and `Rackn/Kubernetes <https://github.com/rackn/kubernetes.git>`.
 
 
 Step 3. Deploy infrastructure containers
@@ -72,13 +71,13 @@ From the Compose directory, run ``docker-compose up -d`` to start the process.  
 
 You can monitor the progress in several ways:
 
-#. Starting Compose without the ``-d`` flag will send logs to the screen.  In this mode, we suggest grepping the contents to eliminate logstash.  [9]_ 
+#. Starting Compose without the ``-d`` flag will send logs to the screen.  In this mode, we suggest grepping the contents to eliminate logstash.  [31]_ 
 #. The Digital Rebar Consul service comes up quickly on http://127.0.0.1:8500
 #. A Kibana logstash service is running on http://127.0.0.1:5601
 #. ``docker-compose ps`` will show you the status of the services and associated port mappings.
 #. ``docker ps`` will show you the status of the containers
 
-To reset the environment, you must stop [10]_ and then remove [11]_ the containers.
+To reset the environment, you must stop and then remove [32]_ the containers.
 
 After the install has progressed (the ``rebar-api-service`` is up in `Consul <http://127.0.0.1:8500>`_ ), you should be able to monitor the progress of the Admin container at http://localhost:3000.
 
@@ -108,9 +107,9 @@ You can turn the number of nodes up and down by changing the number.
 KVM Nodes (high fidelity test)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-> this only works on Linux environments that can run KVM.
+Works on Linux environments that can run KVM.
 
-These instructions assume that you've linked [12]_ the Digital Rebar code to ~/rebar.
+These instructions assume that you've linked [24]_ the Digital Rebar code to ~/rebar.
 
 #. Install prereqs: 
 
@@ -128,13 +127,15 @@ To boot Real Hardware, bind a physical interface to docker0 with brctl,
 make sure that interface is up and does not have an address, and plug it
 in to a switch that has the physical boxes you want to boot.
 
-Example Commands: 1. slave the eth2 to the docker bridge,
-``sudo brctl addif docker0 eth2`` 1. turn on eth2 for the bridge,
-``sudo ip link set eth2 up`` 1. boot the physical nodes from a switch
-connected to eth2
+Example Commands: 
 
-Virtual Box (generally for Windows users)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  #. Install prereqs: ``sudo apt-get install bridge-utils``
+  #. slave the eth2 to the docker bridge, ``sudo brctl addif docker0 eth2`` 
+  #. turn on eth2 for the bridge, ``sudo ip link set eth2 up`` 
+  #. boot the physical nodes from a switch connected to eth2
+
+Virtual Box (generally for Mac or Windows users)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
     This approach simulates the same steps as metal, so it expects that you've created a VM to host the
     Admin container.  If so, make sure you added an ethernet device (not
@@ -167,17 +168,30 @@ Command Reference
 
 **WARNING**: These suggestions may become out of date.  We strongly recommend reviewing the actively maintained `deploy scripts <https://github.com/rackn/digitalrebar-deploy>`_.
 
-.. [1] ``sudo usermod -a -G docker <your-user>``
+Step 1 Items:
+
+.. [11] ``curl -sSL https://get.docker.com/ -o /tmp/docker.sh | sh``
+.. [12] ``sudo usermod -a -G docker <your-user>``
    plus, if you don't want to reboot right away, run ``sudo chmod 666 /var/run/docker.sock`` to temporarily allow everyone access.
-.. [2] ``sudo service apparmor teardown`` and ``sudo update-rc.d -f apparmor remove``
-.. [3] ``export no_proxy="127.0.0.1,[::1],localhost,192.168.124.0/24,172.16.0.0/12"``
-.. [4] ``ssh-keygen -t rsa``
-.. [5] ``sudo sed -ie "s/%sudo\tALL=(ALL:ALL) ALL/%sudo ALL=(ALL) NOPASSWD:ALL/g" /etc/sudoers``
-.. [6] ``tools/docker-admin --daemon centos ./production.sh admin.rebar.digital``
-.. [7] ``sudo ip a add 192.168.124.4/24 dev docker0``
-.. [8] ``curl -sSL https://get.docker.com/ -o /tmp/docker.sh | sh``
-.. [9] ``docker-compose up | grep -v logstash``
-.. [10] ``docker-compose stop``
-.. [11] ``docker-compose rm``
-.. [12] ``-s ~/deploy/compose/components/rebar_api/digitalrebar/ rebar``
-.. [13] ``mkdir -p .cache/digitalrebar/tftpboot/isos`` and ``cd .cache/digitalrebar/tftpboot/isos`` then ``wget http://mirrors.kernel.org/centos/7.1.1503/isos/x86_64/CentOS-7-x86_64-Minimal-1503-01.iso -nc`` and/or ``wget http://mirrors.kernel.org/ubuntu-releases/trusty/ubuntu-14.04.3-server-amd64.iso -nc``
+.. [13] ``sudo service apparmor teardown`` and ``sudo update-rc.d -f apparmor remove``
+.. [14] ``sudo ip a add 192.168.124.10/24 dev docker0``
+
+Step 2 Items:
+
+.. [21] ``ssh-keygen -t rsa``
+.. [22] ``sudo sed -ie "s/%sudo\tALL=(ALL:ALL) ALL/%sudo ALL=(ALL) NOPASSWD:ALL/g" /etc/sudoers``
+.. [23] ISO download steps:
+
+        #. ``mkdir -p .cache/digitalrebar/tftpboot/isos``
+        #. ``cd .cache/digitalrebar/tftpboot/isos``
+        #. Choose one or both:
+
+           #. ``wget http://mirrors.kernel.org/centos/7.1.1503/isos/x86_64/CentOS-7-x86_64-Minimal-1503-01.iso -nc``
+           #. ``wget http://mirrors.kernel.org/ubuntu-releases/trusty/ubuntu-14.04.3-server-amd64.iso -nc``
+.. [24] ``-s ~/deploy/compose/components/rebar_api/digitalrebar/ rebar``
+
+Step 3 Items:
+
+.. [31] ``docker-compose up | grep -v logstash``
+.. [32] ``docker-compose stop && docker-compose rm``
+
