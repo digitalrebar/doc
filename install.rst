@@ -1,7 +1,7 @@
 Digital Rebar Install
 =====================
 
-*Approximate install time: 15 minutes depending on bandwidth.*  Once cached, reset takes *under 3 minutes* on most systems.
+*Approximate install time: 10-30 minutes depending on bandwidth.*  Once cached, reset takes *under 3 minutes* on most systems.
 
 .. contents:: The install steps are:
   :depth: 1
@@ -69,7 +69,9 @@ These steps are for **default** configuration.  Advanced configurations can adap
 Step 3. Deploy infrastructure containers
 ----------------------------------------
 
-From the Compose directory, run ``docker-compose up -d`` to start the process.  The first time is slower because you have to pull the images.
+From the ``compose`` directory, run ``docker-compose up -d`` to start the process.  
+
+** FIRST INSTALL? ** The first install is slow because you have to pull the images, do this interactively using ``docker-compose pull``.  Once the images are local there is minimal network interaction.
 
 You can monitor the progress in several ways:
 
@@ -109,7 +111,7 @@ You can turn the number of nodes up and down by changing the number.
 KVM Nodes (high fidelity test)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Works on Linux environments that can run KVM.
+Works on Linux environments that can run KVM.  It is **not compatable** with simultaneous VirtualBox / Vagrant testing.
 
 These instructions assume that you've linked [24]_ the Digital Rebar code to ~/rebar.
 
