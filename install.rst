@@ -69,15 +69,17 @@ These steps are for **default** configuration.  Advanced configurations can adap
 Step 3. Deploy infrastructure containers
 ----------------------------------------
 
-From the ``compose`` directory, run ``docker-compose up -d`` to start the process.  
+FIRST INSTALL? The first install is slow because you have to pull the images, do this interactively using ``docker-compose pull``.  Once the images are local there is minimal network interaction.
 
-** FIRST INSTALL? ** The first install is slow because you have to pull the images, do this interactively using ``docker-compose pull``.  Once the images are local there is minimal network interaction.
+From the ``compose`` directory, run ``docker-compose up -d`` to start the process.  If it does not come up the first time, try to reset the environement (steps below),
+
+After a few minutes, the rebar-api-service will be available on http://127.0.0.1:3000
 
 You can monitor the progress in several ways:
 
 #. Starting Compose without the ``-d`` flag will send logs to the screen.  In this mode, we suggest grepping the contents to eliminate logstash.  [31]_ 
-#. The Digital Rebar Consul service comes up quickly on http://127.0.0.1:8500
-#. A Kibana logstash service is running on http://127.0.0.1:5601
+#. The Digital Rebar Consul service comes up quickly on http://127.0.0.1:8500.  There should be a list of approximately 10 services.  You can login once the "rebar-api-service" is passing.
+#. A Kibana logstash service is running on http://127.0.0.1:5601.  Select a timestamp and then visit the Discover tab.
 #. ``docker-compose ps`` will show you the status of the services and associated port mappings.
 #. ``docker ps`` will show you the status of the containers
 
@@ -96,6 +98,9 @@ Step 4. Provision Nodes!
 ------------------------
 
 And now, the real fun begins!  
+
+#. Log in to Digital Rebar on http://127.0.0.1:3000 using default user ``rebar`` and password ``rebar1``
+#. Wait for the first annealing pass to complete (all marks are green).  Please be patient on the first run because Digital Rebar is building (and caching) provisioning images from the downloaded ISOs
 
 If this is your first install, the Docker and KVM nodes approach will allow you to play with Digital Rebar with minimal network configuration.
 
