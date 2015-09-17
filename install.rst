@@ -3,6 +3,8 @@ Digital Rebar Install
 
 *Approximate install time: 10-30 minutes depending on bandwidth.*  Once cached, reset takes *under 3 minutes* on most systems.
 
+16 Gb of RAM (or better) is recommended.
+
 .. contents:: The install steps are:
   :depth: 1
 
@@ -57,14 +59,12 @@ These steps are for **default** configuration.  Advanced configurations can adap
    - when starting Compose, you will be alerted of port conflicts with `assigned port conflicts <docker-compose-common.yml>`_ .
 - (optional) Create an ssh key [21]_ for Digital Rebar to copy into your nodes.
 - (optional) Enable passwordless sudo [22]_
-- Download at least one ISO [23]_ from the list in `provisioner.yml <https://github.com/digitalrebar/core/blob/develop/barclamps/provisioner.yml#L135>`_ and copy to ``~/.cache/digitalrebar/tftpboot/isos``
+- (optional) Download at least one ISO [23]_ from the list in `provisioner.yml <https://github.com/digitalrebar/core/blob/develop/barclamps/provisioner.yml#L135>`_ and copy to ``~/.cache/digitalrebar/tftpboot/isos``.  This step is required to provision bare metal or unimaged VMs using ``kvm-slave``.
 - Install git.
 - Clone the RackN Digital Rebar Deploy: ``git clone https://github.com/rackn/digitalrebar-deploy.git deploy``
 - Run ``compose/setup.sh`` to clone the Digital Rebar code base from Github into the ``components/rebar/digitalrebar/core`` directory.
-  - Add workloads to the base by passing them as parameters.  Examples are Kubernetes, Ceph and Hardware.
+  - Add workloads to the base by passing them as parameters.  Examples are ``kubernetes``, ``ceph`` and ``hardware``.  This simply clones additional repos next to the core repo.
 - (optional) Link the Digital Rebar code path [24]_ from the compose components directory to your home directory.
-  - Git clone additional workloads from the linked ~/rebar directory such as `RackN/Ceph <https://github.com/rackn/ceph.git>`_ and `Rackn/Kubernetes <https://github.com/rackn/kubernetes.git>`.
-
 
 Step 3. Deploy infrastructure containers
 ----------------------------------------
@@ -174,6 +174,11 @@ If your development environment is running in VMs then:
       deployment
    #. if you have issues, review the ``/var/log/install.log`` for
       details
+
+Step 5. Install Workloads
+-------------------------
+
+From the Digital Rebar UI, you can use one of the Deployment...Wizards to select roles to install on available nodes.  Once you have selected roles for nodes, you must "commit" the deployment.
 
 Command Reference
 -----------------
