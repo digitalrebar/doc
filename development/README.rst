@@ -33,8 +33,8 @@ Digital Rebar does not use use RAILS_ENV=development in the traditional way beca
 
 If you have a need for development behavior (classes and views the refresh when code changes) then perform the following steps:
 
-   #. Deploy Digital Rebar in the normal way
-   #. ``cp core/rails/config/environments/development.rb core/rails/config/environments/production.rb``
-   #.  ``service rebar restart``
+#. Deploy Digital Rebar in the normal way
+#. ``cp core/rails/config/environments/development.rb core/rails/config/environments/production.rb``
+#.  ``service rebar restart``
    
 You may make any Rails configuration changes desired in the same way.  Since we ignore ``production.rb`` you can leave your own customized version in place.
