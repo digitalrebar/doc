@@ -1,7 +1,7 @@
 Digital Rebar Install
 =====================
 
-*Approximate install time: 10-30 minutes depending on bandwidth.*  Once cached, reset takes *under 3 minutes* on most systems.
+*Approximate install time: 10-30 minutes depending on bandwidth.*  Once cached, reset takes *3-10 minutes* on most systems.
 
 16 Gb of RAM (or better) is recommended.
 
@@ -100,7 +100,7 @@ Step 4. Provision Nodes!
 And now, the real fun begins!  
 
 #. Log in to Digital Rebar on http://127.0.0.1:3000 using default user ``rebar`` and password ``rebar1``
-#. Wait for the first annealing pass to complete (all marks are green).  Please be patient on the first run because Digital Rebar is building (and caching) provisioning images from the downloaded ISOs
+#. Wait for the first annealing pass to complete (all marks are green).  Please be patient on the first run because Digital Rebar is building and caching provisioning images (during ``provisioner-base-images`` role) from the downloaded ISOs
 
 If this is your first install, the Docker and KVM nodes approach will allow you to play with Digital Rebar with minimal network configuration.
 
