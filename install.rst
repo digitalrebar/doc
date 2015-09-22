@@ -57,8 +57,7 @@ These steps are for **default** configuration.  Advanced configurations can adap
    - db: PostgreSQL on :5432 (e.g.: ``sudo service postgresql stop`` )
    - rails: local web apps on :3000
    - when starting Compose, you will be alerted of port conflicts with `assigned port conflicts <docker-compose-common.yml>`_ .
-- (optional) Create an ssh key [21]_ for Digital Rebar to copy into your nodes.
-- (optional) Enable passwordless sudo [22]_
+- Create an ssh key [21]_ for Digital Rebar to copy into your nodes.
 - (optional) Download at least one ISO [23]_ from the list in `provisioner.yml <https://github.com/digitalrebar/core/blob/develop/barclamps/provisioner.yml#L135>`_ and copy to ``~/.cache/digitalrebar/tftpboot/isos``.  This step is required to provision bare metal or unimaged VMs using ``kvm-slave``.
 - Install git.
 - Clone the RackN Digital Rebar Deploy: ``git clone https://github.com/rackn/digitalrebar-deploy.git deploy``
@@ -77,7 +76,7 @@ After a few minutes, the rebar-api-service will be available on http://127.0.0.1
 
 You can monitor the progress in several ways:
 
-#. Starting Compose without the ``-d`` flag will send logs to the screen.  In this mode, we suggest grepping the contents to eliminate logstash.  [31]_ 
+#. Use ``docker-compose logs rebar_api`` to send logs to the screen.  The command example shows how select one component to watch.
 #. The Digital Rebar Consul service comes up quickly on http://127.0.0.1:8500.  There should be a list of approximately 10 services.  You can login once the "rebar-api-service" is passing.
 #. A Kibana logstash service is running on http://127.0.0.1:5601.  Select a timestamp and then visit the Discover tab.
 #. ``docker-compose ps`` will show you the status of the services and associated port mappings.
@@ -196,7 +195,6 @@ Step 1 Items:
 Step 2 Items:
 
 .. [21] ``ssh-keygen -t rsa``
-.. [22] ``sudo sed -ie "s/%sudo\tALL=(ALL:ALL) ALL/%sudo ALL=(ALL) NOPASSWD:ALL/g" /etc/sudoers``
 .. [23] ISO download steps:
 
         #. ``mkdir -p .cache/digitalrebar/tftpboot/isos``
@@ -209,6 +207,5 @@ Step 2 Items:
 
 Step 3 Items:
 
-.. [31] ``docker-compose up | grep -v logstash``
 .. [32] ``docker-compose stop && docker-compose rm``
 
