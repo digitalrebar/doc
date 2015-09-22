@@ -59,11 +59,12 @@ These steps are for **default** configuration.  Advanced configurations can adap
    - rails: local web apps on :3000
    - when starting Compose, you will be alerted of port conflicts with `assigned port conflicts <docker-compose-common.yml>`_ .
 - Create an ssh key [21]_ for Digital Rebar to copy into your nodes.
-- (optional) Download at least one ISO [23]_ from the list in `provisioner.yml <https://github.com/digitalrebar/core/blob/develop/barclamps/provisioner.yml#L135>`_ and copy to ``~/.cache/digitalrebar/tftpboot/isos``.  This step is required to provision bare metal or unimaged VMs using ``kvm-slave``.
+- (optional) Download at least one ISO [22]_ from the list in `provisioner.yml <https://github.com/digitalrebar/core/blob/develop/barclamps/provisioner.yml#L135>`_ and copy to ``~/.cache/digitalrebar/tftpboot/isos``.  This step is required to provision bare metal or unimaged VMs using ``kvm-slave``.
 - Install git.
 - Clone the RackN Digital Rebar Deploy: ``git clone https://github.com/rackn/digitalrebar-deploy.git deploy``
 - Run ``compose/setup.sh`` to clone the Digital Rebar code base from Github into the ``components/rebar/digitalrebar/core`` directory.
-  - Add workloads to the base by passing them as parameters.  Examples are ``kubernetes``, ``ceph`` and ``hardware``.  This simply clones additional repos next to the core repo.
+   - Copy desired ssh keys into the compose digitalrebar core configuration ssh_keys directory [23]_
+   - Add workloads to the base by passing them as parameters.  Examples are ``kubernetes``, ``ceph`` and ``hardware``.  This simply clones additional repos next to the core repo.
 - (optional) Link the Digital Rebar code path [24]_ from the compose components directory to your home directory.
 
 Step 3. Deploy infrastructure containers
@@ -196,7 +197,7 @@ Step 1 Items:
 Step 2 Items:
 
 .. [21] ``ssh-keygen -t rsa``
-.. [23] ISO download steps:
+.. [22] ISO download steps:
 
         #. ``mkdir -p .cache/digitalrebar/tftpboot/isos``
         #. ``cd .cache/digitalrebar/tftpboot/isos``
@@ -204,6 +205,7 @@ Step 2 Items:
 
            #. ``wget http://mirrors.kernel.org/centos/7.1.1503/isos/x86_64/CentOS-7-x86_64-Minimal-1503-01.iso -nc``
            #. ``wget http://mirrors.kernel.org/ubuntu-releases/trusty/ubuntu-14.04.3-server-amd64.iso -nc``
+.. [23] ``cp ~/.ssh/id_rsa.pub ~/deploy/compose/digitalrebar/core/config/ssh_keys/setup-0.key``
 .. [24] ``-s ~/deploy/compose/components/rebar_api/digitalrebar/ rebar``
 
 Step 3 Items:
