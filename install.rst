@@ -13,8 +13,9 @@ Rather than cover every operating system, we are assuming that you can translate
 *Need help?* Jump over to our `live chat <https://gitter.im/digitalrebar/core>`_  (Gitter.im)
 
 **RECOMMENDATION:** Review the `RackN maintained deploy scripts <https://github.com/rackn/digitalrebar-deploy>`_ for updated step-by-step install examples.
-  * Use `Vagrant <https://www.vagrantup.com/>`_? We've automated all these steps for that too.
-  * Comfortable with `Ansible <http://ansibile.com>`_? Deploy these steps automatically to Ubuntu and Centos.
+  * Use `Vagrant <https://github.com/rackn/digitalrebar-deploy/blob/master/install_vagrant.md>`_? We've automated all these steps for that too.
+  * Comfortable with `Ansible <https://github.com/rackn/digitalrebar-deploy/edit/master/install_ansible.md>`_? Deploy these steps automatically to Ubuntu and Centos.
+  * Don't have hardware?  No problem, we've got a quick install in `Packet.net <https://github.com/rackn/digitalrebar-deploy/blob/master/install_packet.md>`_.
 
 Provisioning from Containers
 ----------------------------
