@@ -205,7 +205,7 @@ Step 2 Items:
 
            #. ``wget http://mirrors.kernel.org/centos/7.1.1503/isos/x86_64/CentOS-7-x86_64-Minimal-1503-01.iso -nc``
            #. ``wget http://mirrors.kernel.org/ubuntu-releases/trusty/ubuntu-14.04.3-server-amd64.iso -nc``
-.. [23] ``cp ~/.ssh/id_rsa.pub ~/deploy/compose/digitalrebar/core/config/ssh_keys/setup-0.key``
+.. [23] ``cp ~/.ssh/id_rsa.pub deploy/compose/digitalrebar/core/config/ssh_keys/setup-0.key``
 .. [24] ``-s ~/deploy/compose/components/rebar_api/digitalrebar/ rebar``
 
 Step 3 Items:
