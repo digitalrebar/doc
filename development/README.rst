@@ -35,6 +35,10 @@ If you have a need for development behavior (classes and views the refresh when 
 
 #. Deploy Digital Rebar in the normal way
 #. ``cp core/rails/config/environments/development.rb core/rails/config/environments/production.rb``
-#.  ``service rebar restart``
-   
+#.  delete the production setting from ``core/rails/config/application.rb`` (this is not be required in future)
+#. ``docker exec -it compose_rebar_api_1 bash``
+#. ``touch /tmp/development.txt``
+#. ``service rebar restart``
+
 You may make any Rails configuration changes desired in the same way.  Since we ignore ``production.rb`` you can leave your own customized version in place.
+
