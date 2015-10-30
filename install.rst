@@ -52,11 +52,8 @@ Step 2. Download Code & Prerequists
 These steps are for **default** configuration.  Advanced configurations can adapt to more complex environments.
 
 - Make sure you have *disabled* the following services locally:
-   - bind: DNS server on :53 (e.g.: ``sudo killall dnsmasq``)
-   - proxy: local proxy on :8123 (e.g.: ``sudo service squid3 stop``) 
-   - ntp: Time server on :123 (e.g.: ``sudo service ntp stop``)
-   - db: PostgreSQL on :5432 (e.g.: ``sudo service postgresql stop`` )
    - rails: local web apps on :3000
+   - consul: UI on :8500
    - when starting Compose, you will be alerted of port conflicts with `assigned port conflicts <docker-compose-common.yml>`_ .
 - Create an ssh key [21]_ for Digital Rebar to copy into your nodes.
 - (optional) Download at least one ISO [22]_ from the list in `provisioner.yml <https://github.com/digitalrebar/core/blob/develop/barclamps/provisioner.yml#L135>`_ and copy to ``~/.cache/digitalrebar/tftpboot/isos``.  This step is required to provision bare metal or unimaged VMs using ``kvm-slave``.
@@ -70,9 +67,9 @@ These steps are for **default** configuration.  Advanced configurations can adap
 Step 3. Deploy infrastructure containers
 ----------------------------------------
 
-FIRST INSTALL? The first install is slow because you have to pull the images, do this interactively using ``docker-compose pull``.  Once the images are local there is minimal network interaction.
-
-From the ``compose`` directory, run ``docker-compose up -d`` to start the process.  If it does not come up the first time, try to reset the environement (steps below),
+#. From the ``compose`` directory, run ``./init_files.sh --access FORWARDER --provisioner``.  This will create the required .yml files for docker-compose.  To see what other options are available for ``init_files.sh``, you can also run ``./init_files.sh --help``.
+#. FIRST INSTALL? The first install is slow because you have to pull the images, do this interactively using ``docker-compose pull``.  Once the images are local there is minimal network interaction.  You should re-pull the containers (and the deploy git repository) on a regular basis to keep up to date with the changes to the containers.
+#. From the ``compose`` directory, run ``docker-compose up -d`` to start the process.  If it does not come up the first time, try to reset the environement (steps below),
 
 After a few minutes, the rebar-api-service will be available on http://127.0.0.1:3000
 
@@ -105,14 +102,6 @@ And now, the real fun begins!
 
 If this is your first install, the Docker and KVM nodes approach will allow you to play with Digital Rebar with minimal network configuration.
 
-Docker Nodes (fast testing)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-From the deploy/compse directory:
-
-#. ``docker-compose scale node=5``
-
-You can turn the number of nodes up and down by changing the number.
 
 KVM Nodes (high fidelity test)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
