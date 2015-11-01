@@ -8,7 +8,7 @@ While it's been completly rebuilt by DevOps artisans, Digital Rebar history incl
 Getting Started
 ---------------
 
-Want to **install Digital Rebar**? Here's the `Install Guide <deployment/install.md>`_
+Want to **install Digital Rebar**? Here's the `Install Guide <deployment/install.rst>`_
 
 Join Our Community
 ------------------

@@ -13,8 +13,8 @@ See ansible group vars:
 
 The following deploy approaches are available:
 
-* [Ansible Playbook(s)](https://github.com/digitalrebar/doc/deployment/install/ansible.md)  <==== STEP-BY-STEP INSTALL
-* [Vagrant Install](https://github.com/digitalrebar/doc/deployment/install/vagrant.md) runs on your local system
+* [Ansible Playbook(s)](https://github.com/digitalrebar/doc/deployment/install/ansible.rst)  <==== STEP-BY-STEP INSTALL
+* [Vagrant Install](https://github.com/digitalrebar/doc/deployment/install/vagrant.rst) runs on your local system
 * [Run In Packet.net](https://github.com/digitalrebar/doc/deployment/run_in_packet.sh) automatically runs on a hosted metal server (account needed)
 
 > Note: All installs use the same Ansible playbooks.
@@ -33,9 +33,9 @@ Rather than cover every operating system, we are assuming that you can translate
 *Need help?* Jump over to our `live chat <https://gitter.im/digitalrebar/core>`_  (Gitter.im)
 
 **RECOMMENDATION:** Review the `RackN maintained deploy scripts <https://github.com/rackn/digitalrebar-deploy>`_ for updated step-by-step install examples.
-  * Use `Vagrant <https://github.com/rackn/digitalrebar-deploy/blob/master/install_vagrant.md>`_? We've automated all these steps for that too.
-  * Comfortable with `Ansible <https://github.com/rackn/digitalrebar-deploy/edit/master/install_ansible.md>`_? Deploy these steps automatically to Ubuntu and Centos.
-  * Don't have hardware?  No problem, we've got a quick install in `Packet.net <https://github.com/rackn/digitalrebar-deploy/blob/master/install_packet.md>`_.
+  * Use `Vagrant <https://github.com/rackn/digitalrebar-deploy/blob/master/install_vagrant.rst>`_? We've automated all these steps for that too.
+  * Comfortable with `Ansible <https://github.com/rackn/digitalrebar-deploy/edit/master/install_ansible.rst>`_? Deploy these steps automatically to Ubuntu and Centos.
+  * Don't have hardware?  No problem, we've got a quick install in `Packet.net <https://github.com/rackn/digitalrebar-deploy/blob/master/install_packet.rst>`_.
 
 Provisioning from Containers
 ----------------------------
