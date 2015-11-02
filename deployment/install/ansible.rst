@@ -9,7 +9,8 @@ The playbook is driven by a set of scripts handle accessing the system be it lin
 Check the `scripts <https://github.com/rackn/digitalrebar-deploy>`_ to see how to run the playbook.  *run-in-xxx.sh*
 
 What's installed?
------------------
+"""""""""""""""""
+
 The following is done by default:
 
   * all prerequisites including latest Docker with correct permissions
@@ -23,15 +24,20 @@ The following is done by default:
 All of these can be altered by the group_vars/all.yml.
 
 Configuration Options
----------------------
+"""""""""""""""""""""
 
 The following options are available to be modified in the `group_vars/all.yml <https://github.com/rackn/digitalrebar-deploy/group_vars/all.yml>`_ file.  The file contains documentation for each var, but additional detail is specified in the table below.
 
-+-------+----------+-----------+---------+
-| *Key* | *Values* | *Default* | *Notes* |
-+=======+==========+===========+=========+
-| jj    | jj       | jj        | jj      |
-+-------+----------+-----------+---------+
++---------------+----------+-----------+---------+
+| *Key*         | *Values* | *Default* | *Notes* |
++---------------+----------+-----------+---------+
+| dr_services   |          |           |         |
+|               |          | jj        | jj      |
++---------------+----------+-----------+---------+
+| dr_workload   | jj       | jj        |         |
++---------------+----------+-----------+---------+
 
 
+.. code-block:: shell
 
+  <h1>code block example</h1>
