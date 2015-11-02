@@ -2,27 +2,31 @@
 Digital Rebar Install
 *********************
 
+.. contents:: Table Contents
+  :depth: 1
 
 *Approximate install time: 10-30 minutes depending on bandwidth.*  Once cached, reset takes *3-10 minutes* on most systems.
 
-16 Gb of RAM (or better) is recommended.
+**System Requirements** for Admin Container Host
 
-.. contents:: The install steps are:
-  :depth: 1
-
-Rather than cover every operating system, we are assuming that you can translate between Ubuntu to other distributions.
+* 8 Gb of RAM (or better) is recommended.
+* 4 Physical Cores
+* Operating System should be: Mac OSX or Linux
 
 *Need help?* Jump over to our `live chat <https://gitter.im/digitalrebar/core>`_  (Gitter.im)
 
-**RECOMMENDATION:** Review the `RackN maintained deploy scripts <https://github.com/rackn/digitalrebar-deploy>`_ for updated step-by-step install examples.
-  * Use `Vagrant <https://github.com/rackn/digitalrebar-deploy/blob/master/install_vagrant.rst>`_? We've automated all these steps for that too.
-  * Comfortable with `Ansible <https://github.com/rackn/digitalrebar-deploy/edit/master/install_ansible.rst>`_? Deploy these steps automatically to Ubuntu and Centos.
+Jump to Specific Environments
+-----------------------------
+
+  * Already have a Linux system (VM or Physical)?  Use the `SSH <https://github.com/rackn/digitalrebar-deploy/edit/master/install/linux.rst>`_ helper or the `Local <https://github.com/rackn/digitalrebar-deploy/edit/master/install/local_linux.rst>`_ helper.
   * Don't have hardware?  No problem, we've got a quick install in `Packet.net <https://github.com/rackn/digitalrebar-deploy/blob/master/install_packet.rst>`_.
+  * Use `Vagrant <https://github.com/rackn/digitalrebar-deploy/blob/master/install_vagrant.rst>`_? We've automated all these steps for that too. [**In progress**]
+  * Comfortable with `Ansible <https://github.com/rackn/digitalrebar-deploy/edit/master/install/ansible.rst>`_? Deploy these steps automatically to Ubuntu and Centos.  They are the shared basis for the above helper scripts.
+
+**RECOMMENDATION:** Review the `RackN maintained deploy scripts <https://github.com/rackn/digitalrebar-deploy>`_ for updated step-by-step install examples.
 
 Provisioning from Containers
 ----------------------------
-
-The goal for this document is getting a basic Digital Rebar Infastructure running quickly.  For that reason, many options and configuration choices have been omitted in the interest in brevity.
 
 Digital Rebar operates all the infrastructure management functions in Docker containers; consequently, you need to be running in an environment that can run Docker.
 
@@ -220,4 +224,3 @@ The following deploy approaches are available:
 * [Run In Packet.net](https://github.com/digitalrebar/doc/deployment/run_in_packet.sh) automatically runs on a hosted metal server (account needed)
 
 > Note: All installs use the same Ansible playbooks.
-
