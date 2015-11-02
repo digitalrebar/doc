@@ -1,78 +1,37 @@
-# Using the [Ansible](http://ansible.com) Playbook
+##################################################
+Using the `Ansible <http://ansible.com>`_ Playbook
+##################################################
 
-The following documentation will setup a complete running Digital Rebar system for test purposes.
+The Digital Rebar playbook starts in `digitalrebar.yml <https://github.com/rackn/digitalrebar-deploy/digitalrebar.yml>`_ and uses the `tasks <https://github.com/rackn/digitalrebar-deploy/tasks>`_ and `group vars <https://github.com/rackn/digitalrebar-deploy/group_vars>`_ to drive configuration.
 
-*PRO TIP:* Playbooks can be _localhost_ applied to run local setups!
+The playbook is driven by a set of scripts handle accessing the system be it linux-based (remote or local), Mac OSX, or in a metal provider (Packet).
 
-Running ansible local:
-  * echo "127.0.0.1" > run-in-hosts
-  * ansible-playbook -i run-in-hosts digitalrebar.yml --connection=local
+Check the `scripts <https://github.com/rackn/digitalrebar-deploy>`_ to see how to run the playbook.  *run-in-xxx.sh*
 
-Available playbooks:
-  * [digitalrebar.yml](digitalrebar.yml) generic install based on Docker Compose
-  * Supporting playbooks
-    * [docker.yml](tasks/docker.yml) Installs Docker & Compose
-    * [ubuntu1404-base.yml](tasks/ubuntu1404-base.yml) Ubuntu Pre-reqs
-    * [centos07-base.yml](tasks/centos07-base.yml) Centos Pre-reqs
-    * [packet.yml](packet.yml) Added optimizations for Packet.net
+What's installed?
+-----------------
+The following is done by default:
 
-## Prereqs
-
-You need a target system:
-
-  * with a matching operating system installed (see Available playbooks above)
-  * root user access via your local SSH key
-  * internet connectivity from the system (faster is better)
-  * 4 Gb of RAM (more if you want to run slaves on the system)
-
-On your local workstation:
-
-  * Clone the [Digital Rebar Deploy](https://github.com/rackn/digitalrebar-deploy.git) repo - this one!
-    * Use `compose/setup.sh` to do this automatically
-    * checkout out additional workloads (`compose/setup.sh rackn` will get all)
-  * Ansible installed
-    *  Ubuntu (`sudo apt-get install ansible`)
-    *  Centos (`yum install ansible`)
-      * May have to add epel first (`yum install epel-release`)
-  * IP of the target system in Ansible inventory (`sudo vi /etc/ansible/hosts`)
-    * include `ansible_ssh_user=root` after the IP
-    * If doing localhost, make sure to use the IP of the node and not 127.0.0.1
-
-## Install Process
-
-> There is no need to connect to the remote system via SSH.  All steps are performed from your workstation by Ansible.
-
-From your workstation:
-
-  * run the selected playbook: `ansible-playbook [digitalrebar.yml]`
-    * include `-u root` if you did _not_ specific an ssh user in inventory
-  * watch and wait
-  * visit the Digital Rebar UI: http://[system address]:3000
-
-Note: It will take additional time after the playbook completes before Digital Rebar is available.
-
-### What's installed?
-
-  * all pre-requists including latest Docker with correct permissions
+  * all prerequisites including latest Docker with correct permissions
   * latest Digital Rebar code from develop branch
   * Node target operating systems:
-    * Ubuntu 14.04 and Centos 7 ISO
+     * Ubuntu 14.04 and Centos 7 ISO
   * Default IP maps for Digital Rebar: 
-    * internal address of 192.168.124.10
-    * port mapping of UI (:3000), Consul (:8500) and Chef (:443)
-  * IP mapping of host as 192.168.124.4 (so you can ssh/ping Admin container)
+     * internal address of 192.168.124.11
+     * port mapping of UI (:3000) and Consul (:8500)
 
-## Next Steps
+All of these can be altered by the group_vars/all.yml.
 
-### Spinning up nodes (aka slaves)
+Configuration Options
+---------------------
 
-Once you have the Digital Rebar admin running, you can add nodes into the environment.  At this time, you must _SSH to the system_ to complete these steps.
+The following options are available to be modified in the `group_vars/all.yml <https://github.com/rackn/digitalrebar-deploy/group_vars/all.yml>`_ file.  The file contains documentation for each var, but additional detail is specified in the table below.
 
-*SSH as the `vagrant` user*
++-------+----------+-----------+---------+
+| *Key* | *Values* | *Default* | *Notes* |
++=======+==========+===========+=========+
+| jj    | jj       | jj        | jj      |
++-------+----------+-----------+---------+
 
-From the `~/core` directory
 
-  * Start: `for j in 1 2 3; do tools/kvm-slave & done`
-  * Stop: `for j in 1 2 3; do kill %$j ; done`
 
-See [kvm slaves](https://github.com/digitalrebar/doc/blob/master/development/advanced-install/kvm-slaves.rst) doc
