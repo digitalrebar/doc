@@ -214,13 +214,3 @@ See ansible group vars:
 
 * group_vars/all.yml for values, defaults.
 
-Deploy Paths
-~~~~~~~~~~~~
-
-The following deploy approaches are available:
-
-* [Ansible Playbook(s)](https://github.com/digitalrebar/doc/deployment/install/ansible.rst)  <==== STEP-BY-STEP INSTALL
-* [Vagrant Install](https://github.com/digitalrebar/doc/deployment/install/vagrant.rst) runs on your local system
-* [Run In Packet.net](https://github.com/digitalrebar/doc/deployment/run_in_packet.sh) automatically runs on a hosted metal server (account needed)
-
-> Note: All installs use the same Ansible playbooks.
