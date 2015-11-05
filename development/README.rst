@@ -26,6 +26,8 @@ While we have invested in BDD and system tests to catch core logic
 errors, most changes require performing a deployment to test
 correctness!
 
+> Protip: You can enter the Rails Console from the host, using ``docker exec -it compose_rebar_api_1 /opt/digitalrebar/core/tools/rails-console.sh``.  This works for development and production!
+
 Setting Rails Development Mode
 ------------------------------
 
@@ -34,7 +36,10 @@ Digital Rebar does not use use RAILS_ENV=development in the traditional way beca
 If you have a need for development behavior (classes and views the refresh when code changes) then perform the following steps:
 
 #. Deploy Digital Rebar in the normal way
-#. ``cp core/rails/config/environments/development.rb core/rails/config/environments/production.rb``
-#.  ``service rebar restart``
-   
-You may make any Rails configuration changes desired in the same way.  Since we ignore ``production.rb`` you can leave your own customized version in place.
+#. From the host, create the /tmp/development.txt file and restart
+
+   ```docker exec -it compose_rebar_api_1 touch /tmp/development.txt
+   docker exec -it compose_rebar_api_1 service rebar restart
+   ```
+
+You may make any Rails configuration changes by created your own ``core/rails/config/environments/production.rb`` file.  Since we ignore ``production.rb`` you can leave your own customized version in place.
