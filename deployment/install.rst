@@ -1,25 +1,32 @@
+*********************
 Digital Rebar Install
-=====================
+*********************
+
+.. contents:: Table Contents
+  :depth: 1
 
 *Approximate install time: 10-30 minutes depending on bandwidth.*  Once cached, reset takes *3-10 minutes* on most systems.
 
-16 Gb of RAM (or better) is recommended.
+**System Requirements** for Admin Container Host
 
-.. contents:: The install steps are:
-  :depth: 1
-
-Rather than cover every operating system, we are assuming that you can translate between Ubuntu to other distributions.
+* 8 Gb of RAM (or better) is recommended.
+* 4 Physical Cores
+* Operating System should be: Mac OSX or Linux
 
 *Need help?* Jump over to our `live chat <https://gitter.im/digitalrebar/core>`_  (Gitter.im)
 
+Jump to Specific Environments
+-----------------------------
+
+  * Already have a Linux system (VM or Physical)?  Use the `SSH <https://github.com/rackn/digitalrebar-deploy/edit/master/install/linux.rst>`_ helper or the `Local <https://github.com/rackn/digitalrebar-deploy/edit/master/install/local_linux.rst>`_ helper.
+  * Don't have hardware?  No problem, we've got a quick install in `Packet.net <https://github.com/rackn/digitalrebar-deploy/blob/master/install_packet.rst>`_.
+  * Use `Vagrant <https://github.com/rackn/digitalrebar-deploy/blob/master/install_vagrant.rst>`_? We've automated all these steps for that too. [**In progress**]
+  * Comfortable with `Ansible <https://github.com/rackn/digitalrebar-deploy/edit/master/install/ansible.rst>`_? Deploy these steps automatically to Ubuntu and Centos.  They are the shared basis for the above helper scripts.
+
 **RECOMMENDATION:** Review the `RackN maintained deploy scripts <https://github.com/rackn/digitalrebar-deploy>`_ for updated step-by-step install examples.
-  * Use `Vagrant <https://www.vagrantup.com/>`_? We've automated all these steps for that too.
-  * Comfortable with `Ansible <http://ansibile.com>`_? Deploy these steps automatically to Ubuntu and Centos.
 
 Provisioning from Containers
 ----------------------------
-
-The goal for this document is getting a basic Digital Rebar Infastructure running quickly.  For that reason, many options and configuration choices have been omitted in the interest in brevity.
 
 Digital Rebar operates all the infrastructure management functions in Docker containers; consequently, you need to be running in an environment that can run Docker.
 
@@ -51,33 +58,30 @@ Step 2. Download Code & Prerequists
 These steps are for **default** configuration.  Advanced configurations can adapt to more complex environments.
 
 - Make sure you have *disabled* the following services locally:
-   - bind: DNS server on :53 (e.g.: ``sudo killall dnsmasq``)
-   - proxy: local proxy on :8123 (e.g.: ``sudo service squid3 stop``) 
-   - ntp: Time server on :123 (e.g.: ``sudo service ntp stop``)
-   - db: PostgreSQL on :5432 (e.g.: ``sudo service postgresql stop`` )
    - rails: local web apps on :3000
+   - consul: UI on :8500
    - when starting Compose, you will be alerted of port conflicts with `assigned port conflicts <docker-compose-common.yml>`_ .
-- (optional) Create an ssh key [21]_ for Digital Rebar to copy into your nodes.
-- (optional) Enable passwordless sudo [22]_
-- (optional) Download at least one ISO [23]_ from the list in `provisioner.yml <https://github.com/digitalrebar/core/blob/develop/barclamps/provisioner.yml#L135>`_ and copy to ``~/.cache/digitalrebar/tftpboot/isos``.  This step is required to provision bare metal or unimaged VMs using ``kvm-slave``.
+- Create an ssh key [21]_ for Digital Rebar to copy into your nodes.
+- (optional) Download at least one ISO [22]_ from the list in `provisioner.yml <https://github.com/digitalrebar/core/blob/develop/barclamps/provisioner.yml#L135>`_ and copy to ``~/.cache/digitalrebar/tftpboot/isos``.  This step is required to provision bare metal or unimaged VMs using ``kvm-slave``.
 - Install git.
 - Clone the RackN Digital Rebar Deploy: ``git clone https://github.com/rackn/digitalrebar-deploy.git deploy``
 - Run ``compose/setup.sh`` to clone the Digital Rebar code base from Github into the ``components/rebar/digitalrebar/core`` directory.
-  - Add workloads to the base by passing them as parameters.  Examples are ``kubernetes``, ``ceph`` and ``hardware``.  This simply clones additional repos next to the core repo.
+   - Copy desired ssh keys into the compose digitalrebar core configuration ssh_keys directory [23]_
+   - Add workloads to the base by passing them as parameters.  Examples are ``kubernetes``, ``ceph`` and ``hardware``.  This simply clones additional repos next to the core repo.
 - (optional) Link the Digital Rebar code path [24]_ from the compose components directory to your home directory.
 
 Step 3. Deploy infrastructure containers
 ----------------------------------------
 
-FIRST INSTALL? The first install is slow because you have to pull the images, do this interactively using ``docker-compose pull``.  Once the images are local there is minimal network interaction.
-
-From the ``compose`` directory, run ``docker-compose up -d`` to start the process.  If it does not come up the first time, try to reset the environement (steps below),
+#. From the ``compose`` directory, run ``./init_files.sh --access FORWARDER --provisioner``.  This will create the required .yml files for docker-compose.  To see what other options are available for ``init_files.sh``, you can also run ``./init_files.sh --help``.
+#. FIRST INSTALL? The first install is slow because you have to pull the images, do this interactively using ``docker-compose pull``.  Once the images are local there is minimal network interaction.  You should re-pull the containers (and the deploy git repository) on a regular basis to keep up to date with the changes to the containers.
+#. From the ``compose`` directory, run ``docker-compose up -d`` to start the process.  If it does not come up the first time, try to reset the environement (steps below),
 
 After a few minutes, the rebar-api-service will be available on http://127.0.0.1:3000
 
 You can monitor the progress in several ways:
 
-#. Starting Compose without the ``-d`` flag will send logs to the screen.  In this mode, we suggest grepping the contents to eliminate logstash.  [31]_ 
+#. Use ``docker-compose logs rebar_api`` to send logs to the screen.  The command example shows how select one component to watch.
 #. The Digital Rebar Consul service comes up quickly on http://127.0.0.1:8500.  There should be a list of approximately 10 services.  You can login once the "rebar-api-service" is passing.
 #. A Kibana logstash service is running on http://127.0.0.1:5601.  Select a timestamp and then visit the Discover tab.
 #. ``docker-compose ps`` will show you the status of the services and associated port mappings.
@@ -104,14 +108,6 @@ And now, the real fun begins!
 
 If this is your first install, the Docker and KVM nodes approach will allow you to play with Digital Rebar with minimal network configuration.
 
-Docker Nodes (fast testing)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-From the deploy/compse directory:
-
-#. ``docker-compose scale node=5``
-
-You can turn the number of nodes up and down by changing the number.
 
 KVM Nodes (high fidelity test)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -196,8 +192,7 @@ Step 1 Items:
 Step 2 Items:
 
 .. [21] ``ssh-keygen -t rsa``
-.. [22] ``sudo sed -ie "s/%sudo\tALL=(ALL:ALL) ALL/%sudo ALL=(ALL) NOPASSWD:ALL/g" /etc/sudoers``
-.. [23] ISO download steps:
+.. [22] ISO download steps:
 
         #. ``mkdir -p .cache/digitalrebar/tftpboot/isos``
         #. ``cd .cache/digitalrebar/tftpboot/isos``
@@ -205,10 +200,17 @@ Step 2 Items:
 
            #. ``wget http://mirrors.kernel.org/centos/7.1.1503/isos/x86_64/CentOS-7-x86_64-Minimal-1503-01.iso -nc``
            #. ``wget http://mirrors.kernel.org/ubuntu-releases/trusty/ubuntu-14.04.3-server-amd64.iso -nc``
+.. [23] ``cp ~/.ssh/id_rsa.pub deploy/compose/digitalrebar/core/config/ssh_keys/setup-0.key``
 .. [24] ``-s ~/deploy/compose/components/rebar_api/digitalrebar/ rebar``
 
 Step 3 Items:
 
-.. [31] ``docker-compose up | grep -v logstash``
 .. [32] ``docker-compose stop && docker-compose rm``
+
+Notes to incorporate
+--------------------
+
+See ansible group vars:
+
+* group_vars/all.yml for values, defaults.
 
