@@ -9,9 +9,8 @@ Providers are intended to be used by the Rebar core to handle various aspects of
 Creating a new Provider
 -----------------------
 
-The simplest way to create a new Provider is via the rebar CLI:
+The simplest way to create a new Provider is via the rebar CLI::
 
-.. code:: bash
    victor@m4700:~/src/digitalrebar/deploy/compose (master)
    $ rebar -U rebar -P rebar1 providers create \
        '{"name": "amazon-vl-test",
@@ -34,9 +33,8 @@ interpreted is up to the type of the provider.
 Creating a node using a specific Provider
 -----------------------------------------
 
-To create a node using a specific Provider, pass the provider name as the node variant:
+To create a node using a specific Provider, pass the provider name as the node variant::
 
-.. code:: bash
    victor@m4700:~/src/digitalrebar/deploy/compose (master)
    $ rebar -U rebar -P rebar1 nodes create \
        '{"name": "aws-test-1.neode.net",
