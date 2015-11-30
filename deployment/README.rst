@@ -15,3 +15,5 @@ Install Digital Rebar
 In the open community, we are only supporting the Docker based installation of Digital Rebar.  This approach is more consistent and supportable.
 
 Additional install options may be available in commercial releases.
+
+Ready to start? See `Install <install.rst>_`
