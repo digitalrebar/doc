@@ -18,10 +18,10 @@ Digital Rebar Install
 Jump to Specific Environments
 -----------------------------
 
-  * Already have a Linux system (VM or Physical)?  Use the `SSH <https://github.com/rackn/digitalrebar-deploy/blob/master/install/linux.rst>`_ helper or the `Local <https://github.com/rackn/digitalrebar-deploy/blob/master/install/local_linux.rst>`_ helper.
-  * Don't have hardware?  No problem, we've got a quick install in `Packet.net <https://github.com/rackn/digitalrebar-deploy/blob/master/install_packet.rst>`_.
-  * Use `Vagrant <https://github.com/rackn/digitalrebar-deploy/blob/master/install_vagrant.rst>`_? We've automated all these steps for that too. [**In progress**]
-  * Comfortable with `Ansible <https://github.com/rackn/digitalrebar-deploy/edit/master/install/ansible.rst>`_? Deploy these steps automatically to Ubuntu and Centos.  They are the shared basis for the above helper scripts.
+  * Already have a Linux system (VM or Physical)?  Use the `SSH <install/linux.rst>`_ helper or the `Local <install/local_linux.rst>`_ helper.
+  * Don't have hardware?  No problem, we've got a quick install in `Packet.net <install/packet.rst>`_.
+  * Use `Vagrant <install/vagrant.rst>`_? We've automated all these steps for that too. [**In progress**]
+  * Comfortable with `Ansible <install/ansible.rst>`_? Deploy these steps automatically to Ubuntu and Centos.  They are the shared basis for the above helper scripts.
 
 **RECOMMENDATION:** Review the `RackN maintained deploy scripts <https://github.com/rackn/digitalrebar-deploy>`_ for updated step-by-step install examples.
 
