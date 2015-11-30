@@ -16,4 +16,4 @@ In the open community, we are only supporting the Docker based installation of D
 
 Additional install options may be available in commercial releases.
 
-Ready to start? See `Install <install.rst>_`
+Ready to start? See `Install <install.rst>`
