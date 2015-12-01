@@ -7,9 +7,10 @@ Overview
 Providers encapsulate the methods needed to create, destroy, provision, and manage nodes.
 This abstraction is still being defined, so the documentation is necessarily incomplete.
 
-At a high level, a Provider is an interface to an external system such as Amazon,
-Rackspace, or Packet that is used to create and destroy Rebar nodes on that system.
+At a high level, a Provider is an interface to an external system such as Amazon AWS,
+Rackspace, or Packet.net that is used to create and destroy Digital Rebar nodes on that system.
 A provider must be able to handle the following tasks:
+
 * Node creation
 * Node removal
 * Rebooting a node.
@@ -19,7 +20,7 @@ A provider must be able to handle the following tasks:
 In the future, providers will also handle more detailed node creation tasks, as well as configuring
 and managing networks.
 
-From the Rebar API, you can perform the usual CRUD operations with providers
+From the `Rebar API <../development/api>`_, you can perform the usual CRUD operations with providers
 
 Rebar API Actions
 ~~~~~~~~~~~~~~~~~
@@ -60,7 +61,7 @@ Providers are implemented in 2 parts:
 
 * An external service that contains all the logic required to
   interface with (or implement) the external system.
-* A shim in the Rebar core that talks to the external service.  The
+* A shim in the Digital Rebar core that talks to the external service.  The
   shim must be a subclass of Provider, and provide implementations of
   the 4 basic provider methods
 
@@ -72,31 +73,22 @@ using it -- 1 to initialize the provider itself, and 3 for basic node
 operations.  As the scope of the providers grows, the number and type
 of methods they must implement will grow as well.  The methods are:
 
-
-register\_endpoint
-
-  Register a new Provider.  This must be a private method that will be
+:register\_endpoint: Register a new Provider.  This must be a private method that will be
   called after a new Provider is created via the Provider API.  It
   accepts no parameters.
 
-create\_node
-
-  Create a new node on the provider.  This method will be called as
+:create\_node: Create a new node on the provider.  This method will be called as
   part of the node creation via the Rebar API.  It accepts the node as
   its parameter.
 
-reboot\_node
+:reboot\_node: Reboot the node.  It accepts the node as its parameter.
 
-  Reboot the node.  It accepts the node as its parameter.
-
-delete\_node
-
-  Delete the node from the provider.  It accepts the node as its parameter.
+:delete\_node: Delete the node from the provider.  It accepts the node as its parameter.
 
 In general, the shim that implements these methods should be as small
 as possible, calling out to the external service to do most of the
 work.  These methods should also be non-blocking to the extent
-feasible -- these methods should start doing whaterer is needed and
+feasible -- these methods should start doing whatever is needed and
 return, and the external service should call back into Rebar as
 appropriate once the work is done.
 
