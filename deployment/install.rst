@@ -59,6 +59,7 @@ At this point, you are ready to use the deploy tools to build your node.
 
 What Systems Do I Have to Play With?
 """"""""""""""""""""""""""""""""""""
+pending...
 
 What System Do I Have to Run an Admin Node?
 """""""""""""""""""""""""""""""""""""""""""
