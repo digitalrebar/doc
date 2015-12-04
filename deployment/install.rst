@@ -41,7 +41,9 @@ Questions Questions
 How Do I Get The Code
 """""""""""""""""""""
 
-Like a tall Kamino cloner, you clone it from GitHub.  By following the directory structure below, you are set for development or deployments.
+Like a tall Kamino cloner, you clone it from GitHub.  So, first you need to `apt-get install git` or `yum install git`.
+
+By following the directory structure below, you are set for development or deployments.
 
 ::
 
