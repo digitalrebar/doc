@@ -25,34 +25,45 @@ From the `Rebar API <../development/api>`_, you can perform the usual CRUD opera
 Rebar API Actions
 ~~~~~~~~~~~~~~~~~
 
-=====   ====================   ========================================================
-Verb    URL                    Comments
------   --------------------   --------------------------------------------------------
-GET     api/v2/providers       List all the providers for all the providers
-GET     api/v2/providers/:id   Get information on a specific provider
-POST    api/v2/providers       Create a new provider for a provider.
-DELETE  api/v2/providers/:id   Delete an provider
-PUT     api/v2/providers/:id   Update an provider with new information.
-PATCH   api/v2/providers/:id   Update an provider with new information using JSON Patch
-=====   ====================   ========================================================
++--------+----------------------+----------------------------------------------------------+
+| Verb   | URL                  | Comments                                                 |
++========+======================+==========================================================+
+| GET    | api/v2/providers     | List all the providers for all the providers             |
++--------+----------------------+----------------------------------------------------------+
+| GET    | api/v2/providers/:id | Get information on a specific provider                   |
++--------+----------------------+----------------------------------------------------------+
+| POST   | api/v2/providers     | Create a new provider for a provider.                    |
++--------+----------------------+----------------------------------------------------------+
+| DELETE | api/v2/providers/:id | Delete an provider                                       |
++--------+----------------------+----------------------------------------------------------+
+| PUT    | api/v2/providers/:id | Update an provider with new information.                 |
++--------+----------------------+----------------------------------------------------------+
+| PATCH  | api/v2/providers/:id | Update an provider with new information using JSON Patch |
++--------+----------------------+----------------------------------------------------------+
+
 
 JSON Fields for Providers
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-============    ============  ========     ======================================================
-Attribute       Type          Settable     Note
-------------    ------------  --------     ------------------------------------------------------
-id              Internal Ref  No           Actually an Integer
-name            String        Yes          Unique name for the provider.
-description     String        Yes          Description of the provider.
-type            String        Yes          The class of the provider for this provider.
-auth\_details   JSON          Yes          JSON that describes the authentication and other details
-                                           for this provider.  The actual contents of this field
-                                           can vary depending on type.
-created\_at     String        No           The creation tinestamp for this provider.
-updated\_at     String        No           The last modification timestamp for this provider.
-=============   ============  ========     ======================================================
-
++---------------+--------------+----------+----------------------------------------------------------+
+| Attribute     | Type         | Settable | Note                                                     |
++===============+==============+==========+==========================================================+
+| id            | Internal Ref | No       | Actually an Integer                                      |
++---------------+--------------+----------+----------------------------------------------------------+
+| name          | String       | Yes      | Unique name for the provider.                            |
++---------------+--------------+----------+----------------------------------------------------------+
+| description   | String       | Yes      | Description of the provider.                             |
++---------------+--------------+----------+----------------------------------------------------------+
+| type          | String       | Yes      | The class of the provider for this provider.             |
++---------------+--------------+----------+----------------------------------------------------------+
+| auth\_details | JSON         | Yes      | JSON that describes the authentication and other details |
+|               |              |          |    for this provider.  The actual contents of this field |
+|               |              |          |    can vary depending on type.                           |
++---------------+--------------+----------+----------------------------------------------------------+
+| created\_at   | String       | No           The creation tinestamp for this provider.              |
++---------------+--------------+----------+----------------------------------------------------------+
+| updated\_at   | String       | No           The last modification timestamp for this provider.     |
++---------------+--------------+----------+----------------------------------------------------------+
 
 Implementation
 --------------
