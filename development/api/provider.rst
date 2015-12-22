@@ -25,21 +25,23 @@ From the `Rebar API <../development/api>`_, you can perform the usual CRUD opera
 Rebar API Actions
 ~~~~~~~~~~~~~~~~~
 
-+--------+----------------------+----------------------------------------------------------+
-| Verb   | URL                  | Comments                                                 |
-+========+======================+==========================================================+
-| GET    | api/v2/providers     | List all the providers for all the providers             |
-+--------+----------------------+----------------------------------------------------------+
-| GET    | api/v2/providers/:id | Get information on a specific provider                   |
-+--------+----------------------+----------------------------------------------------------+
-| POST   | api/v2/providers     | Create a new provider for a provider.                    |
-+--------+----------------------+----------------------------------------------------------+
-| DELETE | api/v2/providers/:id | Delete an provider                                       |
-+--------+----------------------+----------------------------------------------------------+
-| PUT    | api/v2/providers/:id | Update an provider with new information.                 |
-+--------+----------------------+----------------------------------------------------------+
-| PATCH  | api/v2/providers/:id | Update an provider with new information using JSON Patch |
-+--------+----------------------+----------------------------------------------------------+
++--------+-------------------------+----------------------------------------------------------+
+| Verb   | URL                     | Comments                                                 |
++========+=========================+==========================================================+
+| GET    | api/v2/providers        | List all the providers for all the providers             |
++--------+-------------------------+----------------------------------------------------------+
+| GET    | api/v2/providers/:id    | Get information on a specific provider                   |
++--------+-------------------------+----------------------------------------------------------+
+| GET    | api/v2/providers/create | Special case, returns no-db stub object for UI editing   |
++--------+-------------------------+----------------------------------------------------------+
+| POST   | api/v2/providers        | Create a new provider for a provider.                    |
++--------+-------------------------+----------------------------------------------------------+
+| DELETE | api/v2/providers/:id    | Delete an provider                                       |
++--------+-------------------------+----------------------------------------------------------+
+| PUT    | api/v2/providers/:id    | Update an provider with new information.                 |
++--------+-------------------------+----------------------------------------------------------+
+| PATCH  | api/v2/providers/:id    | Update an provider with new information using JSON Patch |
++--------+-------------------------+----------------------------------------------------------+
 
 
 JSON Fields for Providers
