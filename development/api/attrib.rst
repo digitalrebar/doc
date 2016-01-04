@@ -70,6 +70,7 @@ Returns:
         "description": "BIOS configured system identifier",
         "id": 1,
         "role_id": null,
+        "node_id": null,
         "schema": null,
         "created_at": "2014-03-03T05:18:01.873Z"
       },
@@ -83,6 +84,7 @@ Returns:
         "description": "System Serial Number",
         "id": 2,
         "role_id": null,
+        "node_id": null,
         "schema": null,
         "created_at": "2014-03-03T05:18:01.899Z"
       },
@@ -120,6 +122,7 @@ Returns
         ],
         "required": true
       },
-      "role_id": null
+      "role_id": null,
+      "node_id": null
     }
 
