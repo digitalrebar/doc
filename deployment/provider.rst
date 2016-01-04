@@ -154,3 +154,26 @@ metal nodes from Packet::
           }
       }
     }'
+
+Testing Provider
+~~~~~~~~~~~~~~~~
+
+The testing provider adds debugging instructions to the Amazon EC2 provider so you can simulate activity without actually creating remote notes.
+
+* Create a new Provider with the following Rebar CLI call::
+    victor@m4700:~/src/digitalrebar/deploy/compose (master)
+    $ rebar -U rebar -P rebar1 providers create \
+       '{"name": "test-vl-test",
+         "type": "AwsProvider",
+         "auth_details": {
+             "aws_access_key_id": "IAM_aws_access_key",
+             "aws_secret_access_key": "IAM_secret_key_for_access_key",
+             "region": "your-preferred-region",
+             "debug": {
+                "host_ip":"[address of a ssh/pingable node]",
+                "boot_delay_time":0,
+                "ssh_delay_time":0
+             }
+          }
+        }'
+
