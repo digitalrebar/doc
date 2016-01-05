@@ -68,9 +68,9 @@ What System Do I Have to Run an Admin Node?
 
 An admin node needs a docker capable system to run in.  This can be a Linux system with docker-engine installed or a MacOS with docker tools installed.  In theory, a windows box could be used with virtual box and the docker tools, but come on.
 
-For a linux system, you will want to look at the *run-in-system.sh* script and its description `here <https://github.com/rackn/digitalrebar-deploy/blob/master/install/linux.rst>`_.  This script can be run against the local system with the --localhost option or a remote system (with ssh access).
+For a linux system, you will want to look at the *run-in-system.sh* script and its description `here <https://github.com/digitalrebar/doc/blob/master/deployment/install/linux.rst>`_.  This script can be run against the local system with the --localhost option or a remote system (with ssh access).
 
-For a Mac system, you will want to look at the *run-in-mac.sh* script and its description `here <https://github.com/rackn/digitalrebar-deploy/blob/master/install/mac.rst>`_.  This script will make sure that tools are installed to run docker in a VirtualBox instance and let you run the developer tools or the deploy tools against it.
+For a Mac system, you will want to look at the *run-in-mac.sh* script and its description `here <https://github.com/digitalrebar/doc/blob/master/deployment/install/mac.rst>`_.  This script will make sure that tools are installed to run docker in a VirtualBox instance and let you run the developer tools or the deploy tools against it.
 
 
 What Access Mode Should I Use?
