@@ -1,7 +1,7 @@
 Run-In-System for Linux System
 ==============================
 
-This is for Lnstall in linux systems that are already out provisioned or to take over an existing Linux system.
+This is for install in linux systems that are already out provisioned or to take over an existing Linux system.  
 
 Follow the ../install.rst steps to checkout the DigitalRebar code and RackN deploy.
 
@@ -19,4 +19,9 @@ Additional Options:
 
 * for a KVM booting dev-test add: --con-provisioner --access=FORWARDER
 * for a Docker test node add: --con-node
+
+Regular Use & Dev Systems
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+These scripts are mainly used for single pass setups where you plan to tear down the system after use.  If you are planning to do regular development or 
 
