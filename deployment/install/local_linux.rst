@@ -1,1 +1,0 @@
-Local linux install doc.
