@@ -43,4 +43,4 @@ This is end with the Digital Rebar admin node fully operational but without any 
   * Use the SSH address, not the internal IP address you used above
   * reminder: accept the self-signed SSL certificate.
 * You can quickly test the system with docker based nodes using ``cd compose && docker-compose scale node=10``
-* You can add nodes with the AWS or Packet provisioner from the "Utilities...Providers" menu.  `Instructions here <../provider.rst>`.
+* You can add nodes with the AWS or Packet provisioner from the "Utilities...Providers" menu.  `Instructions here <../provider.rst>`_.
