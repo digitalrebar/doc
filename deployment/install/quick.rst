@@ -11,7 +11,6 @@ Installation Steps:
 1. AWS Path:
   #. Create AWS t2.medium (or larger) Ubuntu instance with your SSH key.  CRITICAL: You need access to Port 22, 443 and 3000!
   #. Connect to the server: ``ssh ubuntu@[ip address]``
-  #. Become root: ``sudo -i``
   #. Figure out the system's CIDR address: ``ip a | grep -A 1 eth0``
 
 2. Packet or B-Y-O-Server Path:
