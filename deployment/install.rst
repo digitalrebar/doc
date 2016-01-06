@@ -62,7 +62,7 @@ The ``run-in-[packet|system].sh [options] `` scripts will quickly build a workin
 Before you start, you MUST identify one or more infrastructure providers.  These allow you to manage and provision nodes.
 
 Flags:
-* --provisioner (aka metal)
+* --con-provisioner (aka metal)
 * --con-aws (Amazon provider)
 * --con-packet (Packet.net provider)
 * --con-gce (Google cloud provider)
