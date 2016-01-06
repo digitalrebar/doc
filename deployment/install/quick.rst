@@ -3,10 +3,13 @@ Digital Rebar Quick Start
 
 For this quick start, we assume you'll ssh to the install server.  The goal is a temporary playground, not a long term install.  It is possible to install remote and fully automated, but we are keeping it very simple in this guide
 
-Install Steps:
+Once you have the server, it should take about 10 minutes in AWS or Packet.net.
+
+Installation Steps:
+-------------------
 
 1. AWS Path:
-  #. Create AWS t2.medium (or larger) Ubuntu instance with your SSH key
+  #. Create AWS t2.medium (or larger) Ubuntu instance with your SSH key.  CRITICAL: You need access to Port 22, 443 and 3000!
   #. Connect to the server: ``ssh ubuntu@[ip address]``
   #. Become root: ``sudo -i``
   #. Figure out the system's CIDR address: ``ip a | grep -A 1 eth0``
@@ -35,9 +38,12 @@ Install Steps:
 
 6. Install to local system: ``./run-in-system.sh --deploy-admin=local --con-node --access=HOST --admin-ip=$IPA``
 
-This is end with the Digital Rebar admin node fully operational but without any nodes.  
+This script ends with the Digital Rebar admin node fully operational but without any nodes.  
 
-* From your client, you can log on to the system using ``http://[external ip address]:3000``.  Remniders: 
+Let's Add Nodes!
+----------------
+
+* From your client, you can log on to the system using ``http://[external ip address]:3000``.  Reminders: 
 
   * Use the SSH address, not the internal IP address you used above
   * reminder: accept the self-signed SSL certificate.
