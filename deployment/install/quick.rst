@@ -6,14 +6,12 @@ For this quick start, we assume you'll ssh to the install server.  The goal is a
 Install Steps:
 
 1. AWS Path:
-
   #. Create AWS t2.medium (or larger) Ubuntu instance with your SSH key
   #. Connect to the server: ``ssh ubuntu@[ip address]``
   #. Become root: ``sudo -i``
   #. Figure out the system's CIDR address: ``ip a | grep -A 1 eth0``
 
 2. Packet or B-Y-O-Server Path:
-
   #. Create Packet Type 1 Ubuntu Server with your SSH key
   #. Connect to the server: ``ssh root@[ip address]``
   #. Figure out the system's CIDR address: ``ip a | grep -A 1 bond0``
@@ -39,7 +37,8 @@ Install Steps:
 
 This is end with the Digital Rebar admin node fully operational but without any nodes.  
 
-* From your client, you can log on to the system using ``http://[external ip address]:3000`` 
+* From your client, you can log on to the system using ``http://[external ip address]:3000``.  Remniders: 
+
   * Use the SSH address, not the internal IP address you used above
   * reminder: accept the self-signed SSL certificate.
 * You can quickly test the system with docker based nodes using ``cd compose && docker-compose scale node=10``
