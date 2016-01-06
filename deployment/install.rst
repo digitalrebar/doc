@@ -18,6 +18,7 @@ Digital Rebar Install
 Jump to Specific Environments
 -----------------------------
 
+  * `TL;DR Quick Start <install/quick.rst>`_ if you've got easy access to a Ubuntu system (AWS is perfect).
   * Already have a Linux system (VM or Physical)?  Use the `SSH <install/linux.rst>`_ helper to setup your system.  This works for local or remote installs.
   * Don't have hardware?  No problem, we've got a quick install in `Packet.net <install/packet.rst>`_ that includes provisioning.
   * Use `Vagrant <install/vagrant.rst>`_? We've automated all these steps for that too. [**In progress**]
