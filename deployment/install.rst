@@ -5,7 +5,7 @@ Digital Rebar Install
 .. contents:: Table Contents
   :depth: 2
 
-*Approximate install time: 10-30 minutes depending on bandwidth.*  Once cached, reset takes *3-10 minutes* on most systems.
+*Approximate install time: 10-30 minutes depending on bandwidth.*  Once cached, reset takes *3-10 minutes* on most systems.  For the easiest install experience, we recommend trying a cloud based install.
 
 **System Requirements** for Admin Container Host
 
@@ -18,8 +18,8 @@ Digital Rebar Install
 Jump to Specific Environments
 -----------------------------
 
-  * Already have a Linux system (VM or Physical)?  Use the `SSH <install/linux.rst>`_ helper or the `Local <install/local_linux.rst>`_ helper.
-  * Don't have hardware?  No problem, we've got a quick install in `Packet.net <install/packet.rst>`_.
+  * Already have a Linux system (VM or Physical)?  Use the `SSH <install/linux.rst>`_ helper to setup your system.  This works for local or remote installs.
+  * Don't have hardware?  No problem, we've got a quick install in `Packet.net <install/packet.rst>`_ that includes provisioning.
   * Use `Vagrant <install/vagrant.rst>`_? We've automated all these steps for that too. [**In progress**]
   * Comfortable with `Ansible <install/ansible.rst>`_? Deploy these steps automatically to Ubuntu and Centos.  They are the shared basis for the above helper scripts.
 
@@ -28,20 +28,12 @@ Jump to Specific Environments
 Provisioning from Containers
 ----------------------------
 
-Digital Rebar operates all the infrastructure management functions in Docker containers; consequently, you need to be running in an environment that can run Docker.
+Digital Rebar operates all the infrastructure management functions in Docker containers; consequently, you need to be running in an environment that can run Docker (this includes Macs).
 
 General Installation
 --------------------
 
-To get a running Digital Rebar system, you need to answer a couple of questions first.  This questions will inform you to which installation setup to use and the options to pass or set.
-
-Questions Questions
-~~~~~~~~~~~~~~~~~~~
-
-How Do I Get The Code
-"""""""""""""""""""""
-
-Like a tall Kamino cloner, you clone it from GitHub.  So, first you need to `apt-get install git` or `yum install git`.
+First you need to `apt-get install git` or `yum install git`.
 
 By following the directory structure below, you are set for development or deployments.
 
@@ -54,14 +46,28 @@ By following the directory structure below, you are set for development or deplo
   cd deploy/compose
   ln -s ../../../digitalrebar digitalrebar
   cd ..
+  echo "Checking prerequisites"
+  ./run-in-system.sh --help
+  echo "let's setup Digital Rebar!"
   
 In human words, change to your home directory, make a digitalrebar directory.  Change into the newly created directory and clone the digitalrebar-deploy tree from RackN as deploy.  Once that clone is complete, create a symbolic link from the compose directory to the Digital Rebar top-level directory.
 
-At this point, you are ready to use the deploy tools to build your node.
+At this point, you are ready to use the deploy tools to build your node
 
-What Systems Do I Have to Play With?
-""""""""""""""""""""""""""""""""""""
-pending...
+Providers: What Systems Do I Have to Play With?
+"""""""""""""""""""""""""""""""""""""""""""""""
+
+The ``run-in-[packet|system].sh [options] `` scripts will quickly build a working Digital Rebar administrate system.  There are advanced workload scripts that will setup Digital Rebar AND provision a workload.
+
+Before you start, you MUST identify one or more infrastructure providers.  These allow you to manage and provision nodes.
+
+Flags:
+* --provisioner (aka metal)
+* --con-aws (Amazon provider)
+* --con-packet (Packet.net provider)
+* --con-gce (Google cloud provider)
+
+The provisioner is able to handle PXE boot discovery of metal, KVM and Vagrant nodes.  The cloud providers require that you have an account with the provider.  For first users, we recommend AWS or Packet.
 
 What System Do I Have to Run an Admin Node?
 """""""""""""""""""""""""""""""""""""""""""
