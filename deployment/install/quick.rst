@@ -35,7 +35,9 @@ Installation Steps:
       ./run-in-system.sh --help
       echo "let's setup Digital Rebar!"
 
-6. Install to local system: ``./run-in-system.sh --deploy-admin=local --con-node --access=HOST --admin-ip=$IPA``
+6. Install to local system: ``./run-in-system.sh --deploy-admin=local --con-node --access=HOST --wl-kubernetes --admin-ip=$IPA``
+
+Add or Replace ``--wl-kubernetes`` with other ``--wl-[workload]`` (see list from --help) if you'd like to play with other choices.
 
 This script ends with the Digital Rebar admin node fully operational but without any nodes.  
 
