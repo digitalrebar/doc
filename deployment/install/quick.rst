@@ -49,4 +49,12 @@ Let's Add Nodes!
   * Use the SSH address, not the internal IP address you used above
   * reminder: accept the self-signed SSL certificate.
 * You can quickly test the system with docker based nodes using ``cd compose && docker-compose scale node=10``
-* You can add nodes with the AWS or Packet provisioner from the "Utilities...Providers" menu.  `Instructions here <../provider.rst>`_.
+* You can add nodes with the AWS or Packet provisioner from the "Utilities...Providers" menu:
+  * Add a provider using your AWS or Packet.net API Credentials
+  * Add nodes from format at the top of the Nodes page.  The API has additional options.
+  * Detailed `Instructions here <../provider.rst>`_.
+* Select nodes for Kubernetes using the "Deployments...Kubernetes Wizard"
+* "Commit" the Deployment created by the Kubernetes Wizard.
+* Watch Digital Rebar build your cluster!
+
+Remember to delete your nodes from the Nodes page before you take the system down!  There is no automatic cleanup.
