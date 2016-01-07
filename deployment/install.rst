@@ -2,6 +2,8 @@
 Digital Rebar Install
 *********************
 
+`TL;DR Quick Start <install/quick.rst>`_ if you've got easy access to a Ubuntu system (AWS is perfect).
+
 .. contents:: Table Contents
   :depth: 2
 
