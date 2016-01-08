@@ -18,7 +18,7 @@ Installation Steps:
   #. Connect to the server: ``ssh root@[ip address]``
   #. Figure out the system's CIDR address: ``ip a | grep -A 1 bond0``
 
-3. Save your system IP address: ``export IPA=[CIDR]``
+3. Save your system IP address: ``export IPA=[CIDR]`` (`CIDR <https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing>`_ is the IP address with the /## subnet included)
 #. Install Git: ``sudo apt-get install git ansible jq -y``  (may be apt-get install git)
 #. Get the deployment code and test for pre-reqs
     
