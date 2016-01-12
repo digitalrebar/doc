@@ -25,7 +25,6 @@ Installation Steps:
       cd ~
       mkdir digitalrebar
       git clone https://github.com/rackn/digitalrebar-deploy digitalrebar/deploy
-      cd digitalrebar/deploy/compose
       ln -s digitalrebar/ digitalrebar/deploy/compose/digitalrebar
       cd digitalrebar/deploy
       echo "Checking prerequisites"
