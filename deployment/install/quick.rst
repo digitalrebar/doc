@@ -11,14 +11,12 @@ Installation Steps:
 1. AWS Path:
   #. Create AWS t2.medium (or larger) Ubuntu instance with your SSH key.  CRITICAL: You need access to Port 22, 443 and 3000!
   #. Connect to the server: ``ssh ubuntu@[ip address]``
-  #. Figure out the system's CIDR address: ``ip a | grep -A 1 eth0``
 
 2. Packet or B-Y-O-Server Path:
   #. Create Packet Type 1 Ubuntu Server with your SSH key
   #. Connect to the server: ``ssh root@[ip address]``
-  #. Figure out the system's CIDR address: ``ip a | grep -A 1 bond0``
 
-3. Save your system IP address: ``export IPA=[CIDR]`` (`CIDR <https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing>`_ is the IP address with the /## subnet included)
+3. Save your system EXTERNAL IP address: ``export IPA=[CIDR]`` (`CIDR <https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing>`_ is the IP address with the /## subnet included)
 #. Install Git: ``sudo apt-get install git ansible jq -y``  (may be apt-get install git)
 #. Get the deployment code and test for pre-reqs
     
@@ -28,8 +26,8 @@ Installation Steps:
       mkdir digitalrebar
       git clone https://github.com/rackn/digitalrebar-deploy digitalrebar/deploy
       cd digitalrebar/deploy/compose
-      ln -s ../../../digitalrebar digitalrebar
-      cd ..
+      ln -s digitalrebar/ digitalrebar/deploy/compose/digitalrebar
+      cd digitalrebar/deploy
       echo "Checking prerequisites"
       ./run-in-system.sh --help
       echo "let's setup Digital Rebar!"
