@@ -26,16 +26,15 @@ Installation Steps:
     
       cd ~
       mkdir digitalrebar
-      cd digitalrebar
-      git clone https://github.com/rackn/digitalrebar-deploy deploy
-      cd deploy/compose
+      git clone https://github.com/rackn/digitalrebar-deploy digitalrebar/deploy
+      cd digitalrebar/deploy/compose
       ln -s ../../../digitalrebar digitalrebar
       cd ..
       echo "Checking prerequisites"
       ./run-in-system.sh --help
       echo "let's setup Digital Rebar!"
 
-6. Install to local system: ``./run-in-system.sh --deploy-admin=local --con-node --access=HOST --wl-kubernetes --admin-ip=$IPA``
+6. Install to local system: ``./run-in-system.sh --deploy-admin=local --access=HOST --wl-kubernetes --admin-ip=$IPA``
 
 Add or Replace ``--wl-kubernetes`` with other ``--wl-[workload]`` (see list from --help) if you'd like to play with other choices.
 
