@@ -40,16 +40,16 @@ This script ends with the Digital Rebar admin node fully operational but without
 Let's Add Nodes!
 ----------------
 
-* From your client, you can log on to the system using ``http://[external ip address]:3000``.  Reminders: 
+* From your client, you can log on to the system using ``https://[external ip address]:3000``.  Reminders: 
 
-  * Use the SSH address, not the internal IP address you used above
-  * reminder: accept the self-signed SSL certificate.
-* You can quickly test the system with docker based nodes using ``cd compose && docker-compose scale node=10``
-* You can add nodes with the AWS or Packet provisioner from the "Utilities...Providers" menu:
-  * Add a provider using your AWS or Packet.net API Credentials
+  * Use External IP (same as the SSH address) with port 3000
+  * It's HTTPS, so you must accept the self-signed SSL certificate.
+* You can add nodes with the AWS or Packet provisioner from the "Nodes...Providers" menu:
+  * Add a provider using your AWS, GCE or Packet.net API Credentials
   * Add nodes from format at the top of the Nodes page.  The API has additional options.
   * Detailed `Instructions here <../provider.rst>`_.
 * Select nodes for Kubernetes using the "Deployments...Kubernetes Wizard"
+  * You need 3 or more nodes to build a real cluster
 * "Commit" the Deployment created by the Kubernetes Wizard.
 * Watch Digital Rebar build your cluster!
 
