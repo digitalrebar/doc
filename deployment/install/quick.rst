@@ -31,9 +31,9 @@ Installation Steps:
       ./run-in-system.sh --help
       echo "let's setup Digital Rebar!"
 
-6. Install to local system: ``./run-in-system.sh --deploy-admin=local --access=HOST --wl-kubernetes --admin-ip=$IPA``
+6. Install to local system: ``./run-in-system.sh --deploy-admin=local --access=HOST --wl-docker-swarm --admin-ip=$IPA``
 
-Add or Replace ``--wl-kubernetes`` with other ``--wl-[workload]`` (see list from --help) if you'd like to play with other choices.
+Add or Replace ``--wl-docker-swarm`` with other ``--wl-[workload]`` such as ``--wl-kubernetes`` (see list from --help) if you'd like to play with other choices.
 
 This script ends with the Digital Rebar admin node fully operational but without any nodes.  
 
@@ -48,9 +48,9 @@ Let's Add Nodes!
   * Add a provider using your AWS, GCE or Packet.net API Credentials
   * Add nodes from format at the top of the Nodes page.  The API has additional options.
   * Detailed `Instructions here <../provider.rst>`_.
-* Select nodes for Kubernetes using the "Deployments...Kubernetes Wizard"
+* Select nodes for Kubernetes using the "Deployments...Docker Swarm Wizard"
   * You need 3 or more nodes to build a real cluster
-* "Commit" the Deployment created by the Kubernetes Wizard.
+* "Commit" the Deployment created by the Docker Swarm Wizard.
 * Watch Digital Rebar build your cluster!
 
 Remember to delete your nodes from the Nodes page before you take the system down!  There is no automatic cleanup.
