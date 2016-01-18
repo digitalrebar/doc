@@ -40,6 +40,8 @@ Add ``--wl-kubernetes`` or  other ``--wl-[workload]`` (see list from --help) if 
 
 This script ends with the Digital Rebar admin node fully operational but without any nodes.  You need to login to the Digital Rebar UI (default user/pass is ``rebar/rebar1``) for the next step.
 
+Troubleshooting Tip:  You can see exactly what's going on using "Monitor...Annealer."  If there is an error, that view provides a ``Retry`` button that often resolves simple timing issues.
+
 Let's Add Nodes!
 ----------------
 
