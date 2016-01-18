@@ -1,7 +1,7 @@
 Digital Rebar Quick Start
 =========================
 
-For this quick start, we assume you'll ssh to the install server.  The goal is a temporary playground, not a long term install.  It is possible to install different operating system by remote and fully automated, but we are keeping it very simple in this guide
+For this quick start, we assume you'll ssh to the install server.  The goal is a temporary playground, not a long term install.  It is possible to install different operating systems and work by remote or fully automated, but we are keeping it very simple in this guide.  We are using Docker Swarm as a reference app.
 
 Once you have the server, it should take about 10 minutes in AWS or Packet.net.
 
@@ -18,7 +18,7 @@ Installation Steps:
   #. Connect to the server: ``ssh root@[ip address]``
 
 3. Save your system EXTERNAL IP address: ``export IPA=[CIDR]`` (`CIDR <https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing>`_ is the IP address with the /## subnet included)
-#. Install Git: ``sudo apt-get install git ansible jq -y``  (may be apt-get install git)
+#. Install Prereqs: ``sudo apt-get install git ansible jq -y``
 #. Get the deployment code and test for pre-reqs
     
     ::
@@ -34,28 +34,34 @@ Installation Steps:
 
 6. Install to local system: ``./run-in-system.sh --deploy-admin=local --access=HOST --wl-docker-swarm --admin-ip=$IPA``
 
-Add or Replace ``--wl-docker-swarm`` with other ``--wl-[workload]`` such as ``--wl-kubernetes`` (see list from --help) if you'd like to play with other choices.
+Add ``--wl-kubernetes`` or  other ``--wl-[workload]`` (see list from --help) if you'd like to play with other choices later.
 
-This script ends with the Digital Rebar admin node fully operational but without any nodes.  
+This script ends with the Digital Rebar admin node fully operational but without any nodes.  You need to login to the Digital Rebar UI (default user/pass is ``rebar/rebar1``) for the next step.
 
-Let's Add Node
---------------
+Let's Add Nodes!
+----------------
+
+To keep it simple, we're using cloud servers, not local vms or physical servers.  These are supported in a more complex setup.
 
 * From your client, you can log on to the system using ``https://[external ip address]:3000``.  Reminders: 
 
   * Use External IP (same as the SSH address) with port 3000
-https://github.com/digitalrebar/doc/compare/50eae4d0615d1884a1624a41142d42441163ded0...4360effdaeee34348d1198f4078eb8b07821aad4  * It's HTTPS, so you must accept the self-signed SSL certificate.
+  * It's HTTPS, so you must accept the self-signed SSL certificate.
 * You can add nodes with the AWS or Packet provisioner from the "Nodes...Providers" menu:
+
   * Add a provider using your AWS, GCE or Packet.net API Credentials
   * Add nodes from format at the top of the Nodes page.  The API has additional options.
   * Detailed `Instructions here <../provider.rst>`_.
 
 Remember to delete your nodes from the Nodes page before you take the system down!  There is no automatic cleanup.
 
-Build a Cluster
----------------
+Build a Docker Swarm Cluster
+---------------------------
 
-* Select nodes for Kubernetes using the "Deployments...Docker Swarm Wizard"
-  * You need 3 or more nodes to build a real cluster
+* Select 2+ nodes for Docker Swarm using the "Deployments...Docker Swarm Wizard":
+  
+  * Select one node as ``docker-swarm-manager`` using the checkboxes
+  * Select different node(s) as ``docker-swarm-member`` using the checkboxes
 * "Commit" the Deployment created by the Docker Swarm Wizard.
 * Watch Digital Rebar build your cluster!
+* Test using ``docker -H tcp://[ip of manager]:2475 info`` when it's done
