@@ -1,7 +1,7 @@
 Digital Rebar Quick Start
 =========================
 
-For this quick start, we assume you'll ssh to the install server.  The goal is a temporary playground, not a long term install.  It is possible to install different operating systems and work by remote or fully automated, but we are keeping it very simple in this guide.  We are using Docker Swarm as a reference app.
+For this quick start, we assume you'll ssh to the install server.  The goal is a temporary playground, not a long term install.  It is possible to install different operating systems and work by remote or fully automated, but we are keeping it very simple in this guide.
 
 Once you have the server, it should take about 10 minutes in AWS or Packet.net.
 
@@ -59,6 +59,8 @@ Remember to delete your nodes from the Nodes page before you take the system dow
 
 Build a Docker Swarm Cluster
 ---------------------------
+
+We are using a very basic Docker Swarm as a reference app for this quick install.
 
 #. Select 2+ nodes for Docker Swarm using the "Deployments...Docker Swarm Wizard":
   
