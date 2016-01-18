@@ -9,7 +9,7 @@ Installation Steps:
 -------------------
 
 1. AWS Path:
-  #. Create AWS t2.medium (or larger) Ubuntu instance with your SSH key.  CRITICAL: You need access to Port 22, 443 and 3000!  (while Centos 7 also works but we're keeping this install single O/S simple).
+  #. Create AWS t2.medium (or larger) Ubuntu instance with your SSH key.  CRITICAL: You need access to Port 22, 443 and 3000!  (Centos 7 also works but we're keeping this install single O/S simple).
   #. Connect to the server: ``ssh ubuntu@[ip address]``
 
 2. Packet or B-Y-O-Server Path:
