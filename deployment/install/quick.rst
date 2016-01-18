@@ -38,23 +38,24 @@ Add or Replace ``--wl-docker-swarm`` with other ``--wl-[workload]`` such as ``--
 
 This script ends with the Digital Rebar admin node fully operational but without any nodes.  
 
-Let's Add Nodes!
-----------------
+Let's Add Node
+--------------
 
 * From your client, you can log on to the system using ``https://[external ip address]:3000``.  Reminders: 
 
   * Use External IP (same as the SSH address) with port 3000
-  * It's HTTPS, so you must accept the self-signed SSL certificate.
+https://github.com/digitalrebar/doc/compare/50eae4d0615d1884a1624a41142d42441163ded0...4360effdaeee34348d1198f4078eb8b07821aad4  * It's HTTPS, so you must accept the self-signed SSL certificate.
 * You can add nodes with the AWS or Packet provisioner from the "Nodes...Providers" menu:
-  * Add a provider using your AWS Credentials (GCE or Packet.net should work too)
-  * Add two or more nodes from format at the top of the Nodes page.  The API has additional options.
+  * Add a provider using your AWS, GCE or Packet.net API Credentials
+  * Add nodes from format at the top of the Nodes page.  The API has additional options.
   * Detailed `Instructions here <../provider.rst>`_.
-* Build a Docker Swarm Cluster using the "Deployments...Docker Swarm Wizard"
-  * You need 2 or more nodes to build a real cluster
-  * Select node-0 as the "docker-swarm-manager"
-  * Select one or more _different_ nodes for "docker-swarm-member"
-  * "Create" the deployment
-* "Commit" the "docker_swarm" Deployment created by the Docker Swarm Wizard.
-* Watch Digital Rebar build your cluster!
 
 Remember to delete your nodes from the Nodes page before you take the system down!  There is no automatic cleanup.
+
+Build a Cluster
+---------------
+
+* Select nodes for Kubernetes using the "Deployments...Docker Swarm Wizard"
+  * You need 3 or more nodes to build a real cluster
+* "Commit" the Deployment created by the Docker Swarm Wizard.
+* Watch Digital Rebar build your cluster!
