@@ -51,10 +51,10 @@ To keep it simple, we're using cloud servers, not local vms or physical servers.
    #. It's HTTPS, so you must accept the self-signed SSL certificate.
 #. Add a AWS Provider from the "Nodes...Providers" menu:
 
-   #. Add a provider using your AWS Credentials
+   #. Add a provider using your AWS Credentials.
    #. optionally, you can also add GCE and Packet.net API Credentials
-
 #. Add 2+ nodes from the "Nodes" menu:
+
    #. Add nodes from form at the top of the Nodes page.  The API has additional options.
    #. Detailed `Instructions here <../provider.rst>`_.
 
