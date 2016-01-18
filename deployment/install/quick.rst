@@ -69,6 +69,7 @@ We are using a very basic Docker Swarm as a reference app for this quick install
   
    #. Select one node as ``docker-swarm-manager`` using the checkboxes
    #. Select different node(s) as ``docker-swarm-member`` using the checkboxes
-#. "Commit" the Deployment created by the Docker Swarm Wizard.
+   #. "Create" the proposal for the cluster from the Wizard
+#. "Commit" the porposal created by the Docker Swarm Wizard (Deployments...Docker Swarm page)
 #. Watch Digital Rebar build your cluster!
 #. Test using ``docker -H tcp://[ip of manager]:2475 info`` when it's done
