@@ -11,12 +11,13 @@ Installation Steps:
 #. AWS Path:
 
    #. Create AWS t2.medium (or larger) Ubuntu instance with your SSH key.  
-   #. Security Group access needs Port 22, 443, 3000, 4646 and ICMP!  This is the minimum, depending on your application, you'll need additional ports open.
+   #. Security Group access needs Port 22, 443, 3000 (rebar), 4646 (chef), 8301 (consul) and ICMP!  This our recommended base, depending on your application, you'll need additional ports open or may be able to Chef and Consul.
    #. Connect to the server: ``ssh ubuntu@[ip address]``
 
 #. Packet or B-Y-O-Server Path:
 
    #. Create Packet Type 1 Ubuntu Server with your SSH key
+   #. Make sure your policy gives access to ports 22, 443, 3000, 4646, 8301 and ICMP.
    #. Connect to the server: ``ssh root@[ip address]``
 
 #. Save your system EXTERNAL IP address: ``export IPA=[CIDR]`` (`CIDR <https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing>`_ is the IP address with the /## subnet included)
