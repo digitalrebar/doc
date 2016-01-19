@@ -10,7 +10,7 @@ Installation Steps:
 
 #. AWS Path:
 
-   #. Create AWS t2.medium (or larger) Ubuntu instance with your SSH key.  
+   #. Create AWS m4.large (or larger) Ubuntu instance with your SSH key.  
    #. Security Group access needs Port 22, 443, 3000 (rebar), 2475 (docker), 4646 (chef), 8301 (consul) and ICMP!  This our recommended base, depending on your application, you'll need additional ports open or may be able to omit Docker, Chef and Consul.
    #. Connect to the server: ``ssh ubuntu@[ip address]``
 
