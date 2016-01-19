@@ -6,6 +6,11 @@ Overview
 
 Providers are intended to be used by the Rebar core to handle various aspects of node management.  For now, they just let Rebar create and manage nodes on external providers (such as AWS, Rackspace, and Packet).  In the future, though, their scope will be expanded to handle all aspects of node provisioning and network management.
 
+Saving Config in dr_info
+------------------------
+
+For regular uses, you can store your provider credentials in the ``~/.dr_info`` file ( `details here <./dr_info.rst>`_ )
+
 Supported Providers
 -------------------
 
