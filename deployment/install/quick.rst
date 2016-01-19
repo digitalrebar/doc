@@ -5,8 +5,8 @@ For this quick start, we assume you'll ssh to the install server.  The goal is a
 
 Once you have the server, it should take about 20 minutes in AWS or Packet.net to complete all steps.
 
-Installation Steps:
--------------------
+Base Installation (10 mins)
+---------------------------
 
 #. AWS Path:
 
@@ -60,11 +60,12 @@ To keep it simple, we're using cloud servers, not local vms or physical servers.
 
    #. Add nodes from form at the top of the Nodes page.  The API has additional options.
    #. Detailed `Instructions here <../provider.rst>`_.
+# Allow the system to complete annealing (progress in top right corner)
 
 Remember to delete your nodes from the Nodes page before you take the system down!  There is no automatic cleanup.
 
 Build a Docker Swarm Cluster
----------------------------
+----------------------------
 
 We are using a very basic Docker Swarm as a reference app for this quick install.
 
