@@ -1,7 +1,7 @@
 Digital Rebar Quick Start
 =========================
 
-This TL;DR only! See `Full Install <../install.rst>` page for more options.
+This TL;DR only! See `Full Install <../install.rst>`_ page for more options.
 
 For this quick start, we assume you'll ssh to the install server.  The goal is a temporary playground, not a long term install.  It is possible to install different operating systems and work by remote or fully automated, but we are keeping it very simple in this guide.
 
