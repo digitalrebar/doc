@@ -60,17 +60,9 @@ At this point, you are ready to use the deploy tools to build your node
 Providers: What Systems Do I Have to Play With?
 """""""""""""""""""""""""""""""""""""""""""""""
 
-The ``run-in-[packet|system].sh [options] `` scripts will quickly build a working Digital Rebar administrate system.  There are advanced workload scripts that will setup Digital Rebar AND provision a workload.
+The ``run-in-[packet|system].sh [options] `` or ``workloads\[docker-swarm|kubernetes]`` scripts will quickly build a working Digital Rebar administrate system.  There are advanced workload scripts that will setup Digital Rebar AND provision a workload.
 
-Before you start, you MUST identify one or more infrastructure providers.  These allow you to manage and provision nodes.
-
-Flags:
-* --con-provisioner (aka metal)
-* --con-aws (Amazon provider)
-* --con-packet (Packet.net provider)
-* --con-gce (Google cloud provider)
-
-The provisioner is able to handle PXE boot discovery of metal, KVM and Vagrant nodes.  The cloud providers require that you have an account with the provider.  For first users, we recommend AWS or Packet.
+The provisioner (include with ``--provisioner``) is able to handle PXE boot discovery of metal and KVM.  The cloud providers require that you have an account with the provider.  For first users, we recommend AWS, Google or Packet.
 
 What System Do I Have to Run an Admin Node?
 """""""""""""""""""""""""""""""""""""""""""
@@ -81,6 +73,7 @@ For a linux system, you will want to look at the *run-in-system.sh* script and i
 
 For a Mac system, you will want to look at the *run-in-mac.sh* script and its description `here <https://github.com/digitalrebar/doc/blob/master/deployment/install/mac.rst>`_.  This script will make sure that tools are installed to run docker in a VirtualBox instance and let you run the developer tools or the deploy tools against it.
 
+For AWS or Packet, look at the *run-in-[aws|packet]* scripts.  They will automatically provision systems from those clouds and then install Digital Rebar.
 
 What Access Mode Should I Use?
 """"""""""""""""""""""""""""""
@@ -124,8 +117,6 @@ This leaves you in a show where you can run docker-compose logs and other docker
 
 Notes and Provisos
 ------------------
-
-Vagrant is a work in progress but getting there.  Stay tuned.
 
 The general installation steps can be reviewed in the `Ansible <https://github.com/rackn/digitalrebar-deploy/edit/master/install/ansible.rst>`_ playbook docs.
 
