@@ -7,7 +7,7 @@ Follow the ../install.rst steps to checkout the DigitalRebar code and RackN depl
 
 From ``digitalrebar/deploy`` directory
 
-NOTE: You must have key based _root_ SSH access to your target system.  The install process logs into your system as root.
+NOTE: You must have key based SSH access to your target system.  The install process logs into your system as root AND will fix that access if you have a non-root account (specify with ``--login-user``)
 
 1) Figure out your system IP address
 2) ``./run-in-system.sh --help`` to make sure we have all the pre-req's
