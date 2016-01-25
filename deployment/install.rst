@@ -44,15 +44,13 @@ By following the directory structure below, you are set for development or deplo
 
   cd ~
   mkdir digitalrebar
-  cd digitalrebar
-  git clone https://github.com/rackn/digitalrebar-deploy deploy
-  cd deploy/compose
-  ln -s ../../../digitalrebar digitalrebar
-  cd ..
+  git clone https://github.com/rackn/digitalrebar-deploy digitalrebar/deploy
+  ln -s digitalrebar/ digitalrebar/deploy/compose/digitalrebar
+  cd digitalrebar/deploy
   echo "Checking prerequisites"
   ./run-in-system.sh --help
   echo "let's setup Digital Rebar!"
-  
+
 In human words, change to your home directory, make a digitalrebar directory.  Change into the newly created directory and clone the digitalrebar-deploy tree from RackN as deploy.  Once that clone is complete, create a symbolic link from the compose directory to the Digital Rebar top-level directory.
 
 At this point, you are ready to use the deploy tools to build your node
