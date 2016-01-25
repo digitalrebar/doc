@@ -23,11 +23,11 @@ Sample ``.dr_info``:
 CLI Population
 --------------
 
-If you have the rebar cli in your path, then you can use the `workloads/add-provider.sh` script to add providers to a running rebar system.  
+If you have the `rebar cli <../cli/README.rst>`_ in your path, then you can use the ``workloads/add-provider.sh`` script to add providers to a running rebar system.  
 
   ::
 
     workloads/add-provider.sh --admin-ip=[rebar ip] --provider=[google|aws|packet|debug]
 
-Note: For AWS, you also need to ``sudo pip install awscli``
+Note: For AWS or Google the scripts will attempt to install their CLIs
 
