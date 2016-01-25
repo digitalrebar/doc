@@ -23,8 +23,8 @@ Jump to Specific Environments
   * `TL;DR Quick Start <install/quick.rst>`_ if you've got easy access to a Ubuntu system (AWS is perfect).
   * Already have a Linux system (VM or Physical)?  Use the `SSH <install/linux.rst>`_ helper to setup your system.  This works for local or remote installs.
   * Don't have hardware?  No problem, we've got a quick install in `Packet.net <install/packet.rst>`_ that includes provisioning.
-  * Use `Vagrant <install/vagrant.rst>`_? We've automated all these steps for that too. [**In progress**]
-  * Comfortable with `Ansible <install/ansible.rst>`_? Deploy these steps automatically to Ubuntu and Centos.  They are the shared basis for the above helper scripts.
+  * Use `Vagrant <deployment/vagrant.rst>`_? We've automated all these steps for that too for admins and worker nodes.
+  * Comfortable with `Ansible <install/ansible.rst>`_? Deploy these steps automatically to Ubuntu, Centos and others.  They are the shared basis for the above helper scripts.
 
 **RECOMMENDATION:** Review the `RackN maintained deploy scripts <https://github.com/rackn/digitalrebar-deploy>`_ for updated step-by-step install examples.
 
