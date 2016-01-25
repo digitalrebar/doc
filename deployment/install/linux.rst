@@ -9,16 +9,21 @@ From ``digitalrebar/deploy`` directory
 
 NOTE: You must have key based SSH access to your target system.  The install process logs into your system as root AND will fix that access if you have a non-root account (specify with ``--login-user``)
 
-1) Figure out your system IP address
-2) ``./run-in-system.sh --help`` to make sure we have all the pre-req's
-3) ``./run-in-system.sh --deploy-admin=[system|local] --admin-ip=[my CIDR ip/subnet]`` Choose ``system`` for remote install and ``local`` for your current system.
-4) Allow the system to run and you will see Ansible progress
-5) Follow steps to login to Digital Rebar UI.
+Here are the steps:
 
-Additional Options:
+#. Figure out your system IP address
+#. If you don't have root login, then use ``./add-from-ssh`` to fix your credentials (our advanced scripts call this automatically)
+#. ``./run-in-system.sh --help`` to make sure we have all the pre-req's
+#. ``./run-in-system.sh --deploy-admin=[system|local] --admin-ip=[my CIDR ip/subnet]`` Choose ``system`` for remote install and ``local`` for your current system.
+#. Allow the system to run and you will see Ansible progress
+#. Follow steps to login to Digital Rebar UI.
 
-* for a KVM booting dev-test add: --con-provisioner --access=FORWARDER
-* for a Docker test node add: --con-node
+Common Additional Options:
+
+* If you setup a ``~/.dr_info`` file then you can use ``workloads/add-provider.sh`` to add providers by remote.
+* if you don't have direct root control, add ``--login-user=[username]``
+* for a Metal or KVM booting dev-test add: ``--con-provisioner --access=FORWARDER``
+* for a Docker test Compose scale command add: ``--con-node``
 
 Regular Use & Dev Systems
 ~~~~~~~~~~~~~~~~~~~~~~~~~
