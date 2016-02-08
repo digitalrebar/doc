@@ -59,7 +59,8 @@ To keep it simple, we're using cloud servers, not local vms or physical servers.
 #. Add 2+ nodes from the "Nodes" menu:
 
    #. Add nodes from form at the top of the Nodes page.  The API has additional options.
-   #. Recommended: For Swarm, use "default_os" in AWS instead of an AMI UUID.  In Google, you need to specific Centos7 with ``projects/centos-cloud/global/images/centos-7-v20151104``.
+   #. Recommended: For Swarm in AWS, the "default_os" should be sufficient.  It loads Ubuntu 14.014 and is `mapped in many AWS regions <https://github.com/rackn/digitalrebar-deploy/blob/master/containers/cloudwrap/cloudwrap/api.rb#L110>`_. 
+   #  In Google, you can use the single specific Centos7 with ``projects/centos-cloud/global/images/centos-7-v20151104``.
    #. If you are trying other clouds or images, you need can override default_os based on `provider o/s map <https://github.com/rackn/digitalrebar-deploy/blob/master/workloads/os.map>`_  For example: Centos 7 AMI UUID for us-west-2 is ami-d440a6e7.
    #. Detailed `Instructions here <../provider.rst>`_.
 #. Allow the system to complete annealing (progress in top right corner)
