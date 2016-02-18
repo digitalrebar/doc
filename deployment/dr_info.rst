@@ -3,6 +3,8 @@ Digital Rebar Info (.dr_info)
 
 For regular uses, you can store your provider credentials in the ``~/.dr_info`` file ( `details here <./dr_info.rst>`_ )
 
+There is a ``.dr_info.example`` file in the `DigitalRebar-Deployment root <https://github.com/rackn/digitalrebar-deploy/blob/master/.dr_info.example>`_ you can use as a template.
+
 Sample ``.dr_info``:
 
   ::
