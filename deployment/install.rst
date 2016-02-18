@@ -58,7 +58,9 @@ At this point, you are ready to use the deploy tools to build your node
 Providers: What Systems Do I Have to Play With?
 """""""""""""""""""""""""""""""""""""""""""""""
 
-The ``run-in-[packet|system].sh [options] `` or ``workloads\[docker-swarm|kubernetes]`` scripts will quickly build a working Digital Rebar administrate system.  There are advanced workload scripts that will setup Digital Rebar AND provision a workload.
+Prerequisite: Add your credentials to a `.dr_info file <dr_info.rst>`_.
+
+The ``run-in-[packet|system|google|docean|aws].sh [options] `` or ``workloads\[docker-swarm|kubernetes]`` scripts will quickly build a working Digital Rebar administrate system.  There are advanced workload scripts that will setup Digital Rebar AND provision a workload.
 
 The provisioner (include with ``--provisioner``) is able to handle PXE boot discovery of metal and KVM.  The cloud providers require that you have an account with the provider.  For first users, we recommend AWS, Google or Packet.
 
