@@ -11,6 +11,13 @@ If you'd like to access the CLI *without a deployment*, the `RackN <http://rackn
 Select the correct architecture to retrieve the CLI:
 
 * `Linux <https://s3-us-west-2.amazonaws.com/rebar-cli/rebar-linux-amd64>`_
+
+    ::
+    
+      sudo curl -o /usr/local/sbin/rebar https://s3-us-west-2.amazonaws.com/rebar-cli/rebar-linux-amd64
+      sudo chmod +x /usr/local/sbin/rebar
+      rebar --help
+
 * `Mac <https://s3-us-west-2.amazonaws.com/rebar-cli/rebar-darwin-amd64>`_
 
 You must `chmod +x` to use the CLI.  We also recommend renaming the CLI as "rebar" and placing in your execution path.
