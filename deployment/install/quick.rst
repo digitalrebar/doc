@@ -31,7 +31,7 @@ Base Installation (10 mins)
       cd ~
       mkdir digitalrebar
       git clone https://github.com/rackn/digitalrebar-deploy digitalrebar/deploy
-      ln -s digitalrebar/ digitalrebar/deploy/compose/digitalrebar
+      ln -s ~/digitalrebar/ digitalrebar/deploy/compose/digitalrebar
       cd digitalrebar/deploy
       echo "Checking prerequisites"
       ./run-in-system.sh --help
