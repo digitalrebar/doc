@@ -118,7 +118,7 @@ This leaves you in a show where you can run docker-compose logs and other docker
 Notes and Provisos
 ------------------
 
-The general installation steps can be reviewed in the `Ansible <https://github.com/rackn/digitalrebar-deploy/edit/master/install/ansible.rst>`_ playbook docs.
+The general installation steps can be reviewed in the `Ansible <install/ansible.rst>`_ playbook docs.
 
     To improve support, the `Digital Rebar team <https://github.com/orgs/digitalrebar/teams>`_ is no longer creating or documenting install packages.
 
