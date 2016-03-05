@@ -1,7 +1,7 @@
 Digital Rebar Documentation License
 ===================================
 
-Digital Rebar Documentation is available from multiple authors under the [Creative Commons license](https://en.wikipedia.org/wiki/Creative_Commons_license) with Attribution.
+Digital Rebar Documentation is available from multiple authors under the `Creative Commons license <https://en.wikipedia.org/wiki/Creative_Commons_license>`_ with Attribution.
 
 ::
 

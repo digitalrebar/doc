@@ -7,6 +7,16 @@ This guide is targeted at individuals who wish to *contribute and extend*
 Digital Rebar. You should review the architectural and operator
 instructions as part of the learning process.
 
+.. toctree::
+   :maxdepth: 1
+   :glob:
+   
+   *
+
+   :hidden:
+   testing-bdd/*
+
+
 API
 ------------------
 
@@ -36,10 +46,10 @@ Digital Rebar does not use use RAILS_ENV=development in the traditional way beca
 If you have a need for development behavior (classes and views the refresh when code changes) then perform the following steps:
 
 #. Deploy Digital Rebar in the normal way
-#. From the host, create the /tmp/development.txt file and restart
+#. From the host, create the ``dev.mode`` file in the digitalrebar home directory and restart the rebar_api contain
 
-   ```docker exec -it compose_rebar_api_1 touch /tmp/development.txt
-   docker exec -it compose_rebar_api_1 service rebar restart
+   ```touch ~/digitalrebar/dev.mode
+   cd ~/digitalrebar/deploy/compose && docker-compose restart rebar_api
    ```
 
 You may make any Rails configuration changes by created your own ``core/rails/config/environments/production.rb`` file.  Since we ignore ``production.rb`` you can leave your own customized version in place.

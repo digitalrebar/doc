@@ -1,3 +1,7 @@
+.. Copyright (c) 2016 RackN Inc.
+.. Licensed under the Apache License, Version 2.0 (the "License");
+.. Digital Rebar documentation master file, created by
+
 Welcome to Digital Rebar Documentation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -13,13 +17,38 @@ Want to **install Digital Rebar**? Here's the `Install Guide <deployment/install
 Join Our Community
 ------------------
 
-* `Live Weekly Planning and Design Meetings <http://bit.ly/digitalrebarcalendar>`_
 * `Mailing List <http://bit.ly/digitalrebarlist>`_
 * `Live Chat <https://gitter.im/digitalrebar/core?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge>`_  (Gitter.im)
 * `Issues and Roadmap <https://waffle.io/digitalrebar/core>`_
-* ``#digitalrebar`` IRC channel on `Freenode <https://webchat.freenode.net/>`_ (hint: Gitter.im is more active).
 
-More information?
------------------
+Digital Rebar Documentation
+---------------------------
 
 This project is composed of many parts.  Please visit the `Digital Rebar Project <http://digitalrebar.github.io>`_ home page.
+
+Contents:
+
+.. toctree::
+   :maxdepth: 2
+   
+   user/README
+   deployment/README
+   development/README
+   development/api/README
+   cli/README
+   clients/README
+   principles/README
+   faq/README
+   LICENSE
+
+   :hidden:
+   role_errors
+   role_errors/README
+   role_errors/*
+
+Indices and tables
+==================
+
+* :ref:`genindex`
+* :ref:`search`
+

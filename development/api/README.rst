@@ -19,30 +19,11 @@ available!
 API Index
 ~~~~~~~~~
 
-*This is a reference index - API is documented in subpages*
-
-::
-
-    * /api/v2
-      * /anneal (check the annealer status)
-      * /nodes
-        * /[:id]/node_roles
-        * /[:id]/attribs
-      * /jigs
-      * /barclamps
-      * /deployments
-        * /[:id]/roles
-        * /[:id]/node_roles
-        * /graph (GET only)
-        * /propose (PUT only)
-        * /commit (PUT only)
-        * /recall (PUT only)
-      * /deployment_roles
-      * /jigs
-      * /roles
-      * /attribs
-      * /groups
-        * /[:id]/nodes
+.. toctree::
+   :maxdepth: 1
+   :glob:
+   
+   *
 
 Digital Rebar API Pattern
 ~~~~~~~~~~~~~~~~~~~~~~~~~

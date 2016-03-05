@@ -17,3 +17,14 @@ In the open community, we are only supporting the Docker based installation of D
 Additional install options may be available in commercial releases.
 
 Ready to start? See `Install <install.rst>`_
+
+Install Resources
+~~~~~~~~~~~~~~~~~
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+   
+   install
+   install/*
+   *

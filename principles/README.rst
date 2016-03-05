@@ -1,18 +1,25 @@
 Operational Principles
 ======================
 
-The operational model behind Rebar is entering its third generation and
+The operational model behind Digital Rebar is entering its third generation and
 its important to understand the principles behind that model. The model
 is critical because it shapes how Rebar approaches the infrastructure at
 a fundamental level so it makes it easier to interact with the platform
 if you see how we are approaching operations. Rebar’s goal is to create
 emergent services.
 
-The topics in this guide help explain Rebar's core architectural
+The topics in this guide help explain Digital Rebar's core architectural
 principles.
 
-Digital Rebar Objective
----------------
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+   
+   *
+
+Design Objective
+----------------
 
 Digital Rebar delivers repeatable best practice deployments. Rebar is not just
 about installation: we define success as a sustainable operations model
@@ -27,7 +34,7 @@ Background
 ----------
 
 When Greg Althaus (github @GAlthaus) and Rob "zehicle" Hirschfeld
-(github @CloudEdge) started the project, we had some very specific
+(github @Zehicle) started the project, we had some very specific
 targets in mind. We’d been working towards using organic emergent
 swarming (think ants) to model continuous application deployment. We had
 also been struggling with the most routine foundational tasks (bios,
@@ -46,7 +53,7 @@ Chef to do the majority of the installation left the Rebar team to focus
 on infrastructure provisioning. 
 
 Key Features of Digital Rebar
-------------
+-----------------------------
 
 -  *Heterogeneous Operating Systems* – chose which operating system you
    want to install on the target servers.
