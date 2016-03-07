@@ -110,7 +110,7 @@ Using the deploy tools, the environment should be setup for doing development as
   cd digitalrebar/core
   tools/docker-admin
   
-This leaves you in a show where you can run docker-compose logs and other docker commands to inspect the containers.  Exiting this shell will kill and remove the containers.  *docker-admin* takes an --access flag with a value of either HOST or FORWARDER and a very helpful --no-pull flag that doesn't do a pull update to increase iteration speeds.
+This leaves you in a show where you can run docker-compose logs and other docker commands to inspect the containers.  Exiting this shell will kill and remove the containers.  *docker-admin* takes an --access flag with a value of either HOST or FORWARDER and a very helpful ``--no-pull`` flag that doesn't do a pull update to increase iteration speeds.
 
 
 Notes and Provisos
