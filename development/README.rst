@@ -11,11 +11,17 @@ instructions as part of the learning process.
    :maxdepth: 1
    :glob:
    
-   *
-
-   :hidden:
-   testing-bdd/*
-
+   contributing/contributing
+   contributing/contributing-code
+   contributing/mark
+   contributing/workflow
+   ui/README
+   jigs/README
+   sledgehammer/build_sledgehammer
+   sledgehammer/dev-build-sledgehammer
+   sledgehammer/sledgehammer-hooks
+   smoketesting
+   api/README
 
 API
 ------------------

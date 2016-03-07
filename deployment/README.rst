@@ -16,7 +16,7 @@ In the open community, we are only supporting the Docker based installation of D
 
 Additional install options may be available in commercial releases.
 
-Ready to start? See `Install <install.rst>`_
+Ready to start? See `Digital Rebar Install <https://github.com/digitalrebar/doc/blob/master/deployment/install.rst>`_
 
 Install Resources
 ~~~~~~~~~~~~~~~~~
@@ -25,6 +25,7 @@ Install Resources
    :maxdepth: 1
    :glob:
    
+   install/quick
    install
    install/*
    *

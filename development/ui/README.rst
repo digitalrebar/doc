@@ -11,3 +11,9 @@ primary goals at this point.
 
 We expect to revisit this assumption in the future and encourage
 community development of this UI or other approaches.
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+   
+   *

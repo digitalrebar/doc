@@ -183,13 +183,13 @@ Once the roles are attached, you start the process by clicking the
 Once the deployment is committed, Digital Rebar will automatically reboot the
 node and start the O/S install process.
 
-.. |Ready (image)| image:: https://raw.githubusercontent.com/digitalrebar/core/master/rails/public/images/icons/led/active.png
-.. |Error (image)| image:: https://raw.githubusercontent.com/digitalrebar/core/master/rails/public/images/icons/led/error.png
-.. |Blocked (image)| image:: https://raw.githubusercontent.com/digitalrebar/core/master/rails/public/images/icons/led/blocked.png
-.. |Idle (image)| image:: https://raw.githubusercontent.com/digitalrebar/core/master/rails/public/images/icons/led/active.png
-.. |Off (image)| image:: https://raw.githubusercontent.com/digitalrebar/core/master/rails/public/images/icons/led/off.png
-.. |Wait (image)| image:: https://raw.githubusercontent.com/digitalrebar/core/master/rails/public/images/icons/led/wait.png
-.. |Proposed (image)| image:: https://raw.githubusercontent.com/digitalrebar/core/master/rails/public/images/icons/led/proposed.png
-.. |Reserved (image)| image:: https://raw.githubusercontent.com/digitalrebar/core/master/rails/public/images/icons/led/reserved.png
-.. |TODO (image)| image:: https://raw.githubusercontent.com/digitalrebar/core/master/rails/public/images/icons/led/todo.png
-.. |Transition (image)| image:: https://raw.githubusercontent.com/digitalrebar/core/master/rails/public/images/icons/led/transition.png
+.. |Ready (image)| image:: https://raw.githubusercontent.com/digitalrebar/core/master/rails/app/assets/images/icons/led/active.png
+.. |Error (image)| image:: https://raw.githubusercontent.com/digitalrebar/core/master/rails/app/assets/images/icons/led/error.png
+.. |Blocked (image)| image:: https://raw.githubusercontent.com/digitalrebar/core/master/rails/app/assets/images/icons/led/blocked.png
+.. |Idle (image)| image:: https://raw.githubusercontent.com/digitalrebar/core/master/rails/app/assets/images/icons/led/active.png
+.. |Off (image)| image:: https://raw.githubusercontent.com/digitalrebar/core/master/rails/app/assets/images/icons/led/off.png
+.. |Wait (image)| image:: https://raw.githubusercontent.com/digitalrebar/core/master/rails/app/assets/images/icons/led/wait.png
+.. |Proposed (image)| image:: https://raw.githubusercontent.com/digitalrebar/core/master/rails/app/assets/images/icons/led/proposed.png
+.. |Reserved (image)| image:: https://raw.githubusercontent.com/digitalrebar/core/master/rails/app/assets/images/icons/led/reserved.png
+.. |TODO (image)| image:: https://raw.githubusercontent.com/digitalrebar/core/master/rails/app/assets/images/icons/led/todo.png
+.. |Transition (image)| image:: https://raw.githubusercontent.com/digitalrebar/core/master/rails/app/assets/images/icons/led/transition.png

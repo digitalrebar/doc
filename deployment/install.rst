@@ -1,8 +1,7 @@
-*********************
 Digital Rebar Install
-*********************
+=====================
 
-`TL;DR Quick Start <install/quick.rst>`_ if you've got easy access to a Ubuntu system (AWS is perfect).
+`TL;DR Quick Start <https://github.com/digitalrebar/doc/blob/master/deployment/install/quick.rst>`_ if you've got easy access to a Ubuntu system (AWS is perfect).
 
 .. contents:: Table Contents
   :depth: 2
@@ -20,11 +19,10 @@ Digital Rebar Install
 Jump to Specific Environments
 -----------------------------
 
-  * `TL;DR Quick Start <install/quick.rst>`_ if you've got easy access to a Ubuntu system (AWS is perfect).
-  * Already have a Linux system (VM or Physical)?  Use the `SSH <install/linux.rst>`_ helper to setup your system.  This works for local or remote installs.
-  * Don't have hardware?  No problem, we've got a quick install in `Packet.net <install/packet.rst>`_ that includes provisioning.
-  * Use `Vagrant <deployment/vagrant.rst>`_? We've automated all these steps for that too for admins and worker nodes.
-  * Comfortable with `Ansible <install/ansible.rst>`_? Deploy these steps automatically to Ubuntu, Centos and others.  They are the shared basis for the above helper scripts.
+  * Already have a Linux system (VM or Physical)?  Use the `SSH <https://github.com/digitalrebar/doc/blob/master/deployment/install/linux.rst>`_ helper to setup your system.  This works for local or remote installs.
+  * Don't have hardware?  No problem, we've got a quick install in `Packet.net <https://github.com/digitalrebar/doc/blob/master/deployment/install/packet.rst>`_ that includes provisioning.
+  * Use `Vagrant <https://github.com/digitalrebar/doc/blob/master/deployment/vagrant.rst>`_? We've automated all these steps for that too for admins and worker nodes.
+  * Comfortable with `Ansible <https://github.com/digitalrebar/doc/blob/master/deployment/install/ansible.rst>`_? Deploy these steps automatically to Ubuntu, Centos and others.  They are the shared basis for the above helper scripts.
 
 **RECOMMENDATION:** Review the `RackN maintained deploy scripts <https://github.com/rackn/digitalrebar-deploy>`_ for updated step-by-step install examples.
 
@@ -69,9 +67,9 @@ What System Do I Have to Run an Admin Node?
 
 An admin node needs a docker capable system to run in.  This can be a Linux system with docker-engine installed or a MacOS with docker tools installed.  In theory, a windows box could be used with virtual box and the docker tools, but come on.
 
-For a linux system, you will want to look at the *run-in-system.sh* script and its description `here <https://github.com/digitalrebar/doc/blob/master/deployment/install/linux.rst>`_.  This script can be run against the local system with the --localhost option or a remote system (with ssh access).
+For a linux system, you will want to look at the `run-in-system.sh <https://github.com/digitalrebar/doc/blob/master/deployment/install/linux.rst>`_ script and its description.  This script can be run against the local system with the --localhost option or a remote system (with ssh access).
 
-For a Mac system, you will want to look at the *run-in-mac.sh* script and its description `here <https://github.com/digitalrebar/doc/blob/master/deployment/install/mac.rst>`_.  This script will make sure that tools are installed to run docker in a VirtualBox instance and let you run the developer tools or the deploy tools against it.
+For a Mac system, you will want to look at the `run-in-mac.sh <https://github.com/digitalrebar/doc/blob/master/deployment/install/mac.rst>`_ script and its description.  This script will make sure that tools are installed to run docker in a VirtualBox instance and let you run the developer tools or the deploy tools against it.
 
 For AWS or Packet, look at the *run-in-[aws|packet]* scripts.  They will automatically provision systems from those clouds and then install Digital Rebar.
 
@@ -118,9 +116,9 @@ This leaves you in a show where you can run docker-compose logs and other docker
 Notes and Provisos
 ------------------
 
-The general installation steps can be reviewed in the `Ansible <install/ansible.rst>`_ playbook docs.
+The general installation steps can be reviewed in the Ansible playbook docs.
 
     To improve support, the `Digital Rebar team <https://github.com/orgs/digitalrebar/teams>`_ is no longer creating or documenting install packages.
 
-    For developers, we've collected some `additional guidance <development/advanced-install>`_ to review after you've got your first install working.
+    For developers, we've collected some additional guidance in the development section to review after you've got your first install working.
 

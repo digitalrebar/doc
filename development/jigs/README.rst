@@ -25,9 +25,11 @@ Digital Rebar must have 1 or more Jigs that preform the work of node-role state 
 For initial Digital Rebar work, the primary **Jigs** inclide:
 -------------------------------------------------------------
 
--  the **Chef** jig in Barclamp-Chef
--  the **script** jig in Barclamp-Script
--  the **noop** jig in Barclamp-Noop
+.. toctree::
+   :maxdepth: 1
+   :glob:
+   
+   *
 
 JIG semantic standard operations:
 ---------------------------------

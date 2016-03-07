@@ -12,7 +12,7 @@ While it's been completly rebuilt by DevOps artisans, Digital Rebar history incl
 Getting Started
 ---------------
 
-Want to **install Digital Rebar**? Here's the `Install Guide <deployment/install.rst>`_
+Want to **install Digital Rebar**? Here's the online `Install Guide <https://github.com/digitalrebar/doc/blob/master/deployment/install.rst>`_
 
 Join Our Community
 ------------------
@@ -30,21 +30,16 @@ Contents:
 
 .. toctree::
    :maxdepth: 2
+   :glob:
    
    user/README
    deployment/README
    development/README
    development/api/README
-   cli/README
    clients/README
    principles/README
    faq/README
    LICENSE
-
-   :hidden:
-   role_errors
-   role_errors/README
-   role_errors/*
 
 Indices and tables
 ==================

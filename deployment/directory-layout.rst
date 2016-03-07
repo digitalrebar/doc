@@ -21,7 +21,7 @@ the */opt/digitalrebar/core* directory:
 +=================+=============================================================================+
 | BDD             | Business Driven Development Testing Infrastructre                           |
 +-----------------+-----------------------------------------------------------------------------+
-| barclamps       | Metadata that for barclamps which drive workload deployment                  |
+| barclamps       | Metadata that for barclamps which drive workload deployment                 |
 +-----------------+-----------------------------------------------------------------------------+
 | bin             | Digital Rebar executables and helper files                                  |
 +-----------------+-----------------------------------------------------------------------------+
@@ -49,7 +49,7 @@ the */opt/digitalrebar/core* directory:
 +-----------------+-----------------------------------------------------------------------------+
 | test            | Additional role test facilities                                             |
 +-----------------+-----------------------------------------------------------------------------+
-| tools           | Tools used to enable the *admin* node to manage OS installed slaves   |
+| tools           | Tools used to enable the *admin* node to manage OS installed slaves         |
 +-----------------+-----------------------------------------------------------------------------+
 | updates         | Merge tools                                                                 |
 +-----------------+-----------------------------------------------------------------------------+

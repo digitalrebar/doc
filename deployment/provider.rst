@@ -40,7 +40,9 @@ delete Amazon EC2 virtual machines. In order to use it, you should:
 * Make sure that IAM user has rights to create, reboot, and delete EC2
   instances, along with being able to create and delete keys for those
   instances.
-* Create a new Provider with the following Rebar CLI call::
+* Create a new Provider with the following Rebar CLI call
+
+::
     victor@m4700:~/src/digitalrebar/deploy/compose (master)
     $ rebar -U rebar -P rebar1 providers create \
        '{"name": "amazon-vl-test",
@@ -53,7 +55,9 @@ delete Amazon EC2 virtual machines. In order to use it, you should:
         }'
 
 Once you have created a new Provider, you can create EC2 instances
-using that provider::
+using that provider
+
+::
 
     victor@m4700:~/src/digitalrebar/deploy/compose (master)
     $ rebar -U rebar -P rebar1 nodes create \
@@ -85,7 +89,9 @@ delete GCE virtual machines. In order to use it, you should:
   and reboot GCE instances in your project.  Be sure and save the
   generated JSON file somewhere secure where you can access it with
   the rebar CLI.
-* Create a new Provider with the following Rebar CLI call::
+* Create a new Provider with the following Rebar CLI call
+
+::
     victor@m4700:~/src/digitalrebar/deploy/compose (master)
     $ rebar -U rebar -P rebar1 providers create \
     "{\"name\": \"gce-vl-test\",
@@ -96,7 +102,9 @@ delete GCE virtual machines. In order to use it, you should:
       }
      }"
 
-Once you have created the Provider, you can create GCE instances using it::
+Once you have created the Provider, you can create GCE instances using it
+
+::
 
     victor@m4700:~/src/digitalrebar/deploy/compose (master)
     $ rebar -U rebar -P rebar1 nodes create \
@@ -132,7 +140,9 @@ Packet.  In order to use it, you should:
 
 * Create an account and an API key with Packet.
 * Create a new Project at Packet, and record its ID.
-* Create a new Provider using the following Rebar CLI call::
+* Create a new Provider using the following Rebar CLI call
+
+::
     victor@m4700:~/src/digitalrebar/deploy/compose (master)
     $ rebar -U rebar -P rebar1 providers create \
     '{"auth_details": {
@@ -144,7 +154,9 @@ Packet.  In order to use it, you should:
     }'
 
 Once you have created the Provider, you can use it to allocate bare
-metal nodes from Packet::
+metal nodes from Packet
+
+::
     victor@m4700:~/src/digitalrebar/deploy/compose (master)
     $ rebar -U rebar -P rebar1 nodes create \
     '{"name": "packet-1.neode.net",
@@ -165,7 +177,9 @@ Testing Provider
 
 The testing provider adds debugging instructions to the Amazon EC2 provider so you can simulate activity without actually creating remote notes.
 
-* Create a new Provider with the following Rebar CLI call::
+* Create a new Provider with the following Rebar CLI call
+
+::
     victor@m4700:~/src/digitalrebar/deploy/compose (master)
     $ rebar -U rebar -P rebar1 providers create \
        '{"name": "test-vl-test",
