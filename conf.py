@@ -141,7 +141,7 @@ html_theme = 'bizstyle'
 html_title = "Digital Rebar Docs"
 
 # A shorter title for the navigation bar.  Default is the same as html_title.
-html_short_title = "DRebar"
+html_short_title = "Digital Rebar"
 
 # The name of an image file (relative to this directory) to place at the top
 # of the sidebar.
@@ -155,7 +155,7 @@ html_favicon = "images/digitalrebar.ico"
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
-html_static_path = ['static']
+htmlstatic_path = ['static']
 
 # Add any extra paths that contain custom files (such as robots.txt or
 # .htaccess) here, relative to this directory. These files are copied
