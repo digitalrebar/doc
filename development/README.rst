@@ -21,14 +21,6 @@ instructions as part of the learning process.
    sledgehammer/dev-build-sledgehammer
    sledgehammer/sledgehammer-hooks
    smoketesting
-   api/README
-
-API
-------------------
-
-Our intention is to keep
-the API documentation focused just on using the API and leave more it to
-curious readers to review the model and principles areas.
 
 Dev Environment
 ---------------

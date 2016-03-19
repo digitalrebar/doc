@@ -35,7 +35,7 @@ Contents:
    user/README
    deployment/README
    development/README
-   development/api/README
+   api/README
    clients/README
    principles/README
    faq/README

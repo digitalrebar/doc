@@ -2,7 +2,11 @@ Digital Rebar API
 -----------------
 
 This document is the reference guide for the Digital Rebar API.
-`Additional information is provided in the API <./>`__ directory.
+
+Our intention is to keep the API documentation focused just on using 
+the API and leave more it to curious readers to review the model and 
+principles areas.
+
 
 Using the API
 ~~~~~~~~~~~~~
