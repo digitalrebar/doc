@@ -60,7 +60,9 @@ Prerequisite: Add your credentials to a `.dr_info file <dr_info.rst>`_.
 
 The ``run-in-[packet|system|google|docean|aws].sh [options] `` or ``workloads\[docker-swarm|kubernetes]`` scripts will quickly build a working Digital Rebar administrate system.  There are advanced workload scripts that will setup Digital Rebar AND provision a workload.
 
-The Provisioner/DHCP containers (include with ``--con-provisioner --con-dhcp``) are able to handle DHCP/PXE boot discovery of metal and KVM.  The cloud providers require that you have an account with the provider.  For first users, we recommend AWS, Google or Packet.
+The Provisioner/DHCP containers (include with ``--con-provisioner --con-dhcp``) are able to handle DHCP/PXE boot discovery of metal and KVM.  These options will lengthen the install because they download provioning ISOs from source.  You can also automatically upload ISOs from your local ``~/digitalrebar/isos``.
+
+The cloud providers require that you have an account with the provider.  For first users, we recommend AWS, Google or Packet.
 
 What System Do I Have to Run an Admin Node?
 """""""""""""""""""""""""""""""""""""""""""
