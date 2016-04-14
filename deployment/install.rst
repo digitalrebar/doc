@@ -51,6 +51,8 @@ By following the directory structure below, you are set for development or deplo
 
 In human words, change to your home directory, make a digitalrebar directory.  Change into the newly created directory and clone the digitalrebar-deploy tree from RackN as deploy.  Once that clone is complete, create a symbolic link from the compose directory to the Digital Rebar top-level directory.
 
+Note: target IP address must include /## for CIDR!
+
 At this point, you are ready to use the deploy tools to build your node
 
 Providers: What Systems Do I Have to Play With?
