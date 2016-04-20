@@ -23,7 +23,7 @@ Base Installation (10 mins)
    #. Connect to the server: ``ssh root@[ip address]``
 
 #. Save your system EXTERNAL IP address: ``export IPA=[CIDR]`` (`CIDR <https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing>`_ is the IP address with the /## subnet included)
-#. Install Prereqs: ``sudo apt-get update && sudo apt-get install git -y``
+#. Install Prereqs: ``sudo apt-get update && sudo apt-get install git python python-pymongo python-pycurl -y``
 #. Get the deployment code and test for pre-reqs
     
     ::
