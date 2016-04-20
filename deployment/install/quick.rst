@@ -37,7 +37,7 @@ Base Installation (10 mins)
       ./run-in-system.sh --help
       echo "let's setup Digital Rebar!"
 
-#. Install to local system: ``./run-in-system.sh --deploy-admin=local --access=HOST --wl-docker-swarm --admin-ip=$IPA``  (note: IP must include /## for CIDR)
+#. Install to local system: ``./run-in-system.sh --deploy-admin=local --access=HOST --wl-docker-swarm --admin-ip=$IPA``  (notes: it's OK to retry this script and IP must include /## for CIDR)
 
 Add ``--wl-kubernetes`` or  other ``--wl-[workload]`` (see list from --help) if you'd like to play with other choices later.
 This script ends with the Digital Rebar admin node fully operational but without any nodes.  You need to login to the Digital Rebar UI (default user/pass is ``rebar/rebar1``) for the next step.
