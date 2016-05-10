@@ -13,13 +13,13 @@ Base Installation (10 mins)
 #. AWS Path:
 
    #. Create AWS m4.large (or larger!) Ubuntu instance with your SSH key.  
-   #. The "default" Security Group needs Port 22 (ssh), 443 & 3000 (rebar), 2375 & 2475 (docker), 4646 (chef), 8300 & 8301 (consul) and ICMP!  This our recommended base, depending on your application, you'll need additional ports open or may be able to omit Docker, Chef and Consul.
+   #. The "default" Security Group needs Port 22 (ssh), 443 & 3000 (rebar), 2375 & 2475 (docker), 4646 (chef), 8300 & 8301 (consul), 8888 (certificate signing service) and ICMP!  This our recommended base, depending on your application, you'll need additional ports open or may be able to omit Docker, Chef and Consul.
    #. Connect to the server: ``ssh ubuntu@[ip address]``
 
 #. Packet or B-Y-O-Server Path:
 
    #. Create Packet Type 1 Ubuntu Server with your SSH key (8 Gb RAM minimum)
-   #. Make sure your policy gives access to ports 22, 443, 3000, 2375, 2475, 4646, 8300, 8301 and ICMP.
+   #. Make sure your policy gives access to ports 22, 443, 3000, 2375, 2475, 4646, 8300, 8301, 8888, and ICMP.
    #. Connect to the server: ``ssh root@[ip address]``
 
 #. Save your system EXTERNAL IP address: ``export IPA=[CIDR]`` (`CIDR <https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing>`_ is the IP address with the /## subnet included)
