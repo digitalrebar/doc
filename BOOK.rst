@@ -9,38 +9,19 @@ The **Digital Rebar Project** is a container-ready, infrastructure-as-code provi
 
 While it's been completly rebuilt by DevOps artisans, Digital Rebar history includes years of battle-tested ops learnings by the `Crowbar Project <http://github.com/crowbar>`_ founders.
 
-Getting Started
----------------
 
-Want to **install Digital Rebar**? Here's the :ref:`install`
-
-Join Our Community
-------------------
-
-* `Mailing List <http://bit.ly/digitalrebarlist>`_
-* `Live Chat <https://gitter.im/digitalrebar/core?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge>`_  (Gitter.im)
-* `Issues and Roadmap <https://waffle.io/digitalrebar/core>`_
-* `Digital Rebar Project <http://digitalrebar.github.io>`_ home page.
-
-Contents:
----------
+Contents
+--------
 
 .. toctree::
    :maxdepth: 2
    :glob:
    
+   intro/README
    user/README
    deployment/README
-   development/README
-   api/README
-   clients/README
    principles/README
+   development/README
    faq/README
    LICENSE
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`search`
 

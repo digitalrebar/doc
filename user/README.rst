@@ -4,6 +4,15 @@ User Guide
 This is the Digital Rebar user guide. Please feel free to add sections
 and information as needed.
 
+.. toctree::
+  :maxdepth: 2
+  :glob:
+
+  ../api/README
+  ../clients/README
+
+
+
 State Image Key
 ~~~~~~~~~~~~~~~
 
