@@ -17,8 +17,9 @@ Prereqs
   * Vagrant requires several other items:
   
      * Virtualbox (or similar) (e.g.: `sudo apt-get install virtualbox`)
+
   * The Vagrant install uses the `rebar cli <../cli/README.rst>`_ for actions.  It must be accessible from your Vagrant path.
-   * You also need the ``vagrant-trigger`` plugin.
+  * You also need the ``vagrant-trigger`` plugin.
 
 Admin Node
 ----------

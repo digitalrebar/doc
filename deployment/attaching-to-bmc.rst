@@ -2,11 +2,11 @@ Connecting to the BMC Network
 -----------------------------
 
 | By default, Rebar sets up a BMC network on 192.168.128.xxx/24 named
-``the_bmc`` in the category ``bmc`` and the group ``internal``.
+  ``the_bmc`` in the category ``bmc`` and the group ``internal``.
 | You may modify this by changing values from the
-``/networks`` page. These instructions have been created with the
-assumption that you are using the default network and should be modified
-to match your specific configuration.
+  ``/networks`` page. These instructions have been created with the
+  assumption that you are using the default network and should be modified
+  to match your specific configuration.
 
 Attaching Admin to BMC
 ~~~~~~~~~~~~~~~~~~~~~~
