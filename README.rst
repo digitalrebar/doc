@@ -25,5 +25,5 @@ Join Our Community
 Digital Rebar Documentation
 ---------------------------
 
-Find our docs at read-the-docs `online <http://digital-rebar.readthedocs.io/en/latest>` or as a `single pdf <https://readthedocs.org/projects/digital-rebar/downloads/pdf/latest/>`.
+Find our docs at read-the-docs `online <http://digital-rebar.readthedocs.io/en/latest>`_ or as a `single pdf <https://readthedocs.org/projects/digital-rebar/downloads/pdf/latest/>`_.
 
