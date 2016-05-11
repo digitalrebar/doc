@@ -1,3 +1,5 @@
+.. _install:
+
 Digital Rebar Install
 =====================
 
