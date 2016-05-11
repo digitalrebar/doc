@@ -16,7 +16,7 @@ While it's been completly rebuilt by DevOps artisans, Digital Rebar history incl
 Getting Started
 ---------------
 
-Want to **install Digital Rebar**? Here's the online `Install Guide <https://github.com/digitalrebar/doc/blob/master/deployment/install.rst>`_
+Want to **install Digital Rebar**? Here's the online `Install Guide <http://digital-rebar.readthedocs.io/en/latest/deployment/install.html>`_
 
 Join Our Community
 ------------------
