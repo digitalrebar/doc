@@ -2,11 +2,11 @@ External Services Configuration
 -------------------------------
 
 | The Digital Rebar System can be configured to utilize external (not
-installed or managed by Digital Rebar) services.
+  installed or managed by Digital Rebar) services.
 | These configurations are made in the following file: 
-/opt/digitalrebar/core/rebar-config.sh and must be made *PRIOR* to
-running production.sh to install the system. Users can configure any
-combination of of these services.
+  /opt/digitalrebar/core/rebar-config.sh and must be made *PRIOR* to
+  running production.sh to install the system. Users can configure any
+  combination of of these services.
 
 DNS (Domain Name Server)
 ~~~~~~~~~~~~~~~~~~~~~~~~

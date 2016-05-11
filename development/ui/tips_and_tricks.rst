@@ -2,7 +2,7 @@ Tips & Tricks (UI Developer)
 ----------------------------
 
 Dashboard - No Polling
-~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~
 
 When you are troubleshooting the UI or REST APIs, the Node Dashboard
 (``dashboard``) polling can be challenging because it generates log traffic.

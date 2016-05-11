@@ -1,5 +1,5 @@
 Digital Rebar delivers "Ready State" infrastructure
-===========================================
+===================================================
 
 The following points focus on the unique aspects of the Digital Rebar Operations
 Model. Unlike other Operating System Provisioning Tools (like Razor,

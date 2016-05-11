@@ -10,5 +10,6 @@ Additional Steps:
 
   #. Note your API key
   #. Register your SSH public key (our Packet scripts do not upload a key for you!)
+
 #. Create a `~/.dr_info file <../dr_info.rst>`_ with Packet API keys
 #. ``./run_in_packet.sh yourname``

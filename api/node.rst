@@ -94,13 +94,15 @@ JSON Fields
 +--------------------+----------------+------------+------------------------------------------------+
 | Updated\_at        | String         | No         | Unicode - date format                          |
 +--------------------+----------------+------------+------------------------------------------------+
-|Variant             | String         | Yes        | What variant of node this is.  Used by the provider infrastructure.                          |
+| Variant            | String         | Yes        | What variant of node this is.  Used by the     |
+|                    |                |            | provider infrastructure.                       |
 +--------------------+----------------+------------+------------------------------------------------+
 | Arch               | String         | Yes        | The node hardware architecture.                |
 +--------------------+----------------+------------+------------------------------------------------+
 | OS_Family          | String         | Yes        | The family of OS running on the node.          |
 +--------------------+----------------+------------+------------------------------------------------+
-| Provider\_ID       | Internal Ref   | No         | The ID of the provider responsible for managing the node                       |
+| Provider\_ID       | Internal Ref   | No         | The ID of the provider responsible for         |
+|                    |                |            | managing the node                              |
 +--------------------+----------------+------------+------------------------------------------------+
 
 
