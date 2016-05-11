@@ -5,6 +5,10 @@
 Welcome to Digital Rebar Documentation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+.. image:: https://readthedocs.org/projects/digital-rebar/badge/?version=latest
+  :target: http://digital-rebar.readthedocs.io/en/latest/BOOK.html?badge=latest
+  :alt: Documentation Status
+
 The **Digital Rebar Project** is a container-ready, infrastructure-as-code provisioning platform that delivers the best of software deployment automation and orchestration without locking you into a single hardware platform or operating system.  Our mission is to embrace the heterogenous nature of data center operations.
 
 While it's been completly rebuilt by DevOps artisans, Digital Rebar history includes years of battle-tested ops learnings by the `Crowbar Project <http://github.com/crowbar>`_ founders.
@@ -25,5 +29,5 @@ Join Our Community
 Digital Rebar Documentation
 ---------------------------
 
-Find our docs at read-the-docs `online <http://digital-rebar.readthedocs.io/en/latest>`_ or as a `single pdf <https://readthedocs.org/projects/digital-rebar/downloads/pdf/latest/>`_.
+Find our docs at read-the-docs `online <http://digital-rebar.readthedocs.io/en/latest/BOOK.html>`_ or as a `single pdf <https://readthedocs.org/projects/digital-rebar/downloads/pdf/latest/>`_.
 
