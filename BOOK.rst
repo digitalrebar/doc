@@ -18,8 +18,8 @@ Contents
    :glob:
    
    intro/README
-   user/README
    deployment/README
+   user/README
    principles/README
    development/README
    faq/README
