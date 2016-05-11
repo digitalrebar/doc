@@ -12,7 +12,7 @@ While it's been completly rebuilt by DevOps artisans, Digital Rebar history incl
 Getting Started
 ---------------
 
-Want to **install Digital Rebar**? Here's the online `Install Guide <https://github.com/digitalrebar/doc/blob/master/deployment/install.rst>`_
+Want to **install Digital Rebar**? Here's the `Install Guide <deployment/install.rst>`_
 
 Join Our Community
 ------------------
@@ -22,8 +22,25 @@ Join Our Community
 * `Issues and Roadmap <https://waffle.io/digitalrebar/core>`_
 * `Digital Rebar Project <http://digitalrebar.github.io>`_ home page.
 
-Digital Rebar Documentation
----------------------------
+Contents:
+---------
 
-Find our docs at read-the-docs `online <http://digital-rebar.readthedocs.io/en/latest>` or as a `single pdf <https://readthedocs.org/projects/digital-rebar/downloads/pdf/latest/>`.
+.. toctree::
+   :maxdepth: 2
+   :glob:
+   
+   user/README
+   deployment/README
+   development/README
+   api/README
+   clients/README
+   principles/README
+   faq/README
+   LICENSE
+
+Indices and tables
+==================
+
+* :ref:`genindex`
+* :ref:`search`
 
