@@ -1,3 +1,6 @@
+.. index::
+  pair: Node; API
+
 Node API
 ========
 
