@@ -19,8 +19,6 @@ the */opt/digitalrebar/core* directory:
 +-----------------+-----------------------------------------------------------------------------+
 | Sub-Directory   | Description of Contents                                                     |
 +=================+=============================================================================+
-| BDD             | Business Driven Development Testing Infrastructre                           |
-+-----------------+-----------------------------------------------------------------------------+
 | barclamps       | Metadata that for barclamps which drive workload deployment                 |
 +-----------------+-----------------------------------------------------------------------------+
 | bin             | Digital Rebar executables and helper files                                  |

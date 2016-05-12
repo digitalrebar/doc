@@ -37,7 +37,6 @@ To create a pull request
    1. you may have to merge changes using
       ``git add [file]= and =git rebase --continue--``
 
-4. run and pass all the BDD tests, [[testing/README.md]]
 5. push your change to your personal repo in a branch:
    ``git push personal master:[my-pull-request-branch]``
 6. from your Github fork UI, create a pull request from

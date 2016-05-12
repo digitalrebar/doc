@@ -19,7 +19,7 @@ Returns JSON for Annealer worker queue
 +--------+---------------------+-----------+--------------------------------------+---------------+
 | Verb   | URL                 | Options   | Returns                              | Comments      |
 +========+=====================+===========+======================================+===============+
-| GET    | /api/status/queue   | none      | Number of Workers and List of Jobs   | Used by BDD   |
+| GET    | /api/status/queue   | none      | Number of Workers and List of Jobs   |               |
 +--------+---------------------+-----------+--------------------------------------+---------------+
 
 **Output**
