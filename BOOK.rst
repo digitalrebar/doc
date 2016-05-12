@@ -18,9 +18,9 @@ Contents
    :maxdepth: 2
    
    intro/README
+   principles/README
    deployment/README
    user/README
-   principles/README
    development/README
    faq/README
    LICENSE
