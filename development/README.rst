@@ -1,3 +1,5 @@
+.. _dev_guide:
+
 Development Guide
 =================
 

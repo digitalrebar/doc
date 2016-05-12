@@ -1,3 +1,5 @@
+.. _licenses:
+
 Digital Rebar Documentation License
 ===================================
 

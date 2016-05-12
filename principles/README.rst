@@ -1,3 +1,5 @@
+.. _op_principles:
+
 Operational Principles
 ======================
 
