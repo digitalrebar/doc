@@ -30,10 +30,6 @@ for testing. It is very important in our process that developers are
 able to run deployments in their environment as part of the testing
 cycle.
 
-While we have invested in BDD and system tests to catch core logic
-errors, most changes require performing a deployment to test
-correctness!
-
 > Protip: You can enter the Rails Console from the host, using ``docker exec -it compose_rebar_api_1 /opt/digitalrebar/core/tools/rails-console.sh``.  This works for development and production!
 
 Setting Rails Development Mode
