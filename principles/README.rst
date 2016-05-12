@@ -14,12 +14,6 @@ The topics in this guide help explain Digital Rebar's core architectural
 principles.
 
 
-.. toctree::
-   :maxdepth: 1
-   :glob:
-   
-   *
-
 Design Objective
 ----------------
 
@@ -101,3 +95,13 @@ Digital Rebar vs Crowbar/OpenCrowbar
 ------------------------------------
 
 Some of you may remember us from our Dell days (we've all since left and founded, RackN) when we founded the Crowbar Project. Since Crowbar was an "MVP" and is still being actively developed by SUSE and focuses solely on installing OpenStack, splitting the repositories allow both versions to progress with less confusion. This new generation is structurally and philosphically different from Crowbar and we’ve investing substantially in expanding the extensibility of the architecture, refactoring the tooling, paying down technical debt and cleanup up documentation. 
+
+Digital Rebar Concepts
+----------------------
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   *
+

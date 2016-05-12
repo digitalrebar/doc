@@ -1,7 +1,5 @@
-Digital Rebar Concepts
-======================
 
-The operations challenge
+The Operations Challenge
 ------------------------
 
 A deployment framework is key to solving the problems of deploying,

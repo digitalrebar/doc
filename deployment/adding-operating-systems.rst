@@ -1,12 +1,18 @@
 Adding Provisionable Operating Systems
 ======================================
 
+.. index::
+  TODO; OS_PROV_LIST
+
+TODO: Fix OS list from deploy container/provisioner/update_nodes/bootenv
+TODO: Ref provisioner API bootenv
+
 This process ensures that the Admin node can deploy operating systems to
 slaves.
 
 When deploying an admin node in production mode, you will want to be
 able to install operating systems on slave nodes. By default, the
-``provisioner-base-images`` role will look for OS install ISO images in
+``provisioner`` container will look for OS install ISO images in
 ``/tftpboot/isos``.
 
 As of August 2015, the provisioner knows how to install the following
@@ -30,21 +36,13 @@ operating systems from the following ISO images:
 -  ``Xen Server 6.5``: ``XenServer-6.5.0-xenserver.org-install-cd.iso``
 
     This list is subject to change! For the latest list, consult
-    `Provisioner Base
-    Images <https://github.com/digitalrebar/core/blob/develop/barclamps/provisioner.yml>`__
-    template file.
+    `Provisioner Default Boot Environments
+    <https://github.com/rackn/digitalrebar-deploy/tree/master/containers/provisioner/update-nodes/bootenvs>`__.
 
-For Docker Installs only
-------------------------
+.. index::
+  TODO; OS_HOW_TO_ADD_BOOTENV_MOVE_TO_USER_GUIDE
 
-To enable the provisioner to install from those images, place them in
-``$HOME/.cache/digitalrebar/tftpboot/isos``, either directly or via a
-hard link. These images will then be available inside the Docker
-container at ``/tftpboot/isos``, and the provisioner will be able to use
-them to install operating systems on slave nodes or if you do not want
-to copy the ISOs into place, you must hard link (not soft link) the ISO
-files because symlinks are not visible on file system paths mapped
-inside containers.
+TODO: MOve this to user guide and fix
 
 Add a new OS after initial annealing
 ------------------------------------
