@@ -1,4 +1,4 @@
-.. _contrib_basic
+.. _contrib_basic:
 
 Contributing Basics
 -------------------
