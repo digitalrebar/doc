@@ -103,5 +103,13 @@ Digital Rebar Concepts
    :maxdepth: 1
    :glob:
 
-   *
+   concepts/*
 
+Digital Rebar Architecture
+--------------------------
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   arch/*
