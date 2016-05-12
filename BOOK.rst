@@ -10,8 +10,7 @@ The **Digital Rebar Project** is a container-ready, infrastructure-as-code provi
 While it's been completly rebuilt by DevOps artisans, Digital Rebar history includes years of battle-tested ops learnings by the `Crowbar Project <http://github.com/crowbar>`_ founders.
 
 
-Contents
---------
+**Contents**
 
 .. toctree::
    :glob:
