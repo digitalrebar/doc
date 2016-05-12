@@ -15,6 +15,7 @@ instructions as part of the learning process.
    
    contributing/contributing
    contributing/contributing-code
+   contributing/contributing-docs
    contributing/mark
    contributing/workflow
    ui/README

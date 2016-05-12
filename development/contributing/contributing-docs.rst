@@ -1,17 +1,17 @@
-Contributing Code
+Contributing Docs
 -----------------
 
 Fork The Code
 ~~~~~~~~~~~~~
 
     we assume you already have a clone of
-    ``https://github.com/digitalrebar/core``
+    ``https://github.com/digitalrebar/doc``
 
 1. create a personal fork of the
-   ``https://github.com/digitalrebar/core``
+   ``https://github.com/digitalrebar/doc``
 
    1. Fork the code if you want to be able to submit changes
-   2. rename your fork in Github to something like 'rebar-core' to make
+   2. rename your fork in Github to something like 'rebar-doc' to make
       it easier to track. We'll assume that you did that in these
       directions
    3. remember to update your public SSH key to github
@@ -22,11 +22,37 @@ Fork The Code
    2. ``git config --global user.email "email.address"``
 
 3. add a personal remote:
-   ``git remote add personal`` https://github.com/[yourgitnamehere]/[rebar-core]\`
+   ``git remote add personal`` https://github.com/[yourgitnamehere]/[rebar-doc]\`
 4. you can check your remotes using ``git remote -v``
 5. get the latest code from your repo ``git fetch personal``
 
-To create a pull request
+Bigger Doc Changes
+~~~~~~~~~~~~~~~~~~
+
+For bigger doc changes, it is help to make a local environment to visualize your
+modifications.  This helps make a consistent multi-page change and lets you test
+your changes.
+
+The docs are automatically generated upon a successful pull request merge by the
+read-the-docs system.  We use Sphinx builders to generate html and pdf docs.  We 
+would love for you to validate the html docs at a minimum before submitting a 
+change.
+
+To setup an environment, you will need to install `Sphinx <http://www.sphinx-doc.org/en/stable/install.html>`_.
+For OS X 10.11, ``pip install sphinx`` was sufficient to build the docs.  The install link has methods for many platforms.
+
+With that in place, ``make html`` will create a _build/html directory that contains the built files.
+Using a browser pointed to the ``file://<working_dir>/_build/html/BOOK.html`` should allow you to verify changes.
+
+An additional tip is to run ``make html`` in a one second loop in another terminal to pick up changes as you make them. ::
+
+  while [ true ] ; do
+    make html
+    sleep 1
+  done
+
+
+To Create a Pull Request
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 1. make your change and commit it:
@@ -42,7 +68,7 @@ To create a pull request
 6. from your Github fork UI, create a pull request from
    my-pull-request-branch
 
-Work on a branch
+Work On a Branch
 ~~~~~~~~~~~~~~~~
 
 It's good practice to work on a branch instead of trunk. That allows you
@@ -64,12 +90,3 @@ your next item while the community does the review. It also isolates you
 from changes in master. If you need to get changes from master, use
 ``git merge master`` from your branch.
 
-Edit Documentation
-~~~~~~~~~~~~~~~~~~
-
-You do NOT need a local clone to update docs! You can edit them right
-from your fork on Github. Just make the changes and then create a pull
-request using the Github UI.  This is great for simple changes.
-See, :ref:`contrib-docs` for bigger changes.
-
-We *love* Docs changes!
