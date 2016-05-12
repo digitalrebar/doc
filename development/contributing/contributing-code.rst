@@ -1,7 +1,12 @@
-Contributing to Digital Rebar
------------------------------
+Contributing to Digital Rebar Core
+----------------------------------
 
 Before `submitting pull requests <https://help.github.com/articles/using-pull-requests>`_, please make sure you understand the Apache license. We consider submitting a pull to be accepting the project's license terms.
+
+.. index::
+  TODO; code_tree_usage
+
+TODO: This isn't what we do as much.  It is still true-ish, but may change shortly.
 
 We are using this `style <http://nvie.com/posts/a-successful-git-branching-model/>`__
 branching model. The main goal is not to develop in *master*, but on the
@@ -50,14 +55,9 @@ Coding Expectations
 -  Copyright & License header will be included in files that can
    tolerate headers
 -  At least 1 line comments as header for all methods
--  Unit tests for all models concurrent with pull request
--  Tests for all API calls and web pages concurrent with pull
-   request
 -  Documentation for API calls concurrent with pull request
--  Adhere to the community [Ruby style guide]
-   (https://github.com/bbatsov/ruby-style-guide)
--  Adhere to the community [Rails style guide]
-   (https://github.com/bbatsov/rails-style-guide/)
+-  Adhere to the community `Ruby style guide <https://github.com/bbatsov/ruby-style-guide>`_
+-  Adhere to the community `Rails style guide <https://github.com/bbatsov/rails-style-guide>`_
 
 Testing/ Validation
 ^^^^^^^^^^^^^^^^^^^
