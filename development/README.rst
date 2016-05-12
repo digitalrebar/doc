@@ -21,9 +21,6 @@ instructions as part of the learning process.
    ui/README
    jigs/README
    sledgehammer/build_sledgehammer
-   sledgehammer/dev-build-sledgehammer
-   sledgehammer/sledgehammer-hooks
-   smoketesting
 
 Dev Environment
 ---------------

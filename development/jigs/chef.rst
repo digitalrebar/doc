@@ -1,3 +1,8 @@
+
+Chef Jig
+--------
+
+
 Chef Jig and Developing with Cookbooks
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -11,8 +16,6 @@ Adding Chef Jig into a dev system
 
     bundle exec rake rebar:chef:inject_conn url=http://127.0.0.1:4000 name=admin key_file=/etc/chef/client.pem
 
-Developing with Chef Cookbooks
-------------------------------
 
 Rebar and Berkshelf
 ~~~~~~~~~~~~~~~~~~~

@@ -22,8 +22,8 @@ state transition.
 
 Digital Rebar must have 1 or more Jigs that preform the work of node-role state transition operations, known as **Jobs**.
 
-For initial Digital Rebar work, the primary **Jigs** inclide:
--------------------------------------------------------------
+
+**Current Jigs**
 
 .. toctree::
    :maxdepth: 1
