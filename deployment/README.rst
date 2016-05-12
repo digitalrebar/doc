@@ -1,5 +1,7 @@
-Deploy Guide
-------------
+.. _deploy_guide:
+
+Deployment Guide
+----------------
 
 The files located in this directory provide key information sought by
 software engineers, systems operators, DevOps staff, and end users.
