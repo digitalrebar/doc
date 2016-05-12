@@ -17,7 +17,7 @@ instructions as part of the learning process.
    contributing/contributing-code
    contributing/contributing-docs
    contributing/mark
-   contributing/workflow
+   dev_env/README
    ui/README
    jigs/README
    sledgehammer/build_sledgehammer

@@ -7,8 +7,8 @@ deployment code in multi-node situations.
 Using kvm-slaves with *kvm-slaves* script
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-    Closing the KVM window will *not* stop the VM because the scripts
-    are designed to restart the VM if it halts.
+Closing the KVM window will *not* stop the VM because the scripts
+are designed to restart the VM if it halts.
 
 Prereqs
 ^^^^^^^
@@ -23,7 +23,7 @@ For reference, here are the current Ubuntu requirements:
 Start Up
 ^^^^^^^^
 
-From the dev system, ``tools/kvm-slave``
+From the dev system and the core repo, ``tools/kvm-slave``
 
 This creates a KVM machine and attaches it to the Docker bridge.
 
