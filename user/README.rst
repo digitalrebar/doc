@@ -10,9 +10,9 @@ and information as needed.
   :maxdepth: 2
   :glob:
 
+  cases/README
   ../api/README
   ../clients/README
-
 
 
 State Image Key
@@ -42,34 +42,13 @@ State Image Key
 | Transition   | |Transition (image)|   | Annealer sent work to Jig                                 |
 +--------------+------------------------+-----------------------------------------------------------+
 
-Getting the Admin up
-~~~~~~~~~~~~~~~~~~~~
+.. index:
+  TODO; CUT_Up_UG_to_cases
 
-Once you've got a working Digital Rebar Admin node running, you access the UI
-via port http://[Admin IP]:3000. The default user is ``rebar`` with
-password ``rebar``.
+TODO: Cut these into use cases and API/CLI descriptions
 
-    All (and more) of the UI capabilities are also exposed by the Digital Rebar
-    CLI which is automatically setup on the Admin node.
-
-The ``production.sh`` script will automatically configure the Admin node
-to a complete working state. When the Admin node is ready, you can
-validate that the Admin node is working correctly in several ways:
-
--  the Deployments...System Overview (``/dashboard/layercake``) should
-   should all green checks
--  the Deployments...Annealer (``/annealer``) should show no active work
--  the Deployments...Deployments...system (``/deployments/system``)
-   should show all green checks
--  the Nodes...Nodes (``/nodes``) show should a green check for the
-   Admin node
-
-    You can check these screens *before* the annealer has completed
-    bringing up the Admin node and watch Rebar provision the 1st admin
-    node.
-
-Digital Rebar Admin Up! Add Nodes
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Add Nodes
+~~~~~~~~~
 
 Once the Digital Rebar Admin is running, simply booting VMs or physical nodes
 onto the management network will engage the discovery process (using
