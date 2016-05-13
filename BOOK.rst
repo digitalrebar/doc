@@ -15,6 +15,7 @@ The **Digital Rebar Project** is a container-ready, infrastructure-as-code provi
    
    intro/README
    principles/README
+   arch/README
    deployment/README
    user/README
    contrib/README

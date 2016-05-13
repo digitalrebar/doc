@@ -22,7 +22,9 @@ TODO: Define Audiences
 +========================+=============================================+
 | :ref:`introduction`    | Initial information and quick starts        |
 +------------------------+---------------------------------------------+
-| :ref:`op_principles`   | Describes how Digital Rebar works           |
+| :ref:`op_principles`   | Describes concepts around Digital Rebar     |
++------------------------+---------------------------------------------+
+| :ref:`arch`            | Describes components of Digital Rebar       |
 +------------------------+---------------------------------------------+
 | :ref:`deploy_guide`    | Describes how to deploy Digital Rebar       |
 +------------------------+---------------------------------------------+
