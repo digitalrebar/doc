@@ -11,6 +11,7 @@ The **Digital Rebar Project** is a container-ready, infrastructure-as-code provi
 
 .. toctree::
    :glob:
+   :numbered:
    :maxdepth: 2
    
    intro/README
