@@ -1,5 +1,7 @@
-Adding Provisionable Operating Systems
-======================================
+.. _dg_add_os:
+
+Seeding Provisionable Operating Systems
+=======================================
 
 .. index::
   TODO; OS_PROV_LIST
@@ -39,19 +41,3 @@ operating systems from the following ISO images:
     `Provisioner Default Boot Environments
     <https://github.com/rackn/digitalrebar-deploy/tree/master/containers/provisioner/update-nodes/bootenvs>`__.
 
-.. index::
-  TODO; OS_HOW_TO_ADD_BOOTENV_MOVE_TO_USER_GUIDE
-
-TODO: MOve this to user guide and fix
-
-Add a new OS after initial annealing
-------------------------------------
-
-If you add a new OS after the initial annealing, Digital Rebar must be told to
-rediscover available operating systems. You must reapply (retry) the
-``provisioner-base-images`` role (aka *Available O/S*) on the Admin
-server in the System deployment.
-
-    you can generally navigate directly to this NodeRole using
-    ``/nodes/2/node_roles/provisioner-base-images`` or using the name of
-    your admin server instead of the #2.

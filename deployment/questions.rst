@@ -1,14 +1,9 @@
-.. _install:
+.. _deploy_questions:
 
-Digital Rebar Install
-=====================
+Questions to Guide Deployment
+-----------------------------
 
-`TL;DR Quick Start <https://github.com/digitalrebar/doc/blob/master/deployment/install/quick.rst>`_ if you've got easy access to a Ubuntu system (AWS is perfect).
-
-.. contents:: Table Contents
-  :depth: 2
-
-*Approximate install time: 10-30 minutes depending on bandwidth.*  Once cached, reset takes *3-10 minutes* on most systems.  For the easiest install experience, we recommend trying a cloud based install.
+*Need help?* Jump over to our `live chat <https://gitter.im/digitalrebar/core>`_  (Gitter.im)
 
 **System Requirements** for Admin Container Host
 
@@ -16,51 +11,9 @@ Digital Rebar Install
 * 4 Physical Cores
 * Operating System should be: Mac OSX or Linux
 
-*Need help?* Jump over to our `live chat <https://gitter.im/digitalrebar/core>`_  (Gitter.im)
-
-Jump to Specific Environments
------------------------------
-
-  * Already have a Linux system (VM or Physical)?  Use the `SSH <https://github.com/digitalrebar/doc/blob/master/deployment/install/linux.rst>`_ helper to setup your system.  This works for local or remote installs.
-  * Don't have hardware?  No problem, we've got a quick install in `Packet.net <https://github.com/digitalrebar/doc/blob/master/deployment/install/packet.rst>`_ that includes provisioning.
-  * Use `Vagrant <https://github.com/digitalrebar/doc/blob/master/deployment/vagrant.rst>`_? We've automated all these steps for that too for admins and worker nodes.
-  * Comfortable with `Ansible <https://github.com/digitalrebar/doc/blob/master/deployment/install/ansible.rst>`_? Deploy these steps automatically to Ubuntu, Centos and others.  They are the shared basis for the above helper scripts.
-
-**RECOMMENDATION:** Review the `RackN maintained deploy scripts <https://github.com/rackn/digitalrebar-deploy>`_ for updated step-by-step install examples.
-
-Provisioning from Containers
-----------------------------
-
-Digital Rebar operates all the infrastructure management functions in Docker containers; consequently, you need to be running in an environment that can run Docker (this includes Macs).
-
-General Installation
---------------------
-
-First you need to `apt-get install git` or `yum install git`.
-
-By following the directory structure below, you are set for development or deployments.
-
-::
-
-  cd ~
-  mkdir digitalrebar
-  git clone https://github.com/rackn/digitalrebar-deploy digitalrebar/deploy
-  ln -s digitalrebar/ digitalrebar/deploy/compose/digitalrebar
-  cd digitalrebar/deploy
-  echo "Checking prerequisites"
-  ./run-in-system.sh --help
-  echo "let's setup Digital Rebar!"
-
-In human words, change to your home directory, make a digitalrebar directory.  Change into the newly created directory and clone the digitalrebar-deploy tree from RackN as deploy.  Once that clone is complete, create a symbolic link from the compose directory to the Digital Rebar top-level directory.
-
-Note: target IP address must include /## for CIDR!
-
-At this point, you are ready to use the deploy tools to build your node
 
 Providers: What Systems Do I Have to Play With?
 """""""""""""""""""""""""""""""""""""""""""""""
-
-Prerequisite: Add your credentials to a `.dr_info file <dr_info.rst>`_.
 
 The ``run-in-[packet|system|google|docean|aws].sh [options] `` or ``workloads\[docker-swarm|kubernetes]`` scripts will quickly build a working Digital Rebar administrate system.  There are advanced workload scripts that will setup Digital Rebar AND provision a workload.
 
@@ -118,13 +71,4 @@ Using the deploy tools, the environment should be setup for doing development as
   
 This leaves you in a show where you can run docker-compose logs and other docker commands to inspect the containers.  Exiting this shell will kill and remove the containers.  *docker-admin* takes an --access flag with a value of either HOST or FORWARDER and a very helpful ``--no-pull`` flag that doesn't do a pull update to increase iteration speeds.
 
-
-Notes and Provisos
-------------------
-
-The general installation steps can be reviewed in the Ansible playbook docs.
-
-    To improve support, the `Digital Rebar team <https://github.com/orgs/digitalrebar/teams>`_ is no longer creating or documenting install packages.
-
-    For developers, we've collected some additional guidance in the development section to review after you've got your first install working.
 
