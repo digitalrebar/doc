@@ -40,9 +40,6 @@ TODO: Define Audiences
 +------------------------+---------------------------------------------+
 
 
-
-**Contents**
-
 .. toctree::
    :glob:
    :maxdepth: 1
