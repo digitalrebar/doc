@@ -23,5 +23,5 @@ Walk through each section to get deploy a Digital Rebar admin node or as always 
    tools
    config/README
    install/README
-   *
+   workloads/README
 
