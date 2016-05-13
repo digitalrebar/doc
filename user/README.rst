@@ -11,6 +11,7 @@ and information as needed.
   :glob:
 
   cases/README
+  backup-restore
   ../api/README
   ../clients/README
 

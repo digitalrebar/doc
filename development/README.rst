@@ -21,6 +21,7 @@ instructions as part of the learning process.
    ui/README
    jigs/README
    sledgehammer/build_sledgehammer
+   directory-layout
 
 Dev Environment
 ---------------
