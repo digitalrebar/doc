@@ -1,6 +1,13 @@
 Provider Usage
 ==============
 
+.. index:
+  TODO; provider_split_out
+
+TODO: Use this part in arch
+TODO: Put some in user guide.
+TODO: Reference from Deployment.
+
 Overview
 --------
 
