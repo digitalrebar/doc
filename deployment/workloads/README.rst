@@ -1,4 +1,6 @@
-Workloads Installer
+.. _dg_workloads:
+
+Workload Installers
 ===================
 
 The ``workloads/[scripts]`` provide a complete system setup for a variety of workloads.  They are designed as one command, multiple target deployment scripts.
