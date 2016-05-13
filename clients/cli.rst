@@ -1,3 +1,5 @@
+.. _rebar_cli:
+
 Digital Rebar CLI
 =================
 
