@@ -8,6 +8,7 @@ Expanded Table of Contents
 Here is a full list of sections of this book.
 
 .. toctree::
+   :numbered:
    :glob:
    
    intro/README
