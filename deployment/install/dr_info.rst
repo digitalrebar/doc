@@ -1,5 +1,8 @@
-Digital Rebar Info (.dr_info)
-=============================
+
+.. _dr_info:
+
+Digital Rebar Info File (.dr_info)
+==================================
 
 For regular uses, you can store your provider credentials in the ``~/.dr_info`` file ( `details here <./dr_info.rst>`_ )
 
