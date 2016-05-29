@@ -7,6 +7,6 @@ Extending Digital Rebar Guide
   TODO; Describe_Role_Addition
 
 
-This guide will describe how to add Roles and Worloads.
+This guide will describe how to add Roles and Workloads.
 This should include creation, addition, and removal of pieces.
 
