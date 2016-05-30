@@ -9,10 +9,21 @@ This is the Digital Rebar Web Interface.
   :maxdepth: 1
   :glob:
 
+  login
   overview
+  annealer
+  monitor
+  ready_state_wizard
   deployment
   nodes
-  ready_state_wizard
+  roles
+  providers
+  barclamps
+  networks
+  jigs
+  groups
+  hammers
+  families
 
 State Image Key
 ~~~~~~~~~~~~~~~
