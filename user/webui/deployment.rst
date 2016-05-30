@@ -17,6 +17,30 @@ deployment from the Deployment...Deployments submenu or direct using
     Deployments are automatically set to have the system deployment as
     their parent. In the future, other parents may be set.
 
+Deployment without Nodes
+------------------------
+
+A deployment can exist without nodes.  In this mode, it is possible to add roles and change the deployment state from proposed to committed and back.
+
+.. image:: /images/screens/dr_system_no_nodes.png
+
+Once nodes have been added, the deployment will show the node-role state for the nodes.
+
+.. image:: /images/screens/dr_single_deployment.png
+
+Use the (+) button to add roles to nodes as desired.
+
+Tracking Progress of a Deployment
+---------------------------------
+
+Nodes may have different role assignments in the same deployment.  For example, cloud and metal nodes will have different roles.  Power or reservation state will be shown as a prefix to the node name.
+
+.. image:: /images/screens/dr_system_cloud_and_metal.png
+
+When Digital Rebar is working, node-role states will be automatically updated in the deployment.
+
+.. image:: /images/screens/dr_system_new_nodes.png
+
 Adding Nodes to a Deployment
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -27,6 +51,9 @@ You can set a node into a deployment from the Nodes list drill down into
 each node page (``/nodes/[node name]``) or several at a time from the
 Nodes...Bulk Edit (``/dashboard/list``). Both methods provide a list of
 available deployments.
+
+.. image:: /images/screens/dr_bulk_edit.png
+
 
 Adding Networks to a Deployment
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
