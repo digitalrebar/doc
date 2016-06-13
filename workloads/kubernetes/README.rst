@@ -17,6 +17,8 @@ Install the Kubernetes workload, run the workload script:
   	cd ~/digitalrebar/deploy
   	workloads/kubernetes.sh --deploy-admin=google --provider=aws --deployment-name=kubeup
 
+Since the Kubernetes workload uses Ansible, it does not require the nodes to access an Admin node.  This allows users to run a local Admin node and provision Kubernetes to external nodes.  WARNING: A local admin requires consistent connectivity to the nodes to work - it cannot disconnect even when the script changes to waiting to anneal mode.
+
 Video Examples
 --------------
 
@@ -29,24 +31,31 @@ Rob Hirschfeld has created a `number of videos <https://www.youtube.com/playlist
 Configuration Options
 ---------------------
 
+We've worked hard to create safe defaults; however, if you change defaults then the downstream consumers of those values will get the correct values.
+
 General Options
 ~~~~~~~~~~~~~~~
 
   * ``--kubernetes-master-count=<Number>`` Number of masters to start
   * ``--kubernetes-bin-dir=<String>`` Directory to store binaries ``/usr/local/bin``
-  * ``--kubernetes-cloud-provider=<String>`` Is kubernetes in a cloud environment (false or type)
-  * ``--kubernetes-cloud-provider-type=<String>`` Which cloud environment
   * ``--kubernetes-cluster-logging=<true|false>`` Use cluster logging
   * ``--kubernetes-cluster-monitoring=<true|false>`` Use cluster monitoring
   * ``--kubernetes-cluster-name=<String>`` Name of cluster: cluster.local
-  * ``--kubernetes-kube-service-addresses=<CIDRIP>`` Internal Service IP Addresses
   * ``--kubernetes-local-release-dir=<String>`` Directory to download binaries: /tmp/releases
   * ``--kubernetes-log-level=<Int>  : Kubernetes Log Level: 2
   * ``--kubernetes-test=<true|false>`` Add the test role to validate completion
   * ``--kubernetes-users=<String>   : JSON string of users with password and role
 
+The following options are set by the script.  Override with caution!
+
+  * ``--kubernetes-kube-service-addresses=<CIDRIP>`` Internal Service IP Addresses
+  * ``--kubernetes-cloud-provider=<String>`` Is kubernetes in a cloud environment (false or type)
+  * ``--kubernetes-cloud-provider-type=<String>`` Which cloud environment
+
 Prerequisites 
 ~~~~~~~~~~~~~
+
+In the future, you should be able to use an existing Etcd cluster.
 
   * ``--kubernetes-etcd-client-port=<Int>`` Default etcd client port: 2379
   * ``--kubernetes-etcd-peer-port=<Int>`` Default etcd peer port: 2380
@@ -67,7 +76,10 @@ Networking Options
 
 There are a lot of networking options for Kubernetes and they are constantly evolving.
 
-  * ``--kubernetes-networking=<calico|flannel|opencontrail>`` Network mode to use
+There are the primary ones are generally set by users:
+
+  * ``--kubernetes-networking=<calico|flannel|opencontrail>`` Network mode to use.  Defaults to flannel.
+  * ``--kubernetes-dns=<true|false>`` Use DNS add-on. Defaults to true.
   * ``--kubernetes-network-category=<category name>`` Network category to use for underlay traffic, default: admin
 
 DNS configuration: 
@@ -75,7 +87,6 @@ DNS configuration:
   * ``--kubernetes-dns-domain=<Domain String>`` Domain of the internal Kubernetes DNS service
   * ``--kubernetes-dns-namespace=<Kuberetenes Namespace>`` Namespace to put the DNS service in
   * ``--kubernetes-dns-replicas=<Number>`` Number of DNS replicas to run
-  * ``--kubernetes-dns=<true|false>`` Use DNS add-on
   * ``--kubernetes-dns-upstream=<JSON ARRAY of IP>`` JSON array of DNS server IPs
 
 Calico or Flannel:
