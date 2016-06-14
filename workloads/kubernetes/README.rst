@@ -5,10 +5,10 @@ Kubernetes Workload
 
 `Kubernetes <http://kubernetes.io/>`_ is a container orchestration and management platform.
 
-This section is specific to Kubernetes, see :ref:`workloads_guide` for general install tips.
-
 Installation
 ------------
+
+Before running the steps below, you must complete the general workloads installation in :ref:`workloads_guide`.
 
 Install the Kubernetes workload, run the workload script:
 
