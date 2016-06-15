@@ -3,6 +3,8 @@
 Workload Installers
 ===================
 
+Please see :ref:`workloads_guide` for additional information.
+
 The ``workloads/[scripts]`` provide a complete system setup for a variety of workloads.  They are designed as one command, multiple target deployment scripts.
 
 The following workloads are available
