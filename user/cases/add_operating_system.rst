@@ -18,11 +18,8 @@ The default set of ISOs can be found in :ref:`dg_add_os`.  Adding a default ISO 
   Boot Environment; Base
   OS Install; Base
 
-1. Add iso to tftpboot/iso directory
-
-  This can be found on the admin node.  It is usually */root/.cache/digitalrebar/tftpboot/isos*
-
-2. Restart the provisioner container
+#. Add iso to tftpboot/isos directory, usually on the admin node in */root/.cache/digitalrebar/tftpboot/isos*.
+#. Restart the provisioner container
 
   On the admin node as root, run:
 
@@ -48,7 +45,7 @@ The boot environment must provide a network boot that installs the OS or other t
 then sets the next boot environment to localboot upon completion. 
 See :ref:`api_provisioner_bootenv` and :ref:`api_provisioner_template`.
 
-#. Add iso to tftpboot/iso directory, */root/.cache/digitalrebar/tftpboot/isos*.
+#. Add iso to tftpboot/isos directory, usually on the admin node in */root/.cache/digitalrebar/tftpboot/isos*.
 #. Create install templates for new OS (or reuse)
 #. Create install bootenv for new OS
 #. Upload templates to provisioner
