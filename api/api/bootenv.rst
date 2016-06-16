@@ -1,130 +1,246 @@
 .. index::
-  pair: Node; API
+  pair: Bootenv; API
 
-Node API
-========
+.. _api_provisioner_bootenv:
 
-Node APIs are used to manage nodes (servers) within the Rebar system
+Bootenv API
+===========
 
-When Nodes are created, updated or deleted, roles and jigs are notified
-so they can tail appropriate actions.
+Bootenv APIs are used to manage boot environments for nodes.  Bootenvs reference
+:ref:`api_provisioner_template` objects.
+
+This API is only available through the reverse proxy feature.
 
 API Actions
 -----------
 
-+----------+-------------------------------------------+-----------------------------------------------------------------------+
-| Verb     | URL                                       | Comments                                                              |
-+==========+===========================================+=======================================================================+
-| GET      | api/v2/nodes                              | List                                                                  |
-+----------+-------------------------------------------+-----------------------------------------------------------------------+
-| GET      | api/v2/nodes/:id                          | Specific Item                                                         |
-+----------+-------------------------------------------+-----------------------------------------------------------------------+
-| PUT      | api/v2/nodes/:id                          | Update Item, notifies all jigs and roles                              |
-+----------+-------------------------------------------+-----------------------------------------------------------------------+
-| POST     | api/v2/nodes                              | Create Item, notifies all jigs and roles                              |
-+----------+-------------------------------------------+-----------------------------------------------------------------------+
-| DELETE   | api/v2/nodes/:id                          | Delete Item + notifies all jigs and roles                             |
-+----------+-------------------------------------------+-----------------------------------------------------------------------+
-| GET      | api/v2/nodes/:id/node\_roles              | Shows all the roles that the node is using (including their status)   |
-+----------+-------------------------------------------+-----------------------------------------------------------------------+
-| GET      | /api/v2/nodes/[:node\_id]/attribs         | List Attribs for a specific node                                      |
-+----------+-------------------------------------------+-----------------------------------------------------------------------+
-| GET      | /api/v2/nodes/[:node\_id]/attribs/[:id]   | Show Attrib (including value) for a specific Node                     |
-+----------+-------------------------------------------+-----------------------------------------------------------------------+
-| PUT      | /api/v2/nodes/[:node\_id]/commit          | Commit all the noderoles in proposed on a specific node               |
-+----------+-------------------------------------------+-----------------------------------------------------------------------+
-| PUT      | /api/v2/nodes/[:node\_id]/attribs/[:id]   | Update Attrib                                                         |
-+----------+-------------------------------------------+-----------------------------------------------------------------------+
-
-Details:
-
--  name - must be FQDN
-
-Hints:
-
-Uesrs can provide shortcuts to the hint data. The following hints have
-been defined as optional parameters for the Node API
-
--  ip - requests a specific network-admin IP
--  mac - setup up the DHCP resolution for the node using the given MAC
-   address
-
-Examples
---------
-
-Using CURL to create a minimally configured node from the Admin node
-
-curl --digest -u 'developer:Cr0wbar!' -H "Content-Type:application/json"
---url http://127.0.0.1:3000/api/v2/nodes -X POST --data @ns.json
-
-Where the data file is ``ns.json`` and contains
-
-{ "alive": "true", "bootenv": "local", "name": "test.cr0wbar.com" } ##
-JSON Fields
-
-+--------------------+----------------+------------+------------------------------------------------+
-| Attribute          | Type           | Settable   | Note                                           |
-+====================+================+============+================================================+
-| Admin              | Boolean        | Yes        |                                                |
-+--------------------+----------------+------------+------------------------------------------------+
-| Alias              | String         | Yes        |                                                |
-+--------------------+----------------+------------+------------------------------------------------+
-| Alive              | Boolean        | Yes        |                                                |
-+--------------------+----------------+------------+------------------------------------------------+
-| Allocated          | Boolean        | Yes        |                                                |
-+--------------------+----------------+------------+------------------------------------------------+
-| Available          | Boolean        | Yes        |                                                |
-+--------------------+----------------+------------+------------------------------------------------+
-| Bootenv            | String         | Yes        |                                                |
-+--------------------+----------------+------------+------------------------------------------------+
-| Created\_at        | String         | No         | Unicode - date format                          |
-+--------------------+----------------+------------+------------------------------------------------+
-| Deployment\_id     | Internal Ref   | No         | Actually an Int                                |
-+--------------------+----------------+------------+------------------------------------------------+
-| Description        | String         | Yes        |                                                |
-+--------------------+----------------+------------+------------------------------------------------+
-| Discovery          | String         | Yes        | All the details of the hardware - very large   |
-+--------------------+----------------+------------+------------------------------------------------+
-| Hint               | String         | Yes        |                                                |
-+--------------------+----------------+------------+------------------------------------------------+
-| Id                 | Integer        | No         |                                                |
-+--------------------+----------------+------------+------------------------------------------------+
-| Name               | String         | Yes        |                                                |
-+--------------------+----------------+------------+------------------------------------------------+
-| Order              | Integer        | ??         |                                                |
-+--------------------+----------------+------------+------------------------------------------------+
-| Target\_role\_id   | Internal Ref   | No         |                                                |
-+--------------------+----------------+------------+------------------------------------------------+
-| Updated\_at        | String         | No         | Unicode - date format                          |
-+--------------------+----------------+------------+------------------------------------------------+
-| Variant            | String         | Yes        | What variant of node this is.  Used by the     |
-|                    |                |            | provider infrastructure.                       |
-+--------------------+----------------+------------+------------------------------------------------+
-| Arch               | String         | Yes        | The node hardware architecture.                |
-+--------------------+----------------+------------+------------------------------------------------+
-| OS_Family          | String         | Yes        | The family of OS running on the node.          |
-+--------------------+----------------+------------+------------------------------------------------+
-| Provider\_ID       | Internal Ref   | No         | The ID of the provider responsible for         |
-|                    |                |            | managing the node                              |
-+--------------------+----------------+------------+------------------------------------------------+
++----------+-------------------------------------------+-------------------------------------+
+| Verb     | URL                                       | Comments                            |
++==========+===========================================+=====================================+
+| GET      | provisioner/bootenvs                      | List                                |
++----------+-------------------------------------------+-------------------------------------+
+| GET      | provisioner/bootens/:name                 | Specific Item                       |
++----------+-------------------------------------------+-------------------------------------+
+| PUT      | provisioner/bootenvs/:name                | Update Item                         |
++----------+-------------------------------------------+-------------------------------------+
+| POST     | provisioner/bootenvs                      | Create Item                         |
++----------+-------------------------------------------+-------------------------------------+
+| DELETE   | provisioner/bootenvs/:name                | Delete Item                         |
++----------+-------------------------------------------+-------------------------------------+
 
 
+Bootenv Object
+--------------
+
+The general bootenv object defines an execution environment for nodes.  A boot environment is a network
+boot context that can lead to an installation, or discovery-like image (default sledgehammer environment),
+or diskless-boot environment.  The boot environment defines the set of files needed for the node to PXE
+boot into this environment.
+
+To support the widest range of boot methods, the boot environment should provide at least three
+template objects.  These are the file content needed to start the boot process based upon the PXE
+boot loader in use.  These files must in the form:
+
+::
+
+      {
+        "Name": "pxelinux",
+        "Path": "pxelinux.cfg/{{.Machine.HexAddress}}",
+        "UUID": "default-pxelinux.tmpl"
+      },
+      {
+        "Name": "elilo",
+        "Path": "{{.Machine.HexAddress}}.conf",
+        "UUID": "default-elilo.tmpl"
+      },
+      {
+        "Name": "ipxe",
+        "Path": "{{.Machine.Address}}.ipxe",
+        "UUID": "default-ipxe.tmpl"
+      },
+
+Notice the three bootloader types, *pxelinux*, *ipxe*, and *elilo*.  For most linux-based network installs,
+the default three listed above is sufficient.  The BootParams, Kernel, and Initirds are properly injected
+to launch the kernel with initrds.  The BootParams string should be used to reference other templated
+files needed for installation.
+
+For example:
+
+::
+
+  "BootParams": "ksdevice=bootif ks={{.Machine.Url}}/compute.ks method={{.Env.OS.InstallUrl}} inst.geoloc=0",
+
+This example shows that the *compute.ks* file is served from the ``.Machine.Url`` variable.  The .MachineUrl
+variable is helper that presents an HTTP path to the node's template expansion directory on the provisioner.
+The template list should include a file that called *compute.ks*.  The ``.Env.OS.InstallURL`` is a helper
+variable that references the ISO installation directory created in the provisioner.  This directory presents
+the reference ISO exploded from its ISO file into a live filesystem image.  The provisioner serves that directory
+from the ``.Env.OS.InstallURL`` path.
+
+For the install process to work correctly, the bootenv used to install an OS must end in ``-install``.
+The roles used to install OSes uses the the ``-install`` form to limit choices in the UI and to ensure
+proper workflow progress during the bring-up process.
+
+
++--------------------+-----------------+------------+------------------------------------------------+
+| Attribute          | Type            | Settable   | Note                                           |
++====================+=================+============+================================================+
+| BootParams         | Template String | Yes        | String expanded and available as variable      |
+|                    |                 |            | .BootParams in templates. Often used to        |
+|                    |                 |            | represent the boot parameters passed to the    |
+|                    |                 |            | initial boot kernel.                           |
++--------------------+-----------------+------------+------------------------------------------------+
+| Initrds            | List of Strings | Yes        | A list of initrd images that are relative to   |
+|                    | or              |            | CD expansion directory.  Often used with the   |
+|                    | null            |            | template helper .Env.JoinInitrds.              |
++--------------------+-----------------+------------+------------------------------------------------+
+| Kernel             | String          | Yes        | The path to the kernel to initially boot.      |
+|                    |                 |            | Referenced by .Env.Kernel and used with        |
+|                    |                 |            | template helper .Env.PathFor.                  |
++--------------------+-----------------+------------+------------------------------------------------+
+| Name               | String          | Yes        | Unique name for this boot environment          |
++--------------------+-----------------+------------+------------------------------------------------+
+| OS                 | OS Object       | Yes        | An OS Object defining information about the    |
+|                    |                 |            | OS to install                                  |
++--------------------+-----------------+------------+------------------------------------------------+
+| RequiredParams     | List of Strings | Yes        | A list of attributes that the bootenv requires |
+|                    |                 |            | to fill in templates. The node object is       |
+|                    |                 |            | for these values and provided to all the       |
+|                    |                 |            | templates during expansion.                    |
++--------------------+-----------------+------------+------------------------------------------------+
+| Templates          | List of         | Yes        | A list of template objects that define the     |
+|                    | Template        |            | set of files to render for this boot           |
+|                    | Objects         |            | environment for each node.                     |
++--------------------+-----------------+------------+------------------------------------------------+
+
+
+OS Object
+---------
+
+The OS Object define Operating System information used to populate the served install directory.
+
++--------------------+-----------------+------------+------------------------------------------------+
+| Attribute          | Type            | Settable   | Note                                           |
++====================+=================+============+================================================+
+| Name               | String          | Yes        | Name of OS - Usually BootEnv Name minus the    |
+|                    |                 |            | *-install*.                                    |
++--------------------+-----------------+------------+------------------------------------------------+
+| Family             | String          | Yes        | OS Family name - e.g, RedHat, Ubuntu           |
++--------------------+-----------------+------------+------------------------------------------------+
+| Codename           | String          | Yes        | OS Codename - distro codename, e.g. trusty     |
++--------------------+-----------------+------------+------------------------------------------------+
+| Version            | String          | Yes        | OS Version - distro version, e.g. 14.04        |
++--------------------+-----------------+------------+------------------------------------------------+
+| IsoFile            | String          | Yes        | The name of the ISO in the isos directory.     |
++--------------------+-----------------+------------+------------------------------------------------+
+| IsoSha256          | String          | Yes        | The SHA256 sum of the ISO to ensure viability  |
++--------------------+-----------------+------------+------------------------------------------------+
+| IsoUrl             | String          | Yes        | The URL the ISO can be downloaded from         |
++--------------------+-----------------+------------+------------------------------------------------+
+| Files              | null or list of | Yes        | A list of file objects to place in the install |
+|                    | File Objects    |            | directory.  Used for static install files.     |
++--------------------+-----------------+------------+------------------------------------------------+
+
+
+File Object
+-----------
+
+File objects define static files that be used to populate the install directory.  These are often
+used when the isos are not complete or the install method is not ISO-based.  For example, CoreOS.
+
++--------------------+-----------------+------------+----------------------------------------------------+
+| Attribute          | Type            | Settable   | Note                                               |
++====================+=================+============+====================================================+
+| URL                | String          | Yes        | URL where to find the file                         |
++--------------------+-----------------+------------+----------------------------------------------------+
+| Name               | String          | Yes        | Name of the file to place in the install directory |
++--------------------+-----------------+------------+----------------------------------------------------+
+| ValidationURL      | String          | Yes        | Can be null. Location of checksum or signature     |
++--------------------+-----------------+------------+----------------------------------------------------+
+| ValidationMethod   | String          | Yes        | Can be null, Method to use for validation.         |
++--------------------+-----------------+------------+----------------------------------------------------+
+
+NOTE: Validation is not currently implemented in the provisioner.
+
+
+Template Object
+---------------
+
+This object defines a reference to the template objects.  UUID is the template object id.
+
++--------------------+-----------------+------------+------------------------------------------------------+
+| Attribute          | Type            | Settable   | Note                                                 |
++====================+=================+============+======================================================+
+| UUID               | String          | Yes        | UUID of the :ref:`api_provisioner_template` Object   |
++--------------------+-----------------+------------+------------------------------------------------------+
+| Path               | Template String | Yes        | String expanded and available as variable            |
++--------------------+-----------------+------------+------------------------------------------------------+
+| Name               | String          | Yes        | Name of template inside this bootenv.                |
++--------------------+-----------------+------------+------------------------------------------------------+
 
 
 
-Field Information
------------------
+Example Bootenv Object
+----------------------
 
-Minimum fields needed for create
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Here is an example JSON object.
 
-Alive, Bootenv, Name
+::
 
-Target Role ID
-~~~~~~~~~~~~~~
+  {
+    "BootParams": "ksdevice=bootif ks={{.Machine.Url}}/compute.ks method={{.Env.OS.InstallUrl}} inst.geoloc=0",
+    "Initrds": [
+      "images/pxeboot/initrd.img"
+    ],
+    "Kernel": "images/pxeboot/vmlinuz",
+    "Name": "centos-7.2.1511-install",
+    "OS": {
+      "Codename": "",
+      "Family": "",
+      "Files": null,
+      "IsoFile": "CentOS-7-x86_64-Minimal-1511.iso",
+      "IsoSha256": "f90e4d28fa377669b2db16cbcb451fcb9a89d2460e3645993e30e137ac37d284",
+      "IsoUrl": "http://mirrors.kernel.org/centos/7.2.1511/isos/x86_64/CentOS-7-x86_64-Minimal-1511.iso",
+      "Name": "centos-7.2.1511",
+      "Version": ""
+    },
+    "RequiredParams": [
+      "logging_servers",
+      "ntp_servers",
+      "operating-system-disk",
+      "provisioner-default-password-hash",
+      "proxy-servers",
+      "rebar-access_keys",
+      "rebar-machine_key"
+    ],
+    "Templates": [
+      {
+        "Name": "pxelinux",
+        "Path": "pxelinux.cfg/{{.Machine.HexAddress}}",
+        "UUID": "default-pxelinux.tmpl"
+      },
+      {
+        "Name": "elilo",
+        "Path": "{{.Machine.HexAddress}}.conf",
+        "UUID": "default-elilo.tmpl"
+      },
+      {
+        "Name": "ipxe",
+        "Path": "{{.Machine.Address}}.ipxe",
+        "UUID": "default-ipxe.tmpl"
+      },
+      {
+        "Name": "compute.ks",
+        "Path": "{{.Machine.Path}}/compute.ks",
+        "UUID": "centos-7.ks.tmpl"
+      },
+      {
+        "Name": "rebar_join.sh",
+        "Path": "{{.Machine.Path}}/rebar_join.sh",
+        "UUID": "rebar-join.sh.tmpl"
+      }
+    ]
+  }
 
-TargetRole is used to troubleshoot problem nodes by putting them into a
-*hopefully* known working state which allows you to put the node back
-into sledgehammer so you can take the installed OS out of the picture.
-To do this, set the target role to TargetRole to "rebar managed node"
-and BootEnv to "sledgehammer" then reboot.
+
+
