@@ -5,6 +5,11 @@ Troubleshooting
 
 There are several possible failures when running Workload scripts.
 
+No Response From Server
+~~~~~~~~~~~~~~~~~~~~~~~
+
+Digital Rebar requires HTTPS and accepting the self-signed certificate.
+
 SSH Key
 ~~~~~~~
 

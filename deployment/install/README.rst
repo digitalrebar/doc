@@ -15,9 +15,7 @@ Tool Setup
   dr_info
   cli_setup
 
-Once the tools are setup, you could use the :ref:`dg_workloads` instead to deploy an admin node and a workload at the 
-same time.  This can be faster for initial bring up, but can limit a multi-use deployment.  The workload scripts can also 
-reference an already installed admin node as well.
+Once the tools are setup, you could use the :ref:`workloads_guide` instead to deploy an admin node and a workload at the same time.  This can be faster for initial bring up, but can limit a multi-use deployment.  The workload scripts can also reference an already installed admin node as well.
 
 Specific Environments
 ---------------------
@@ -32,6 +30,7 @@ Specific Environments
   google
   vagrant
   ansible
+  providers
 
 Post Deployment Actions
 -----------------------

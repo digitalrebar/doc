@@ -8,9 +8,9 @@ Kubernetes Workload
 Installation
 ------------
 
-Before running the steps below, you must complete the general workloads installation in :ref:`workloads_guide`.
+FIRST, you must complete the general workloads installation in :ref:`workloads_installation`.
 
-Install the Kubernetes workload, run the workload script:
+Next, Install the Kubernetes workload, run the workload script:
 
   ::
 
@@ -42,9 +42,9 @@ General Options
   * ``--kubernetes-cluster-monitoring=<true|false>`` Use cluster monitoring
   * ``--kubernetes-cluster-name=<String>`` Name of cluster: cluster.local
   * ``--kubernetes-local-release-dir=<String>`` Directory to download binaries: /tmp/releases
-  * ``--kubernetes-log-level=<Int>  : Kubernetes Log Level: 2
+  * ``--kubernetes-log-level=<Int>``  : Kubernetes Log Level: 2
   * ``--kubernetes-test=<true|false>`` Add the test role to validate completion
-  * ``--kubernetes-users=<String>   : JSON string of users with password and role
+  * ``--kubernetes-users=<String``   : JSON string of users with password and role
 
 The following options are set by the script.  Override with caution!
 
