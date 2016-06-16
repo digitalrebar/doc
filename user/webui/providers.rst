@@ -1,9 +1,13 @@
+.. _providers:
+
 Providers
 =========
 
 Providers allow Digital Rebar to interact with Infrastructure as a Service (IaaS or Cloud) providers.  These providers are able to "create" and "destroy" servers programatically.  If a node is created with a non-metal provider, then Digital Rebar will use the information in the Provider to acquire servers.
 
 .. image:: /images/screens/dr_providers_list.png
+
+For details, see :ref:`configure_providers` about configuration and :ref:`troubleshoot_providers`
 
 Nodes via Providers
 -------------------
@@ -28,4 +32,4 @@ And then exiting the appropriate fields.
 Developer Notes
 ---------------
 
-You can monitor provider activity by watching the Cloudwrap container logs.
+You can monitor provider activity by watching the Cloudwrap container logs.  See ref:`configure_providers` for details.

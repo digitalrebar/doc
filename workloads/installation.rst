@@ -15,6 +15,8 @@ Install workloads you need the Digital Rebar Deploy infrastructure:
   	cd ~/digitalrebar
   	git clone https://github.com/rackn/digitalrebar-deploy deploy
 
+You must make sure to open correct :ref:`port_mapping`.
+
 If you have added AWS provider credentials to :ref:`dr_info` then you could then deploy a Kubernetes workload as follows (see :ref:`kubernetes_workload` for mre details):
 
    :: 
@@ -22,7 +24,7 @@ If you have added AWS provider credentials to :ref:`dr_info` then you could then
   	cd ~/digitalrebar/deploy
   	workloads/kubernetes.sh --deploy-admin=aws --provider=aws --deployment-name=rebarrocks
 
-Read more about :ref:`workload_parameters` or you can use ``--help`` to get a full list of options.
+Read more about :ref:`workload_parameters` or you can use ``--help`` to get a full list of :ref:`workloads_parameters`
 
 
 Developer Notes

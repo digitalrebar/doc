@@ -1,12 +1,12 @@
 
 .. _dr_info:
 
-Digital Rebar Info File (.dr_info)
-==================================
+DR Info File (.dr_info)
+=======================
 
-For regular uses, you can store your provider credentials in the ``~/.dr_info`` file ( `details here <./dr_info.rst>`_ )
+For regular uses, you can store your :ref:`providers` credentials in the ``~/.dr_info`` file.
 
-There is a ``.dr_info.example`` file in the `DigitalRebar-Deployment root <https://github.com/rackn/digitalrebar-deploy/blob/master/.dr_info.example>`_ you can use as a template.
+There is a ``.dr_info.example`` file in the `DigitalRebar-Deployment root <https://github.com/rackn/digitalrebar-deploy/blob/master/.dr_info.example>`_ you can use as a template via ``cp ~/digitalrebar/deploy/.dr_info.example ~/.dr_info``
 
 Sample ``.dr_info``:
 
@@ -20,19 +20,7 @@ Sample ``.dr_info``:
     PROVIDER_AWS_SECRET_ACCESS_KEY=[secret here]
     PROVIDER_AWS_REGION=us-west-2
 
-    PROVIDER_GOOGLE_PROJECT=[project]
-    PROVIDER_GOOGLE_JSON_KEY=$(cat "$HOME/gce.json")
+    PROVIDER_GOOGLE_PROJECT=[project_id]
+    PROVIDER_GOOGLE_JSON_KEY=$(cat "$HOME/.ssh/projectname.json")
 
-
-
-CLI Population
---------------
-
-If you have the `rebar cli <../cli/README.rst>`_ in your path, then you can use the ``workloads/add-provider.sh`` script to add providers to a running rebar system.  
-
-  ::
-
-    workloads/add-provider.sh --admin-ip=[rebar ip] --provider=[google|aws|packet|debug]
-
-Note: For AWS or Google the scripts will attempt to install their CLIs
-
+See :ref:`configure_providers` for specific details about individual Providers.

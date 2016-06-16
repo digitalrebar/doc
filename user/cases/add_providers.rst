@@ -1,4 +1,3 @@
-
 .. _ug_add_provider:
 
 Add Providers
@@ -10,13 +9,11 @@ populate the provider in question.
 
   ::
 
+  	cd ~/digitalrebar/deploy
     workloads/add-provider.sh --admin-ip=[rebar ip] --provider=[google|aws|packet|debug]
 
 Note: For AWS or Google the scripts will attempt to install their CLIs
 
+You can also use the :ref:`providers` UI interactively.
 
-.. index:
-  TODO; doc_add_provider
-
-TODO: describe add provider cli, API, UI methods.
-
+See :ref:`configure_providers` for specific details.
