@@ -1,10 +1,10 @@
 
 .. _dr_info:
 
-Digital Rebar Info File (.dr_info)
-==================================
+DR Info File (.dr_info)
+=======================
 
-For regular uses, you can store your :ref:`provider` credentials in the ``~/.dr_info`` file.
+For regular uses, you can store your :ref:`providers` credentials in the ``~/.dr_info`` file.
 
 There is a ``.dr_info.example`` file in the `DigitalRebar-Deployment root <https://github.com/rackn/digitalrebar-deploy/blob/master/.dr_info.example>`_ you can use as a template via ``cp ~/digitalrebar/deploy/.dr_info.example ~/.dr_info``
 

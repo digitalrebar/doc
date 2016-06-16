@@ -14,13 +14,15 @@ SSH Key
 ~~~~~~~
 
 If you are having trouble getting your SSH keys to work correctly, you may need to include the ``--clean-ids`` flag in the script.  
-
+html
 Rebar creates a unique SSH key for each node created; consequently, you may also have orphaned Rebar SSH IDs with your provider.  These can be safely removed with the Provider UI or CLI.
 
 Provider Failure
 ~~~~~~~~~~~~~~~~
 
 Provider node allocation sometimes fails.  In these cases, the annealer will be stuck waiting for a node that never completes.  For worker nodes, you can simply ``destroy`` the node and processing will continue.  If the node was a master node, you may need to destroy the whole deployment and retry.
+
+See :ref:`troubleshoot_providers` for details about testing provider configuration.
 
 Script Failure
 ~~~~~~~~~~~~~~

@@ -7,7 +7,7 @@ Providers allow Digital Rebar to interact with Infrastructure as a Service (IaaS
 
 .. image:: /images/screens/dr_providers_list.png
 
-See :ref:`configure_providers` for details about configuration and troubleshooting.
+For details, see :ref:`configure_providers` about configuration and :ref:`troubleshoot_providers`
 
 Nodes via Providers
 -------------------

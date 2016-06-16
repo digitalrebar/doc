@@ -29,19 +29,58 @@ OpenStack Provider(s)
 
 NOTE: If there is no private network you should create one.  Ideally, it is named "private" or "internal"
 
-In the Horizon Dashboard, you can quickly get the needed provider details from APIDownload RC file
+In the Horizon Dashboard, you can quickly get the needed provider details from Download RC file.
 
-* SSH user (defaults to root, centos, ubuntu) is needed if system nodes do not use standard user accounts.  For example, AWS disables root and requires users to start with _aws-user_.
+* SSH user (defaults to root, centos, ubuntu) is needed if system nodes do not use standard user accounts.  For example, AWS disables root and requires users to start with ``aws-user``.
 * Debug Flag will include your credentials in the log when true.
 * Networking is not consistent for OpenStack; however, the _auto_ setting in Cloudwrap makes reasonable guesses about Network names including private and internal or public and external.  If the auto guess does not work, then simply provide the name of the network.  You can also provide _none_ so that Cloudwrap does not attempt to resolve the matching network.
 
-DreamCompute Hints:
-
-* ssh user: dhc-user
-* public network: auto
-* private network: auto
-
 When troubleshooting OpenStack, use the debug=true flag.  This will provide the full OpenStack CLI command (including your credentials!) in the log.  This allows you to duplicate the Cloudwrap container actions using Docker exec: ``docker exec -it compose_cloudwrap_1 [openstack snip....]``.  This is a very handy way to test the OpenStack provider details.
+
+DreamCompute:
+
+* Auth-url: ``https://iad2.dream.io:5000/v2.0``
+* ssh user: ``dhc-user``
+* public network: ``auto``
+* private network: ``auto``
+
+Datacenterd.io:
+
+* Auth-url: ``https://compute.datacentred.io:5000/``
+* ssh user: ``centos ubuntu``
+* public network: ``public``
+* private network: ``private``
+
+Vexxhost:
+
+* Auth-url: ``https://auth.vexxhost.net/v2.0/``
+* ssh user: ``centos ubuntu root``
+* public network: ``public``
+* private network: ``pprivate``
+
+Auro.io:
+
+* Auth-url: ``https://api.tor1.auro.io:5000/v2.0``
+* ssh user: ``centos ubuntu``
+* public network: ``ext-net``
+* private network: ``Private``
+
+Bluebox:
+
+* Auth-url: per config
+* ssh user: ``ubuntu centos``
+* public network: ``internal``
+* private network: per config 
+
+
+Rackspace:
+
+* Auth-url: ``https://identity.api.rackspacecloud.com/v2.0/``
+* ssh user: ``root ubuntu centos``
+* public network: ``none``
+* private network: ``none``
+
+Note: Rackspace networking DOES create public and private networks but they do not show up in neutron.  Cloudwrap will handle the none-none case correctly here.
 
 Debug Provider
 ~~~~~~~~~~~~~~
@@ -49,6 +88,9 @@ Debug Provider
 The Debug Provider creates Digital Rebar nodes without having a backing IaaS.  It is helpful for testing scale and general workloads.  By default, there is a delay in provisioning debug nodes to help simulate actual node creation.
 
 If you provide a valid IP to the Debug Provider then it will be able to advance the node workflow.
+
+
+.. _troubleshoot_providers:
 
 Troubleshooting Tips
 --------------------
