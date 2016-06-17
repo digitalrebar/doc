@@ -1,3 +1,8 @@
+.. index::
+  pair: Provider; API
+
+.. _api_provider:
+
 Provider APIs
 =============
 

@@ -1,3 +1,8 @@
+.. index::
+  pair: Interface; API
+
+.. _api_interface:
+
 Interface (NICs) API
 ~~~~~~~~~~~~~~~~~~~~
 

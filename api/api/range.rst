@@ -1,3 +1,8 @@
+.. index::
+  pair: Network Range; API
+
+.. _api_network_range:
+
 Range API
 ~~~~~~~~~
 

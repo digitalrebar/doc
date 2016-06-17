@@ -1,3 +1,8 @@
+.. index::
+  pair: DNS Name Filter; API
+
+.. _api_dns_name_filter:
+
 DNS Name Filter APIs
 ~~~~~~~~~~~~~~~~~~~~
 
@@ -43,6 +48,11 @@ JSON fields
 
 Minimum fields needed for create - name, priority, matcher, template,
 and system.
+
+.. index::
+  pair: DNS Name Entry; API
+
+.. _api_dns_name_entry:
 
 DNS Name Entry Routes
 ^^^^^^^^^^^^^^^^^^^^^

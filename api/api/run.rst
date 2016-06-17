@@ -1,3 +1,8 @@
+.. index::
+  pair: Run API
+
+.. _api_run:
+
 Run APIs
 ~~~~~~~~
 

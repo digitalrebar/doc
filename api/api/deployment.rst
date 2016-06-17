@@ -1,3 +1,8 @@
+.. index::
+  pair: Deployment; API
+
+.. _api_deployment:
+
 Deployment APIs
 ~~~~~~~~~~~~~~~
 

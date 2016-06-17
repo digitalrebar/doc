@@ -1,3 +1,8 @@
+.. index::
+  pair: Network; API
+
+.. _api_network:
+
 Network API
 ~~~~~~~~~~~
 

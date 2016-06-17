@@ -1,3 +1,8 @@
+.. index::
+  pair: Jig; API
+
+.. _api_jig:
+
 Jig (aka CMDB interface) APIs
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 

@@ -1,3 +1,9 @@
+.. index::
+  pair: User; API
+
+.. _api_user:
+
+
 The user API is used to manage users.
 
 User CRUD: List

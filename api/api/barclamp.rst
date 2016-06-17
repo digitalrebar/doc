@@ -1,3 +1,8 @@
+.. index::
+  pair: Barclamp; API
+
+.. _api_barclamp:
+
 Barclamp APIs
 ~~~~~~~~~~~~~
 
