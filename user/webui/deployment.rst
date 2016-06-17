@@ -1,3 +1,8 @@
+.. index::
+  pair: Deployment; Web UI
+
+.. _webui_deployment:
+
 Deployments
 ===========
 

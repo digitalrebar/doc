@@ -180,6 +180,11 @@ This object defines a reference to the template objects.  UUID is the template o
 
 
 
+.. index::
+  pair: Bootenv; Example Objects
+
+.. _api_provisioner_bootenv_example_object:
+
 Example Bootenv Object
 ----------------------
 
