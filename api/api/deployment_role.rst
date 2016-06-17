@@ -1,3 +1,8 @@
+.. index::
+  pair: Deployment Role; API
+
+.. _api_deployment_role:
+
 Deployment-Role API
 ~~~~~~~~~~~~~~~~~~~
 

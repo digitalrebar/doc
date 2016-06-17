@@ -1,3 +1,9 @@
+.. index::
+  pair: Attrib; API
+  pair: Attribute; API
+
+.. _api_attrib:
+
 Attribute (aka Attrib) APIs
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 

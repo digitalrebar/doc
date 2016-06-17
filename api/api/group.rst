@@ -1,3 +1,8 @@
+.. index::
+  pair: Group; API
+
+.. _api_group:
+
 Group APIs
 ~~~~~~~~~~
 

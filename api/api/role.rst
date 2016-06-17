@@ -1,3 +1,8 @@
+.. index::
+  pair: Role; API
+
+.. _api_role:
+
 Role APIs
 ~~~~~~~~~
 

@@ -1,3 +1,8 @@
+.. index::
+  pair: Network Router; API
+
+.. _api_network_router:
+
 Router API
 ~~~~~~~~~~
 
