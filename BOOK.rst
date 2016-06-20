@@ -22,11 +22,11 @@ The **Digital Rebar Project** is a container-ready, infrastructure-as-code provi
    development/README
    faq/README
    LICENSE
+   definitions
 
 .. toctree::
    :glob:
    :maxdepth: 1
 
-   definitions
    fullcontent
 
