@@ -27,5 +27,6 @@ The **Digital Rebar Project** is a container-ready, infrastructure-as-code provi
    :glob:
    :maxdepth: 1
 
+   definitions
    fullcontent
 
