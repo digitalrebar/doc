@@ -69,7 +69,7 @@ Digital Rebar is able to perform post-install configuaration and testing.  These
   * ``--kubernetes-dash=<true|false>`` Use Kube-Dash
   * ``--kubernetes-fabric8=<true|false>`` Use Fabric8 console
   * ``--kubernetes-guestbook=<true|false>`` Add the guestbook role to start a guestbook app
-  * ``--kubernetes-ui=<true|false>  : Use Kube-UI - deprecated but still works
+  * ``--kubernetes-ui=<true|false>``  : Use Kube-UI - deprecated but still works
 
 Networking Options
 ~~~~~~~~~~~~~~~~~~

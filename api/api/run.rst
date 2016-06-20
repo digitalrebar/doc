@@ -1,5 +1,5 @@
 .. index::
-  pair: Run API
+  pair: Run; API
 
 .. _api_run:
 
