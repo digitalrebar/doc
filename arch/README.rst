@@ -12,7 +12,7 @@ The Digital Rebar architecture is broken down into three sections.
 +----------+--------------------------------------------------------------------------+
 | Objects  | Description of objects that are being track and managed in Digital Rebar |
 +----------+--------------------------------------------------------------------------+
-| Other    | ???                                                                      |
+| Other    | System layouts and basic workflows                                       |
 +----------+--------------------------------------------------------------------------+
 
 

@@ -1,5 +1,5 @@
-Provising Process
------------------
+Provisioning Process
+--------------------
 
 .. index:
   TODO; describe_provisioning_process

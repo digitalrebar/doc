@@ -1,17 +1,14 @@
 .. _arch_other:
 
-Other
------
+Other Topics
+------------
 
-.. index:
-  TODO; ARCH_OTHER_DESC
-
-TODO: Talk about other things
-
+Here we will discuss other general topics like system layout and basic workflows.
 
 .. toctree::
   :maxdepth: 2
   :glob:
 
+  systems
   *
 

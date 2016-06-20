@@ -1,4 +1,4 @@
-.. _user_guide:
+.. _web_user_guide:
 
 Web UI Guide
 ============
