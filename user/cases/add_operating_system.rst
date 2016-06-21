@@ -62,6 +62,15 @@ will have been added to the node.  This attrib can be changed to the newly added
 Once the deployment or node is committed, the node will progress through that boot environment.
 The :ref:`ug_uc_edit_bootenv` section will describe how to iterate to a successful install.
 
+**TIP**: To get a copy of an existing bootenv template from the admin node, you can do the following,
+for example, to get a copy of the debian-8 bootenv json template:
+
+::
+  
+  cd digitalrebar/deploy/compose
+  docker-compose exec provisioner cat /opt/provisioner-mgmt/bootenvs/debian-8.json > ~/new_template.json
+
+
 .. _ug_uc_edit_bootenv:
 
 Editing OS Install Boot Environment
