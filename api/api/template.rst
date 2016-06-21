@@ -63,7 +63,8 @@ Template Expansion Variables
 
 The following variables are used for expansion within templates and the Bootenv variables,
 BootParams and Template Paths.  These variables are referenced within an escape sequence pair.
-{{ }} is the mark for evaulation.  This is the golang template format.
+{{ }} is the mark for evaulation.  This is the golang template format.  More information about
+the syntax can be found `here <https://golang.org/pkg/text/template/>`_.
 
 +---------------------+------------------------------------------------------------------+
 | Variable            | Comment and Usage                                                |
