@@ -1,3 +1,8 @@
+.. index::
+  pair: Script; Jig
+
+.. _script_jig:
+
 Script Jig
 ~~~~~~~~~~
 

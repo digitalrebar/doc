@@ -1,3 +1,8 @@
+.. index::
+  pair: Contributing; Docs
+
+.. _contributing_docs:
+
 Contributing Docs
 -----------------
 
@@ -11,6 +16,11 @@ We *love* Docs changes!
 You do NOT need a local clone to update docs! You can edit them right
 from your fork on Github. Just make the changes and then create a pull
 request using the Github UI.  This is great for simple changes.
+
+Cross References
+~~~~~~~~~~~~~~~~
+
+Please use Cross Reference ``.. _foo:`` and Index tags ``.. index::`` at the top of pages.  This helps build a complete guide.
 
 Bigger Doc Changes
 ~~~~~~~~~~~~~~~~~~
