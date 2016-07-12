@@ -1,6 +1,7 @@
 .. Copyright (c) 2016 RackN Inc.
 .. Licensed under the Apache License, Version 2.0 (the "License");
 .. Digital Rebar documentation master file, created by
+.. 
 
 Welcome to Digital Rebar Documentation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
