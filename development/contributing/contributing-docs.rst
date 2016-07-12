@@ -21,9 +21,9 @@ Cross References
 ~~~~~~~~~~~~~~~~
 
 Please use Cross Reference ``.. _foo:`` and Index tags ``.. index::`` at the top of pages.  This helps build a complete guide.
-
-Bigger Doc Changes
-~~~~~~~~~~~~~~~~~~
+ 
+Bigger Doc Changes On Linux/Mac
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 For bigger doc changes, it is help to make a local environment to visualize your
 modifications.  This helps make a consistent multi-page change and lets you test
@@ -47,4 +47,15 @@ An additional tip is to run ``make html`` in a one second loop in another termin
     sleep 1
   done
 
+
+Bigger Doc Changes On Windows
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+For bigger doc changes, it is help to make a local environment to visualize your
+modifications.  This helps make a consistent multi-page change and lets you test
+your changes.
+
+The docs are automatically generated upon a sucessful pull request merge by the read-the-docs system. We use Sphinx builders to generate html and pdf docs. We would love for you to validate the html docs at a minimum before submitting a change. 
+
+To setup an environment, you will need to install `Sphinx <http://www.sphinx-doc.org/en/stable/install.html>`_ which requires installing `Phython <https://www.python.org/downloads/>`_, and `pip <https://bootstrap.pypa.io/get-pip.py>`_.
 
