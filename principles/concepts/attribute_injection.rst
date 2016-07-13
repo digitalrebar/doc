@@ -9,7 +9,7 @@ It also allows Digital Rebar to abstract and isolate provisioning layers. This
 operational approach means that deployments are composed of layered
 services (see emergent services) instead of locked "golden" images. The
 layers can be maintained independently and allow users to compose
-specific configurations *a la cart*. This approach works if the layers
+specific configurations *a la carte*. This approach works if the layers
 have clean functional boundaries (FuncOps) that can be scoped and
 managed atomically.
 

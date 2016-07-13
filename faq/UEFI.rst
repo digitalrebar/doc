@@ -1,4 +1,4 @@
-What is the Current State of UEFI:
+What is the Current State of UEFI?
 ----------------------------------
 
 This file documents the current state of UEFI booting in Digital Rebar.
@@ -8,22 +8,22 @@ UEFI mode. We are able to netboot Sledgehammer and the OS install
 kernel/initrd pairs, and get to the point where we have an installed
 operating system on the compute nodes.
 
-How To Use UEFI:
+How To Use UEFI?
 ----------------
 
--  Switch your system to operate in UEFI mode. How this is done varies
+-  Switch the system to operate in UEFI mode. How this is done varies
    from system to system.
 -  Once the system is in UEFI mode, configure it to network boot off the
    first nic.
 -  The rebar framework will handle things from there.
 
-What UEFI Gives You:
---------------------
+What Does UEFI give me?
+-----------------------
 
 -  Native support for drive sizes > 2TB.
 -  All new low-level system firmware.
 
-What Does Not Work:
+What Does Not Work?
 -------------------
 
 -  Booting Ubuntu 12.04 off the hard drive.
@@ -34,14 +34,14 @@ crash the UEFI firmware when it tries to load the kernel and initrd.
 Upstream grub2 has been patched to resolve this issue, but the updates
 have not been pulled into Ubuntu 12.04 yet.
 
-Patch is at http://savannah.gnu.org/bugs/?36532.
+A patch can be found `here <http://savannah.gnu.org/bugs/?36532>`_.
 
-Possible workarounds include: \* Look at using grub-legacy or elilo
-instead of grub2 when installing in UEFI mode. \* Working on getting
-Canonical to pull in an updated version of Grub2 that has the patch that
-fixes the issue.
+Possible workarounds include: 
+  1. Look at using grub-legacy or elilo instead of grub2 when installing in UEFI mode. 
 
-What Had to Be Changed:
+  2. Working on getting Canonical to pull in an updated version of Grub2 that has the patch that fixes the issue.
+
+What Had to Be Changed?
 -----------------------
 
 -  We now generate per-node OS installation scripts and UEFI/PXE config

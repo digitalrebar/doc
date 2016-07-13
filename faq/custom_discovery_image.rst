@@ -1,6 +1,10 @@
-Custom Discovery Image?
-=======================
+Can the Discovery Image be Customized?
+======================================
 
-Q: can we customise the discovery image or would we add an additional role if we want to collect additional data to send to another system?
+Yes, depending on what exactly is being requested.
 
-Yes to both, depending on what exactly you want.
+
+Would an Additional Role be Added if We collect Data to Send to Another System?
+===============================================================================
+
+Yes again, also dependent on the request.
