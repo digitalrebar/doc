@@ -4,10 +4,10 @@ Operational Principles
 ======================
 
 The operational model behind Digital Rebar is entering its third generation and
-its important to understand the principles behind that model. The model
+its important to understand the principles behind that model.  The model
 is critical because it shapes how Rebar approaches the infrastructure at
-a fundamental level so it makes it easier to interact with the platform
-if you see how we are approaching operations. Rebar’s goal is to create
+a fundamental level.  The experience makes it easier to interact with the platform
+as it influences our approach to operations.  Rebar’s goal is to create
 emergent services.
 
 The topics in this guide help explain Digital Rebar's core architectural
@@ -51,22 +51,20 @@ on infrastructure provisioning.
 Key Features of Digital Rebar
 -----------------------------
 
--  *Heterogeneous Operating Systems* – chose which operating system you
-   want to install on the target servers.
+-  *Heterogeneous Operating Systems* – the ability to adapt to whichever operating system is desire.
 -  *CMDB Flexibility* – don’t be locked in to a devops toolset.
--  *Attribute injection* - allows clean abstraction boundaries so you can
-   use multiple tools (Chef and Puppet, playing together).
+-  *Attribute injection* - allows clean abstraction boundaries which allows the use of
+   multiple tools (Chef and Puppet, playing together).
 -  *Ops Annealer* –the orchestration at Rebar’s heart combines the best
    of directed graphs with late binding and parallel execution. We
    believe annealing is the key ingredient for repeatable and OpenOps
    shared code upgrades
 -  *Upstream Friendly* – infrastructure as code works best as a
-   community practice and Rebar use upstream code without injecting “rebarisms” that were previously required. So you
-   can share your learning with the broader DevOps community even if
-   they don’t use Rebar.
+   community practice and Rebar use upstream code without injecting “rebarisms” that were previously required. Therefor, 
+   knowledge can be shared to the broader DevOps community, even if they don't use Rebar.
 -  *Node Discovery (or not)* – Rebar maintains the same proven discovery
    image based approach that we used before, but we’ve streamlined and
-   expanded it. You can use Rebar’s API outside of the PXE discovery
+   expanded it. Rebar’s APIs can be used outside of the PXE discovery
    system to accommodate Docker containers, existing systems and VMs.
 -  *Hardware Configuration* – Rebar maintains the same optional hardware
    neutral approach to RAID and BIOS configuration. Configuring hardware
@@ -78,7 +76,7 @@ Key Features of Digital Rebar
    network abstraction. We’ve learned that a networking is the key to
    success for deployment and upgrade so we’ve made Rebar networking
    flexible and concise. Rebar networking works with attribute injection
-   so that you can avoid hardwiring networking into DevOps scripts.
+   so that hardwiring networking into DevOps scripts can be avoided.
 -  *Out of band control* – when the Annealer hands off work, Rebar gives
    the worker implementation flexibility to do it on the node (using
    SSH) or remotely (using an API). Making agents optional means allows

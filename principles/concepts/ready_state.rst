@@ -46,7 +46,7 @@ and bonds \* able to correctly enumerate NICs over different hardware
 types and configurations \* Operating System agnostic \* CMDB agnostic
 (Chef & Chef Solo, Bash Scripts via SSH, Puppet, others possible) \*
 DevOps configuration improves flexibly and reduces maintenance over
-"golden" image based \* Rebar can deploy your golden images as you wish,
+"golden" image based \* Rebar can deploy the golden images as is wished,
 and even they can notify Rebar to change hardware configs, but they must
 be part of the overall graph of attributes so that other workloads have
 a say in hardware config.
@@ -55,8 +55,8 @@ Rebar’s key function ends up being orchestration, so it can plug in the
 app provisioning tools to do their specific work. We tried to make Rebar
 work as either "disolvable provisioning" or long term support.
 Since Rebar uses SSH means there’s really no penalty for leaving Rebar
-around and ready if you have to maintain the system; however, things
-won’t crash if you stop using it. That was not true in v1 because we
+around and ready in the event of system maintenance; however, things
+won’t crash if Rebaris not in use. That was not true in v1 because we
 relied on Chef Server to do everything.
 
 Rebar is focused more on ready state because we’ve heard that is the
