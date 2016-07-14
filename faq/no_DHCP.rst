@@ -1,11 +1,11 @@
-Digital Rebar did not start DHCP
---------------------------------
+Digital Rebar did not start DHCP, Why?
+======================================
 
-The DHCP/PXE process is optional for Digital Rebar, you must as the system to start the Provisioner to get this functionality.
+The DHCP/PXE process is optional for Digital Rebar, it must be requested at system start to be functional. 
 
-NOTE: You must also include at least one ISO for the provisioner to convert into install images.  The discovery images (aka Sledgehammer) is downloaded automatically by the provisioner.
+NOTE: At least one ISO must be provided for the provisioner to convert into install images.  The discovery images (aka Sledgehammer) is downloaded automatically by the provisioner.
 
-How To Use UEFI:
-----------------
+How do We Use UEFI?
+===================
 
-To start DHCP and PXE, you need to include the Provisioner using the ``--con-provisioner`` flag.  If you are using the ``tools/docker-admin`` dev process then that flag is set automatically.
+To start DHCP and PXE,the Provisioner using the ``--con-provisioner`` flag must be included.  If the ``tools/docker-admin`` dev process is being used then that flag is set automatically.

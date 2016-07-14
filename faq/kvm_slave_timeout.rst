@@ -1,5 +1,5 @@
-tools/kvm_slave timeout in TFTP
-===============================
+Tools/kvm_slave Causes a Timeout in TFTP?
+=========================================
 
 The tools/kvmslave script is very handy for local testing but may conflict with services running on your system.
 
