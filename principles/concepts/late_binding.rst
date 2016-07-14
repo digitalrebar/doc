@@ -19,7 +19,6 @@ they do not deliver predictable upgrades in situations where there
 are circular dependencies to resolve.
 
 It is also not realistic to predict the exact configuration of a system in
-advance because the operational requirements recursively impact how the infrastructure is configured, ops environments must be highly dynamic, and resilience requires configurations to be change tolerant
+advance because the operational requirements recursively impact how the infrastructure is configured, ops environments must be highly dynamic, and resilience requires configurations to be tolerant of change.
 
-Even more complex upgrade where the steps cannot be determined in
-advanced because the specifics of the deployment direct the upgrade.
+The specifics of the deployment allow for more complex upgrades where the steps cannot be determined in advance.
