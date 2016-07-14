@@ -43,16 +43,16 @@ operational scripts. Digital Rebar simply extends the paradigm to both the syste
 
 Attribute Injection enabled operations to be:
 
--  Atomic: Only the information needed for the operation is provided, so
+-  *Atomic*: Only the information needed for the operation is provided, so
    risk of "bleed over" between scripts is minimized. This is also a
    functional programming preference.
 
--  Isolated Idempotent: The risk of accidentally picking up changed
+-  *Isolated Idempotent*: The risk of accidentally picking up changed
    information from previous runs is reduced by controlling the inputs.
    This makes it more likely that scripts can be idempotent.
 
--  Cleanly Scoped: System deployment boundaries can be used in place of search parameters to limit information passed into operations. This allows the orchestration to manage when and how information is added into configurations.
+-  *Cleanly Scoped*: System deployment boundaries can be used in place of search parameters to limit information passed into operations. This allows the orchestration to manage when and how information is added into configurations.
 
--  Easy to troubleshoot: Since the information is limited and
+-  *Easy to troubleshoot*: Since the information is limited and
    controlled, recreating runs for troubleshooting is easier. This
    has substantial value for diagnostics.

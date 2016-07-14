@@ -1,4 +1,4 @@
-.. _ops-challenges:
+.. _ops_challenges:
 
 The Operations Challenge
 ------------------------
