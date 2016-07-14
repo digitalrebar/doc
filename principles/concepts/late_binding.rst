@@ -1,3 +1,5 @@
+.. _late_binding:
+
 Ops Late Binding
 ================
 
@@ -10,19 +12,14 @@ flexible binding.
 
 Ops is fluid and situational.
 
-Many DevOps tooling leverages eventual consistency to create stable
-deployments. This interative approach assumes that repeated attempts of
-executing the same idemnepotent scripts do deliver this result; however,
+Many DevOps toolings leverage eventual consistency to create stable
+deployments. This iterative approach assumes that repeated attempts of
+executing the same idemnepotent scripts do deliver this result. However,
 they do not deliver predictable upgrades in situations where there
 are circular dependencies to resolve.
 
-Its not realistic to predict the exact configuration of a system in
-advance –
-
--  the operational requirements recursively impact how the
-   infrastructure is configured
--  ops environments must be highly dynamic
--  resilience requires configurations to be change tolerant
+It is also not realistic to predict the exact configuration of a system in
+advance because the operational requirements recursively impact how the infrastructure is configured, ops environments must be highly dynamic, and resilience requires configurations to be change tolerant
 
 Even more complex upgrade where the steps cannot be determined in
 advanced because the specifics of the deployment direct the upgrade.
