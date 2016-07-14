@@ -46,53 +46,52 @@ First, we started with best of field DevOps infrastructure: Opscode
 Chef. There was already a remarkable open source community around this
 tool and an enthusiastic following for cloud and scale operators . Using
 Chef to do the majority of the installation left the Rebar team to focus
-on infrastructure provisioning. 
+on infrastructure provisioning.
 
 Key Features of Digital Rebar
 -----------------------------
 
--  *Heterogeneous Operating Systems* – the ability to adapt to whichever operating system is desire.
--  *CMDB Flexibility* – don’t be locked in to a devops toolset.
--  *Attribute injection* - allows clean abstraction boundaries which allows the use of
-   multiple tools (Chef and Puppet, playing together).
--  *Ops Annealer* –the orchestration at Rebar’s heart combines the best
+-  *Heterogeneous Operating Systems*: Rebar has the ability to adapt to whatever operating system is desired.
+-  *CMDB Flexibility*: Using Rebar does not require being locked into a DevOps toolset.
+-  *Attribute injection*: Rebar allows for clean abstraction boundaries, thus the use of multiple tools (think Chef and Puppet playing together) is possible.
+-  *Ops Annealer*: The orchestration at Rebar’s heart combines the best
    of directed graphs with late binding and parallel execution. We
    believe annealing is the key ingredient for repeatable and OpenOps
-   shared code upgrades
--  *Upstream Friendly* – infrastructure as code works best as a
-   community practice and Rebar use upstream code without injecting “rebarisms” that were previously required. Therefor, 
-   knowledge can be shared to the broader DevOps community, even if they don't use Rebar.
--  *Node Discovery (or not)* – Rebar maintains the same proven discovery
-   image based approach that we used before, but we’ve streamlined and
-   expanded it. Rebar’s APIs can be used outside of the PXE discovery
-   system to accommodate Docker containers, existing systems and VMs.
--  *Hardware Configuration* – Rebar maintains the same optional hardware
+   shared code upgrades.
+-  *Upstream Friendly*: Infrastructure as code works best as a
+   community practice, and Rebar uses upstream code without injecting the “rebarisms” that were previously required. Therefore,
+   knowledge can be shared to the broader DevOps community, even if they do not use Rebar.
+-  *Node Discovery (or not)*: Rebar maintains the same proven discovery
+   image based approach that we used before, but we have streamlined and
+   expanded our approach. Rebar’s APIs can be used outside of the PXE discovery
+   system to accommodate Docker containers, existing systems, and VMs.
+-  *Hardware Configuration*: Rebar maintains the same optional hardware
    neutral approach to RAID and BIOS configuration. Configuring hardware
    with repeatability is difficult and requires much iterative testing.
    While our approach is open and generic, the team works hard
-   to validate a on specific set of gear: it’s impossible to make
+   to validate on a specific set of gear. It is impossible to make
    statements beyond that test matrix.
--  *Network Abstraction* – Rebar dramatically extended our DevOps
-   network abstraction. We’ve learned that a networking is the key to
-   success for deployment and upgrade so we’ve made Rebar networking
+-  *Network Abstraction*: Rebar has dramatically extended our DevOps
+   network abstraction. We have learned that networking is the key to
+   success for deployment and upgrade, so we have made Rebar networking
    flexible and concise. Rebar networking works with attribute injection
    so that hardwiring networking into DevOps scripts can be avoided.
--  *Out of band control* – when the Annealer hands off work, Rebar gives
+-  *Out of band control*: When the Annealer hands off work, Rebar gives
    the worker implementation flexibility to do it on the node (using
-   SSH) or remotely (using an API). Making agents optional means allows
-   operators and developers make the best choices for the actions that
+   SSH) or remotely (using an API). Making agents optional means that
+   operators and developers are allowed to make the best choices for the actions that
    they need to take.
--  *Technical Debt Paydown* - We’ve also updated the Rebar
-   infrastructure to use the latest libraries like Ruby 2, Rails 4, Chef
-   11. Even more importantly, we’re dramatically simplified the code
-   structure including in repo documentation and a Docker based
+-  *Technical Debt Paydown*: We have also updated the Rebar
+   infrastructure to use the latest libraries like Ruby 2, Rails 4, and Chef
+   11. Even more importantly, we have dramatically simplified the code
+   structure, including in repo documentation and a Docker based
    developer environment that makes building a working Rebar environment
    fast and repeatable.
 
 Digital Rebar vs Crowbar/OpenCrowbar
 ------------------------------------
 
-Some of you may remember us from our Dell days (we've all since left and founded, RackN) when we founded the Crowbar Project. Since Crowbar was an "MVP" and is still being actively developed by SUSE and focuses solely on installing OpenStack, splitting the repositories allow both versions to progress with less confusion. This new generation is structurally and philosphically different from Crowbar and we’ve investing substantially in expanding the extensibility of the architecture, refactoring the tooling, paying down technical debt and cleanup up documentation. 
+Back before Rebar, we founded the Crowbar Project while working for Dell. Since Crowbar was an "MVP" and is still being actively developed by SUSE and focuses solely on installing OpenStack, splitting the repositories allow both versions to progress with less confusion. This new generation is structurally and philosophically different from Crowbar, and we have invested substantially in expanding the extensibility of the architecture, refactoring the tooling, paying down the technical debt, and cleaning up the documentation.
 
 Digital Rebar Concepts
 ----------------------
@@ -102,4 +101,3 @@ Digital Rebar Concepts
    :glob:
 
    concepts/*
-
