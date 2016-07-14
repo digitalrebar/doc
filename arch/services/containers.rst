@@ -6,7 +6,7 @@
 Collection of Container-based Services
 --------------------------------------
 
-Digital Rebar operates all the infrastructure management functions in Docker containers; consequently, you need to be running in an environment that can run Docker (this includes Macs).
+Digital Rebar operates all the infrastructure management functions in Docker containers; consequently, an environment that can run Docker (this includes Macs) must be used.
 
 +---------------------------------+--------------------------------------------------------+
 + Container                       + Purpose                                                |
@@ -43,5 +43,3 @@ Digital Rebar operates all the infrastructure management functions in Docker con
 +---------------------------------+--------------------------------------------------------+
 | :ref:`arch_service_forwarder`   | Alternate Front-end for Development Environments       |
 +---------------------------------+--------------------------------------------------------+
-
-
