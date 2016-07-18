@@ -61,7 +61,7 @@ With the environemnt created, ``sphinx-build -b html -d _build\doctrees . _build
 
 An additional tip is to run the builder repeatedly in a batch file or command terminal to capture changes as they are created.  ::
 
-  cd path/to/clone
+  cd C:\Users\Stephen\Documents\GitHub\doc
   :label
   echo building sphinx
   sphinx-build -b html -d _build\doctrees . _build\html
@@ -80,3 +80,6 @@ Documentation is an integral and formal component to the development process.  A
  3. Break thoughts into easy to read chunks rather than creating long paragraphs.
 
  4. Be certain to use embeded links when referencing a specific page or program. 
+
+
+

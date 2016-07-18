@@ -7,8 +7,7 @@ Seeding Provisionable Operating Systems
   Boot Environment; Default List
   OS Install; Default List
 
-When deploying an admin node in production mode, you will want to be
-able to install operating systems on slave nodes. By default, the
+When deploying an admin node in production mode, operating systems will need to be installed on slave nodes.  By default, the
 ``provisioner`` container will look for OS install ISO images in
 ``/root/.cache/digitalrebar/tftpboot/isos``.
 
