@@ -11,7 +11,7 @@ for testing. It is very important in our process that developers are
 able to run deployments in their environment as part of the testing
 cycle.
 
-> Protip: You can enter the Rails Console from the host, using ``docker exec -it compose_rebar_api_1 /opt/digitalrebar/core/tools/rails-console.sh``.
+> Protip: The Rails Console can be entered from the host with ``docker exec -it compose_rebar_api_1 /opt/digitalrebar/core/tools/rails-console.sh``.
 
 
 .. toctree::
@@ -25,7 +25,7 @@ Docker Cheats for Developers
 .. _dev_guide_docker:
 
 
-While you can always use `docker exec -it compose_rebar_api_1 bash` to get into the API container, here are some handy cheats that you can use to do routine tasks inside the API container:
+While `docker exec -it compose_rebar_api_1 bash` can always be used to get into the API container, here are some handy cheats that can be used to do routine tasks inside the API container:
 
 * Tail Logs: ``docker exec -it compose_rebar_api_1 tail -f /var/log/rebar/production.log``
 * Open Rails Console (to test models & database direct): ``docker exec -it compose_rebar_api_1 /opt/digitalrebar/core/bin/rebar_console``
@@ -40,7 +40,7 @@ Setting Rails Development Mode
 
 Digital Rebar does not use use RAILS_ENV=development in the traditional way because most of our testing is targeted at doing real provisioning work that requires the production system.
 
-If you have a need for development behavior (classes and views the refresh when code changes) then perform the following steps:
+If development behavior is required (classes and views that refresh when code changes) then perform the following steps:
 
 #. Deploy Digital Rebar in the normal way
 #. From the host, create the ``dev.mode`` file in the digitalrebar home directory and restart the rebar_api contain
@@ -49,4 +49,4 @@ If you have a need for development behavior (classes and views the refresh when 
    cd ~/digitalrebar/deploy/compose && docker-compose restart rebar_api
    ```
 
-You may make any Rails configuration changes by created your own ``core/rails/config/environments/production.rb`` file.  Since we git ignore ``production.rb`` you can leave your own customized version in place.
+You may make any Rails configuration changes by created a personal ``core/rails/config/environments/production.rb`` file.  Since we git ignore ``production.rb`` personal versions can be left in place.

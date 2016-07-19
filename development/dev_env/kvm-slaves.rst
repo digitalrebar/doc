@@ -13,7 +13,7 @@ are designed to restart the VM if it halts.
 Prereqs
 ^^^^^^^
 
-There are some. Run the script and it will tell you! 
+There are some requirements; run the script and it will tell you! 
 
 For reference, here are the current Ubuntu requirements:
 
@@ -30,12 +30,12 @@ This creates a KVM machine and attaches it to the Docker bridge.
 Shutdown
 ~~~~~~~~
 
-If you kill the pid of the kvm-slave, it will exit gracefully.
+If the pid of the kvm-slave is killed, it will exit gracefully.
 
 Common Usage
 ~~~~~~~~~~~~
 
-Most of our kvm-slave usage looks like:
+Most kvm-slave usage looks like:
 
 -  Create 3: ``for j in 1 2 3; do tools/kvm-slave & done``
 -  Destroy 3: ``for j in 1 2 3; do kill %$j ; done``
