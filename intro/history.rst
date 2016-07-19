@@ -2,7 +2,7 @@
 History
 =======
 
-While it has been completely rebuilt by DevOps artisans, Digital Rebar history includes years of battle-tested ops learnings by the `Crowbar Project <http://github.com/crowbar>`_ founders.
+While it has been completly rebuilt by DevOps artisans, Digital Rebar history includes years of battle-tested ops learnings by the `Crowbar Project <http://github.com/crowbar>`_ founders.
 
 .. index::
   History; Crowbar
@@ -31,12 +31,12 @@ We came to accept that there is no single installer. Instead, scalable installer
 
 Asking for an “easy button” installer is the wrong question.  Instead, let’s ask “can we create sharable components that can be automated in multiple ways?”
 
-There's no universal installation script to create cloud rainbows; however, there are strategies that we can use to make individual projects installable over a wide range of options.  These approaches include composability, consistent configuration and use of standard tools and patterns for operation.  These items help projects focus on their own concerns and allow operators to apply best practice techniques.
+There's no universal installation script to create cloud rainbows; however, there are strategies that we can use to make individual projects installable over a wide range of options.  These approaches include composability, consistent configuration and use of standard tools and patterns for operation.  These items help projects focus on their own concerns and allow operators to apply best practice techniques. 
 
 From OpenCrowbar to Digital Rebar
 ---------------------------------
 
-The original 2014 fork of Crowbar v2 was called OpenCrowbar.  This was done to allow SUSE to continue working in the original Crowbar repositories.  They have continued to maintain Crowbar as their OpenStack installer.  As OpenCrowbar features and methodogy diverged signficantly from Crowbar, there was naming confusion for the community.
+The original 2014 fork of Crowbar v2 was called OpenCrowbar.  This was done to allow SUSE to continue working in the original Crowbar repositories.  They have continued to maintain Crowbar as their OpenStack installer.  As OpenCrowbar features and methodogy diverged signficantly from Crowbar, there was naming confusion for the community.  
 
 In 2015, we made the decision to both rename the project and make a substantial refactoring effort towards containers and microservices.  Combining both efforts created a very clean break between the original Crowbar code base and Digital Rebar.
 
