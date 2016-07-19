@@ -1,7 +1,7 @@
-No Consul Services after Digital Rebar Restart
-==============================================
+Why is there No Consul Service after Digital Rebar Restarts?
+============================================================
 
-If you restarted Digital Rebar but there are Consul is not showing any services then it is possible that the Digital Rebar containers were not removed before restart.
+If Digital Rebar has been restarted but the Consul is not showing any services then it is possible that the Digital Rebar containers were not removed before restart.
 
 #. Use ``docker-compose stop && docker-compose rm`` to reset the environment.
 #. Then ``docker-compose up`` to start it again

@@ -3,27 +3,26 @@ Connecting to the BMC Network
 
 | By default, Rebar sets up a BMC network on 192.168.128.xxx/24 named
   ``the_bmc`` in the category ``bmc`` and the group ``internal``.
-| You may modify this by changing values from the
-  ``/networks`` page. These instructions have been created with the
-  assumption that you are using the default network and should be modified
-  to match your specific configuration.
+| Changing values from the ``/networks`` page will modify the BMC network. These instructions have been created with the
+  assumption of the default network and should be modified
+  to match the specific configuration.
 
 Attaching Admin to BMC
 ~~~~~~~~~~~~~~~~~~~~~~
 
 While Rebar will configure the admin node and managed node BMCs, it does
-not configure a gateway for your workstation to connect to the nodes on
-that network. You need to add a gateway IP on the BMC network from the
-system you are using to connect to the BMC network.
+not configure a gateway for the local workstation to connect to the nodes on
+that network. A gateway IP ust be added on the BMC network from the local
+system to connect to the BMC network.
 
-These instructions assume you are using a Linux desktop with the Admin
+These instructions assume a Linux desktop with the Admin
 node running in a Docker container. The container is using docker0 as
 the network bridge to the nodes.
 
-You must add the bmc range the bridge from your workstation:
+BMC range must be added to the bridge from the local workstation:
 ``sudo ip addr add 192.168.128.1/24 dev docker0``
 
-You should now be able to ping the node's BMC interfaces. By default
+The node's BMC interfaces should now be pingable. By default
 they are assigned on from 192.168.128.21, so ``ping 192.168.128.21``
 should work.
 
@@ -33,9 +32,9 @@ page in the UI and node detail page.
 Remote Manage Web UI
 ~~~~~~~~~~~~~~~~~~~~
 
-Once you know the node's BMC IP address and have network access to that
-network, you should be able to open the node's Web Management interface
-(if your node has one).
+Once aware of the node's BMC IP address and have network access to that
+network, he node's Web Management interface should be accessable
+(if the node has one).
 
 From a browser: ``https://[node ip]`` should bring up a login prompt.
 

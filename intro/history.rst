@@ -2,7 +2,7 @@
 History
 =======
 
-While it's been completly rebuilt by DevOps artisans, Digital Rebar history includes years of battle-tested ops learnings by the `Crowbar Project <http://github.com/crowbar>`_ founders.
+While it has been completly rebuilt by DevOps artisans, Digital Rebar history includes years of battle-tested ops learnings by the `Crowbar Project <http://github.com/crowbar>`_ founders.
 
 .. index::
   History; Crowbar
