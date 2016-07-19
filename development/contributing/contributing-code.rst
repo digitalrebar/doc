@@ -1,7 +1,7 @@
 Contributing to Digital Rebar Core
 ----------------------------------
 
-Before `submitting pull requests <https://help.github.com/articles/using-pull-requests>`_, please make sure you understand the Apache license. We consider submitting a pull to be accepting the project's license terms.
+Before `submitting pull requests <https://help.github.com/articles/using-pull-requests>`_, please make sure to have read and understood the Apache license. Submitting a pull is considered to be accepting the project's license terms.
 
 .. index::
   TODO; code_tree_usage
@@ -9,7 +9,7 @@ Before `submitting pull requests <https://help.github.com/articles/using-pull-re
 TODO: This isn't what we do as much.  It is still true-ish, but may change shortly.
 
 We are using this `style <http://nvie.com/posts/a-successful-git-branching-model/>`__
-branching model. The main goal is not to develop in *master*, but on the
+branching model. The main goal is not to develop in *master*, but in the
 *develop* branch so that *master* is the latest validated code.
 *develop* should be stable and tests should have been run against it,
 but hasn't necessarily been regression tested for production release
@@ -66,6 +66,5 @@ Testing/ Validation
    deploy or our commercial products
 -  For operating systems that are non-core, we will *not* validate on
    the target OS for the push 
--  Eventually, we would expect that a pull request would be built and
-   tested in our CI system before the push can be accepted ' ####
-   Feature Progression
+-  Eventually, we expect that a pull request will be built and
+   tested in our CI system before the push can be accepted. 
