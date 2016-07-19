@@ -49,4 +49,4 @@ If development behavior is required (classes and views that refresh when code ch
    cd ~/digitalrebar/deploy/compose && docker-compose restart rebar_api
    ```
 
-You may make any Rails configuration changes by created a personal ``core/rails/config/environments/production.rb`` file.  Since we git ignore ``production.rb`` personal versions can be left in place.
+Rails configuration changes may be made to the ``core/rails/config/environments/production.rb`` file.  If a Pull Request to update code is made, please remember to exclude that file from the file list.
