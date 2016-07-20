@@ -4,11 +4,11 @@
 CLI Download
 ------------
 
-If you have the :ref:`rebar_cli` in your path, you can drive Digital Rebar from your desktop or other environment.
+If :ref:`rebar_cli` is avalible in the path, Digital Rebar can be driven from a desktop or other environment.  
 
 The rebar client is a golang binary that can access the Digital Rebar API from a command line.
 
-There are precompiled binraries that can be placed into path or you can build from source.
+There are precompiled binraries that can be placed into path or can be built from source.
 
 Precompiled Binary
 ==================
@@ -31,7 +31,7 @@ Build From Source
 
 To build from source, see the github `repo <https://github.com/digitalrebar/rebar-api>`_.
 
-The source also allows you to embed the Digital Rebar API into another golang program as well.
+The source also allows the embedding of the Digital Rebar API into another golang program as well.
 
 
 Running the CLI
@@ -39,13 +39,13 @@ Running the CLI
 
 To run the CLI, it is useful to specify some environment variables to reduce the options required on the actual command line.
 
-+------------------+-------------------------+------------------------------------------------+
-| Variable         | Default                 | Comments                                       |
-+==================+=========================+================================================+
-| REBAR_KEY        | rebar:rebar1            | Username and Password with a colon in between. |
-+------------------+-------------------------+------------------------------------------------+
-| REBAR_ENDPOINT   | https://127.0.0.1:3000  | URL to access the admin from your environment. |
-+------------------+-------------------------+------------------------------------------------+
++------------------+-------------------------+---------------------------------------------------+
+| Variable         | Default                 | Comments                                          |
++==================+=========================+===================================================+
+| REBAR_KEY        | rebar:rebar1            | Username and Password with a colon in between.    |
++------------------+-------------------------+---------------------------------------------------+
+| REBAR_ENDPOINT   | https://127.0.0.1:3000  | URL to access the admin from the used environment.|
++------------------+-------------------------+---------------------------------------------------+
 
-Putting these in your environment file or shell init script can be helpful for accessing Digital Rebar.
+Putting these in the environment file or shell init script can be helpful for accessing Digital Rebar.
 

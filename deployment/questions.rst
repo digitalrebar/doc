@@ -5,25 +5,25 @@ Questions to Guide Deployment
 
 *Need help?* Jump over to our `live chat <https://gitter.im/digitalrebar/core>`_  (Gitter.im)
 
-The goal of this set of questions is to help you figure which containers to include your deployment, workloads to bring in,
+The goal of this set of questions is to help determine which containers to include during deployment, workloads to bring in,
 and tool to run to deploy the admin node.
 
 Whatcha' Doin' Questions
 ========================
 
-The first thing you have to do is figure what you are going to do with Digital Rebar.  This will
-direct what you need to install, where you need to install it, and what you need to configure.
+The first thing to do is figure what purpose of Digital Rebar is serving.  This will 
+direct what to install, where to install it, and what to configure.
 
 What Systems Do I Have to Play With?
-++++++++++++++++++++++++++++++++++++
+====================================
 
-If you have physical systems, then metal is an option.  If you don't have physical systems, then using a cloud provider will allow you
-to run systems.
+With physical systems, fiddling with metal is an option.  With no physical systems, the cloud provider being used should allow systems to be run. 
+ -to run systems.   
 
-Are you going to be doing metal installs?
-+++++++++++++++++++++++++++++++++++++++++
+Are Metal Installs likely?
+==========================
 
-If you are going to be managing bare metal servers, you will need to include the provisioner container and possibly the DHCP container.
+If bare metal servers are being managed, the provisioner and DHCP containers will need to be included. 
 See the :ref:`dhcp_or_not` for that question.
 
 .. index:
@@ -31,26 +31,26 @@ See the :ref:`dhcp_or_not` for that question.
   TODO; arch_network_layout
   TODO; arch_providers_cloud
 
-When managing metal, Digital Rebar uses the :ref:`chef_jig` for some actions and it requires that nodes be able to communicate to the admin node.  If this path is not possible, you will need to rethink the network layout, :ref:`arch_network_layout`.
+When managing metal, Digital Rebar uses the :ref:`chef_jig` for some actions and it requires that nodes be able to communicate to the admin node.  If this path is not possible,the network layout and  :ref:`arch_network_layout` will need to be rethought.  
+        
+Are Cloud Instances Going to be Managed?
+========================================
 
-Are you going to be managing cloud instances?
-+++++++++++++++++++++++++++++++++++++++++++++
-
-If you want to use the :ref:`arch_providers_cloud`, you will need to make sure that the admin node can access the cloud providers
-and you have credentials to the clouds of choice.  The admin node and managed nodes can be live in a cloud.
+If the :ref:`arch_providers_cloud` is intended for use, the admin node must be able to access the cloud providers
+and the credentials to the clouds of choice.  The admin node and managed nodes can be live in a cloud.
 
 
 Admin Node Questions
 ====================
 
-Now that you have an idea of what you are going to do, you need to have an admin node.  
+With the intent of the operation determined, an admin node is required.   
 The admin node can run in the cloud, a VM, or a physical node.  The admin node has some
 specific requirements.
 
 System Requirements
 +++++++++++++++++++
 
-* 8 Gb of RAM (or better) is recommended.
+* 8 Gb of RAM (or more) is recommended.
 * 4 Physical Cores
 * Operating System should be: Mac OSX or Linux
 
@@ -66,9 +66,9 @@ What System Do I Have to Run an Admin Node?
 
 An admin node needs a docker capable system to run in.  This can be a Linux system with docker-engine installed or a MacOS with docker tools installed.  In theory, a windows box could be used with virtual box and the docker tools, but come on.
 
-For a linux system, you will want to look at the `run-in-system.sh <https://github.com/digitalrebar/doc/blob/master/deployment/install/linux.rst>`_ script and its description.  This script can be run against the local system with the --localhost option or a remote system (with ssh access).
+For a linux system, be certain to reference the `run-in-system.sh <https://github.com/digitalrebar/doc/blob/master/deployment/install/linux.rst>`_ script and its description.  This script can be run against the local system with the --localhost option or a remote system (with ssh access).
 
-For a Mac system, you will want to look at the `run-in-mac.sh <https://github.com/digitalrebar/doc/blob/master/deployment/install/mac.rst>`_ script and its description.  This script will make sure that tools are installed to run docker in a VirtualBox instance and let you run the developer tools or the deploy tools against it.
+For a Mac system, be certain to reference the `run-in-mac.sh <https://github.com/digitalrebar/doc/blob/master/deployment/install/mac.rst>`_ script and its description.  This script will make sure that tools are installed to run docker in a VirtualBox instance and allow the developer tools to run or the deploy tools against it.
 
 For AWS or Packet, look at the *run-in-[aws|packet]* scripts.  They will automatically provision systems from those clouds and then install Digital Rebar.
 
@@ -97,23 +97,23 @@ Instead of specifying the Forwarder IP, we have to specify the external IP to us
 
 For either mode, the FORWARDER_IP, EXTERNAL_IP, and mode is specified as values in the group_vars/all.yml file or some of the commands take those values as flags.
 
-At this point, you should be able to choose your tool and install and deploy Digital Rebar.  Once installed and configured, you can provision nodes (using good ole PXE of a physical system or creation of a kvm-slave) or join nodes (using add-from-system.sh) to the admin node.
-
+At this point, tools should be available and installation and deployment of Digital Rebar can begin.  Once installed and configured, nodes can be provisioned (using PXE of a physical system or creation of a kvm-slave) or join nodes (using add-from-system.sh) to the admin node.
+        
 Am I going to develop Digital Rebar or Workloads for Digital Rebar?
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-Using the deploy tools, the environment should be setup for doing development as well.  You can switch to using the docker-admin tools provided in core to start and stop Digital Rebar containers.  It has a shell wrap that allows you to quickly stop, clean-up, and restart.
+Using the deploy tools, the environment should be setup for doing development as well.  The docker-admin tools provided in core can be used to start and stop Digital Rebar containers.  It has a shell wrap that allows for quickly stopping, cleaning-up, and restarting.
 
 ::
 
   cd digitalrebar/core
   tools/docker-admin
   
-This leaves you in a show where you can run docker-compose logs and other docker commands to inspect the containers.  Exiting this shell will kill and remove the containers.  *docker-admin* takes an --access flag with a value of either HOST or FORWARDER and a very helpful ``--no-pull`` flag that doesn't do a pull update to increase iteration speeds.
-
+This creates a show where docker-compose logs and other docker commands can be run to inspect the containers.  Exiting this shell will kill and remove the containers.  *docker-admin* takes an --access flag with a value of either HOST or FORWARDER and a very helpful ``--no-pull`` flag that doesn't do a pull update to increase iteration speeds.
+        
 
 The ``run-in-[packet|system|google|docean|aws].sh [options] `` or ``workloads\[docker-swarm|kubernetes]`` scripts will quickly build a working Digital Rebar administrate system.  There are advanced workload scripts that will setup Digital Rebar AND provision a workload.
 
-The Provisioner/DHCP containers (include with ``--con-provisioner --con-dhcp``) are able to handle DHCP/PXE boot discovery of metal and KVM.  These options will lengthen the install because they download provioning ISOs from source.  You can also automatically upload ISOs from your local ``~/digitalrebar/isos``.
-
-The cloud providers require that you have an account with the provider.  For first users, we recommend AWS, Google or Packet.
+The Provisioner/DHCP containers (include with ``--con-provisioner --con-dhcp``) are able to handle DHCP/PXE boot discovery of metal and KVM.  These options will lengthen the install because they download provioning ISOs from source.  ISO can automatically be updated from a local``~/digitalrebar/isos``.
+        
+The cloud providers require an account with the provider.  For first users AWS, Google, or Packet are the recommended options.
