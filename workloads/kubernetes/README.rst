@@ -8,7 +8,7 @@ Kubernetes Workload
 Installation
 ------------
 
-FIRST, you must complete the general workloads installation in :ref:`workloads_installation`.
+FIRST, complete the general workloads installation in :ref:`workloads_installation`.
 
 Next, Install the Kubernetes workload, run the workload script:
 
@@ -31,7 +31,7 @@ Rob Hirschfeld has created a `number of videos <https://www.youtube.com/playlist
 Configuration Options
 ---------------------
 
-We've worked hard to create safe defaults; however, if you change defaults then the downstream consumers of those values will get the correct values.
+We've worked hard to create safe defaults; however, if defaults are changed then the downstream consumers of those values will still get the correct values.
 
 General Options
 ~~~~~~~~~~~~~~~
@@ -55,7 +55,7 @@ The following options are set by the script.  Override with caution!
 Prerequisites 
 ~~~~~~~~~~~~~
 
-In the future, you should be able to use an existing Etcd cluster.
+In the future, it should be possible to use an existing Etcd cluster.
 
   * ``--kubernetes-etcd-client-port=<Int>`` Default etcd client port: 2379
   * ``--kubernetes-etcd-peer-port=<Int>`` Default etcd peer port: 2380
@@ -63,7 +63,7 @@ In the future, you should be able to use an existing Etcd cluster.
 Pod Configuration & UI
 ~~~~~~~~~~~~~~~~~~~~~~
 
-Digital Rebar is able to perform post-install configuaration and testing.  These flags are used to configure pods on the Kubernetes cluster after is has been installed.  The sequence is handled by the Digital Rebar annealer, the script pre-loads all requests and does not hold work.
+Digital Rebar is able to perform post-install configuration and testing.  These flags are used to configure pods on the Kubernetes cluster after is has been installed.  The sequence is handled by the Digital Rebar annealer, the script pre-loads all requests and does not hold work.
 
   * ``--kubernetes-dashboard=<true|false>`` Use Kubernetes-Dashboard (default UI now)
   * ``--kubernetes-dash=<true|false>`` Use Kube-Dash
