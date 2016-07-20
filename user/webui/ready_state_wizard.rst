@@ -15,16 +15,16 @@ several steps that are commonly performed together.
 From the Ready State Wizard Screen: 
 
   1. name the deployment (network will be named the same as the deployment) 
-  #. describe the network settings (you can change this later from the Networks page) 
-  #. check the nodes that you want to provision 
-  #. select the o/s that you want to be installed 
-  #. accept the changes (this takes you to the deployment page)
+  #. describe the network settings (this can be changed from the Networks page at a later date) 
+  #. check the nodes to provisioned 
+  #. select the o/s to be installed 
+  #. accept the changes (this opens the deployment page)
   #. commit the deployment to begin.
 
 Change OS
 ---------
 
-You can change the OS after the wizard has run by clicking on the ``provisioner-os-install`` node role for the individual nodes (the blue wrench icon).  
+The OS can be altered after the wizard has run by clicking on the ``provisioner-os-install`` node role for the individual nodes (the blue wrench icon).  
 
 .. image:: /images/screens/dr_ready_state_change_os.png
 
@@ -33,7 +33,7 @@ Install note: The list will be limited to the available operating systems.  See 
 Commit Deployment
 -----------------
 
-Digital Rebar will not start while the deployment is proposed (user managed).  To release the deployment, you much ``commit`` the deployment by clicking the ``commit`` button.
+Digital Rebar will not start while the deployment is proposed (user managed).  To release the deployment, ``commit`` the deployment by clicking the ``commit`` button.
 
 .. image:: /images/screens/dr_ready_state_precommit.png
 

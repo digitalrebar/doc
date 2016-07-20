@@ -1,11 +1,10 @@
 Login Screen
 ============
 
-Unless you are using the RackN Enterprise Single Sign On (SSO) featuer, you will be presented with the Digital Rebar login screen before you can access the UI.
-
+Unless using the RackN Enterprise Single Sign On (SSO) featuer, a Digital Rebar login screen will appear to allow access to the user interface. 
 .. image:: /images/screens/dr_login_screen.png
 
 License
 -------
 
-You do not have to log in to read the license.
+The license can be accessed without loging on.
