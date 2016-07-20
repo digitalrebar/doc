@@ -25,7 +25,7 @@ A provider must be able to handle the following tasks:
 In the future, providers will also handle more detailed node creation tasks, as well as configuring
 and managing networks.
 
-From the `Rebar API <../development/api>`_, you can perform the usual CRUD operations with providers
+From the `Rebar API <../development/api>`_, the usual CRUD operations can be performed with providers
 
 Rebar API Actions
 ~~~~~~~~~~~~~~~~~

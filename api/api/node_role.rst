@@ -24,7 +24,7 @@ are maintained on related NodeRoleDatum mode.
    Attrib model. Please see the node API docs for more about this type
    of data
 
-NodeRole does not have a natural key, so you must reference them them by
+NodeRole does not have a natural key, so they must be referenced by
 ID or under the relevant Nodes, Roles, or Deployment.
 
 API Actions
@@ -60,8 +60,8 @@ API Actions
 | DELETE   | api/v2/node\_roles/:id                                | Allowed if Node Role does not have child dependencies     |
 +----------+-------------------------------------------------------+-----------------------------------------------------------+
 
-Helpers have been added to NodeRole create so that you do not need to
-provide IDs when creating a new NodeRole. You can pass:
+Helpers have been added to NodeRole create so that IDs are unnecessary when creating a new NodeRole. 
+The following can be passed:
 
 -  Deployment Name instead of Deployment ID
 -  Node Name instead of Node ID
@@ -111,7 +111,7 @@ Node\_Error
 *Calculated*
 
 True if any of the NodeRoles on the associated Node are in an error
-state. This allows API users to monitor the status of a target role and
+state.  This allows API users to monitor the status of a target role and
 know if there was an error that will block progress without having to
 inspect other NodeRoles. Instead of looking at all parents (which could
-span nodes), Node provides a more limited scope
+span nodes), Node provides a more limited scope.

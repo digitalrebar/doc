@@ -106,8 +106,8 @@ By convention, most Digital Rebar models have the same fields.
 -  description - user definable content
 -  created\_at - when object was created
 -  updated\_at - when object was last updated
--  object\_id - cross reference id to an object. In most cases, you can
-   use the name of the object instead of the API
+-  object\_id - cross reference id to an object. In most cases, the name
+   of the object can be used instead of the API
 
     Some of the information stored in objects is maintained as json and
     will appear as nested data.
@@ -122,9 +122,9 @@ the API.
 The API adds ="application/vnd.rebar.[type].[form]+json;version=2.0"= to
 the content-type tag.
 
-If you only care about certian attributes being returned for an API
-call, you can set the ``x-return-attributes`` header to a JSON array of
-the attributes you want to return.
+If only certian attributes need to be returned for an API
+call, the ``x-return-attributes`` header can be to a JSON array of
+the attributes that need to be returned.
 
 -  [type] is the object type being returned. E.g.: node, deployment,
    jig, etc
@@ -245,8 +245,8 @@ Mark the node as alive, which will allow the annealer to do its thing:
 Installing an operating system on a node
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Get the names of the nodes you want to install:
-'''''''''''''''''''''''''''''''''''''''''''''''
+Get the names of the nodes for install:
+'''''''''''''''''''''''''''''''''''''''
 
 -  CLI: ``rebar nodes list --attributes name``
 -  API:
@@ -287,7 +287,7 @@ Returns:
       "name": "test1"
     }
 
-Update the target node with the new deployment that you just created:
+Update the target node with the new deployment that was just created:
 '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 -  CLI: ``rebar nodes move d52-54-05-3f-00-00.smoke.test to test1``
