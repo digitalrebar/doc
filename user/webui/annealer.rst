@@ -1,7 +1,7 @@
 Annealer
 ========
 
-The Annealer page (/annealer) shows all the active node-roles in the system grouped by type with the most immediate types (error, transition) at the top.  You can reach the annealer by Monitor...Annealer or the top right status icons.
+The Annealer page (/annealer) shows all the active node-roles in the system grouped by type with the most immediate types (error, transition) at the top.  The annealer can be reached by Monitor...Annealer or the top right status icons.
 
 .. image:: /images/screens/dr_annealier_monitor.png
 

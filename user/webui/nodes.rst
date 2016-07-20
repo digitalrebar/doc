@@ -41,7 +41,7 @@ requires time.
 Once the node is booted, Digital Rebar automatically adds the node into the
 system deployment. The system deployment is a special purpose deployment
 used for discovery and base management. Users have limited options to
-change it; however, you can easily monitor the discovery process
+change it; however, the discovery process can be easily monitored by
 watching the Annealer or system deployment screens. They will show
 exactly which steps of the discovery progress are pending, acting and
 completed.

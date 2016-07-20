@@ -1,7 +1,7 @@
 Networks
 ========
 
-Digital Rebar has sophisticated networking for physical systems.  When changing networking settings it is critical to understand your desired networking configuration.
+Digital Rebar has sophisticated networking for physical systems.  When changing networking settings it is critical to understand the desired networking configuration.
 
 Default Networks
 ----------------
@@ -46,7 +46,7 @@ To cope with NIC enumeration differences between systems, it is possible to defi
 
 .. image:: /images/screens/dr_bus_interfaces.png
 
-Developer Note: if you are creating a general mapping for new hardware types, please submit a pull request so that your mapping is included in the default list.
+Developer Note: If creating a general mapping for new hardware types, please submit a pull request so that the mapping is included in the default list.
 
 DNS Filters
 -----------

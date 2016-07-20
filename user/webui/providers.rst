@@ -21,7 +21,7 @@ WARNING: It is possible for node create and destroy to fail in such a way that t
 Adding Providers
 ----------------
 
-You can add providers by selecting a provider type in the top right of the Provider list.
+Providers can be added by selecting a provider type in the top right of the Provider list.
 
 .. image:: /images/screens/dr_providers_initial.png
 
@@ -32,4 +32,4 @@ And then exiting the appropriate fields.
 Developer Notes
 ---------------
 
-You can monitor provider activity by watching the Cloudwrap container logs.  See ref:`configure_providers` for details.
+Provider activity can be monitored by watching the Cloudwrap container logs.  See ref:`configure_providers` for details.
