@@ -13,7 +13,7 @@ environment.
 By default, setup will now download golden sledgehammers and this step
 is not needed.
 
-Only do this step if you want to make changes to Sledgehammer! We
+Only do this step if changes are required for Sledgehammer! We
 recommend using the golden sledgehammer.
 
 #. prep for sledgehammer requirements:
@@ -36,6 +36,5 @@ Failures
 If it fails to find some packages, change the mirror kickstart is using
 in ``sledgehammer\sledgehammer.ks``
 
-List of mirrors here:
-http://isoredirect.centos.org/centos/7/isos/x86\_64/
+List of mirrors `here <http://isoredirect.centos.org/centos/7/isos/x86\_64/>`_
 

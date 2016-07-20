@@ -1,3 +1,8 @@
+.. index::
+pair: Noop; Jig
+
+.. _noop_jig:
+
 Noop Jig
 ~~~~~~~~
 
