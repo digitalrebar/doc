@@ -7,26 +7,20 @@ Follow the ../install.rst steps to checkout the DigitalRebar code and RackN depl
 
 From ``digitalrebar/deploy`` directory
 
-NOTE: You must have key based SSH access to your target system.  The install process logs into your system as root AND will fix that access if you have a non-root account (specify with ``--login-user``)
+NOTE: There must be a key based SSH access to the target system.  The install process logs into the system as root AND will fix that access if there is a non-root account (specify with ``--login-user``)
 
 Here are the steps:
 
-#. Figure out your system IP address
-#. If you don't have root login, then use ``./add-from-ssh`` to fix your credentials (our advanced scripts call this automatically)
-#. ``./run-in-system.sh --help`` to make sure we have all the pre-req's
-#. ``./run-in-system.sh --deploy-admin=[system|local] --admin-ip=[my CIDR ip/subnet]`` Choose ``system`` for remote install and ``local`` for your current system.
-#. Allow the system to run and you will see Ansible progress
+#. Figure out the system IP address
+#. If the root login is missing, then use ``./add-from-ssh`` to fix the credentials (our advanced scripts call this automatically)
+#. ``./run-in-system.sh --help`` to make sure all of the pre-req's are in place
+#. ``./run-in-system.sh --deploy-admin=[system|local] --admin-ip=[my CIDR ip/subnet]`` Choose ``system`` for remote install and ``local`` for the current system.
+#. Allow the system to run and Ansible progress will be visible
 #. Follow steps to login to Digital Rebar UI.
 
 Common Additional Options:
 
-* If you setup a ``~/.dr_info`` file then you can use ``workloads/add-provider.sh`` to add providers by remote.
-* if you don't have direct root control, add ``--login-user=[username]``
-* for a Metal or KVM booting dev-test add: ``--con-provisioner --access=FORWARDER``
-* for a Docker test Compose scale command add: ``--con-node``
-
-Regular Use & Dev Systems
-~~~~~~~~~~~~~~~~~~~~~~~~~
-
-These scripts are mainly used for single pass setups where you plan to tear down the system after use.  If you are planning to do regular development or 
-
+* If a  ``~/.dr_info`` file is set up then ``workloads/add-provider.sh`` can be used to add providers by remote.
+* If direct root control is not avalible, add ``--login-user=[username]``
+* For a Metal or KVM booting dev-test add: ``--con-provisioner --access=FORWARDER``
+* For a Docker test Compose scale command add: ``--con-node``

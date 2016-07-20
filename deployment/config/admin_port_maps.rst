@@ -3,7 +3,8 @@
 Rebar Admin Node Port Mapping
 -----------------------------
 
-The following table can help figure out which Digital Rebar services are
+The following table can help determine
+ which Digital Rebar services are
 running on the admin server.  Depending on the configuration, they may not have to be exposed.
 
 Please review and edit these port numbers.
