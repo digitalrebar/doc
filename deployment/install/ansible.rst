@@ -173,7 +173,7 @@ Step 1 Items:
 
 .. [11] ``curl -sSL https://get.docker.com/ -o /tmp/docker.sh | sh``
 .. [12] ``sudo usermod -a -G docker <your-user>`` 
-run ``sudo chmod 666 /var/run/docker.sock`` to temporarily allow everyone access and avoid an imediate reboot.
+run ``sudo chmod 666 /var/run/docker.sock`` to temporarily allow everyone access and avoid an immediate reboot.
 .. [13] ``sudo service apparmor teardown`` and ``sudo update-rc.d -f apparmor remove``
 .. [14] ``sudo ip a add 192.168.124.10/24 dev docker0``
 
