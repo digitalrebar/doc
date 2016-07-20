@@ -17,7 +17,7 @@ initial boot.
 #. in the CLI, use ``rebar nodes create ...``
 
 #. (Optional) PUT any node-specific hints that may be needed for the
-   bootstrap process, including node MAC addresses or your suggested IP
+   bootstrap process, including node MAC addresses or the suggested IP
    address.
 
 #. POST to ``/api/v2/node_roles`` to bind default roles to the node.
