@@ -94,7 +94,7 @@ And now, the real fun begins!
 #. Log in to Digital Rebar on http://127.0.0.1:3000 using default user ``rebar`` and password ``rebar1``
 #. Wait for the first annealing pass to complete (all marks are green).  Please be patient on the first run because Digital Rebar is building and caching provisioning images (during ``provisioner-base-images`` role) from the downloaded ISOs
 
-If this is the first install, the Docker and KVM nodes approach will allow for some experimentation with Digital Rebar with minimla network configuration. 
+If this is the first install, the Docker and KVM nodes approach will allow for some experimentation with Digital Rebar with minimal network configuration. 
 
 
 KVM Nodes (high fidelity test)
