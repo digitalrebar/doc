@@ -79,16 +79,16 @@ the syntax can be found `here <https://golang.org/pkg/text/template/>`_.
 +---------------------+------------------------------------------------------------------+
 | .Env.Name           | The name of the boot environment.                                |
 +---------------------+------------------------------------------------------------------+
-| .Env.Kernel         | Raw partial path to the kernel for the boot environment. You     |
-|                     | should process it into the full path appropriate to the boot     |
-|                     | protocol with .Env.PathFor                                       |
+| .Env.Kernel         | Raw partial path to the kernel for the boot environment. It      |
+|                     | should  be processed into the full path appropriate to the       |
+|                     | boot protocol with .Env.PathFor                                  |
 +---------------------+------------------------------------------------------------------+
 | .Env.Initrds        | The list of raw partial paths for the initrds for the boot env.  |
-|                     | You should not use these directly, instead use the               |
+|                     | These should not be used directly, instead use the               |
 |                     | .Env.JoinInitrds method.                                         |
 +---------------------+------------------------------------------------------------------+
-| .Env.BootParams     | The template for the boot parameters for this boot env. You      |
-|                     | should not use this directly, instead you should use the         |
+| .Env.BootParams     | The template for the boot parameters for this boot env. This     |
+|                     | should not be used directly, instead use the                     |
 |                     | .BootParams method.                                              |
 +---------------------+------------------------------------------------------------------+
 | .Env.OS.Name        | The name of the OS that this boot env boots into.                |

@@ -122,13 +122,13 @@ Field Information
 Minimum fields needed for create
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Alive, Bootenv, Name
+Alive, Bootenv, and Name are all required.
 
 Target Role ID
 ~~~~~~~~~~~~~~
 
 TargetRole is used to troubleshoot problem nodes by putting them into a
-*hopefully* known working state which allows you to put the node back
-into sledgehammer so you can take the installed OS out of the picture.
+*hopefully* known working state which allows the node to be put back
+into sledgehammer in order to removed the installed OS from the picture.
 To do this, set the target role to TargetRole to "rebar managed node"
 and BootEnv to "sledgehammer" then reboot.

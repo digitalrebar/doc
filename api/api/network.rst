@@ -29,8 +29,8 @@ Lists the current networks.
 | DELETE   | api/v2/networks/[network]   | Database ID or name               | HTTP error code 200 on success          |            |
 +----------+-----------------------------+-----------------------------------+-----------------------------------------+------------+
 
-    There are helpers on the POST method that allow you to create ranges
-    and routers when you create the network.
+    There are helpers on the POST method that allow the creation of ranges
+    and routers when the network is created.
 
 Sample:
 
@@ -46,12 +46,12 @@ Sample:
       "use_bridge": true or false,
       "category":   "String to indicate type: admin,bmc,general,...",
       "group":      "String to indicate groups of networks",
-      "conduit":    "1g0,1g1", // or whatever you want to use as a conduit for this network
+      "conduit":    "1g0,1g1", // or whatever is desired as a conduit for this network
       "ranges": [
          { "name": "name", "first": "192.168.124.10/24", "last": "192.168.124.245/24" }
       ],
       "router": {
-         "pref": 255, // or whatever pref you want.  Lowest on a host will win.
+         "pref": 255, // or whatever pref is desired.  Lowest on a host will win.
          "address": "192.168.124.1/24"
       }
     }

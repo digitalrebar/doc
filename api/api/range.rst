@@ -28,5 +28,4 @@ Lists the current ranges for a network.
 | PUT    | network/api/v2/networks/[network]/ranges/[range]   |                                   |                                         |            |
 +--------+----------------------------------------------------+-----------------------------------+-----------------------------------------+------------+
 
-You cannot delete a range at this time. You must delete the entire
-network.
+A range cannot be deleted at this time, the entire network must be destroyed in order to delete a range. 
