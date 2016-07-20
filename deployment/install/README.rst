@@ -3,7 +3,7 @@
 Deploy Digital Rebar Admin Node
 ===============================
 
-At this point :ref:`initial_install_setup` and :ref:`dg_config` should haved been completed.
+At this point :ref:`initial_install_setup` and :ref:`dg_config` should have been completed.
 
 Tool Setup
 ----------
