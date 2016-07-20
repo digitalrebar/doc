@@ -70,7 +70,7 @@ data["map"]["to"]["value"] , :size => 30 ... = hidden\_field\_tag
 
     :javascript
       var rules = new Array();
-      // cannot use regular json syntax because you cannot have hyphen in key names and attribs have hyphen, TODO should re-factor attribs to use json friendly key names
+      // cannot use regular json syntax because hyphens cannot be in key names and attribs have hyphen, TODO should re-factor attribs to use json friendly key names
       rules["data_[@role.name]_[map_to_value]"] = new Object({
         required: true,
         minlength: 8
@@ -108,7 +108,7 @@ data["map"]["to"]["value"] , :size => 30 ... = hidden\_field\_tag
 4. Override Role hooks if needed
 
    If any special actions need to take place prior to sending the data
-   down to the node after the Deployment is committed you can override
+   down to the node after the Deployment is committed, override
    one of the hooks declared in
    `Role <https://github.com/rebar/barclamp-rebar/blob/master/rebar_framework/app/models/role.rb>`__.
 
@@ -163,51 +163,51 @@ Messaging Barclamp as an example:
 1.  Start the Admin node, log in and create new Deployment.
 2.  Start a new test node, either a VM or actual hardware.
 3.  Validate the test node has PXE booted and is the discovered state in
-    the UI
-4.  Create a new Deployment and add the single role you are trying to
-    test, messaging-server for example.
-5.  Add the newly discovered node to the Deployment
+    the UI.  
+4.  Create a new Deployment and add the single role that is to be tested,
+    messaging-server for example.
+5.  Add the newly discovered node to the Deployment.  
 6.  At the intersection of the role and node click the green + icon to
     expand all the parent roles.
 7.  At this point the very last role, from left-to-right, should be the
-    role you are testing with a blue diamond icon at the intersection of
-    the node and role. The blue diamond indicates the node role is in
-    the Proposed state. Click this icon, this will bring you to the Node
-    Role view that contains the functionality you are testing.
-8.  Before proceeding copy the ID of the node role you are editing to be
-    used later on. This can be found by looking at the URL of the page.
-    For instance the following
+    role that is being tested with a blue diamond icon at the intersection of
+    the node and role.  The blue diamond indicates the node role is in
+    the Proposed state.  Click this icon, this will bring up the Node
+    Role view that contains the functionality being testing.
+8.  Before proceeding copy the ID of the node role being edited to be
+    used later on.  This can be found by looking at the URL of the page.
+    For example: 
     http://192.168.124.10:3000/node\_roles/84, shows that the node role
-    is 84
+    is 84.  
 9.  Validate the form fields and labels are correct that the form
-    validation is working properly. Validation error messages should be
-    displayed to the right of the field in question. In order to
-    validate the rules the tester should know what each field's validation rules are supposed to be.
+    validation is working properly.  Validation error messages should be
+    displayed to the right of the field in question.  In order to
+    validate the rules the tester should know what each field's validation 
+    rules are supposed to be.
 10. Test required fields by clearing them all and attempt to save the
-    node role. You should see required messages for every field in the
-    messaging server role for example as every field is required
+    node role.  Required messages should appear for every field in the
+    messaging server role as every field is required.  
 11. Validate and field length rules are working correctly, there are
     on-key-up event handlers on each field and when the length doesn't
-    meet the defined max/min length, you should be notified.
-12. Validate special case fields like password and email. In messaging
+    meet the defined max/min length, a notification will appear.
+12. Validate special case fields like password and email.  In messaging
     there is a custom validator defined that will not allow special
-    characters in the password. If you enter % you should see a
-    validation error message.
+    characters in the password.  If a % is entered a validation error 
+    message will appear.
 13. Enter all required information in the correct format and save the
-    node role. You should see a notification in the standard global
-    notification section of the page that the node role has been saved
-    successfully.
+    node role.  A notification should appear in the standard global 
+    notification section that the node role has been saved successfully.  
 14. Navigate through the deployments menu to get back to the deployment
-    node role list page again. Click the blue icon for the role you are
-    testing and validate the information you previously changed. This action will
-    repopulate the form.
+    node role list page again.  Click the blue icon for the role being 
+    tested and validate the information that was previously changed.  
+    This action will repopulate the form.
 15. Make additional changes and repeat previous step to validate the
-    additional update was successful. The reason for this is the first
-    time you edited the node role you were overwriting the defaults,
-    creating a new object. This second pass is an update of that object.
-16. Testing of the rendered form is done at this point. It may be
+    additional update was successful.  The reason for this is the first
+    time the node role was edited the defaults were being overridden,
+    creating a new object.  This second pass is an update of that object.
+16. Testing of the rendered form is done at this point.  It may be
     worthwhile to validate model data itself is correct prior to
-    committing the deployment. This can be easily done through the Rails
+    committing the deployment.  This can be easily done through the Rails
     console:
 17. SSH into the admin node navigate to the rebar\_framework director
     ``:~$ cd /opt/dell/rebar_framework``
@@ -233,10 +233,10 @@ Messaging Barclamp as an example:
 
 21. If the information looks correct in the model commit of the Deployment
     UI. While the parent node is executing, such as
-    installing the operating system etc, you can take a look at the
-    read-only node role view by clicking the grey circle icon
+    installing the operating system etc, the read-only node role view can be 
+    accessed by clicking the gray circle icon
     (indicating blocked state) at the intersection of the node and role.
-    This will take you to the read-only node role view. Validate the
+    This will open the read-only node role view. Validate the
     fields and data correct.
 22. When the Deployment is finished and active, the last step is to
     verify the settings in the UI actually made it to the target

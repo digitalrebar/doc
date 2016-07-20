@@ -13,7 +13,7 @@ are designed to restart the VM if it halts.
 Prereqs
 ^^^^^^^
 
-There are some requirements; run the script and it will tell you! 
+There are some requirements; run the script and it will explain what is required! 
 
 For reference, here are the current Ubuntu requirements:
 

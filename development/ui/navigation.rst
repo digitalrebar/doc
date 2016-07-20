@@ -1,10 +1,10 @@
 Adding Menu Items
 ~~~~~~~~~~~~~~~~~
 
-You add menu items into Digital Rebar using database migrations that
+Menu items can be added to Digital Rebar using database migrations that
 insert into the ``navs`` table using the ``Nav`` object.
 
-You must add the migration to the ``rebar_framework/db/migrate``
+Add the migration to the ``rebar_framework/db/migrate``
 directory and follow the Rails migration naming convention of
 ``YYYYMMDDHHMMSS_barclamp_navs.rb``.
 
@@ -12,19 +12,19 @@ Inside the migration, use the ``Nav.find_or_create_by_item`` to populate
 the information for the menu item:
 
 -  item = the id of the item
--  parent\_item = the id of the top level menu you want to use (``root``
+-  parent\_item = the id of the top level menu intended for use (``root``
    creates a top level menu)
 -  name = the i18n path to the menu text
 -  description = the i18n path to the menu hover information
--  path = the Rails path you want to follow. Unless it starts with http,
+-  path = the Rails path to be followed. Unless it starts with http,
    ``eval`` will be applied to the path.
 -  order = the display order of the menu item
 
 Remember to:
 
--  Provide a ``self.down`` that removes your menu item, to maintain a
+-  Provide a ``self.down`` that removes the menu item, to maintain a
    clean environment.
--  Create matching entries in your barclamp's i18n files.
+-  Create matching entries in the barclamp's i18n files.
 
 Example from the Network barclamp:
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
