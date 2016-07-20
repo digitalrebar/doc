@@ -9,4 +9,4 @@ To make a backup, simply run the `./backup.sh` script from the ./deploy director
 
 To restore the backup, use the matching `./restore.sh` script in the same directory.
 
-You should store the output of the backup on a different system than the Digital Rebar admin.
+The output of the backup should be stored on a different system than the Digital Rebar admin.
