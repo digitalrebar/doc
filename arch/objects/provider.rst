@@ -16,7 +16,7 @@ Providers are intended to be used by the Rebar core to handle various aspects of
 Saving Config in dr_info
 ------------------------
 
-For regular uses, you can store your provider credentials in the ``~/.dr_info`` file ( `details here <./dr_info.rst>`_ )
+For regular uses, provider credentials can be stored in the ``~/.dr_info`` file ( `details here <./dr_info.rst>`_ )
 
 Supported Providers
 -------------------
@@ -25,7 +25,7 @@ Phantom
 ~~~~~~~
 
 The Phantom provider is the default provider type for internal Rebar
-nodes.  You will normally never see or operate on a node with the
+nodes.  Normally, nodes will never be seen or be operating with the
 Phantom provider.
 
 Metal
@@ -41,7 +41,7 @@ Amazon EC2
 ~~~~~~~~~~
 
 The Amazon EC2 provider is used to let Rebar create, reboot, and
-delete Amazon EC2 virtual machines. In order to use it, you should:
+delete Amazon EC2 virtual machines. In order to use it the following must be done:
 
 * Create a new IAM user on Amazon.
 * Make sure that IAM user has rights to create, reboot, and delete EC2
@@ -56,11 +56,11 @@ delete Amazon EC2 virtual machines. In order to use it, you should:
          "auth_details": {
              "aws_access_key_id": "IAM_aws_access_key",
              "aws_secret_access_key": "IAM_secret_key_for_access_key",
-             "region": "your-preferred-region"
+             "region": "the-preferred-region"
          }
         }'
 
-Once you have created a new Provider, you can create EC2 instances
+Once a new provider has been created, create EC2 instances
 using that provider::
 
     victor@m4700:~/src/digitalrebar/deploy/compose (master)
@@ -77,21 +77,22 @@ using that provider::
          }'
 
 This will create a t2.small node running Ubuntu 14.04 in the region
-the provider was configured to use.  You can omit the
-'provider-create-hint' section of the JSON, which will cause the
-provider to default to using a t2.micro instance running Ubuntu 14.04.
+the provider was configured to use.  If the
+'provider-create-hint' section of the JSON is omitted, the provider
+will default to using a t2.micro instance running Ubuntu 14.04.
 
 Google Compute Engine
 ~~~~~~~~~~~~~~~~~~~~~
 
 The Google Compute Engine provider lets Rebar create, reboot, and
-delete GCE virtual machines. In order to use it, you should:
+delete GCE virtual machines. In order to use it, the following must be done:
 
-* Create a new project to use, if you do not already have one.
-* Make sure your project has the Google Compute Engine API enabled.
+* Create a new project to use.
+* Make sure the
+ project has the Google Compute Engine API enabled.
 * Create a new service account key with permission to create, delete,
-  and reboot GCE instances in your project.  Be sure and save the
-  generated JSON file somewhere secure where you can access it with
+  and reboot GCE instances in the project.  Be sure and save the
+  generated JSON file somewhere secure where it can be accessed with
   the rebar CLI.
 * Create a new Provider with the following Rebar CLI call::
 
@@ -100,12 +101,12 @@ delete GCE virtual machines. In order to use it, you should:
     "{\"name\": \"gce-vl-test\",
       \"type\": \"GoogleProvider\",
       \"auth_details\": {
-          \"google_project\": \"your-project-name\",
+          \"google_project\": \"the-project-name\",
           \"google_json_key\": $(cat "/path/to/downloaded/token.json")
       }
      }"
 
-Once you have created the Provider, you can create GCE instances using it::
+Once the Provider is created, a GCE instances can be built using it::
 
     victor@m4700:~/src/digitalrebar/deploy/compose (master)
     $ rebar -U rebar -P rebar1 nodes create \
@@ -129,7 +130,7 @@ Once you have created the Provider, you can create GCE instances using it::
       }
      }'
 
-If you omit the information in 'provider-create-hint', it will default
+If the information in 'provider-create-hint', is omitted it will default
 to then 'n1-standard-1' machine type, the 'us-central1-f' zone, and a
 single disk with Ubuntu 14.04 as the installed OS.
 
@@ -137,7 +138,7 @@ Packet.net
 ~~~~~~~~~~
 
 The Packet.net provider lets Rebar manage bare metal nodes provided by
-Packet.  In order to use it, you should:
+Packet.  In order to use it, the following must be done:
 
 * Create an account and an API key with Packet.
 * Create a new Project at Packet, and record its ID.
@@ -146,14 +147,14 @@ Packet.  In order to use it, you should:
     victor@m4700:~/src/digitalrebar/deploy/compose (master)
     $ rebar -U rebar -P rebar1 providers create \
     '{"auth_details": {
-          "project_token": "your-API-key",
-          "project_id": "your-project-UUID"
+          "project_token": "the-API-key",
+          "project_id": "the-project-UUID"
       },
       "name": "RackN Packet Account",
       "type": "PacketProvider"
     }'
 
-Once you have created the Provider, you can use it to allocate bare
+Once the Provider is created, it can be used to allocate bare
 metal nodes from Packet::
 
     victor@m4700:~/src/digitalrebar/deploy/compose (master)
@@ -174,7 +175,7 @@ metal nodes from Packet::
 Testing Provider
 ~~~~~~~~~~~~~~~~
 
-The testing provider adds debugging instructions to the Amazon EC2 provider so you can simulate activity without actually creating remote notes.
+The testing provider adds debugging instructions to the Amazon EC2 provider so activity can be simulated without actually creating remote notes.
 
 * Create a new Provider with the following Rebar CLI call::
 
@@ -185,7 +186,7 @@ The testing provider adds debugging instructions to the Amazon EC2 provider so y
          "auth_details": {
              "aws_access_key_id": "IAM_aws_access_key",
              "aws_secret_access_key": "IAM_secret_key_for_access_key",
-             "region": "your-preferred-region",
+             "region": "the-preferred-region",
              "debug": {
                 "host_ip":"[address of a ssh/pingable node]",
                 "boot_delay_time":0,

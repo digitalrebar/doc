@@ -5,4 +5,4 @@ The clients/ansible/inventory.py file can be used to generate dynamic inventory 
 
 example: ``ansible -i inventory.py all -a "uname -a"``
 
-For now, you must manually change the URL and user settings inside the inventory.py file.
+For now, the URL and user settings must be manually changed inside the inventory.py file.
