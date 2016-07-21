@@ -9,7 +9,7 @@ It is written in Golang and can be adapted as a Golang client.
 
 The CLI is automatically created during deployment and accessible inside the Rebar_API container or from the host via `docker exec -it compose_rebar_api_1 rebar --help`
 
-If you'd like to access the CLI *without a deployment*, the `RackN <http://rackn.com>`_ teams makes it available for download:
+In order to download the CLI *without a deployment*, the `RackN <http://rackn.com>`_ teams has it available.
 Select the correct architecture to retrieve the CLI:
 
 * `Linux <https://s3-us-west-2.amazonaws.com/rebar-cli/rebar-linux-amd64>`_
@@ -22,7 +22,7 @@ Select the correct architecture to retrieve the CLI:
 
 * `Mac <https://s3-us-west-2.amazonaws.com/rebar-cli/rebar-darwin-amd64>`_
 
-You must `chmod +x` to use the CLI.  We also recommend renaming the CLI as "rebar" and placing in your execution path.
+`chmod +x` must be entered to use the CLI.  We also recommend renaming the CLI as "rebar" and placing in the execution path.
 
 To use the CLI, type `rebar --help` for instructions
 
@@ -34,7 +34,7 @@ There are many commands in the CLI described in --help.  The most basic is "reba
 Parameters
 ----------
 
-Parameters are used to set the server address (-E) and credentials (-U & -P).  A typical instruction looks like ``rebar ping -E https://127.0.0.1:3000 -U rebar -P rebar1``.  To avoid passing parameters into each call, we recommend setting your environment variables.
+Parameters are used to set the server address (-E) and credentials (-U & -P).  A typical instruction looks like ``rebar ping -E https://127.0.0.1:3000 -U rebar -P rebar1``.  To avoid passing parameters into each call, we recommend setting the environment variables.
 
 
 Environment Variables
