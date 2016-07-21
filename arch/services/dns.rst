@@ -16,7 +16,7 @@ DNS Server and Service
 ----------------------
 
 The Digital Rebar system can provide the DNS Server. Currently, the Digital Rebar DNS server is BIND. The BIND
-server will set up everything needed run a DNS server. Any external DNS server could be used in placle of this, but the server must be injected into the system by the common.env in
+server will set up everything needed run a DNS server. Any external DNS server could be used in place of this, but the server must be injected into the system by the common.env in
 the deployment scripts.
 
 DNS Management Server and Service
