@@ -13,29 +13,29 @@ Edit Documentation
 
 We *love* Docs changes!
 
-Docs may be edited directly from a fork on Github, and therefore do not require local clones!  Changes can be directly installed by sending a pull request using Github where they will be approved and then added.  This method is great for simple changes; however, more complex changes require more examination and thought.
+Docs may be edited directly from a fork on Github, and therefore do not require local clones!  Changes can be directly installed by sending a pull request using Github where they will be approved and then added.  This method is great for simple changes; however, more complex changes require more examination and thought. 
 
 
 Cross References
 ~~~~~~~~~~~~~~~~
 
-Please use Cross Reference ``.. _foo:`` and Index tags ``.. index::`` at the top of pages.  This helps build a complete guide.
- 
+Please use Cross Reference ``.. _foo:`` and Index tags ``.. index::`` at the top of pages.  To reference another section, use ``:ref:`[file]``` to link to the proper section.  This helps to build a complete, easy to navigate guide.
+
 Bigger Doc Changes
 ~~~~~~~~~~~~~~~~~~
 
 For bigger doc changes, it is help to make a local environment to visualize the
-modifications.  This helps make a consistent multi-page change and enables the user to acertain the impact of his or her changes.
+modifications.  This helps make a consistent multi-page change and enables the user to ascertain the impact of his or her changes.
 
 The docs are automatically generated upon a successful pull request merge by the
-read-the-docs system.  Sphinx builders to generate html and pdf docs.  At a minimum please validate the html doc as this reduces errors and smooths integration of new content. 
+read-the-docs system.  Sphinx builders to generate html and pdf docs.  At a minimum please validate the html doc as this reduces errors and smooths integration of new content.
 
-In order to validate the docs, a prerequisite environemnt is needed. 
+In order to validate the docs, a prerequisite environment is needed.
 
 On Linux/Mac
 ++++++++++++
 
-`Sphinx <http://www.sphinx-doc.org/en/stable/install.html>`_. is required to create the environment in which docs can be built. 
+`Sphinx <http://www.sphinx-doc.org/en/stable/install.html>`_. is required to create the environment in which docs can be built.
 For OS X 10.11, ``pip install sphinx`` is sufficient to create the required environment.
 
 With that in place, ``make html`` will create a _build/html directory that contains the built files.
@@ -50,14 +50,14 @@ An additional tip is to run ``make html`` repeatedly in another terminal to capt
 
 
 On Windows
-++++++++++ 
+++++++++++
 
 
 
 
 To setup the environment, `Sphinx <http://www.sphinx-doc.org/en/stable/install.html>`_ is required, which requires installing `Python <https://www.python.org/downloads/>`_ and `pip <https://bootstrap.pypa.io/get-pip.py>`_.
 
-With the environemnt created, ``sphinx-build -b html -d _build\doctrees . _build\html`` will build the files.  Using a browser pointed to ``C://<workinf dir>/_build/html/BOOK.html`` should allow verification of the changes. 
+With the environment created, ``sphinx-build -b html -d _build\doctrees . _build\html`` will build the files.  Using a browser pointed to ``C://<workinf dir>/_build/html/BOOK.html`` should allow verification of the changes.
 
 An additional tip is to run the builder repeatedly in a batch file or command terminal to capture changes as they are created.  ::
 
@@ -68,15 +68,19 @@ An additional tip is to run the builder repeatedly in a batch file or command te
   timeout 1 >nul
   goto label
 
-Doumentation Expectations
+Documentation Expectations
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Documentation is an integral and formal component to the development process.  All documentation should be free from spelling and gramatical errors.   Additionally all documentation must adhere to a certain stylistic guide.
+Documentation is an integral and formal component to the development process.  All documentation should be free from spelling and grammatical errors.   Additionally, all documentation must adhere to a certain stylistic guide.
 
- 1. All sentences must be followed by two spaces "__" while words are seperated by the standard single space "_".
+ 1. All sentences must be followed by two spaces "__" while words are separated by the standard single space "_".
 
- 2. Use primarily third person when writing documentation. First person is sometimes acceptable, but second person (you, your) is almost always not. 
+ 2. Use primarily third person when writing documentation. First person is sometimes acceptable, but second person (you, your) is almost always not.
 
  3. Break thoughts into easy to read chunks rather than creating long paragraphs.
 
- 4. Be certain to use embeded links when referencing a specific page or program. 
+ 4. Use embedded links when referencing a specific page or program.
+
+ 5. The oxford comma is used in the documentation.
+
+ 6. Lists should be bulleted.  If a list item contains a term or phrase that is elaborated upon, italicize the term and set it off with a colon.  See :ref:`op_principles` for an example list.
