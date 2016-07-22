@@ -1,8 +1,12 @@
+.. index::
+  pair: Objects; Providers
+
 Provider Usage
 ==============
 
-.. index:
+.. index::
   TODO; provider_split_out
+  pair: Provider; Provider usage
 
 TODO: Use this part in arch
 TODO: Put some in user guide.
@@ -11,7 +15,7 @@ TODO: Reference from Deployment.
 Overview
 --------
 
-Providers are intended to be used by the Rebar core to handle various aspects of node management.  For now, they just let Rebar create and manage nodes on external providers (such as AWS, Rackspace, and Packet).  In the future, though, their scope will be expanded to handle all aspects of node provisioning and network management.
+Providers are intended to be used by the Rebar core to handle various aspects of node management.  Currently, they let Rebar create and manage nodes on external providers (such as AWS, Rackspace, and Packet).  In the future, their scope will be expanded to handle all aspects of node provisioning and network management.
 
 Saving Config in dr_info
 ------------------------
@@ -21,21 +25,33 @@ For regular uses, provider credentials can be stored in the :ref:`dr_info`.
 Supported Providers
 -------------------
 
+.. index::
+  pair: Provider; Phantom
+  Supported Providers; Phantom
+
 Phantom
 ~~~~~~~
 
 The Phantom provider is the default provider type for internal Rebar
-nodes.  Normally, nodes will never be seen or be operating with the
+nodes.  Normally, nodes will not be seen or be operating with the
 Phantom provider.
+
+.. index::
+  pair: Provider; Metal
+  Supported Providers; Metal
 
 Metal
 ~~~~~
 
-The Metal provider is what Rebar uses to manage bare-metal nodes that
+Rebar uses the Metal provider to manage bare-metal nodes that
 it has direct control over.  In future releases of Rebar, the current
-built-in provisioner and network management code will be folded in to
+built-in provisioner and network management code will be folded into
 the Metal provider.  Metal is the default Provider for all nodes
-created via the Rebar API.
+created via the :ref:`digital_rebar_api`.
+
+.. index::
+  pair: Provider; Amazon EC2
+  Supported Providers; Amazon EC2
 
 Amazon EC2
 ~~~~~~~~~~
@@ -44,8 +60,8 @@ The Amazon EC2 provider is used to let Rebar create, reboot, and
 delete Amazon EC2 virtual machines. In order to use it the following must be done:
 
 * Create a new IAM user on Amazon.
-* Make sure that IAM user has rights to create, reboot, and delete EC2
-  instances, along with being able to create and delete keys for those
+* Make sure that IAM user has the rights to create, reboot, and delete EC2
+  instances, along with ability to create and delete keys for those
   instances.
 * Create a new Provider with the following Rebar CLI call::
 
@@ -80,6 +96,9 @@ This will create a t2.small node running Ubuntu 14.04 in the region
 the provider was configured to use.  If the
 'provider-create-hint' section of the JSON is omitted, the provider
 will default to using a t2.micro instance running Ubuntu 14.04.
+
+.. index::
+  pair: Provider; Google Compute Engine
 
 Google Compute Engine
 ~~~~~~~~~~~~~~~~~~~~~
@@ -134,6 +153,10 @@ If the information in 'provider-create-hint', is omitted it will default
 to then 'n1-standard-1' machine type, the 'us-central1-f' zone, and a
 single disk with Ubuntu 14.04 as the installed OS.
 
+.. index::
+  pair: Provider; Packet
+  Supported Providers; Packet
+
 Packet.net
 ~~~~~~~~~~
 
@@ -172,10 +195,14 @@ metal nodes from Packet::
       }
     }'
 
+.. index::
+  pair: Provider; Testing
+  Supported Providers; Testing
+
 Testing Provider
 ~~~~~~~~~~~~~~~~
 
-The testing provider adds debugging instructions to the Amazon EC2 provider so activity can be simulated without actually creating remote notes.
+The testing provider adds debugging instructions to the Amazon EC2 provider, so activity can be simulated without actually creating remote notes.
 
 * Create a new Provider with the following Rebar CLI call::
 
