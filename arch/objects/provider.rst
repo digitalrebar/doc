@@ -27,7 +27,7 @@ Supported Providers
 
 .. index::
   pair: Provider; Phantom
-  Supported Providers; Phantom
+  pair: Supported Providers; Phantom
 
 Phantom
 ~~~~~~~
@@ -38,7 +38,7 @@ Phantom provider.
 
 .. index::
   pair: Provider; Metal
-  Supported Providers; Metal
+  pair: Supported Providers; Metal
 
 Metal
 ~~~~~
@@ -51,7 +51,7 @@ created via the :ref:`digital_rebar_api`.
 
 .. index::
   pair: Provider; Amazon EC2
-  Supported Providers; Amazon EC2
+  pair: Supported Providers; Amazon EC2
 
 Amazon EC2
 ~~~~~~~~~~
@@ -99,6 +99,7 @@ will default to using a t2.micro instance running Ubuntu 14.04.
 
 .. index::
   pair: Provider; Google Compute Engine
+  pair: Supported Providers; Google Compute Engine
 
 Google Compute Engine
 ~~~~~~~~~~~~~~~~~~~~~
@@ -155,7 +156,7 @@ single disk with Ubuntu 14.04 as the installed OS.
 
 .. index::
   pair: Provider; Packet
-  Supported Providers; Packet
+  pair: Supported Providers; Packet
 
 Packet.net
 ~~~~~~~~~~
