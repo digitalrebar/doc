@@ -1,9 +1,9 @@
 
 
-Workload//TBD//
-===============
+Workload
+========
 
-The workload tab will not open a page, but will provide the options of "Install O/S" and "Docker Swarm."
+The "workload" tab will not open a page, but will provide the options of "Install O/S" and "Docker Swarm."
 
 O/S Instalation Wizard
 ----------------------

@@ -1,7 +1,7 @@
 
 
-Overview//TBD//
-===============
+Overview
+========
 
 At Digital Rebar, we not only strive to provide excellent deployment services, but an excellent user experience.  In order to satisfy that imperative, we have developed a new user interface.  
 The new interface provides a sleek new way to interact with server deployment, and has been designed with efficiency in mind.  
