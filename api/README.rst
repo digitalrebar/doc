@@ -1,5 +1,5 @@
 .. index::
-
+  pair: API; Overview
 
 .. _digital_rebar_api:
 
