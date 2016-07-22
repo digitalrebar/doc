@@ -1,57 +1,42 @@
 Provisioning Process
---------------------
+====================
 
 .. index:
   TODO; describe_provisioning_process
+  Provisioner; Provisioning Process
 
 TODO: Update for provisioning process
 
-**Overview**
+Overview
+--------
 
-The Provisioner provides the roles and recipes to set up the
+The :ref:`arch_service_provisioner` provides the roles and recipes needed to set up the
 provisioning server and a base environment for all provisioned nodes.
 The Provisioner also provides the transition entry point for nodes that
 require DHCP transitions completed. The Provisioner assumes that
 addressing will be handled outside of this barclamp.
 
-**Roles**
+Roles
+-----
 
 The following node roles are defined:
 
--  Provisioner-server
+-  *Provisioner-server*: Configures the system to run the provisioning services (TFTP, Web server with apt packages, APT repository).
 
-   -  Configures the system to run the provisioning services (TFTP, Web
-      server with apt packages, APT repository)
+-  *Provisioner-service*: Allows for the injection of the provisioner information into other components.
 
--  Provisioner-service
+-  *DHCP-server*: Provides a DHCP server for doing initial device discovery and points to the provisioner-service.
 
-   -  Allows for the injection of the provisioner information into other
-      components
+-  *DHCP-database*: Updates the DHCP information based upon the boot.env properties.
 
--  DHCP-server
+-  *Provisioner-database*: Updates the provisioner boot information based upon the bootenv properties. (See :ref:`api_provisioner_bootenv`.)
 
-   -  Provides a DHCP server for doing initial device discovery
-   -  Points to the provisioner-service
+-  *Provisioner-repos*: Makes sure that the apt/yum repository is configured and a root ssh key is deployed.
 
--  DHCP-database
+-  *Provisioner-setup-base*: Prepares boot environments from ISOs.
 
-   -  Updates the DHCP information based upon the bootenv properties.
-
--  Provisioner-database
-
-   -  Updates the provisioner boot information based upon the bootenv
-      properties
-
--  Provisioner-repos
-
-   -  Makes sure that the apt/yum repository is configured and a root
-      ssh key is deployed
-
--  Provisioner-setup-base
-
-   -  Prepares boot environments from ISOs
-
-**Workflow**
+Workflow
+--------
 
 The provisioner provides the Sledgehammer discovery image. It is
 expected that there is a DHCP server (provided by Digital Rebar or external
