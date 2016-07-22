@@ -8,7 +8,7 @@ Consul
 ------
 
 The consul container runs a recent version of consul without the UI.  It acts as the primary Key/Value
-store for the system.  All other services register their presence and, in most cases, additional 
-key/values that allow access, port information, or public identity information.
+store for the system.  All other services register their presence and, in most cases, additional
+key/values that allow access, port information, or public identity information with the consul.
 
 This container runs as a host container on the Admin node.

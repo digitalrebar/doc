@@ -6,14 +6,14 @@
 Contributing Docs
 -----------------
 
-As always, please, follow the basic git setup to start, :ref:`contrib_basic`.
+As always, please follow the basic git setup to start: :ref:`contrib_basic`.
 
 Edit Documentation
 ~~~~~~~~~~~~~~~~~~
 
 We *love* Docs changes!
 
-Docs may be edited directly from a fork on Github, and therefore do not require local clones!  Changes can be directly installed by sending a pull request using Github where they will be approved and then added.  This method is great for simple changes; however, more complex changes require more examination and thought. 
+Docs may be edited directly from a fork on Github and therefore do not require local clones!  Changes can be directly installed by sending a pull request using Github in which they await approval before being added.  This method is great for simple changes; however, more complex changes require more examination and thought.
 
 
 Cross References
@@ -24,11 +24,11 @@ Please use Cross Reference ``.. _foo:`` and Index tags ``.. index::`` at the top
 Bigger Doc Changes
 ~~~~~~~~~~~~~~~~~~
 
-For bigger doc changes, it is help to make a local environment to visualize the
-modifications.  This helps make a consistent multi-page change and enables the user to ascertain the impact of his or her changes.
+For bigger doc changes, it is helpful to create a local environment in order to visualize the
+modifications.  This helps make a consistent, multi-page change and enables the user to ascertain the impact of his or her changes.
 
 The docs are automatically generated upon a successful pull request merge by the
-read-the-docs system.  Sphinx builders to generate html and pdf docs.  At a minimum please validate the html doc as this reduces errors and smooths integration of new content.
+read-the-docs system.  Sphinx builders generate the html and pdf docs from the files they receive.  At a minimum please validate the html doc as this reduces errors and smooths integration of new content.
 
 In order to validate the docs, a prerequisite environment is needed.
 
@@ -73,7 +73,7 @@ Documentation Expectations
 
 Documentation is an integral and formal component to the development process.  All documentation should be free from spelling and grammatical errors.   Additionally, all documentation must adhere to a certain stylistic guide.
 
- 1. All sentences must be followed by two spaces "__" while words are separated by the standard single space "_".
+ 1. All sentences must be followed by two spaces "__", while words are separated by the standard single space "_".
 
  2. Use primarily third person when writing documentation. First person is sometimes acceptable, but second person (you, your) is almost always not.
 
