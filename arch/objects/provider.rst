@@ -156,7 +156,7 @@ single disk with Ubuntu 14.04 as the installed OS.
 
 .. index::
   pair: Provider; Packet
-  pair: Supported Providers; Packet 
+  pair: Supported Providers; Packet
 
 Packet.net
 ~~~~~~~~~~
@@ -198,7 +198,7 @@ metal nodes from Packet::
 
 .. index::
   pair: Provider; Testing
-  Supported Providers; Testing
+  pair: Supported Providers; Testing
 
 Testing Provider
 ~~~~~~~~~~~~~~~~
