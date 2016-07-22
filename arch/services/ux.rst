@@ -7,8 +7,7 @@
 UX
 --
 
-The UX container provides an experimental UI that attempts to address more real-time feedback, scale, and
-configuration and monitoring the provisioner services.
+The UX container provides an experimental UI that attempts to address real time feedback, scale, and
+configuration, while also monitoring the :ref:`arch_service_provisioner` services.
 
-The UX registers with the reverse proxy as the /ux directory reference from the Admin node.
-
+The UX registers with the :ref:`arch_service_revproxy` as the /ux directory reference from the :ref:`arch_other_systems`.

@@ -1,3 +1,7 @@
+.. index::
+
+.. _docker_admin:
+
 Developer Server (docker-admin)
 ===============================
 

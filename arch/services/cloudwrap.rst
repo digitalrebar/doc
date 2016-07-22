@@ -7,13 +7,14 @@
 Cloudwrap
 ---------
 
-The cloudwrap container provides a cloud abstraction service that enables the Rebar API core to create, 
-modify, and destroy nodes in various sets of clouds.  
+The cloudwrap container provides a cloud abstraction service that enables the :ref:`arch_service_rebar_api` core to create,
+modify, and destroy nodes in various sets of clouds.
 
 Current clouds supported:
 
 * AWS
 * Google
 * Packet
-* OpenStack 
+* OpenStack
 
+See :ref:`api_provider` for more information.
