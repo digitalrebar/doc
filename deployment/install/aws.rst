@@ -1,13 +1,16 @@
-Run-In-AWS 
+.. index::
+  pair: Linux; Run in AWS
+  pair: AWS; Run in AWS
+  pair: Deployment; Run in AWS
+
+Run-In-AWS
 ==========
 
-This is for install in linux systems that are already out provisioned or to take over an existing Linux system.  
+This is for installing in linux systems that are already out provisioned or taking over an existing Linux system.
 
-Follow the ../install.rst steps to checkout the DigitalRebar code and RackN deploy.
+Follow the ../install.rst steps to checkout the DigitalRebar code and RackN deploy from ``digitalrebar/deploy`` directory.
 
-From ``digitalrebar/deploy`` directory
-
-NOTE: NOTE: There must be a key based SSH access to the target system.  The install process logs into the system as root AND will fix that access if there is a non-root account (specify with ``--login-user``)
+*NOTE*: There must be a key based SSH access to the target system.  The install process logs into the system as root and will fix that access if there is a non-root account (specify with ``--login-user``).
 
 
 Here are the steps:
