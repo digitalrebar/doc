@@ -4,9 +4,9 @@
 DR Info File (.dr_info)
 =======================
 
-For regular uses :ref:`providers` credentials can be stored in the ``~/.dr_info`` file.
+For regular uses, :ref:`providers` credentials can be stored in the ``~/.dr_info`` file.
 
-There is a ``.dr_info.example`` file in the `DigitalRebar-Deployment root <https://github.com/rackn/digitalrebar-deploy/blob/master/.dr_info.example>`_ which can be used as a template via ``cp ~/digitalrebar/deploy/.dr_info.example ~/.dr_info``
+There is a ``.dr_info.example`` file in the `DigitalRebar-Deployment root <https://github.com/rackn/digitalrebar-deploy/blob/master/.dr_info.example>`_ that can be used as a template via ``cp ~/digitalrebar/deploy/.dr_info.example ~/.dr_info``
 
 Sample ``.dr_info``:
 
@@ -23,4 +23,4 @@ Sample ``.dr_info``:
     PROVIDER_GOOGLE_PROJECT=[project_id]
     PROVIDER_GOOGLE_JSON_KEY=$(cat "$HOME/.ssh/projectname.json")
 
-See :ref:`configure_providers` for specific details about individual Providers.
+See :ref:`configure_providers` for specific details about individual providers.

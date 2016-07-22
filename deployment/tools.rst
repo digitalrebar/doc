@@ -3,15 +3,16 @@
 Get Digital Rebar Deploy Tools
 ==============================
 
-First,``git`` is required to pull the deploy repo.  Usually something like:
+First,``git`` is required to pull the deploy repository.  To install git, use one of the following:
 
-* Ubuntu/Debian: `apt-get install git`
+* Ubuntu/Debian: `apt-get install git`.
 * CentOS/RedHat: `yum install git`.
-* OS X already has it, but: https://git-scm.com/ just in case
+* OS X should already have git.
+* Otherwise, see https://git-scm.com/ to download the proper version.
 
-By following the directory structure below, either production or development deployment will be ready for use.  These 
-steps are needed for either bringing up an admin node directly or using ansible and ssh to bring up a remote admin node.
-The choice of deploy tool options will determine where the admin node is brought up.
+Next, by following the directory structure below, either production or development deployment will be ready for use.  These
+steps are necessary to either bring up an admin node directly or use ansible and ssh to bring up a remote admin node.
+The choice of deployment tool options will determine where the admin node is brought up.
 
 ::
 
@@ -24,11 +25,11 @@ The choice of deploy tool options will determine where the admin node is brought
   ./run-in-system.sh --help
   echo "let's setup Digital Rebar!"
 
-In human words, 
+The directory takes you through the following steps:
 
 * Change to the home directory
 * Make the digitalrebar directory
-* Clone the digitalrebar-deploy tree from RackN as deploy in the digitalrebar directory  
+* Clone the digitalrebar-deploy tree from RackN as deploy in the digitalrebar directory
 * Create a symbolic link from the compose directory to the Digital Rebar top-level directory
 * Change to the deploy directory
 * Make sure other prerequisites are installed by showing the help for one of the scripts
@@ -39,6 +40,5 @@ In human words,
 
 * Cheerleading!
 
-At this point, the initial configuration of the admin node can be modified, or 
+At this point, the initial configuration of the admin node can be modified, or
 the deploy tools and scripts can build an admin node.
-

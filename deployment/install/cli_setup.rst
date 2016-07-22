@@ -1,14 +1,17 @@
 
 .. _cli_setup:
 
+.. index::
+  pair: CLI; Downloads
+
 CLI Download
 ------------
 
-If :ref:`rebar_cli` is avalible in the path, Digital Rebar can be driven from a desktop or other environment.  
+If :ref:`rebar_cli` is available in the path, Digital Rebar can be driven from a desktop or other environment.
 
-The rebar client is a golang binary that can access the Digital Rebar API from a command line.
+The Rebar client is a golang binary that can access the :ref:`digital_rebar_api` from a command line.
 
-There are precompiled binraries that can be placed into path or can be built from source.
+There are precompiled binaries that can be placed into the path or can be built from source.
 
 Precompiled Binary
 ==================
@@ -33,7 +36,6 @@ To build from source, see the github `repo <https://github.com/digitalrebar/reba
 
 The source also allows the embedding of the Digital Rebar API into another golang program as well.
 
-
 Running the CLI
 ===============
 
@@ -48,4 +50,3 @@ To run the CLI, it is useful to specify some environment variables to reduce the
 +------------------+-------------------------+---------------------------------------------------+
 
 Putting these in the environment file or shell init script can be helpful for accessing Digital Rebar.
-
