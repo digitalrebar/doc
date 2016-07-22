@@ -13,7 +13,7 @@ Edit Documentation
 
 We *love* Docs changes!
 
-Docs may be edited directly from a fork on Github, and therefore do not require local clones!  Changes can be directly installed by sending a pull request using Github where they will be approved and then added.  This method is great for simple changes; however, more complex changes require more examination and thought.
+Docs may be edited directly from a fork on Github, and therefore do not require local clones!  Changes can be directly installed by sending a pull request using Github where they will be approved and then added.  This method is great for simple changes; however, more complex changes require more examination and thought. 
 
 
 Cross References
