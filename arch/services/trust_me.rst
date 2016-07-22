@@ -7,11 +7,9 @@
 Trust Me
 --------
 
-The Trust Me container provides certificate signing services for the Digital Rebar system.  As containers start
-up, if they need access to other API services or provide external access, the container requests signed
-certificate with a public/private key pair.  These are then used as server or client SSL endpoint certifcates
+The Trust Me container provides certificate signing services for the Digital Rebar system.  If containers need access to other API services or provide external access as they start up, the container requests a signed
+certificate with a public/private key pair.  These certificates are then used as server or client SSL endpoint certificates
 to control service access.  All components of the system allow access only if a client certificate is provided.
 The one exception is the :ref:`arch_service_revproxy`.
 
 The Trust Me container is based upon the cfssl tools and currently uses a single self-signed root chain.
-
