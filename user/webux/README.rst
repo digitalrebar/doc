@@ -1,7 +1,7 @@
 .. _web_ux_guide:
 
-Web UX Guide//TBD//
-===================
+Web UX Guide
+============
 
 This is the Digital Rebar Web Experience. Both the UX and the documentation are still under construction. 
 
@@ -17,7 +17,7 @@ This is the Digital Rebar Web Experience. Both the UX and the documentation are 
   nodes
   networks
   dns
-  dhnp
+  dhcp
   provisioner
   access
   settings

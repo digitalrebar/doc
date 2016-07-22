@@ -1,5 +1,5 @@
 
 
-DHNP Subnet//TBD//
+DHCP Subnet//TBD//
 ==================
 
