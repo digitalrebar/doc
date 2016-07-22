@@ -16,7 +16,7 @@ Providers are intended to be used by the Rebar core to handle various aspects of
 Saving Config in dr_info
 ------------------------
 
-For regular uses, provider credentials can be stored in the ``~/.dr_info`` file ( `details here <./dr_info.rst>`_ )
+For regular uses, provider credentials can be stored in the :ref:`dr_info`.
 
 Supported Providers
 -------------------
@@ -194,4 +194,3 @@ The testing provider adds debugging instructions to the Amazon EC2 provider so a
              }
           }
         }'
-
