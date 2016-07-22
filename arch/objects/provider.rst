@@ -156,7 +156,7 @@ single disk with Ubuntu 14.04 as the installed OS.
 
 .. index::
   pair: Provider; Packet
-  pair: Supported Providers; Packet
+  pair: Supported Providers; Packet 
 
 Packet.net
 ~~~~~~~~~~
