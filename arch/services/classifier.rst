@@ -7,7 +7,7 @@
 Classifier
 ----------
 
-The Classifier is a go-based program that processes a rules file. The file directs the Classifier to register with the Rebar API
+The Classifier is a go-based program that processes a rules file. The file directs the Classifier to register with the :ref:`arch_service_rebar_api`
 event endpoint, processes those events, and takes action when events match the rules.  A system can have
 multiple classifiers to enable system and user-based classifiers.
 

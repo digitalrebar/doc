@@ -1,3 +1,8 @@
+.. index::
+  pair: Dev-Tools; Docker Admin
+
+.. _docker_admin:
+
 Developer Server (docker-admin)
 ===============================
 

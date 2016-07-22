@@ -12,4 +12,4 @@ certificate with a public/private key pair.  These certificates are then used as
 to control service access.  All components of the system allow access only if a client certificate is provided.
 The one exception is the :ref:`arch_service_revproxy`.
 
-The Trust Me container is based upon the cfssl tools and currently uses a single self-signed root chain.
+The Trust Me container is based upon the CFSSL tools and currently uses a single self-signed root chain.
