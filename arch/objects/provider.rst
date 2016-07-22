@@ -198,7 +198,7 @@ metal nodes from Packet::
 
 .. index::
   pair: Provider; Testing
-  Supported Providers; Testing
+  pair: Supported Providers; Testing
 
 Testing Provider
 ~~~~~~~~~~~~~~~~
