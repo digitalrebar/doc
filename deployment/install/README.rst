@@ -1,5 +1,8 @@
 .. _install:
 
+.. index::
+  pair: Admin Node; Deployment
+
 Deploy Digital Rebar Admin Node
 ===============================
 
@@ -15,7 +18,7 @@ Tool Setup
   dr_info
   cli_setup
 
-Once the tools are setup, :ref:`workloads_guide` can be used to deploy an admin node and a workload at the same time.  This can be faster for initial bring up, but can limit a multi-use deployment.  The workload scripts can also reference an already installed admin node as well.
+Once the tools are setup, :ref:`workloads_guide` can be used to deploy an :ref:`arch_other_systems` and a workload at the same time.  This can be faster for initial set up, but it can also limit a multi-use deployment.  The workload scripts can also reference an already installed admin node as well.
 
 Specific Environments
 ---------------------
@@ -42,4 +45,3 @@ Sometimes there are addtional sets that need to be done to complete the deployme
   :glob:
 
   attaching-to-bmc
-

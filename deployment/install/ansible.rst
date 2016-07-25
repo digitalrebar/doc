@@ -15,22 +15,22 @@ What's installed?
 
 The following is done by default:
 
-  * all prerequisites including latest Docker with correct permissions
-  * latest Digital Rebar code from develop branch
-  * Node target operating systems:
-     * Ubuntu 14.04 and Centos 7 ISO
-  * Default IP maps for Digital Rebar: 
-     * internal address of 192.168.124.11
-     * port mapping of UI (:3000) and Consul (:8500)
+* all prerequisites including latest Docker with correct permissions
+* latest Digital Rebar code from develop branch
+* Node target operating systems:
+    * Ubuntu 14.04 and Centos 7 ISO
+* Default IP maps for Digital Rebar:
+    * internal address of 192.168.124.11
+    * port mapping of UI (:3000) and Consul (:8500)
 
 All of these can be altered by the group_vars/all.yml.
 
 Step 1. Install Docker & Docker Compose
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-WARNING: freshness matters for Docker, do NOT use *apt-get* or *yum*!
+WARNING: Freshness matters for Docker, do NOT use *apt-get* or *yum*!
 
-Follow the `Docker install guide <http://docs.docker.io/en/latest/installation/>`_ 
+Follow the `Docker install guide <http://docs.docker.io/en/latest/installation/>`_:
 
 - Install Docker. [11]_
 - Get permission to run Docker without sudo. [12]_
@@ -72,7 +72,7 @@ The progress can be monitored in several ways:
 
 #. Use ``docker-compose logs rebar_api`` to send logs to the screen.  The command example shows how to select one component to watch.
 #. The Digital Rebar Consul service comes up quickly on http://127.0.0.1:8500.  There should be a list of approximately 10 services. Once the "rebar-api-service" is passing login will be avalible. #. A Kibana logstash service is running on http://127.0.0.1:5601.  Select a timestamp and then visit the Discover tab.
-#. ``docker-compose ps`` will show the status of the services and associated 
+#. ``docker-compose ps`` will show the status of the services and associated
 #. ``docker ps`` will show the status of the containers
 
 To reset the environment, stop and then remove [32]_ the containers.
@@ -89,12 +89,12 @@ To remove Docker image cruft, we suggest running ``docker ps -q -a | xargs docke
 Step 4. Provision Nodes!
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-And now, the real fun begins!  
+And now, the real fun begins!
 
 #. Log in to Digital Rebar on http://127.0.0.1:3000 using default user ``rebar`` and password ``rebar1``
 #. Wait for the first annealing pass to complete (all marks are green).  Please be patient on the first run because Digital Rebar is building and caching provisioning images (during ``provisioner-base-images`` role) from the downloaded ISOs
 
-If this is the first install, the Docker and KVM nodes approach will allow for some experimentation with Digital Rebar with minimal network configuration. 
+If this is the first install, the Docker and KVM nodes approach will allow for some experimentation with Digital Rebar with minimal network configuration.
 
 
 KVM Nodes (high fidelity test)
@@ -104,7 +104,7 @@ Works on Linux environments that can run KVM.  It is **not compatable** with sim
 
 These instructions assume that the Digital Rebar code has been linked [24]_  to ~/rebar.
 
-#. Install prereqs: 
+#. Install prereqs:
 
    #. ``apt-get install qemu-kvm libvirt-bin ubuntu-vm-builder bridge-utils ruby1.9.1-dev make``
    #. ``gem install json net-http-digest_auth``
@@ -120,21 +120,21 @@ To boot Real Hardware, bind a physical interface to docker0 with brctl,
 make sure that interface is up and does not have an address, and plug it
 in to a switch that has the physical boxes that are to be booted.
 
-Example Commands: 
+Example Commands:
 
   #. Install prereqs: ``sudo apt-get install bridge-utils``
-  #. (optional) To configure RAID or BIOS, the RackN Hardware workload is required. 
+  #. (optional) To configure RAID or BIOS, the RackN Hardware workload is required.
      #. Clone the RackN Hardware workload: ``compose/workload.sh rackn hardware``
      #. Download the required tools.  See `RackN Hardware Docs <https://github.com/rackn/hardware/blob/master/doc/README.md>`_
-  #. slave the eth2 to the docker bridge, ``sudo brctl addif docker0 eth2`` 
-  #. turn on eth2 for the bridge, ``sudo ip link set eth2 up`` 
+  #. slave the eth2 to the docker bridge, ``sudo brctl addif docker0 eth2``
+  #. turn on eth2 for the bridge, ``sudo ip link set eth2 up``
   #. boot the physical nodes from a switch connected to eth2
 
 Virtual Box (generally for Mac or Windows users)
 ------------------------------------------------
 
-    This approach simulates the same steps as metal, so it expects that a VM has been 
-    created to host the Admin container.  If so, make sure an ethernet device has been 
+    This approach simulates the same steps as metal, so it expects that a VM has been
+    created to host the Admin container.  If so, make sure an ethernet device has been
     added (not up'd) to the VM that will be the admin network for slave VMs. Also,
     if using vmware, E1000 Nics will be required and make sure the
     network settings are set to "Allow" promiscuous mode.
@@ -172,7 +172,7 @@ Command Reference
 Step 1 Items:
 
 .. [11] ``curl -sSL https://get.docker.com/ -o /tmp/docker.sh | sh``
-.. [12] ``sudo usermod -a -G docker <your-user>`` 
+.. [12] ``sudo usermod -a -G docker <your-user>``
 run ``sudo chmod 666 /var/run/docker.sock`` to temporarily allow everyone access and avoid an immediate reboot.
 .. [13] ``sudo service apparmor teardown`` and ``sudo update-rc.d -f apparmor remove``
 .. [14] ``sudo ip a add 192.168.124.10/24 dev docker0``

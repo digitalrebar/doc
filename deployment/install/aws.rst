@@ -1,3 +1,5 @@
+.. _run_in_AWS:
+
 .. index::
   pair: Linux; Run in AWS
   pair: AWS; Run in AWS
