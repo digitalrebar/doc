@@ -34,7 +34,7 @@ operating systems from the following ISO images:
 -  ``ESXi 6.0``:
    ``VMware-VMvisor-Installer-6.0.0.update02-3620759.x86_64.iso``
 
-This list is subject to change! For the latest list, consult `Provisioner Default Boot Environments <https://github.com/rackn/digitalrebar-deploy/tree/master/containers/provisioner/update-nodes/bootenvs>`__
+This list is subject to change. For the latest list, consult `Provisioner Default Boot Environments <https://github.com/rackn/digitalrebar-deploy/tree/master/containers/provisioner/update-nodes/bootenvs>`__
 
 To make these environments available after installation, see :ref:`ug_uc_base_os_bootenv`.
 

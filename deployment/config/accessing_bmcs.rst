@@ -1,3 +1,8 @@
+.. _accessing_bmcs:
+
+.. index:
+  BMC Network; Connecting
+
 Connecting to the BMC Network
 -----------------------------
 
