@@ -13,7 +13,7 @@ The "workload" tab will not open a page, but will provide the options of "Instal
 O/S Installation Wizard
 ----------------------
 
-Install O/S helps create a set of nodes in a new deployment on a certain OS.
+Install O/S helps create a set of nodes in a new deployment of a certain OS.  
 
 From the "Install O/S Wizard" page, nodes can be selected and redeployed under a new OS.
 
