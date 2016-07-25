@@ -3,6 +3,7 @@
 
 .. index::
   pair: CLI; Downloads
+  pair: CLI; Setup
 
 CLI Download
 ------------
@@ -35,6 +36,9 @@ Build From Source
 To build from source, see the github `repo <https://github.com/digitalrebar/rebar-api>`_.
 
 The source also allows the embedding of the Digital Rebar API into another golang program as well.
+
+.. index::
+  CLI; Running the CLI
 
 Running the CLI
 ===============
