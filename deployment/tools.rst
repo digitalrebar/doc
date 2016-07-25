@@ -1,5 +1,8 @@
 .. _initial_install_setup:
 
+.. index::
+  pair: Deploy Tools; Install
+
 Get Digital Rebar Deploy Tools
 ==============================
 
