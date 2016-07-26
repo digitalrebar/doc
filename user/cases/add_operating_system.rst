@@ -1,9 +1,12 @@
+.. index::
+  pair: Install; OS Boot Environments
+
 .. _ug_uc_os_bootenv:
 
 OS Install Boot Environments
 ----------------------------
 
-The following describes some actions that can be taken on provisioner boot environments.  While these 
+The following describes some actions that can be taken on provisioner boot environments.  While these
 section talk about operating system install boot environments, a boot environment can be any execution
 context for the node.  Installation can be a by-product of a boot environment, but it doesn't have to.
 
@@ -39,11 +42,13 @@ Adding OS Install Environment
   OS Install; Add
 
 Adding an operating system to Digital Rebar requires creating a boot environment.
-The boot environment lives in the provisioner.  The node's can be configured to target
+The boot environment lives in the :ref:`arch_service_provisioner`.  The node can be configured to target
 the boot environment to install the OS or whatever function the boot environment provides.
-The boot environment must provide a network boot that installs the OS or other tooling and 
-then sets the next boot environment to localboot upon completion. 
+The boot environment must provide a network boot that installs the OS or other tooling and
+then sets the next boot environment to localboot upon completion.
 See :ref:`api_provisioner_bootenv` and :ref:`api_provisioner_template`.
+
+The steps for this are as follows:
 
 #. Add iso to tftpboot/isos directory, usually on the admin node in */root/.cache/digitalrebar/tftpboot/isos*.
 #. Create install templates for new OS (or reuse)
@@ -58,19 +63,20 @@ environment.
 
 Once the boot environment is available, add the ``rebar-installed-node`` role to the node.
 This will add the ``provisioner-os-install`` node role to the node.  The attrib ``provisioner-target-os``
-will have been added to the node.  This attrib can be changed to the newly added environment.  
+will have been added to the node.  This attribute can be changed to the newly added environment.
 Once the deployment or node is committed, the node will progress through that boot environment.
 The :ref:`ug_uc_edit_bootenv` section will describe how to iterate to a successful install.
 
+
+.. index::
+  Boot Environment; Edit
+  OS Install; Edit
+  TODO; OS Install Boot Environment
 
 .. _ug_uc_edit_bootenv:
 
 Editing OS Install Boot Environment
 ===================================
-
-.. index::
-  Boot Environment; Edit
-  OS Install; Edit
 
 TODO: Describe how to edit ks and preseed for file system environments.
 
@@ -84,6 +90,4 @@ This describes making a copy of the existing bootenv for custom needs.
 #. Use new env
 #. If errors, edit templates and bootenv.
 #. Update templates and bootenv.
-#. Retry - if errors iterate.
-
-
+#. Retry if errors iterate.

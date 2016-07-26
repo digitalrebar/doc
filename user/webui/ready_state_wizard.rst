@@ -1,3 +1,6 @@
+.. index::
+  pair: Web UI; Ready State Wizard
+
 .. _ui_ready_state:
 
 Ready State Wizard

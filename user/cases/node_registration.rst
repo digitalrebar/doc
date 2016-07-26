@@ -1,7 +1,12 @@
+.. index::
+  pair: Nodes; Registration
+
+.. _node_registration:
+
 Node Registration Process
 -------------------------
 
-Digital Rebar uses its API to creates nodes and bind their initial NodeRoles
+Digital Rebar uses its API to creates nodes and bind their initial node roles
 (generally No-Op roles).
 
 Use the following steps to register a new node in the system and add
@@ -14,7 +19,7 @@ initial boot.
    the admin network assigned to it. The node will neither be alive nor
    available.
 
-#. in the CLI, use ``rebar nodes create ...``
+#. In the CLI, use ``rebar nodes create ...``
 
 #. (Optional) PUT any node-specific hints that may be needed for the
    bootstrap process, including node MAC addresses or the suggested IP
@@ -25,8 +30,8 @@ initial boot.
    needed for it to act as an admin node and a rebar-managed-node will
    bind all the roles needed for the Sledgehammer discovery process to
    work.
-   
-#. in the CLI, use ``rebar nodes [node] bind [role]``
+
+#. In the CLI, use ``rebar nodes [node] bind [role]``
 
 #. (Optional) PUT any node-specific attrib updates to the node.
 
@@ -43,4 +48,3 @@ initial boot.
 
 TODO: Describe rework this with rebar api examples and post.
 TODO: This is really an DR user guide use case
-

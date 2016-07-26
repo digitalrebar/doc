@@ -25,4 +25,4 @@ It is possible for Role creators to define extra information that drives Wizards
 Adding Roles
 ------------
 
-Roles are added from the Barclamps page.
+Roles are added from the :ref:`ui_barclamps` page.

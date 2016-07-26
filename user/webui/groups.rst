@@ -1,7 +1,12 @@
+.. index::
+  pair: Web UI; Groups
+
+.. _ui_groups:
+
 Groups
 ======
 
-Groups have no programatic Digital Rebar function.  They allow operators to create arbitrary grouping outside of the Digital Rebar control mechanism (Deployments).  Examples of group types include Rack and UI.
+Groups have no programmatic Digital Rebar function.  They allow operators to create arbitrary grouping outside of the Digital Rebar control mechanism (:ref:`webui_deployment`).  Examples of group types include Rack and UI.
 
 Adding Groups
 -------------
@@ -17,4 +22,4 @@ Nodes are added to a group by clicking the (+) in front of the node name while o
 
 .. image:: /images/screens/dr_groups_add.png
 
-Nodes can be moving them to anther group clicking the (+) button in that group's column.
+Nodes can be moved to another group by clicking the (+) button in that group's column.

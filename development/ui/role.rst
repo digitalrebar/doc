@@ -1,3 +1,5 @@
+.. _barclamp_dev:
+
 Barclamp Roles - User Interface Development and Testing
 -------------------------------------------------------
 
@@ -74,13 +76,13 @@ data["map"]["to"]["value"] , :size => 30 ... = hidden\_field\_tag
       rules["data_[@role.name]_[map_to_value]"] = new Object({
         required: true,
         minlength: 8
-        //... 
+        //...
       });
-      //... 
+      //...
       var messages = new Array();
       messages["data_[@role.name]_[map_to_value]"] = new Object({
         required: "#{t('.[field_label_required]', size: 8)}"
-        //... 
+        //...
       });
       //..
 
@@ -163,10 +165,10 @@ Messaging Barclamp as an example:
 1.  Start the Admin node, log in and create new Deployment.
 2.  Start a new test node, either a VM or actual hardware.
 3.  Validate the test node has PXE booted and is the discovered state in
-    the UI.  
+    the UI.
 4.  Create a new Deployment and add the single role that is to be tested,
     messaging-server for example.
-5.  Add the newly discovered node to the Deployment.  
+5.  Add the newly discovered node to the Deployment.
 6.  At the intersection of the role and node click the green + icon to
     expand all the parent roles.
 7.  At this point the very last role, from left-to-right, should be the
@@ -176,30 +178,30 @@ Messaging Barclamp as an example:
     Role view that contains the functionality being testing.
 8.  Before proceeding copy the ID of the node role being edited to be
     used later on.  This can be found by looking at the URL of the page.
-    For example: 
+    For example:
     http://192.168.124.10:3000/node\_roles/84, shows that the node role
-    is 84.  
+    is 84.
 9.  Validate the form fields and labels are correct that the form
     validation is working properly.  Validation error messages should be
     displayed to the right of the field in question.  In order to
-    validate the rules the tester should know what each field's validation 
+    validate the rules the tester should know what each field's validation
     rules are supposed to be.
 10. Test required fields by clearing them all and attempt to save the
     node role.  Required messages should appear for every field in the
-    messaging server role as every field is required.  
+    messaging server role as every field is required.
 11. Validate and field length rules are working correctly, there are
     on-key-up event handlers on each field and when the length doesn't
     meet the defined max/min length, a notification will appear.
 12. Validate special case fields like password and email.  In messaging
     there is a custom validator defined that will not allow special
-    characters in the password.  If a % is entered a validation error 
+    characters in the password.  If a % is entered a validation error
     message will appear.
 13. Enter all required information in the correct format and save the
-    node role.  A notification should appear in the standard global 
-    notification section that the node role has been saved successfully.  
+    node role.  A notification should appear in the standard global
+    notification section that the node role has been saved successfully.
 14. Navigate through the deployments menu to get back to the deployment
-    node role list page again.  Click the blue icon for the role being 
-    tested and validate the information that was previously changed.  
+    node role list page again.  Click the blue icon for the role being
+    tested and validate the information that was previously changed.
     This action will repopulate the form.
 15. Make additional changes and repeat previous step to validate the
     additional update was successful.  The reason for this is the first
@@ -233,7 +235,7 @@ Messaging Barclamp as an example:
 
 21. If the information looks correct in the model commit of the Deployment
     UI. While the parent node is executing, such as
-    installing the operating system etc, the read-only node role view can be 
+    installing the operating system etc, the read-only node role view can be
     accessed by clicking the gray circle icon
     (indicating blocked state) at the intersection of the node and role.
     This will open the read-only node role view. Validate the
@@ -250,5 +252,3 @@ Messaging Barclamp as an example:
     ``:~$ sudo less /etc/rabbitmq/rabbitmq.config   :~$ sudo less /etc/rabbitmq/rabbitmq-env.conf``
 25. This completes testing and verification of the entire life-cyle,
     from the UI to the actual deployed service.
-
-

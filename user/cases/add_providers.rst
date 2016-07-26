@@ -1,11 +1,14 @@
+.. index::
+  Providers; Adding Providers
+
 .. _ug_add_provider:
 
 Add Providers
 -------------
 
-If the :ref:`rebar_cli` exists in the path in use, then the ``workloads/add-provider.sh`` 
+If the :ref:`rebar_cli` exists in the path in use, then the ``workloads/add-provider.sh``
 script can be used to add providers to a running rebar system.  This method uses the :ref:`dr_info` file to
-populate the provider in question. 
+populate the provider in question.
 
   ::
 

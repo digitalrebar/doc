@@ -1,3 +1,8 @@
+.. index::
+  pair: Jigs; Web UI
+
+.. _ui_jigs:
+
 Jigs
 ====
 
@@ -8,6 +13,6 @@ Jigs are the tools that Digital Rebar uses to interact with nodes and other syst
 Roles
 -----
 
-Each Jig shows the list of roles that it can manage. 
+Each Jig shows the list of roles that it can manage.
 
 .. image:: /images/screens/dr_jig_roles.png

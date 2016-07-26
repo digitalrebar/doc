@@ -1,3 +1,6 @@
+.. index::
+  pair: Web UI; Node Monitor
+
 .. _ui_node_monitor:
 
 Node Monitor
