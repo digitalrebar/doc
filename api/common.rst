@@ -1,10 +1,15 @@
+.. index::
+  pair: API; Reference Guide
+
+.. _api_info:
+
 Common Information about the Digital Rebar API
 ----------------------------------------------
 
 This document is the reference guide for the Digital Rebar API.
 
-Our intention is to keep the API documentation focused just on using 
-the API and leave more it to curious readers to review the model and 
+Our intention is to keep the API documentation focused just on using
+the API and leave more to curious readers to review the model and
 principles areas.
 
 
@@ -18,13 +23,17 @@ The Digital Rebar API is versioned. API urls include the Digital Rebar
 version of the API (e.g.: 1.0 or v2). Please use the most recent version
 available!
 
-    Legacy Note: routes with 1.0 are deprecated!
+Legacy Note: routes with 1.0 are deprecated!
 
+.. index::
+  pair: API; Behavior Pattern
+
+.. _api_pattern:
 
 Digital Rebar API Pattern
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The Digital Rebar API follows the following behavior patterns.
+The Digital Rebar API sticks to the following behavior patterns.
 
 Expectations:
 ^^^^^^^^^^^^^
@@ -43,51 +52,55 @@ with API access will still be able to log in normally.
 
 To get the digest, make a HEAD or GET request to /api/v2/digest
 
+.. index::
+  API; URL Patterns
+
 Common API URL Patterns:
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
 Digital Rebar uses a versioned URL pattern. By convention, resource
-names are pluralized in the API. For example, the API will use =nodes=
-instead of =node= in paths.
+names are pluralized in the API. For example, the API will use ``nodes``
+instead of ``node`` in paths.
 
 -  Base Form: ``[workload | api]/[version]/[resources]/[id]``
--  version - version of Digital Rebar framework being used (v2 for this
+-  Version: version of Digital Rebar framework being used (v2 for this
    guide)
--  workload - workload (aka barclamp) that owns the requested activity.
+-  Workload: Workload (aka :ref:`ui_barclamps`) that owns the requested activity.
    Framework uses 'api'
--  bc\_version - the version of the barclamp being used.
--  key\_word - groups the API into different categories
+-  bc\_version: the version of the barclamp being used.
+-  key\_word: groups the API into different categories
 
    -  reserved words such as status and rebar
    -  resource types like node, group, network, etc
 
--  id - (optional) name or DB id of the barclamp configuration
--  Result codes
+-  id: (optional) Name or DB id of the barclamp configuration
+-  Result codes:
 
    -  200 = OK, success
    -  500 = Error in processing.
    -  404 = item not found in database (may return 500 in some cases)
 
 -  List:
--  HTTP get
--  Returns a json array of objects
+
+   -  HTTP get
+   -  Returns a JSON array of objects
 
 -  CRUD Operations:
--  id - name or database ID of the item. Items that do not have natural
-   keys are not expected to honor use of name instead of database ID.
-   When possible, either will be allowed.
+
+   -  id: name or database ID of the item. Items that do not have natural keys are not expected to honor use of name instead of database ID. When possible, either will be allowed.
+
 -  RESTful Verbs for CRUD:
 
-   -  POST / Create - ID is ignored if provided
-   -  GET / Read - Objects will be shallow
-   -  PUT / Update - returns the updated object serialized
-   -  DELETE/ Delete - no return data except 200
+   -  POST / Create: ID is ignored if provided
+   -  GET / Read: Objects will be shallow
+   -  PUT / Update: returns the updated object serialized
+   -  DELETE/ Delete: no return data except 200
 
 -  Special Cases
 
-   -  PUT - used to start an action on existing data (commit a node or
+   -  PUT: used to start an action on existing data (commit a node or
       deployment)
-   -  DELETE - Unlink/Deactivate/Dequeue
+   -  DELETE: Unlink/Deactivate/Dequeue
 
 In general, Digital Rebar REST pattern uses the 4 HTTP verbs as follows:
 
@@ -96,21 +109,27 @@ In general, Digital Rebar REST pattern uses the 4 HTTP verbs as follows:
 -  POST to create new data or relationships
 -  DELETE to remove data or relationships
 
+.. index::
+  pair: API; Expected Fields
+
 Expected Fields
 ~~~~~~~~~~~~~~~
 
-By convention, most Digital Rebar models have the same fields.
+By convention, most Digital Rebar models have the same fields:
 
--  id - database assigned role, number
--  name - resource name, often a natural key with enforced uniqueness
--  description - user definable content
--  created\_at - when object was created
--  updated\_at - when object was last updated
--  object\_id - cross reference id to an object. In most cases, the name
+-  id: database assigned role, number
+-  name: resource name, often a natural key with enforced uniqueness
+-  description: user definable content
+-  created\_at: when object was created
+-  updated\_at: when object was last updated
+-  object\_id: cross reference id to an object. In most cases, the name
    of the object can be used instead of the API
 
     Some of the information stored in objects is maintained as json and
     will appear as nested data.
+
+.. index::
+  API; Headers and Response Patterns
 
 API Headers & Response Patterns
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -146,7 +165,8 @@ response code, such as:
 Example Documentation
 ~~~~~~~~~~~~~~~~~~~~~
 
-The following table should be populated for all API calls:
+.. index::
+  pair: API; Actions
 
 API Actions
 ^^^^^^^^^^^
@@ -196,51 +216,72 @@ Some workflow examples (using the Rebar CLI)
 Creating a Node for a system that already has an OS:
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-This example will show how to create a new node in Rebar for an
+This example will explain how to create a new node in Rebar for an
 already-installed system that we want to bring under Rebar management.
 This example assumes that it has a non-conflicting IP address that is
 already in the nodes range of the admin network, that the public key of
 the Rebar user will let the Script jig run things as root on the node,
 and that there is already a Rebar-compatible operating system installed.
 
--  CLI:
-   ``rebar nodes create '{"name": "newtest.cr0wbar.com", "bootenv": "local"}``
--  API:
-   ``curl --digest -u $(cat /etc/rebar.install.key) \     -X POST \     -d "name=newtest.cr0wbar.com" \     -d "bootenv=local" \     -H "Content-Type:application/json" \     --url http://127.0.0.1:3000/api/v2/nodes``
+-  CLI::
 
-This will return: { "admin":false, "alive":false, "allocated":false,
-"available":false, "bootenv":"local",
-"created\_at":"2013-12-21T05:49:00Z", "deployment\_id":1,
-"description":"", "discovery":{}, "hint":{}, "id":41,
-"name":"newtest.cr0wbar.com", "order":100, "target\_role\_id":null,
-"updated\_at":"2013-12-21T05:49:00Z" }
+    rebar nodes create '{"name": "newtest.cr0wbar.com", "bootenv": "local"}
+
+-  API::
+
+    curl --digest -u $(cat /etc/rebar.install.key)
+    -X POST
+    -d "name=newtest.cr0wbar.com"
+    -d "bootenv=local"
+    -H "Content-Type:application/json"
+    --url http://127.0.0.1:3000/api/v2/nodes
+
+This will return::
+
+  { "admin":false, "alive":false, "allocated":false,
+  "available":false, "bootenv":"local",
+  "created\_at":"2013-12-21T05:49:00Z", "deployment\_id":1,
+  "description":"", "discovery":{}, "hint":{}, "id":41,
+  "name":"newtest.cr0wbar.com", "order":100, "target\_role\_id":null,
+  "updated\_at":"2013-12-21T05:49:00Z" }
 
 After creating the node, we still need to set the hint for the Admin IP
 to have Rebar try and use the one it already has:
 
--  CLI:
-   ``rebar nodes set newtest.cr0wbar.com attrib hint-admin-v4addr to '{"value": "192.168.124.99/24"}``
--  API:
-   ``curl --digest -u $(cat /etc/rebar.install.key)     -X PUT     -H "Content-Type:application/json"     --url http://127.0.0.1:3000/api/v2/nodes/newtest.cr0wbar.com/attribs/hint-admin-v4addr     -d '{"value": "192.168.124.99/24"}'``
+-  CLI::
 
-We then need to bind a useful set of default noderoles to the node:
+    rebar nodes set newtest.cr0wbar.com attrib hint-admin-v4addr to '{"value": "192.168.124.99/24"}
 
--  CLI: ``rebar roles bind rebar-managed-node to newtest.cr0wbar.com``
--  API:
-   ``curl --digest -u $(cat /etc/rebar.install.key)     -X POST     -H "Content-Type:application/json"     --url http://127.0.0.1:3000/api/v2/node_roles     -d '{"node": "newtest.cr0wbar.com", "role": "rebar-managed-node"}'``
+-  API::
 
-Commit the node, which will move the newly-created noderoles from
+    curl --digest -u $(cat /etc/rebar.install.key) -X PUT -H "Content-Type:application/json"  --url http://127.0.0.1:3000/api/v2/nodes/newtest.cr0wbar.com/attribs/hint-admin-v4addr     -d '{"value": "192.168.124.99/24"}'
+
+We then need to bind a useful set of default node roles to the node:
+
+-  CLI::
+
+    rebar roles bind rebar-managed-node to newtest.cr0wbar.com
+
+-  API::
+
+   curl --digest -u $(cat /etc/rebar.install.key) -X POST -H "Content-Type:application/json" --url http://127.0.0.1:3000/api/v2/node_roles     -d '{"node": "newtest.cr0wbar.com", "role": "rebar-managed-node"}'
+
+Commit the node, which will move the newly-created node roles from
 proposed to todo or blocked, and mark the node as available:
 
 -  CLI: ``rebar nodes commit newtest.cr0wbar.com``
 -  API:
    ``curl --digest -u $(cat /etc/rebar.install.key)     -X PUT     -H "Content-Type:application/json"     --url http://127.0.0.1:3000/api/v2/nodes/newtest.cr0wbar.com/commit``
 
-Mark the node as alive, which will allow the annealer to do its thing:
+Mark the node as alive, which will allow the Annealer to do its thing:
 
--  CLI: ``rebar nodes update newtest.cr0wbar.com '{"alive": true}'``
--  API:
-   ``curl --digest -u $(cat /etc/rebar.install.key)     -X PUT     -H "Content-Type:application/json"     --url http://127.0.0.1:3000/api/v2/nodes/newtest.cr0wbar.com     -d 'alive=true'``
+-  CLI::
+
+    rebar nodes update newtest.cr0wbar.com '{"alive": true}'
+
+-  API::
+
+    curl --digest -u $(cat /etc/rebar.install.key)     -X PUT     -H "Content-Type:application/json"     --url http://127.0.0.1:3000/api/v2/nodes/newtest.cr0wbar.com     -d 'alive=true'
 
 Installing an operating system on a node
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -403,4 +444,3 @@ Returns:
       "updated_at": "2014-03-03T04:40:07.351Z",
       "description": null
     }
-
