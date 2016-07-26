@@ -1,3 +1,6 @@
+.. index::
+  Web UI; Overview Page
+
 .. _ui_overview:
 
 Overview

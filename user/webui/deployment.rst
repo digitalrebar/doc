@@ -100,7 +100,7 @@ To install an operating system on a node, attach the
 ``O/S Installed`` milestone role to the node.
 
 To attach the O/S role to the node, click the green plus
-button. This will automatically add both the ``O/S Installled`` and
+button. This will automatically add both the ``O/S Installed`` and
 ``Install O/S`` role.
 
 Once the O/S role is attached, the icon changes to a wrench. Clicking

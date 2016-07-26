@@ -1,3 +1,8 @@
+.. index::
+  pair: Web UI; Families
+
+.. _ui_families:
+
 Families
 ========
 

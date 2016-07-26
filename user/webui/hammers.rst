@@ -1,3 +1,8 @@
+.. index::
+  pair: Web UI; Hammers
+
+.. _ui_hammers:
+
 Hammers
 =======
 

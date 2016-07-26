@@ -1,7 +1,7 @@
-.. _configure_providers:
-
 .. index::
   pair: Providers; Configuration
+
+.. _configure_providers:
 
 Configuring Providers
 =======================
@@ -101,11 +101,10 @@ The Debug Provider creates Digital Rebar nodes without having a backing Infrastr
 
 If a valid IP is provided to the Debug Provider then it will be able to advance the node workflow.
 
-
-.. _troubleshoot_providers:
-
 .. index::
   pair: Troubleshooting; Provider
+
+.. _troubleshoot_providers:
 
 Troubleshooting Tips
 --------------------
