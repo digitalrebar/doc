@@ -1,3 +1,6 @@
+.. index::
+  pair: Web UI; Guide
+
 .. _web_user_guide:
 
 Web UI Guide
@@ -24,6 +27,9 @@ This is the Digital Rebar Web Interface.
   groups
   hammers
   families
+
+.. index::
+  Web UI; State/Image Key
 
 State Image Key
 ~~~~~~~~~~~~~~~

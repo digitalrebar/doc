@@ -6,7 +6,7 @@
 Deployments
 ===========
 
-Deployments provide functional scope for Digital Rebar.  The **system** deployment has special meaning in Digital Rebar; consequently, to do non-discovery operations on a node, it must be part of a deployment.
+Deployments provide functional scope for Digital Rebar.  The **system** deployment has special meaning in Digital Rebar. Consequently, to do non-discovery operations on a node, it must be part of a deployment.
 
 .. image:: /images/screens/dr_nodes_provider_enabled.png
 
@@ -25,7 +25,7 @@ deployment from the Deployment...Deployments submenu or direct using
 Deployment without Nodes
 ------------------------
 
-A deployment can exist without nodes.  In this mode, it is possible to add roles and change the deployment state from proposed to committed and back.
+A deployment can exist without :ref:`ui_nodes`.  In this mode, it is possible to add :ref:`ui_roles` and change the deployment state from proposed to committed and back.
 
 .. image:: /images/screens/dr_system_no_nodes.png
 
@@ -38,7 +38,7 @@ Use the (+) button to add roles to nodes as desired.
 Tracking Progress of a Deployment
 ---------------------------------
 
-Nodes may have different role assignments in the same deployment.  For example, cloud and metal nodes will have different roles.  Power or reservation state will be shown as a prefix to the node name.
+:ref:`ui_nodes` may have different role assignments in the same deployment.  For example, cloud and metal nodes will have different roles.  Power or reservation state will be shown as a prefix to the node name.
 
 .. image:: /images/screens/dr_system_cloud_and_metal.png
 
