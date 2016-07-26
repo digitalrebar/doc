@@ -165,6 +165,7 @@ Steps for booting:
 
   #. Install the prerequisites.
   #. (optional) To configure RAID or BIOS, the RackN Hardware workload is required.
+
      #. Clone the RackN Hardware workload.
      #. Download the required tools.  See `RackN Hardware Docs <https://github.com/rackn/hardware/blob/master/doc/README.md>`_ for instructions.
   #. Slave the eth2 to the Docker bridge.
