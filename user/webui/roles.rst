@@ -1,3 +1,8 @@
+.. index::
+  pair: Web UI; Roles
+
+.. _ui_roles:
+
 Roles
 =====
 
