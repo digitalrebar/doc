@@ -20,7 +20,7 @@ Note: Our documentation is based on reStructuredText (.rst) files that Sphinx us
 Cross References
 ~~~~~~~~~~~~~~~~
 
-Please use Cross Reference ``.. _foo:`` and Index tags ``.. index::`` at the top of pages.  (Note: the To reference another section, use ``:ref:`[file]``` to link to the proper section.  This helps to build a complete, easy to navigate guide.
+Please use Cross Reference ``.. _foo:`` and Index tags ``.. index::`` at the top of pages.  (Note: The cross reference tag must go right before a header in order to function properly.) To reference another section, use ``:ref:`[file]``` to link to the proper section.  This helps to build a complete, easy to navigate guide.
 
 Bigger Doc Changes
 ~~~~~~~~~~~~~~~~~~
@@ -87,4 +87,4 @@ Documentation is an integral and formal component to the development process.  A
 
  5. The oxford comma is used in the documentation.
 
- 6. Lists should be bulleted.  If a list item contains a term or phrase that is elaborated upon, italicize the term and set it off with a colon.  See :ref:`op_principles` for an example list.
+ 6. Lists should be bulleted.  If a list item contains a term or phrase that is elaborated upon, italicize the term and set it off with a colon.  (See :ref:`op_principles` for an example list.)
