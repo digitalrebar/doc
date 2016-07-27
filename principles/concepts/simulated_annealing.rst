@@ -1,3 +1,9 @@
+.. index::
+	Concepts; Annealing
+	Annealer; Concepts
+
+.. _simulated_annealing:
+
 Simulated Annealing
 -------------------
 
