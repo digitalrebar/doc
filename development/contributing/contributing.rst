@@ -1,25 +1,28 @@
+.. index::
+   Contributing; Basics
+
 .. _contrib_basic:
 
 Contributing Basics
 -------------------
 
 These are some general guidelines for working with code in any of our repositories.
-Be that ``core``, ``digitalrebar-deploy``, or ``doc``, the same git workflow should be followed.
+Be it ``core``, ``digitalrebar-deploy``, or ``doc``, the same git workflow should be followed.
 
 While the following use ``core`` as an example, all the trees can be managed the same way.
 
-Fork the Code
+Forking the Code
 ~~~~~~~~~~~~~
 
 The following instructions assume a clone of ``https://github.com/digitalrebar/core`` has already been created.
 
 #. Create a personal fork of the ``https://github.com/digitalrebar/core``
 
-   #. Fork the code in order to be able to submit changes
+   #. Fork the code in order to be able to submit changes.
    #. Rename the fork in Github to something like 'rebar-core' to make
       it easier to track. We'll assume that these proceedures were followed in these
-      directions
-   #. Remember to update any public SSH key to github
+      directions.
+   #. Remember to update any public SSH key to github.
 
 #. Create a personal git identity (one time only)
 
@@ -32,11 +35,16 @@ The following instructions assume a clone of ``https://github.com/digitalrebar/c
 #. It is possible to check remotes using ``git remote -v``
 #. Get the latest code from the personal repository ``git fetch personal``
 
-To Create a Pull Request
+.. index::
+   Contributing; Pull Request
+
+.. _pull_request:
+
+Creating a Pull Request
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 #. Make the change and commit it:
-   ``git commit -a -m "I cut and pasted this"``
+   ``git commit -a -m "[message]"``
 #. Get the latest code from origin: ``git fetch``
 #. Sync the changed code into the trunk: ``git rebase``
 
@@ -47,10 +55,10 @@ To Create a Pull Request
 #. From the Github fork UI, create a pull request from
    my-pull-request-branch
 
-Work On a Branch
+Working on a Branch
 ~~~~~~~~~~~~~~~~
 
-It's good practice to work on a branch instead of trunk. That allows for several isolated 
+It's good practice to work on a branch instead of trunk. This allows for several isolated 
 changes into distinct pulls instead of co-mingling
 changes.
 
