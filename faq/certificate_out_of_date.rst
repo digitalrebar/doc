@@ -1,7 +1,7 @@
-My Certificate is Out of Date
-=============================
+The Certificate is Out of Date
+==============================
 
-If some of your systems are reporting out of date certificates then the system cannot download files or use SSH to connect.
+If some systems are reporting out of date certificates then the system cannot download files or use SSH to connect.
 
 Typical Output
 --------------
@@ -15,6 +15,6 @@ Typical Output
 Likely Cause
 ------------
 
-If you system clock is out of date (or has bad batteries) then it resets to an date that does not match certificate validation ranges.
+If the system clock is out of date (or has bad batteries) then it resets to an date that does not match certificate validation ranges.
 
-Update your system clock.  You may need to replace the batteries in your system.
+Update the system clock.  The batteries may need to be replaced in the system to solve the issue. 

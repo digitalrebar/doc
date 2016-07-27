@@ -6,6 +6,6 @@ If Digital Rebar has been restarted but the Consul is not showing any services t
 #. Use ``docker-compose stop && docker-compose rm`` to reset the environment.
 #. Then ``docker-compose up`` to start it again
 
-   #. If you watch the output stream, you should be able to see log messages from all the containers.
+   #. Log messages from all the containers will be visible in the output stream.
   
 Another possible cause is using an old URL for Consul.  Try to connect with only http://[server_ip]:8500.
