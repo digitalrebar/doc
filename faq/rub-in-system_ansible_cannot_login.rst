@@ -12,4 +12,4 @@ Typical Error Message
   fatal: [52.36.244.168] => failed to transfer file to Please login as the user "centos" rather than the user "root"./setup:
   Received message too long 1349281121
 
-Resolution: Delete the remote key from the cloud system (typically named after your host system name).  Digital Rebar will upload a fresh public key.
+Resolution: Delete the remote key from the cloud system (typically named after the host system name).  Digital Rebar will upload a fresh public key.
