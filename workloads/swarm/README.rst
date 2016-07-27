@@ -1,9 +1,12 @@
+.. index::
+	pair: Docker Swarm; Workloads
+
 .. _swarm_workload:
 
 Docker Swarm Workload
 =====================
 
-.. index:
+.. index::
   TODO; Describe_Docker_Swarm
 
 
@@ -12,7 +15,7 @@ Install the Docker Swarm workload from the ``digitalrebar/deploy`` directory usi
 Installation
 ------------
 
-This section is specific to Docker-Swarm, see :ref:`workloads_guide` for general install tips.
+This section is specific to Docker-Swarm. See :ref:`workloads_guide` for general install tips.
 
    :: 
 

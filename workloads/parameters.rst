@@ -1,7 +1,12 @@
-.. _workloads_parameters:
+.. index::
+  pair: Workloads; Parameters
 
-Optional Parameters 
+.. _workload_parameters:
+
+Workload Parameters 
 -------------------
+
+*Note: These parameters are optional!*
 
 The following options are common for all workload scripts:
 
@@ -29,14 +34,17 @@ The script can be interrupted while it is waiting to converge without impacting 
 Using A Running DR Admin
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-While workloads scripts often include a Digital Rebar admin setup (see :ref:`install`), it saves time if a working admin node is already present.  Tell the scripts to use the admin node using ``--admin-ip=[ip]``.
+While workloads scripts often include a Digital Rebar admin setup (see :ref:`workloads_install`), it saves time if a working :ref:`arch_other_systems` is already present.  Tell the scripts to use the admin node using ``--admin-ip=[ip]``.
 
 Cleaning Up
 ~~~~~~~~~~~
 
 Workloads respect the ``--teardown`` instruction to remove a workload.  Make sure to include the same ``--deployment-name``!  This only works if the ``--deploy-admin`` option was used.
 
-In order to keep the Admin node running for additional deployments, include the ``--keep-admin=true`` flag.  It defaults to _false_.
+In order to keep the Admin node running for additional deployments, include the ``--keep-admin=true`` flag.  Otherwise, it will default to _false_.
+
+.. index::
+  pair: Workloads; Providers
 
 Providers
 ~~~~~~~~~
