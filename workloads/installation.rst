@@ -27,8 +27,7 @@ If AWS provider credentials have been added to :ref:`dr_info`, then a Kubernetes
   	cd ~/digitalrebar/deploy
   	workloads/kubernetes.sh --deploy-admin=aws --provider=aws --deployment-name=rebarrocks
 
-Read more about :ref:`workload_parameters` or use ``--help`` to get a full list of :ref:`workloads_parameters`
-
+Read more about :ref:`workload_parameters` or use ``--help`` to get a full list of parameters.
 
 Developer Notes
 ~~~~~~~~~~~~~~~
