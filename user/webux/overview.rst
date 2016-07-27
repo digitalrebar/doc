@@ -18,21 +18,3 @@ Upon logging in, the user interface will open to the Deployments page. The top o
 
 The name of the selected page is posted on the left, while the tenant is displayed to the right.
 The two icons are for refreshing data and viewing the :ref:`_ux_annealer` respectively. Thanks to the data refresher, users should not need to refresh the page.
-
-The Annealer
-~~~~~~~~~~~~
-
-When opened, the Annealer shows the progress of node role deployment. 
-
-
-.. image:: /images/screens/webux/annealer.png
-
-
-* Error shows all of the node roles in error.  
-* Process shows all of the node :ref:`roles` which are being processed.  
-* Todo shows :ref:`nodes` that are about to be processed.  
-* Queue shows nodes that are waiting to enter Todo.  
-
-**Note:** Error has a retry button that will send all erroneous node roles back to the queue 
-
-
