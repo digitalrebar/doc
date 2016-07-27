@@ -1,10 +1,13 @@
 
 
-Error Backlog
+Alert Backlog
 =============
 
-The "Error Backlog" page simply displays any errors which were incurred in attempting a task.
-The page displays the type of error, its message, and the time at which it occurred.
+
+
+The "Alert Backlog" page simply displays any errors which were incurred in attempting a task.  
+The page displays the type of error, is message, and the time at which it occurred.  
+
 There is also a search feature for finding errors that may have been drowned in other subsequent errors.
 
 .. image:: /images/screens/webux/error.png

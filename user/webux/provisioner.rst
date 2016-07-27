@@ -11,13 +11,12 @@ Similarly to :ref:`ux_workload`, the "Provisioner" tab will not open a page, rat
 Machines
 --------
 
-The "Machines" page shows all of the physical machines that the user has access to read.
 
-.. image:: /images/screens/webux/machines_1.png
+The "Machines" page shows all of the physical machines that the user has access to read.  The page also allows the user to examine each machine in use.  
 
-The page also allows the user to examine each machine in use.
 
-.. image:: /images/screens/webux/machines_2.png
+.. image:: /images/screens/webux/machines.png
+
 
 **Note:** The bar color of the machine corresponds to it's level of activeness: Blue is 100% responsive, yellow is partially responsive, and black is off.
 
