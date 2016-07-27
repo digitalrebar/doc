@@ -103,7 +103,7 @@ Details:
      "username": "rebar",
      "id": 2,
      "is_admin": true,
-     "email": "email@emai.com"
+     "email": "email@email.com"
     }
 
 User CRUD: Update
@@ -150,7 +150,7 @@ Details:
      "username": "rebar",
      "id": 2,
      "is_admin": true,
-     "email": "email@emai.com"
+     "email": "email@email.com"
     }
 
 Reset User Password
@@ -190,7 +190,7 @@ Details:
      "username": "rebar",
      "id": 2,
      "is_admin": true,
-     "email": "email@emai.com"
+     "email": "email@email.com"
     } 
 
 Lock User
@@ -216,7 +216,7 @@ Lock existing user account.
      "username": "rebar",
      "id": 2,
      "is_admin": true,
-     "email": "email@emai.com"
+     "email": "email@email.com"
     }
 
 Unlock User
@@ -242,13 +242,13 @@ Unlock existing user account.
      "username": "rebar",
      "id": 2,
      "is_admin": true,
-     "email": "email@emai.com"
+     "email": "email@email.com"
     }
 
 Make User Admin
 ^^^^^^^^^^^^^^^
 
-Add user administrator priviledge to existing user.
+Add user administrator privilege to existing user.
 
 **Input:**
 
@@ -268,13 +268,13 @@ Add user administrator priviledge to existing user.
      "username": "rebar",
      "id": 2,
      "is_admin": true,
-     "email": "email@emai.com"
+     "email": "email@email.com"
     }    
 
 Remove User Admin
 ^^^^^^^^^^^^^^^^^
 
-Delete user administrator priviledge from existing user.
+Delete user administrator privilege from existing user.
 
 **Input:**
 
@@ -294,7 +294,7 @@ Delete user administrator priviledge from existing user.
      "username": "rebar",
      "id": 2,
      "is_admin": true,
-     "email": "email@emai.com"
+     "email": "email@email.com"
     } 
 
 User CRUD: Delete

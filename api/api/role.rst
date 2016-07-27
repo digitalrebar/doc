@@ -17,7 +17,7 @@ Role Types
 
 Digital Rebar allows Barclamp creators to override the default Role
 behavior. This is a very import extension point for Digital Rebar
-because custom Role beaviors are essential to many orchestration
+because custom Role behaviors are essential to many orchestration
 situations.
 
 If no override is provided, Digital Rebar will use the Digital

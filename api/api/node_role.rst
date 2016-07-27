@@ -16,7 +16,7 @@ are maintained on related NodeRoleDatum mode.
    (also known as "out bound data")
 2. system data (node\_role.sysdata) is set by rebar before annealing
    (also known as "out bound data")
-3. wall data (node\_role.wall) is set by the jig after transistion (also
+3. wall data (node\_role.wall) is set by the jig after transition (also
    known as "in bound data")
 4. discovery data (node.wall) is stored on the node instead of in node role
    because it reflects node information aggregated from all the jigs.
