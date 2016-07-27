@@ -1,3 +1,8 @@
+.. index::
+  Provisioning; Provisioning Process
+
+.. _provisioning_process:
+
 Provisioning Process
 ====================
 

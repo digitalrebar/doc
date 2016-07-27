@@ -1,7 +1,7 @@
-.. _port_mapping:
-
 .. index::
   pair: Admin Node; Port Mapping
+
+.. _port_mapping:
 
 Rebar Admin Node Port Mapping
 -----------------------------

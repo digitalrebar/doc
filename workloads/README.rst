@@ -1,3 +1,6 @@
+.. index::
+	pair: Guide; Workloads
+
 .. _workloads_guide:
 
 Platform Workloads

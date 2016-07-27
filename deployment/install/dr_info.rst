@@ -1,7 +1,7 @@
-.. _dr_info:
-
 .. index::
   pair: DR Info File; Tools
+
+.. _dr_info:
 
 DR Info File (.dr_info)
 =======================
