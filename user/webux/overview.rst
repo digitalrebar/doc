@@ -7,10 +7,6 @@ At Digital Rebar, we not only strive to provide excellent deployment services, b
 The new interface provides a sleek, new way to interact with server deployment, and has been designed with efficiency in mind.  
 
 
-
-General
--------
-
 Upon logging in, the user interface will open to the Deployments page. The top of every page is dominated by this header:
 
 .. image:: /images/screens/webux/overview.png
