@@ -21,7 +21,7 @@ Digital Rebar has three built-in jigs
    Used when database updates or coordination points are needed that
    have no external action.
 -  Test - used by the test infrastructure to validate Digital Rebar
-   logic when no phyiscal infrastructure is available. Not activited in
+   logic when no physical infrastructure is available. Not activated in
    production mode.
 
 API Actions

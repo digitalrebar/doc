@@ -6,7 +6,7 @@
 Template API
 ============
 
-Template APIs are used to manage tempatels for boot environments.  Templates are referenced by
+Template APIs are used to manage templates for boot environments.  Templates are referenced by
 :ref:`api_provisioner_bootenv` objects.
 
 This API is only available through the reverse proxy feature.
@@ -63,7 +63,7 @@ Template Expansion Variables
 
 The following variables are used for expansion within templates and the Bootenv variables,
 BootParams and Template Paths.  These variables are referenced within an escape sequence pair.
-{{ }} is the mark for evaulation.  This is the golang template format.  More information about
+{{ }} is the mark for evaluation.  This is the golang template format.  More information about
 the syntax can be found `here <https://golang.org/pkg/text/template/>`_.
 
 +---------------------+------------------------------------------------------------------+

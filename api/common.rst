@@ -141,7 +141,7 @@ the API.
 The API adds ="application/vnd.rebar.[type].[form]+json;version=2.0"= to
 the content-type tag.
 
-If only certian attributes need to be returned for an API
+If only certain attributes need to be returned for an API
 call, the ``x-return-attributes`` header can be to a JSON array of
 the attributes that need to be returned.
 
