@@ -17,15 +17,15 @@ API Actions
 +----------+-------------------------------------------+-------------------------------------+
 | Verb     | URL                                       | Comments                            |
 +==========+===========================================+=====================================+
-| GET      | provisioner/bootenvs                      | List                                |
+| GET      | /provisioner/bootenvs                     | List                                |
 +----------+-------------------------------------------+-------------------------------------+
-| GET      | provisioner/bootens/:name                 | Specific Item                       |
+| GET      | /provisioner/bootens/:name                | Specific Item                       |
 +----------+-------------------------------------------+-------------------------------------+
-| PUT      | provisioner/bootenvs/:name                | Update Item                         |
+| PUT      | /provisioner/bootenvs/:name               | Update Item                         |
 +----------+-------------------------------------------+-------------------------------------+
-| POST     | provisioner/bootenvs                      | Create Item                         |
+| POST     | /provisioner/bootenvs                     | Create Item                         |
 +----------+-------------------------------------------+-------------------------------------+
-| DELETE   | provisioner/bootenvs/:name                | Delete Item                         |
+| DELETE   | /provisioner/bootenvs/:name               | Delete Item                         |
 +----------+-------------------------------------------+-------------------------------------+
 
 

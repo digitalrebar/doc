@@ -6,7 +6,7 @@
 Questions to Guide Deployment
 -----------------------------
 
-*Need help?* Jump over to our `live chat <https://gitter.im/digitalrebar/core>`.
+*Need help?* Jump over to our `live chat <https://gitter.im/digitalrebar/core>`_.
 
 The goal of this set of questions is to help determine what containers to include during deployment, what workloads should be brought in,
 and what tool must be running to deploy the admin node.
