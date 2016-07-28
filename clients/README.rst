@@ -1,7 +1,12 @@
+.. index::
+	pair: Clients; Digital Rebar API
+
+.. _dr_clients:
+
 Digital Rebar Clients
 =====================
 
-This section details client for the Digital Rebar API
+This section details client for the Digital Rebar API.
 
 
 .. toctree::

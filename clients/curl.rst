@@ -1,3 +1,6 @@
+.. index::
+	Digital Rebar; Using CURL
+
 Using CURL with Digital Rebar
 =============================
 
