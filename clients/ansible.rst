@@ -1,3 +1,8 @@
+.. index::
+	pair: Ansible; Inventory
+
+.. _clients_ansible:
+
 Ansible Dynamic Inventory
 =========================
 
