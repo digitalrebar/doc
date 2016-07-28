@@ -1,3 +1,6 @@
+.. index::
+	FAQs
+
 .. _faq:
 
 Frequently Asked Questions (FAQ)

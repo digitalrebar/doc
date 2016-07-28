@@ -1,3 +1,10 @@
+.. index::
+	Tools; TFTP Timeout
+	KMV Slave; TFTP Timeout
+	TFTP; Timeout
+
+.. _faq_tftp_timeout:
+
 Tools/kvm_slave Causes a Timeout in TFTP?
 =========================================
 

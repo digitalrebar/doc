@@ -1,3 +1,9 @@
+.. index::
+	Networks; Required Networks
+	TODO; Network Management Writeup
+
+.. _faq_required_networks:
+
 Are There Specific Required Networks?
 =====================================
 
