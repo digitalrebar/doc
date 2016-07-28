@@ -1,14 +1,14 @@
-.. _initial_install_setup:
-
 .. index::
   pair: Deploy Tools; Install
+
+.. _initial_install_setup:
 
 Get Digital Rebar Deploy Tools
 ==============================
 
 First,``git`` is required to pull the deploy repository.  To install git, use one of the following:
 
-* Ubuntu/Debian: `apt-get install git`.
+* Ubuntu/Debian: `sudo apt-get install git`.
 * CentOS/RedHat: `yum install git`.
 * OS X should already have git.
 * Otherwise, see https://git-scm.com/ to download the proper version.
