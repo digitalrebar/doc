@@ -10,5 +10,5 @@ The "DHCP Subnet" page shows network configurations. The page shows the network 
 .. image:: /images/screens/webux/dhcp2.png
 
 
-**Extra Info:** DHCP, Dynamic Host Configuration Protocol, is used to hand out addressed to admin networks, and also tells the nodes to boot OS's from the provisioner. 
+**Extra Info:** DHCP (Dynamic Host Configuration Protocol) is used to hand out addressed to admin networks, and also tells the nodes to boot OS's from the provisioner. 
 
