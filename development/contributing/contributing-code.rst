@@ -1,7 +1,7 @@
 Contributing to Digital Rebar Core
 ----------------------------------
 
-Before `submitting pull requests <https://help.github.com/articles/using-pull-requests>`_, please make sure to have read and understood the Apache license. Submitting a pull is considered to be accepting the project's license terms.
+Before `submitting pull requests <https://help.github.com/articles/using-pull-requests>`_, please make sure to read and understood the Apache license. Submitting a pull is considered to be accepting the project's license terms.
 
 .. index::
   TODO; code_tree_usage
@@ -65,6 +65,6 @@ Testing/ Validation
 -  For core functions, push will be validated to NOT break build or
    deploy or our commercial products
 -  For operating systems that are non-core, we will *not* validate on
-   the target OS for the push 
+   the target OS for the push
 -  Eventually, we expect that a pull request will be built and
-   tested in our CI system before the push can be accepted. 
+   tested in our CI system before the push can be accepted.
