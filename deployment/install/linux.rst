@@ -15,7 +15,7 @@ Follow the ../install.rst steps to checkout the DigitalRebar code and RackN depl
 
 Here are the steps:
 
-#. Figure out the system IP address.
+#. Use the commands `ip -4 addr` and `export IPA=[CIDR]` to find and save the CIDR (The external IP and the /XX Subnet address).
 #. If the root login is missing, then use ``./add-from-ssh`` to fix the credentials (our advanced scripts call this automatically).
 #. ``./run-in-system.sh --help`` to make sure all of the pre-req's are in place.
 #. ``./run-in-system.sh --deploy-admin=[system|local] --admin-ip=[my CIDR ip/subnet]`` Choose ``system`` for remote install and ``local`` for the current system.
