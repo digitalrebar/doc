@@ -50,7 +50,7 @@ To run the CLI, it is useful to specify some environment variables to reduce the
 +==================+=========================+===================================================+
 | REBAR_KEY        | rebar:rebar1            | Username and Password with a colon in between.    |
 +------------------+-------------------------+---------------------------------------------------+
-| REBAR_ENDPOINT   | https://127.0.0.1:3000  | URL to access the admin from the used environment.|
+| REBAR_ENDPOINT   | https://127.0.0.1       | URL to access the admin from the used environment.|
 +------------------+-------------------------+---------------------------------------------------+
 
 Putting these in the environment file or shell init script can be helpful for accessing Digital Rebar.
