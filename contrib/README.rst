@@ -3,7 +3,7 @@
 Extending Digital Rebar Guide
 -----------------------------
 
-.. index:
+.. index::
   TODO; Describe_Role_Addition
 
 

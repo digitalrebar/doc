@@ -1,3 +1,6 @@
+.. index::
+	pair: Troubleshooting; Workloads
+
 .. _workloads_troubleshooting:
 
 Troubleshooting
@@ -13,8 +16,7 @@ Digital Rebar requires HTTPS and accepting the self-signed certificate.
 SSH Key
 ~~~~~~~
 
-If having trouble getting the SSH keys to work correctly, include the ``--clean-ids`` flag in the script.  
-html Rebar creates a unique SSH key for each node created; consequently, Rebar SSH IDs may sometimes be orphaned with the provider.  These can be safely removed with the Provider UI or CLI.
+If having trouble getting the SSH keys to work correctly, include the ``--clean-ids`` flag in the script.html Rebar creates a unique SSH key for each node created; consequently, Rebar SSH IDs may sometimes be orphaned with the provider.  These can be safely removed with the Provider UI or CLI.
 
 Provider Failure
 ~~~~~~~~~~~~~~~~

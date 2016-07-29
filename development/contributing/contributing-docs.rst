@@ -15,6 +15,7 @@ We *love* Docs changes!
 
 Docs may be edited directly from a fork on Github and therefore do not require local clones!  Changes can be directly installed by sending a pull request using Github in which they await approval before being added.  This method is great for simple changes; however, more complex changes require more examination and thought.
 
+Note: Our documentation is based on reStructuredText (.rst) files that Sphinx uses to generate the html files that make up the documentation site. For a comprehensive guide on styling and formatting with reST and Sphinx, see Sphinx's `reStructuredText Primer <http://www.sphinx-doc.org/en/stable/rest.html>`_.
 
 Cross References
 ~~~~~~~~~~~~~~~~
@@ -28,14 +29,19 @@ For bigger doc changes, it is helpful to create a local environment in order to 
 modifications.  This helps make a consistent, multi-page change and enables the user to ascertain the impact of his or her changes.
 
 The docs are automatically generated upon a successful pull request merge by the
-read-the-docs system.  Sphinx builders generate the html and pdf docs from the files they receive.  At a minimum please validate the html doc as this reduces errors and smooths integration of new content.
+read-the-docs system.  Sphinx builders generate the html and pdf docs from the files they receive.  At a minimum, please validate the html doc as this reduces errors and smooths integration of new content.
 
 In order to validate the docs, a prerequisite environment is needed.
+
+
+.. index::
+  pair: Linux; Sphinx
+  pair: Mac; Sphinx
 
 On Linux/Mac
 ++++++++++++
 
-`Sphinx <http://www.sphinx-doc.org/en/stable/install.html>`_. is required to create the environment in which docs can be built.
+`Sphinx <http://www.sphinx-doc.org/en/stable/install.html>`_ is required to create the environment in which docs can be built.
 For OS X 10.11, ``pip install sphinx`` is sufficient to create the required environment.
 
 With that in place, ``make html`` will create a _build/html directory that contains the built files.
@@ -49,13 +55,13 @@ An additional tip is to run ``make html`` repeatedly in another terminal to capt
   done
 
 
+.. index::
+  pair: Windows; Sphinx
+
 On Windows
 ++++++++++
 
-
-
-
-To setup the environment, `Sphinx <http://www.sphinx-doc.org/en/stable/install.html>`_ is required, which requires installing `Python <https://www.python.org/downloads/>`_ and `pip <https://bootstrap.pypa.io/get-pip.py>`_.
+To setup the environment, `Sphinx <http://www.sphinx-doc.org/en/stable/install.html>`_ is required, and installing Sphinx requires first installing `Python <https://www.python.org/downloads/>`_ and `pip <https://bootstrap.pypa.io/get-pip.py>`_.
 
 With the environment created, ``sphinx-build -b html -d _build\doctrees . _build\html`` will build the files.  Using a browser pointed to ``C://<workinf dir>/_build/html/BOOK.html`` should allow verification of the changes.
 
@@ -71,7 +77,7 @@ An additional tip is to run the builder repeatedly in a batch file or command te
 Documentation Expectations
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Documentation is an integral and formal component to the development process.  All documentation should be free from spelling and grammatical errors.   Additionally, all documentation must adhere to a certain stylistic guide.
+Documentation is an integral and formal component to the development process.  All documentation should be free of spelling and grammatical errors.   Additionally, all documentation must adhere to a certain stylistic guide:
 
  1. All sentences must be followed by two spaces "__", while words are separated by the standard single space "_".
 
