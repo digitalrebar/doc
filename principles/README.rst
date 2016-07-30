@@ -39,7 +39,7 @@ early scale cloud & data applications. Another key contributor, Victor
 Lowther (github @VictorLowther) has critical experience in Linux
 operations, networking and dependency resolution that lead to made
 significant contributions around the
-`Annealing <simulated_annealing.md>`__ and networking model. These
+:ref:`simulated_annealing` and networking model. These
 backgrounds heavily influenced how we approached Rebar.
 
 First, we started with best of field DevOps infrastructure: Opscode
