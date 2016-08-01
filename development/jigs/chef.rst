@@ -24,15 +24,15 @@ Adding Chef Jig into a dev system
 Rebar and Berkshelf
 ~~~~~~~~~~~~~~~~~~~
 
-For each of your workloads (core, openstack, hardware, etc.) Rebar uses
-a centralized Berkshelf file for all of your cookbooks. The
+For each workload (core, openstack, hardware, etc.) Rebar uses
+a centralized Berkshelf file for all of the cookbooks. The
 Berksfile is in ``digitalrebar/<workload>/chef/cookbooks/Berksfile``.
 Rebar ignores Berksfiles in individual cookbooks.
 
 Berkshelf resolves cookbook dependencies by following the Berksfile
 instructions for local and remote dependent cookbooks.  Dependencies are stored in the Berkshelf (path.) If using a Chef Server, Berkshelf can upload them to the Chef Server. If using chef-solo or
 chef-client -x, Berkshelf packages them on the filesystem and delivers them to
-your nodes.
+the nodes.
 
 We encourage cloning from the Digital Rebar github repos and submitting
 pull requests.
@@ -40,8 +40,8 @@ pull requests.
 Developing Cookbooks
 ~~~~~~~~~~~~~~~~~~~~
 
--  Run all the following as your ``rebar`` user.
--  Cookbook must be placed in and all your cookbooks' dependencies in
+-  As the ``rebar`` user, run all of the following.
+-  Cookbook must be placed in all of the cookbooks' dependencies in
    the centralized Berksfile for them to get picked up and used by the
    Chef Jig.
 
@@ -50,7 +50,7 @@ Developing Cookbooks
        digitalrebar/<workload>/[barclamp]/chef/cookbooks/Berksfile
 
 -  Any of the normal sources can be used to indicate the location of dependent cookbooks.
--  Put your custom and wrapper cookbooks in
+-  Put the custom and wrapper cookbooks in
    ``digitalrebar/<workload>/chef/cookbooks/<my_cookbook>``
 -  The Berkshelf is located at /root/.berkshelf/ Do not edit it.  In order
    to prune it of old and unnecessary versions of cookbooks, feel
@@ -81,7 +81,7 @@ Developing Cookbooks
        $ cd <digitalrebar_root>/<workload>/[barclamp]/chef/cookbooks/
        $ berks package
 
--  If kicking off the annealer again for the proper role,the package.tar.gz file  must be copied over to your slave nodes
+-  If kicking off the annealer again for the proper role,the package.tar.gz file must be copied over to the slave nodes
 
 Testing Cookbooks
 ~~~~~~~~~~~~~~~~~
@@ -89,12 +89,12 @@ Testing Cookbooks
 TODO: Script this, possibly under 'tools'
 
 -  create a test node (a kvm node is just fine)
--  add it to a deployment and add the node-role that your cookbook
+-  add it to a deployment and add the node-role that the cookbook
    belongs to
--  kick off the annealer to deploy your cookbooks to a test node.
+-  kick off the annealer to deploy the cookbooks to a test node.
 
 FUTURE:
 
--  Rebar can help integrate your normal testing patterns. We're
+-  Rebar can help integrate normal testing patterns. We're
    considering ``test-kitchen`` integration.
 

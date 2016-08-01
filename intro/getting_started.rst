@@ -11,13 +11,13 @@ TODO: Add questionnaire here
 .. index::
   TODO; WhatToDo
 
-TODO: What are you trying to do?
+TODO: What is the install intention?
 
 Cloud vs Metal or Both
 Provisioners? ref Principles
 Networks? ref Principles
 
-Once you have an idea what you are going to do, you can continue with :ref:`install`.
+Once the intention of the install has been determined, use the :ref:`install` page to navigate the process.
 
-You can always jump right in with :ref:`quick_start`.
+In order to jump right in, use the :ref:`quick_start`.
 
