@@ -1,7 +1,7 @@
 Mark Use
 ========
 
-The Digital Rebar name and mark are maintained by RackN until the project goverance moves to an independant body.  Users of the project are welcome to use the name and mark.  For future project management purposes, RackN requests vendors obtain permission for commercial uses.
+The Digital Rebar name and mark are maintained by RackN until the project goverance moves to an independent body.  Users of the project are welcome to use the name and mark.  For future project management purposes, RackN requests vendors obtain permission for commercial uses.
 
 Name
 ----
