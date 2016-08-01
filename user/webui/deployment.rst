@@ -19,8 +19,8 @@ Once the deployment is created, there is the option to navigate directly to the
 deployment from the Deployment...Deployments submenu or direct using
 ``/deployments/[my deployment]``.
 
-    Deployments are automatically set to have the system deployment as
-    their parent. In the future, other parents may be set.
+Deployments are automatically set to have the system deployment as
+their parent. In the future, other parents may be set.
 
 Deployment without Nodes
 ------------------------
@@ -72,7 +72,7 @@ Creating a network will also create a matching ``network-[name]`` role
 in the system. These roles allow the network definition to be bound to
 specific nodes in later steps.
 
-    Once a network is created, the assigned network cannot be changed.
+Once a network is created, the assigned network cannot be changed.
 
 Adding Roles to a Deployment
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
