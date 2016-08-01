@@ -3,7 +3,7 @@
 Login
 =====
 
-In order to access the new user interface, go to the version of the link below that applies to your instance:
+In order to access the new user interface, go to the version of the link below that applies to the instance:
   * https://[API_endpoint]/ux/
 
 

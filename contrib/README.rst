@@ -6,6 +6,9 @@
 
 Extending Digital Rebar Guide
 =============================
+This guide will describe how to add Roles and Workloads.
+This should include creation, addition, and removal of pieces.
+
 
 .. toctree::
    :maxdepth: 1
@@ -14,6 +17,4 @@ Extending Digital Rebar Guide
    roles_creation
    workload_creation
 
-This guide will describe how to add Roles and Workloads.
-This should include creation, addition, and removal of pieces.
 

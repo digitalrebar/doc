@@ -28,7 +28,7 @@ The choice of deployment tool options will determine where the admin node is bro
   ./run-in-system.sh --help
   echo "let's setup Digital Rebar!"
 
-The directory takes you through the following steps:
+The directory completes the following steps:
 
 * Change to the home directory
 * Make the digitalrebar directory

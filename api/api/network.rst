@@ -39,7 +39,7 @@ Sample:
     {
       "name":       "networkname",
       "deployment": "deploymentname",
-      "vlan":       your_vlan,
+      "vlan":       intended_vlan,
       "use_vlan":   true or false,
       "team_mode":  teaming mode,
       "use_team":   true or false,

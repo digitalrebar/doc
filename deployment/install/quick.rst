@@ -26,7 +26,7 @@ Base Installation (10 mins)
 
 #. Save the used system's EXTERNAL IP address: ``export IPA=[CIDR]`` (`CIDR <https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing>`_ is the IP address with the /## subnet included)
 
-   Note: For local installs use ``ip -4 addr`` to find the CIDR, or use the external IP given by your server provider. 
+   Note: For local installs use ``ip -4 addr`` to find the CIDR, or use the external IP given by the server provider. 
 
 #. Install Prereqs: ``sudo apt-get update && sudo apt-get install git python python-pymongo python-pycurl -y``
 #. Get the deployment code and test for pre-reqs

@@ -41,7 +41,7 @@ Steps for setting up Docker:
 Sample code to execute these steps::
 
   curl -SSL https://get.docker.com/ -o /tmp/docker.sh | sh
-  sudo usermod -a -G docker <your-user>
+  sudo usermod -a -G docker <user>
   sudo update-rc.d -f apparmor remove
   sudo ip a add 192.168.124.10/24 dev docker0
 
