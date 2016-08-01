@@ -30,3 +30,5 @@ Common Additional Options:
 * If direct root control is not avalible, add ``--login-user=[username]``
 * For a Metal or KVM booting dev-test add: ``--con-provisioner --access=FORWARDER``
 * For a Docker test Compose scale command add: ``--con-node``
+
+For troubleshooting tips and information, see :ref:`roubleshoot_aws`.
