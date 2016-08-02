@@ -1,3 +1,5 @@
+.. _adding_localiz:
+
 Adding Localizations (i18n)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 

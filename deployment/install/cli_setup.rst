@@ -1,9 +1,8 @@
-
-.. _cli_setup:
-
 .. index::
   pair: CLI; Downloads
   pair: CLI; Setup
+
+.. _cli_setup:
 
 CLI Download
 ------------

@@ -1,7 +1,9 @@
-.. _advance_deployment::
+
 
 .. index::
   pair: Deployment; Customization
+
+.. _advance_deployment:
 
 Advanced Deployments
 ~~~~~~~~~~~~~~~~~~~~

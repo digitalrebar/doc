@@ -1,3 +1,5 @@
+.. _rebar:
+
 What is actual Rebar?
 =====================
 

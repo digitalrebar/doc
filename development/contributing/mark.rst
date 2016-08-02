@@ -1,3 +1,5 @@
+.. _mark_use:
+
 Mark Use
 ========
 

@@ -1,7 +1,8 @@
-.. _install:
 
 .. index::
   pair: Admin Node; Deployment
+
+.. _install:
 
 Deploy Digital Rebar Admin Node
 ===============================

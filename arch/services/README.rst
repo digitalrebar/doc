@@ -1,7 +1,8 @@
-.. _arch_services:
 
-.. index:
+
+.. index::
   Services; Overview
+.. _arch_services:
 
 Services
 --------

@@ -1,3 +1,5 @@
+.. _ready_state:
+
 Digital Rebar delivers "Ready State" infrastructure
 ===================================================
 

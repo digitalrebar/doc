@@ -1,6 +1,6 @@
 .. index::
-pair: Noop; Jig
-
+  pair: Noop; Jig
+  
 .. _noop_jig:
 
 Noop Jig

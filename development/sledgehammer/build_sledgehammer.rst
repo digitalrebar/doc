@@ -1,3 +1,4 @@
+.. _sledge_build:
 
 Build Sledgehammer (Advanced Dev Only)
 ======================================

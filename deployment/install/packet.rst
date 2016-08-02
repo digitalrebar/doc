@@ -1,8 +1,8 @@
-.. _run_in_packet:
-
 .. index::
   pair: Packet; Run in Packet
   pair: Deployment; Run in Packet
+  
+.. _run_in_packet:
 
 Run-In-Packet
 =============

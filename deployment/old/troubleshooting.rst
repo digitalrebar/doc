@@ -1,3 +1,5 @@
+.. _troubleshooting_tips:
+
 Digital Rebar Troubleshooting Tips
 ----------------------------------
 
@@ -11,8 +13,8 @@ Problem: outbound network access is not working.
 Cause: Likely cause is that the squid proxy is not configured
 Solution: set the http\_proxy (\`export http\_proxy="http://127.0.0.1:8123") and attempt to access google.com from the admin server. if that worked, try the same thing after ssh'ing to the node
 
-Problem: you are missing the /tftboot/files path
-Cause: this can be caused when you do not have the ISOs staged
+Problem: The /tftboot/files path is missing
+Cause: This can be caused when the ISOs has not been staged
 Solution: Refer to documentation on how to stage ISOs
 
 No OS? Installing an OS, the TFTP Process
@@ -20,7 +22,7 @@ No OS? Installing an OS, the TFTP Process
 
 TFTP provides the boot images for the operating system install.
 
-You can inspect the TFTP information the admin node provides by looking
+The TFTP information the admin node provides can be inspected by looking
 in the ``/tftpboot`` directories.
 
 These directories contain the sledgehammer discovery, base OS install

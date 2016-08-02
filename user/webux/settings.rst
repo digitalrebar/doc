@@ -1,4 +1,4 @@
-.. ux_settings:
+.. _ux_settings:
 
 Settings
 ========

@@ -1,3 +1,5 @@
+.. _tips_tricks:
+
 Tips & Tricks (UI Developer)
 ----------------------------
 

@@ -1,8 +1,7 @@
-.. _contrib_guide:
-
-.. index:
+.. index::
   TODO; Describe_Role_Addition
 
+.. _contrib_guide:
 
 Extending Digital Rebar Guide
 =============================
