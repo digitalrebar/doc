@@ -1,7 +1,9 @@
-.. _accessing_bmcs:
 
-.. index:
+
+.. index::
   BMC Network; Connecting
+
+.. _accessing_bmcs:
 
 Connecting to the BMC Network
 -----------------------------

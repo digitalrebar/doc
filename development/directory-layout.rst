@@ -1,3 +1,5 @@
+.. _digreb_dir_struct:
+
 Digital Rebar Directory Structure
 =================================
 

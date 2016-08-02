@@ -1,3 +1,5 @@
+.. _jig_config_mangr:
+
 Configuration Managers (aka Jigs)
 =================================
 

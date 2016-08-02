@@ -1,7 +1,7 @@
-.. _ux_workload:
-
 .. index::
   pair: Workload; UX
+
+.. _ux_workload:
 
 Workload
 ========

@@ -1,8 +1,8 @@
-.. _run_in_google:
-
 .. index::
   pair: Linux; Run in Google
   pair: Deployment; Run in Google
+
+.. _run_in_google:
 
 Run-In-Google
 =============

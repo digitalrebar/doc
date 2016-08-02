@@ -1,6 +1,8 @@
 .. index::
   Vagrant
 
+.. _vagrant:
+
 Vagrant and  Digital Rebar
 ==========================
 

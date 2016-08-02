@@ -1,3 +1,5 @@
+.. _adding_menu_items:
+
 Adding Menu Items
 ~~~~~~~~~~~~~~~~~
 

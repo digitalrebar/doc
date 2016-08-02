@@ -4,7 +4,7 @@
 Objects
 -------
 
-.. index:
+.. index::
   TODO; ARCH_OBJECT_DESC
 
 TODO: Talk about objects

@@ -1,6 +1,5 @@
 .. index::
-pair: Chef; Jig
-
+  pair: Chef; Jig
 .. _chef_jig:
 
 Chef Jig

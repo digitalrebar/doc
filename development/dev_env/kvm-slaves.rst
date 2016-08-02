@@ -1,3 +1,5 @@
+.. _kvm_worker_nodes:
+
 KVM Worker Nodes
 ----------------
 

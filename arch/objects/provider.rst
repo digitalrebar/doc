@@ -1,6 +1,8 @@
 .. index::
   pair: Objects; Providers
 
+.. _arch_provider:
+
 Provider Usage
 ==============
 

@@ -1,12 +1,12 @@
 Interact with Chef
 ==================
 
-First you must sync local date and time with that on the target system -
-especially if you run in a development environment and did not do so on
+First, sync local date and time with that on the target system -
+especially if running in a development environment and did not do so on
 installation (chef protects agains replay attacks and needs a correct
 time setting)
 
-Get your local time
+Get the local time
 
 ::
 
@@ -19,7 +19,7 @@ and set it on all nodes (from the rebar admin machine as root)
 
     knife ssh node:* -- 'date -us "2012-10-10 18:07"'
 
-Next copy your ``/etc/chef/webui.pem`` file from the admin machine to
+Next copy the ``/etc/chef/webui.pem`` file from the admin machine to
 ``.chef/webui.pem``
 
 Copy the template knife.rb file and set the server url to the correct
@@ -44,7 +44,7 @@ install chef with the Gemfile
 
     bundle install
 
-finally you can work with knife from your local machine:
+finally, work with knife from the local machine:
 
 ::
 

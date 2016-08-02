@@ -1,8 +1,8 @@
-.. _run_in_system:
-
 .. index::
   pair: Linux; Run in System
   pair: Deployment; Run in System
+
+.. _run_in_system:
 
 Run-In-System
 -------------
