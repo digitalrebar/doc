@@ -14,7 +14,7 @@ This section deals with what to do if the install will not start running.
 
 If this occurs, be sure the install command is called with sudo as follows::
 
-	sudo ./run sudo ./run-in-system.sh --deploy-admin=local --access=HOST --admin-ip=$IPA
+	sudo ./run-in-system.sh --deploy-admin=local --access=HOST --admin-ip=$IPA
 
 The system may ask for the system's password at this point. Enter the password, and the install should begin to run.
 
@@ -27,7 +27,7 @@ This section deals with the install failing due to a 'permission denied' or 'pas
 
 If an error appears, saying that a password is needed or permission is denied, be sure the install command uses sudo as follows::
 	
-	sudo ./run sudo ./run-in-system.sh --deploy-admin=local --access=HOST --admin-ip=$IPA
+	sudo ./run-in-system.sh --deploy-admin=local --access=HOST --admin-ip=$IPA
 
 This will fix the majority of issues regarding these failures, as it gives the install the access it needs to run properly.
 
@@ -47,7 +47,7 @@ FOWARDER Wait Until Digital Rebar Service is Up
 ===============================================
 This sections deals with the following task::
 
-	TASK [FORWARDER wait until Digital Rebar service is up [1 upto 20 minutes]
+	TASK [FORWARDER wait until Digital Rebar service is up [1 upto 20 minutes]]
 
 The install has been known to get stuck on this particular task. If this happens, the task will eventually timeout and fail. However, pressing `ctrl` and `c` simultaneously can force the task to halt. This is recommended if the step takes longer than 15 or so minutes, as it will save time.
 
