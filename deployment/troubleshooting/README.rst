@@ -14,6 +14,7 @@ This section will cover troubleshooting all steps of deployment. If a problem is
    :glob:
 
    deploy-tools.rst
+   general-install.rst
    specific-environment/README
 
    
