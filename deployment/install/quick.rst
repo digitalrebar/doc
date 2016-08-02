@@ -14,9 +14,13 @@ Base Installation (10 mins)
 
 #. AWS Path:
 
-   #. Create AWS m4.large (or larger!) Ubuntu instance with the SSH key.  
-   #. The "default" Security Group needs Port 22 (ssh), 443 & 3000 (rebar), 2375 & 2475 (docker), 4646 (chef), 8300 & 8301 (consul), 8888 (certificate signing service) and ICMP!  This our recommended base; depending on the application, additional ports might be required or Docker, Chef and Consul may be omitted.
-   #. Connect to the server: ``ssh ubuntu@[ip address]``
+   #. Create AWS m4.large (or larger!) Ubuntu instance. This can be done with the SSH key or by following the following steps:
+      #. Login to to AWS and click on EC2 under Compute.
+      #. Click on Launch Instance. This will begin the instance set up.
+      #. Select Ubuntu Server for the AMI, then select `m4.large` or larger. 
+      #. Next, navigate to the Configure Security Group tab.  The "default" Security Group for this server needs Port 22 (ssh), 443 & 3000 (rebar), 2375 & 2475 (docker), 4646 (chef), 8300 & 8301 (consul), 8888 (certificate signing service) and ICMP!  Note: This our recommended base; depending on the application, additional ports might be required or Docker, Chef and Consul may be omitted.
+      #. Launch the instance and save the ``.pem`` key as ``[key_name].pem`` to your home directory. This can be done by using the ``gedit`` command in the terminal, then copying and pasting the key to the file.
+   #. Connect to the server: ``ssh -i "[key_name].pem" ubuntu@[public_DNS]``.
 
 #. Packet or B-Y-O-Server Path:
 
@@ -42,7 +46,7 @@ Base Installation (10 mins)
       ./run-in-system.sh --help
       echo "let's setup Digital Rebar!"
 
-#. Install to local system: ``./run-in-system.sh --deploy-admin=local --access=HOST --wl-docker-swarm --admin-ip=$IPA``  (notes: it's OK to retry this script and IP must include /## for CIDR)
+#. Install to local system: ``sudo ./run-in-system.sh --deploy-admin=local --access=HOST --wl-docker-swarm --admin-ip=$IPA``  (notes: it's OK to retry this script and IP must include /## for CIDR)
 
 Add ``--wl-kubernetes`` or  other ``--wl-[workload]`` (see list from --help) if other choices are intended for examination.
 This script ends with the Digital Rebar admin node fully operational but without any nodes.  For the next step, login to the Digital Rebar UI (default user/pass is ``rebar/rebar1``).
