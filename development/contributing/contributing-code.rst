@@ -64,9 +64,9 @@ Coding Expectations
 Testing/ Validation
 ^^^^^^^^^^^^^^^^^^^
 
--  For core functions, push will be validated to NOT break build or
-   deploy or our commercial products
+-  For core functions, the push will be validated to ensure it does NOT break build,
+   deploy, or our commercial products
 -  For operating systems that are non-core, we will *not* validate on
-   the target OS for the push
+   the target OS for the push.
 -  Eventually, we expect that a pull request will be built and
    tested in our CI system before the push can be accepted.
