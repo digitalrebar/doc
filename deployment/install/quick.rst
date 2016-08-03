@@ -56,7 +56,7 @@ Troubleshooting Tip:  "Monitor...Annealer" provides a view of exactly what is go
 Let's Add Nodes!
 ----------------
 
-In order to maintain simplicity, we use cloud servers, not local vms or physical servers.  These are supported in a more complex setup.
+In order to maintain simplicity, we use cloud servers, not local vms or physical servers.  These are supported in a more complex setup. This guide covers adding nodes using the UI. 
 
 #. From the client, it is possible to log on to the system using ``https://[external ip address]:3000``.  Reminders: 
 
@@ -76,6 +76,8 @@ In order to maintain simplicity, we use cloud servers, not local vms or physical
 #. Allow the system to complete annealing (progress in top right corner)
 
 Remember to delete used nodes from the Nodes page before taking the system down!  There is no automatic cleanup.
+
+For more on the UI, see :ref:`web_user_guide`. For instructions on how to add nodes with the UX, see :ref:`ux_nodes`.
 
 Build a Docker Swarm Cluster
 ----------------------------
