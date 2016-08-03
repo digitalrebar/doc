@@ -10,9 +10,12 @@ The Annealer page (/annealer) shows all the active node-roles (see :ref:`ui_role
 
 .. image:: /images/screens/dr_annealier_monitor.png
 
+For more on the function of the Annealer, see :ref:`simulated_annealing`.
+
 Operation
 ---------
 
 The Annealer page is primarily read-only and automatically refreshes.  As the system changes, node-role status is displayed for each role-role.
 
 For any roles in error, a retry button and retry-all button is provided.
+

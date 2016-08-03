@@ -25,29 +25,29 @@ As a convenience, these states are summarized for users:
 Additional States
 -----------------
 
-Nodes have several override conditions that prevent Digital Rebar from operating on them.  They are powered-off and reserved.  Then these states are true, Digital Rebar will not attempt to use the node.
+Nodes have several override conditions that prevent Digital Rebar from operating on them.  These conditions are powered-off and reserved.  If these states are true, Digital Rebar will not attempt to use the node.
 
 
 Cloud Nodes
 -----------
 
-Digital Rebar can create/destroy nodes on external "cloud" systems using the `Provider <provider.html>`_ system.
+Digital Rebar can create/destroy nodes on external "cloud" systems using the :ref:`ui_providers` system.
 
 Physical Nodes
 --------------
 
 Once the Digital Rebar Admin is running, simply booting VMs or physical nodes
 onto the management network will engage the discovery process (using
-DHCP and PXE). Digital Rebar does not event hook the PXE service (to maintain
-separation of duties) so please be patient, the default discovery
-process requires the system to boot the Sledgehammer image which
-requires time.
+:ref:`arch_service_dhcp` and PXE). Digital Rebar does not event hook the PXE service (to maintain
+separation of duties), so please be patient. The default discovery
+process requires the system to boot the Sledgehammer image, which
+takes time.
 
 Once the node is booted, Digital Rebar automatically adds the node into the
 system deployment. The system deployment is a special purpose deployment
 used for discovery and base management. Users have limited options to
 change it; however, the discovery process can be easily monitored by
-watching the :ref:`ui_annealer` or system deployment screens. They will show
+watching the :ref:`ui_annealer` or :ref:`webui_deployment` screens. They will show
 exactly which steps of the discovery progress are pending, acting and
 completed.
 
