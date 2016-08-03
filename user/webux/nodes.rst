@@ -8,3 +8,14 @@ From the "Nodes" page all the :ref:`nodes` in deployment are visible, and displa
 
 
 .. image:: /images/screens/webux/nodes.png
+
+Adding Nodes
+************
+
+To add a node, click the plus icon in the bottom right hand corner of the screen. 
+
+.. image:: /images/icons/ux/add_icon.png
+
+This will pull up a box to set the name, provider, deployment, and O/S that the node will belong to. It also allows for multiple nodes to be made.
+
+.. image:: /images/screens/webux/add_node.png
