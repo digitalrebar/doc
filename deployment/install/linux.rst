@@ -30,3 +30,16 @@ Common Additional Options:
 * For a Docker test Compose scale command add: ``--con-node``.
 
 For troubleshooting, see :ref:`troubleshoot_run_in_system` for help.
+
+Sample code for a complete install with setup included::
+
+	sudo apt-get update
+	sudo apt-get install git
+	mkdir digitalrebar
+	git clone https://github.com/rackn/digitalrebar-deploy digitalrebar/deploy
+	ln -s digitalrebar/ digitalrebar/deploy/compose/digitalrebar
+	cd digitalrebar/deploy
+	ip -4 addr
+	export IPA=[CIDR]
+	./run-in-system.sh --help
+	sudo ./run-in-system.sh --deploy-admin=local --access=host --admin-ip=$IPA
