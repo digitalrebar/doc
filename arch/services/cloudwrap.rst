@@ -12,9 +12,9 @@ modify, and destroy nodes in various sets of clouds.
 
 Current clouds supported:
 
-* AWS
-* Google
-* Packet
-* OpenStack
+* `AWS <https://aws.amazon.com/>`_
+* `Google <https://cloud.google.com/>`_
+* `Packet <https://www.packet.net/>`_
+* `OpenStack <http://www.openstack.org/>`_
 
 See :ref:`api_provider` for more information.

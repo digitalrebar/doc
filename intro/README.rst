@@ -5,7 +5,7 @@ Introduction
 
 Describe the doc layout and what we are trying to do.
 
-.. index:
+.. index::
   TODO; Define_Audiences
 
 TODO: Define Audiences

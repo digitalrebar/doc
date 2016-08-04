@@ -12,3 +12,5 @@ switched over to use the forwarder container as their networking component.  Thi
 when using KVM slaves to test provisioning and workloads.
 
 This container is used when FORWARDER mode is specified in the deploy scripts or the docker-admin scripts.
+
+For more on workloads and provisioning, see :ref:`workloads_guide` and :ref:`provisioning_process`.
