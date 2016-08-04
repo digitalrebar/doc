@@ -31,7 +31,11 @@ Common Additional Options:
 
 For troubleshooting, see :ref:`troubleshoot_run_in_system` for help.
 
-Sample code for a complete install with setup included::
+Sample code for a complete install with setup included is provided below. 
+
+**Note**: [CIDR] in ``export IPA=[CIDR]`` must be replaced with the system's CIDR, found with the command ``ip -4 addr``. If this is not done, the install will **not** work!
+
+::
 
 	sudo apt-get update
 	sudo apt-get install git
