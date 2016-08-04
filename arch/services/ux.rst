@@ -11,3 +11,5 @@ The UX container provides an experimental UI that attempts to address real time 
 configuration, while also monitoring the :ref:`arch_service_provisioner` services.
 
 The UX registers with the :ref:`arch_service_revproxy` as the /ux directory reference from the :ref:`arch_other_systems`.
+
+For more on the UX, see :ref:`web_ux_guide`.
