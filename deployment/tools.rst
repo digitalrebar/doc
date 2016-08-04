@@ -6,12 +6,18 @@
 Get Digital Rebar Deploy Tools
 ==============================
 
-First, git is required to pull the deploy repository.  To install git, use one of the following:
+First, git is required to pull the deploy repository.  To install git, use the following command that corresponds to the correct O/S:
 
-* Ubuntu/Debian: ``sudo apt-get install git``.
-* CentOS/RedHat: ``yum install git``.
+* Ubuntu/Debian: ``sudo apt-get install git``
+* CentOS/RedHat: ``yum install git``
 * OS X should already have git.
 * Otherwise, see https://git-scm.com/ to download the proper version.
+
+Note: It might be worth updating apt-get/yum before installing to ensure the most recent version of git is installed. This can be done with the following commands:
+
+* Ubuntu/Debian: ``sudo apt-get update``
+* CentOS/RedHat: ``yum update``
+* Otherwise, see https://git-scm.com/ to install the latest version.
 
 Next, by following the directory structure below, either production or development deployment will be ready for use.  These
 steps are necessary to either bring up an admin node directly or use ansible and ssh to bring up a remote admin node.
