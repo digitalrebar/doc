@@ -31,7 +31,7 @@ This section will cover how to set up a server on Amazon and prime it for the in
 	ssh -i "[key_name].pem" ubuntu@[public_DNS]
 
 Installing on the Server
-========================
+************************
 To install to the server, follow these steps. Note: If already connected to the server, the first two steps can be omitted. 
 
 #. Figure out the system IP address
