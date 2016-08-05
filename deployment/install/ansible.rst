@@ -33,7 +33,7 @@ WARNING: Freshness matters for Docker, do NOT use *apt-get* or *yum*!
 
 Steps for setting up Docker:
 
-#. Install Docker, using the `Docker install guide <http://docs.docker.io/en/latest/installation/>`_: for reference.
+#. Install Docker using the `Docker install guide <http://docs.docker.io/en/latest/installation/>`_ for reference.
 #. Get permission to run Docker without sudo.
 #. Turn off Apparmor. (If desired, production deployment can be configured to allow Apparmor to remain on.)
 #. Map a local address (192.168.124.10/24) to the Docker bridge. This is required to boot VMs or metal.
