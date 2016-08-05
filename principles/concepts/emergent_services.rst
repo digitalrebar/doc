@@ -7,7 +7,7 @@ We see data center operations as a duel between conflicting priorities.
 On one hand, the environment is constantly changing, and systems must
 adapt quickly to these changes. On the other hand, users of the
 infrastructure expect it to provide stable and consistent services for
-consumption. We have described that as “always ready, never finished.”
+consumption. We have described this state as “always ready, never finished.”
 
 To address this duality, the infrastructure that Digital Rebar
 builds is decomposed into well-defined service layers that can then be
@@ -28,9 +28,9 @@ the concepts surrounding simulated annealing, late binding, attribute injection,
 and emergent design.
 
 Emergent (aka iterative or evolutionary) design challenges the
-traditional assumption that all factors must be known before starting.***
+traditional assumption that all factors must be known before starting and supports the following ideas:
 
--  Dependency graph – multidimensional relationship
+-  Dependency graph: multidimensional relationship
 -  High degree of reuse via abstraction and isolation of service
    boundaries.
 -  Increasing complexity of deployments means more dependencies

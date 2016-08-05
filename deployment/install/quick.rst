@@ -15,11 +15,13 @@ Base Installation (10 mins)
 #. AWS Path:
 
    #. Create AWS m4.large (or larger!) Ubuntu instance. This can be done with the SSH key or by following the following steps:
-      #. Login to to AWS and click on EC2 under Compute.
+      
+      #. Login to AWS and click on EC2 under Compute.
       #. Click on Launch Instance. This will begin the instance set up.
       #. Select Ubuntu Server for the AMI, then select `m4.large` or larger. 
-      #. Next, navigate to the Configure Security Group tab.  The "default" Security Group for this server needs Port 22 (ssh), 443 & 3000 (rebar), 2375 & 2475 (docker), 4646 (chef), 8300 & 8301 (consul), 8888 (certificate signing service) and ICMP!  Note: This our recommended base; depending on the application, additional ports might be required or Docker, Chef and Consul may be omitted.
-      #. Launch the instance and save the ``.pem`` key as ``[key_name].pem`` to your home directory. This can be done by using the ``gedit`` command in the terminal, then copying and pasting the key to the file.
+      #. Next, navigate to the Configure Security Group tab.  The "default" Security Group for this server needs Port 22 (ssh), 443 & 3000 (rebar), 2375 & 2475 (docker), 4646 (chef), 8300 & 8301 (consul), 8888 (certificate signing service) and ICMP!  This is just our recommended base. Depending on the application, additional ports might be required or Docker, Chef and Consul may be omitted.
+      #. Launch the instance and save the ``.pem`` key as ``[key_name].pem`` to the home directory. This can be done by using the ``gedit`` command in the terminal, then copying and pasting the key to the new file.
+   
    #. Connect to the server: ``ssh -i "[key_name].pem" ubuntu@[public_DNS]``.
 
 #. Packet or B-Y-O-Server Path:

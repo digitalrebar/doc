@@ -30,3 +30,20 @@ Common Additional Options:
 * For a Docker test Compose scale command add: ``--con-node``.
 
 For troubleshooting, see :ref:`troubleshoot_run_in_system` for help.
+
+Sample code for a complete install with setup included is provided below. 
+
+**Note**: [CIDR] in ``export IPA=[CIDR]`` must be replaced with the system's CIDR, found with the command ``ip -4 addr``. If this is not done, the install will **not** work!
+
+::
+
+	sudo apt-get update
+	sudo apt-get install git
+	mkdir digitalrebar
+	git clone https://github.com/rackn/digitalrebar-deploy digitalrebar/deploy
+	ln -s digitalrebar/ digitalrebar/deploy/compose/digitalrebar
+	cd digitalrebar/deploy
+	ip -4 addr
+	export IPA=[CIDR]
+	./run-in-system.sh --help
+	sudo ./run-in-system.sh --deploy-admin=local --access=host --admin-ip=$IPA

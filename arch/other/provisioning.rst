@@ -1,14 +1,11 @@
 .. index::
   Provisioning; Provisioning Process
+  TODO; describe_provisioning_process
 
 .. _provisioning_process:
 
 Provisioning Process
 ====================
-
-.. index:
-  TODO; describe_provisioning_process
-  Provisioner; Provisioning Process
 
 TODO: Update for provisioning process
 
