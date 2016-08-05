@@ -37,7 +37,7 @@ To install to the server, follow these steps. Note: If already connected to the 
 #. Figure out the system IP address
 #. If the root login is missing, then use ``./add-from-ssh`` to fix the credentials (our advanced scripts call this automatically)
 #. ``./run-in-system.sh --help`` to make sure all of the pre-req's are in place
-#. ``./run-in-system.sh --deploy-admin=[system|local] --admin-ip=[my CIDR ip/subnet]`` Choose ``system`` for remote install and ``local`` for the current system.
+#. ``./run-in-system.sh --deploy-admin=[system|local] --admin-ip=[my CIDR ip/subnet]  --access=HOST``. Choose ``system`` for remote install and ``local`` for the current system.
 #. Allow the system to run and Ansible progress will be visible.
 #. Follow steps to login to Digital Rebar UI.
 

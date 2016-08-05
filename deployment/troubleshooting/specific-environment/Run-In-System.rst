@@ -52,3 +52,18 @@ This sections deals with the following task::
 The install has been known to get stuck on this particular task. If this happens, the task will eventually timeout and fail. However, pressing `ctrl` and `c` simultaneously can force the task to halt. This is recommended if the step takes longer than 15 or so minutes, as it will save time.
 
 The UX will not be accessible if this occurs. To remedy this and make the UX available, the following must be done.
+
+TODO; Finish
+
+Compose Up Containers Failure
+=============================
+This section deals with the following task::
+
+	TASK [Compose up containers]
+
+If this task fails, rerun the install with the flag ``--remove-orphans`` as follows::
+
+	./run-in-system.sh --deploy-admin=local --admin-ip=$IPA --remove-orphans
+
+The install should then run without issue. 
+
