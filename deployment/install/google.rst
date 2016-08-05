@@ -15,7 +15,7 @@ NOTE: There must be a key based SSH access to the target system.  The install pr
 
 Here are the steps:
 
-#. Figure out the system IP address.
+#. Figure out the system's IP address.
 #. If the root login is missing, then use ``./add-from-ssh`` to fix the credentials (our advanced scripts call this automatically).
 #. ``./run-in-system.sh --help`` to make sure all of the pre-req's are in place.
 #. ``./run-in-system.sh --deploy-admin=[system|local] --admin-ip=[my CIDR ip/subnet]``. Choose ``system`` for remote install and ``local`` for the current system.
