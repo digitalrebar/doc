@@ -46,7 +46,7 @@ Base Installation (10 mins)
       cd digitalrebar/deploy
       echo "Checking prerequisites"
       ./run-in-system.sh --help
-      echo "let's setup Digital Rebar!"
+      echo "let's set up Digital Rebar!"
 
 #. Install to local system: ``sudo ./run-in-system.sh --deploy-admin=local --access=HOST --wl-docker-swarm --admin-ip=$IPA``  (notes: it's OK to retry this script and IP must include /## for CIDR)
 
