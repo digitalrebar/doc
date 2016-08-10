@@ -16,9 +16,15 @@ Base Installation (10 mins)
 
 -AWS Path:
 
-   #. Create AWS m4.large (or larger!) Ubuntu instance with the SSH key.  
-   #. The "default" Security Group needs Port 22 (ssh), 443 & 3000 (rebar), 2375 & 2475 (docker), 4646 (chef), 8300 & 8301 (consul), 8888 (certificate signing service) and ICMP!  This our recommended base; depending on the application, additional ports might be required or Docker, Chef and Consul may be omitted.
-   #. Connect to the server: ``ssh ubuntu@[ip address]``
+   #. Create AWS m4.large (or larger!) Ubuntu instance. This can be done with the SSH key or by following the following steps:
+      
+      #. Login to AWS and click on EC2 under Compute.
+      #. Click on Launch Instance. This will begin the instance set up.
+      #. Select Ubuntu Server for the AMI, then select `m4.large` or larger. 
+      #. Next, navigate to the Configure Security Group tab.  The "default" Security Group for this server needs Port 22 (ssh), 443 & 3000 (rebar), 2375 & 2475 (docker), 4646 (chef), 8300 & 8301 (consul), 8888 (certificate signing service) and ICMP!  This is just our recommended base. Depending on the application, additional ports might be required or Docker, Chef and Consul may be omitted.
+      #. Launch the instance and save the ``.pem`` key as ``[key_name].pem`` to the home directory. This can be done by using the ``gedit`` command in the terminal, then copying and pasting the key to the new file.
+   
+   #. Connect to the server: ``ssh -i "[key_name].pem" ubuntu@[public_DNS]``.
 
 -Packet Path:
 
@@ -51,7 +57,7 @@ Base Installation (10 mins)
       ./run-in-system.sh --help
       echo "let's set up Digital Rebar!"
 
-#. Install to local system: ``./run-in-system.sh --deploy-admin=local --access=HOST --wl-docker-swarm --admin-ip=$IPA``  (notes: it's OK to retry this script and IP must include /## for CIDR)
+#. Install to local system: ``sudo ./run-in-system.sh --deploy-admin=local --access=HOST --wl-docker-swarm --admin-ip=$IPA``  (notes: it's OK to retry this script and IP must include /## for CIDR)
 
 Add ``--wl-kubernetes`` or  other ``--wl-[workload]`` (see list from --help) if other choices are intended for examination.
 This script ends with the Digital Rebar admin node fully operational but without any nodes.  For the next step, login to the Digital Rebar UI (default user/pass is ``rebar/rebar1``).
@@ -61,7 +67,7 @@ Troubleshooting Tip:  "Monitor...Annealer" provides a view of exactly what is go
 Let's Add Nodes!
 ----------------
 
-In order to maintain simplicity, we use cloud servers, not local vms or physical servers.  These are supported in a more complex setup.
+In order to maintain simplicity, we use cloud servers, not local vms or physical servers.  These are supported in a more complex setup. This guide covers adding nodes using the UI. 
 
 #. From the client, it is possible to log on to the system using ``https://[external ip address]:3000``.  Reminders: 
 
@@ -81,6 +87,8 @@ In order to maintain simplicity, we use cloud servers, not local vms or physical
 #. Allow the system to complete annealing (progress in top right corner)
 
 Remember to delete used nodes from the Nodes page before taking the system down!  There is no automatic cleanup.
+
+For more on the UI, see :ref:`web_user_guide`. For instructions on how to add nodes with the UX, see :ref:`ux_nodes`.
 
 Build a Docker Swarm Cluster
 ----------------------------

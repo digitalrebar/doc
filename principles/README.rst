@@ -3,8 +3,8 @@
 Operational Principles
 ======================
 
-The operational model behind Digital Rebar is entering its third generation and
-its important to understand the principles behind that model.  The model
+The operational model behind Digital Rebar is entering its third generation, and
+it's important to understand the principles behind that model.  The model
 is critical because it shapes how Rebar approaches the infrastructure at
 a fundamental level.  The experience makes it easier to interact with the platform
 as it influences our approach to operations.  Rebar’s goal is to create
@@ -20,16 +20,16 @@ Design Objective
 Digital Rebar delivers repeatable best practice deployments. Rebar is not just
 about installation: we define success as a sustainable operations model
 where we continuously improve how people use their infrastructure. The
-complexity and pace of technology change is accelerating so we must have
+complexity and pace of technology change is accelerating, so we must have
 an approach that embraces continuous delivery in the data center.
 
-Rebar’s objective is to help operators and technology become more efficient, stable and
+Rebar’s objective is to help operators and technology become more efficient, stable, and
 resilient over time.
 
 Background
 ----------
 
-When Greg Althaus (github @GAlthaus) and Rob "zehicle" Hirschfeld
+When Greg Althaus (github @Galthaus) and Rob "zehicle" Hirschfeld
 (github @Zehicle) started the project, we had some very specific
 targets in mind. We’d been working towards using organic emergent
 swarming (think ants) to model continuous application deployment. We had
@@ -44,7 +44,7 @@ backgrounds heavily influenced how we approached Rebar.
 
 First, we started with best of field DevOps infrastructure: Opscode
 Chef. There was already a remarkable open source community around this
-tool and an enthusiastic following for cloud and scale operators . Using
+tool and an enthusiastic following for cloud and scale operators. Using
 Chef to do the majority of the installation left the Rebar team to focus
 on infrastructure provisioning.
 

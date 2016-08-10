@@ -42,9 +42,9 @@ initial boot.
 #. PUT to ``/api/v2/nodes/[node-key]/alive`` to make the node as alive
    so processing can start.
 
+Note: For more on the Digital Rebar API, see :ref:`digital_rebar_api`.
 
-.. index:
+.. index::
   TODO; join_node_process
 
 TODO: Describe rework this with rebar api examples and post.
-TODO: This is really an DR user guide use case

@@ -41,5 +41,6 @@ These name/IP pairs are sent to a specified DNS management service that updates
 the DNS server. Filters are ordered and evaluated. Once
 matched, a name is generated and the service is called. A template system
 is used to generate names from node attributes. All matching filters
-will be applied.  See :ref:`api_dns_name_filter` and
-:ref:`object_dns_name_filter` for more information.
+will be applied.  See :ref:`api_dns_name_filter` for more information.
+
+.. reference dns name filter obj when it is created!

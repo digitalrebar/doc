@@ -19,3 +19,5 @@ Additional Steps:
 
 #. Create a :ref:`dr_info` with Packet API keys.
 #. ``./run_in_packet.sh <servername>``.
+
+For troubleshooting tips and information, see :ref:`troubleshoot_packet`.
