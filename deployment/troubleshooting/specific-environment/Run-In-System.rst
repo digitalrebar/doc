@@ -25,7 +25,7 @@ Permission Denied/Password Required
 This section deals with the install failing due to a 'permission denied' or 'password required' error.
 
 
-If an error appears, saying that a password is needed or permission is denied, be sure the install command uses sudo as follows::
+If an error appears, stating that a password is required or permission is denied, be sure the install command uses sudo as follows::
 	
 	sudo ./run-in-system.sh --deploy-admin=local --access=HOST --admin-ip=$IPA
 
@@ -51,4 +51,4 @@ This sections deals with the following task::
 
 The install has been known to get stuck on this particular task. If this happens, the task will eventually timeout and fail. However, pressing `ctrl` and `c` simultaneously can force the task to halt. This is recommended if the step takes longer than 15 or so minutes, as it will save time.
 
-The UX will not be accessible if this occurs. To remedy this and make the UX available, the following must be done.
+The UX will not be accessible if this occurs. Please contact support should this error occur.

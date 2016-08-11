@@ -7,7 +7,7 @@
 Troubleshooting Run-in-AWS 
 --------------------------
 
-This section will cover troubleshooting tips and solutions for installing onto an AWS Server. If an issue is not covered here, please see 
+This section will cover troubleshooting tips and solutions for installing onto an AWS Server. If an issue is not covered here, please contact support.
 
 General Tips
 ============
@@ -16,5 +16,5 @@ If the install fails, check to be sure the install command was run with sudo as 
 
 	sudo ./run-in-system.sh --deploy-admin=local --access=HOST --admin-ip=$IPA
 
-``./run-in-system`` has been known to be finicky about thi, so this may fix the issue. If it does not, see the sections below. 
+``./run-in-system`` has been known to be finicky about this, so this may fix the issue. If it does not, contact support. 
 
