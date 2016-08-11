@@ -12,7 +12,9 @@ Once the server is avalible, it should take about 20 minutes in AWS or Packet.ne
 Base Installation (10 mins)
 ---------------------------
 
-#. AWS Path:
+#. Choose the Required Path
+
+-AWS Path:
 
    #. Create AWS m4.large (or larger!) Ubuntu instance. This can be done with the SSH key or by following the following steps:
       
@@ -24,9 +26,16 @@ Base Installation (10 mins)
    
    #. Connect to the server: ``ssh -i "[key_name].pem" ubuntu@[public_DNS]``.
 
-#. Packet or B-Y-O-Server Path:
+-Packet Path:
 
-   #. Create Packet Type 1 Ubuntu Server with the SSH key (8 Gb RAM minimum)
+   #. Create a Packet Account
+   #. Use ``ssh-keygen -t rsa ``,``cd ~/.ssh ``,``cat id_rsa.pub `` to generate a required key.
+   #. Use the key to create a server.
+   #. Now go to ``Manage>[the project::servers]>[the server::overview]>Console `` and use the command there to ssh to the server.
+
+-B-Y-O-Server Path:
+
+   #. Create A Type 1 Ubuntu Server with the SSH key (8 Gb RAM minimum)
    #. Make sure ports 22, 443, 3000, 2375, 2475, 4646, 8300, 8301, 8888, and ICMP are avlible through the enacted policy.
    #. Connect to the server: ``ssh root@[ip address]``
 
