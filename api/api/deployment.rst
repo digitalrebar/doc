@@ -37,7 +37,7 @@ Deployment Routes
 | PUT    | /api/v2/deployments/[:deployment\_id]/attribs/[:id]   | none      | Update Attrib                                             | -          |
 +--------+-------------------------------------------------------+-----------+-----------------------------------------------------------+------------+
 
-Note: For redeploy details, see :ref:`api_node`
+Note: For redeploy details, see :ref:`api_node` and :ref:`api_deployment_batch`
 
 
 JSON fields
