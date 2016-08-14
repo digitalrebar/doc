@@ -1,5 +1,12 @@
+.. index::
+  pair: Deployment; API
+
+.. _api_deployment_batch:
+
 Deployment Batch API
 ====================
+
+For more detail on the Deployment API, see :ref:`api_deployment`
 
 The Deployment Batch API is designed to allow users to quickly create deployments using a repeatable template.  Originally intended for use by the RackN Wizard, we were able to keep the format single and human readable so that it could be used as a portable deployment format.
 
