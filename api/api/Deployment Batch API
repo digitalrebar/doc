@@ -24,17 +24,24 @@ The batch requires the user to have created a deployment as a target for the bat
 API
 ---
 PUT /api/v2/deployments/2/batch
+POST /api/v2/deployments
 
 If successful, the call will return the deployment targeted by the batch
 
 UI
 --
 
-Users can batch templates using the UI path ``/deployments/[id]/batch``
+Users can batch templates using the UI path ``/deployments/[id]/batch`` or using the RackN UX Wizard process
 
 
 JSON Structure
 --------------
+
+Commit (optional)
+~~~~~~~~~~~~~~~~~
+
+A boolean value, the commit flag tells the system to commit the deployment after running the batch instruction.  This eliminates the user review stage and is helpful for automation using batch to streamline provisioning.
+
 
 TLD (optional)
 ~~~~~~~~~~~~~~
@@ -90,6 +97,7 @@ JSON Example
   ::
     {
       "tld":"batch.com",
+      "commit": false,
       "provider": {
         "name": "debug-provider",
         "hints": {}
