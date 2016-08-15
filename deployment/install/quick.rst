@@ -43,7 +43,14 @@ Base Installation (10 mins)
 
    Note: For local installs use ``ip -4 addr`` to find the CIDR, or use the external IP given by the server provider. 
 
-#. Install Prereqs: ``sudo apt-get update && sudo apt-get install git python python-pymongo python-pycurl -y``
+#. Install Prereqs
+    
+    ::
+    
+      sudo apt-get update
+      sudo apt-get install git python python-pymongo python-pycurl python-pip -y
+      sudo pip install ansible --upgrade
+
 #. Get the deployment code and test for pre-reqs
     
     ::
