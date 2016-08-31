@@ -28,6 +28,7 @@ Common Additional Options:
 * If direct root control is not available, add ``--login-user=[username]``.
 * For a Metal or KVM booting dev-test add: ``--con-provisioner --access=FORWARDER``.
 * For a Docker test Compose scale command add: ``--con-node``.
+* To avoid ISO downloads, you can push ISOs from your install system in the tftpboot/isos directory instead of the public repos.  You _must_ rename ``copy_isos.no`` to be ``copy_isos.yes`` for this feature to work.
 
 For troubleshooting, see :ref:`troubleshoot_run_in_system` for help.
 
