@@ -43,38 +43,29 @@ Base Installation (10 mins)
 
    Note: For local installs use ``ip -4 addr`` to find the CIDR, or use the external IP given by the server provider. 
 
-#. Install Prereqs
+#. Clone Digital Rerbar and Install Prereqs
     
     ::
     
-      sudo apt-get update
-      sudo apt-get install git python python-pymongo python-pycurl python-pip -y
-      sudo pip install ansible --upgrade
+      curl -fsSL https://raw.githubusercontent.com/digitalrebar/digitalrebar/master/deploy/quickstart.sh | bash
 
-#. Get the deployment code and test for pre-reqs
+
+#. Ansible Install Digital Rebar (using deploy ./run-in-system command)
     
     ::
     
-      cd ~
-      mkdir digitalrebar
-      git clone https://github.com/rackn/digitalrebar-deploy digitalrebar/deploy
-      ln -s ~/digitalrebar/ digitalrebar/deploy/compose/digitalrebar
-      cd digitalrebar/deploy
-      echo "Checking prerequisites"
-      ./run-in-system.sh --help
-      echo "let's set up Digital Rebar!"
+      curl -fsSL https://raw.githubusercontent.com/digitalrebar/digitalrebar/master/deploy/quickstart.sh | bash
 
-#. Install to local system: ``./run-in-system.sh --deploy-admin=local --access=HOST --wl-docker-swarm --admin-ip=$IPA``  (notes: it's OK to retry this script and IP must include /## for CIDR)
-
-Add ``--wl-kubernetes`` or  other ``--wl-[workload]`` (see list from --help) if other choices are intended for examination.
-This script ends with the Digital Rebar admin node fully operational but without any nodes.  For the next step, login to the Digital Rebar UI (default user/pass is ``rebar/rebar1``).
+#. Using node's the _public ip_, open Digital Rebar on your Server via the Digital Rebar UI on https://[public ip] (default user/pass is ``rebar/rebar1``).
 
 Troubleshooting Tip:  "Monitor...Annealer" provides a view of exactly what is going on.  If there is an error, that view provides a ``Retry`` button that often resolves simple timing issues.
 
-Let's Add Nodes!
-----------------
+#. After you've connected for the first time, switch to the new UX ("new UX") on the menu or visit https://[public ip]/ux
 
-In order to maintain simplicity, we use cloud servers, not local vms or physical servers.  These are supported in a more complex setup. This guide covers adding nodes using the UI. 
+Let's add a Provider and Nodes!
+-------------------------------
+
+In order to maintain simplicity for new users, use cloud servers, not local vms or physical servers.  These are supported in a more complex setup. This guide covers adding nodes using the UI. 
 
 #. From the client, it is possible to log on to the system using ``https://[external ip address]:3000``.  Reminders: 
 
@@ -97,19 +88,20 @@ Remember to delete used nodes from the Nodes page before taking the system down!
 
 For more on the UI, see :ref:`web_user_guide`. For instructions on how to add nodes with the UX, see :ref:`ux_nodes`.
 
-Build a Docker Swarm Cluster
-----------------------------
+Use the Workload Wizard to Build Cluster (using RackN UX)
+---------------------------------------------------------
 
-We are using a very basic Docker Swarm as a reference app for this quick install.
+We are using a very basic Kubernetes as a reference app for this quick install.
 
-#. Select 2+ nodes for Docker Swarm using the "Deployments...Docker Swarm Wizard":
+#. Select Workloads...Kubernetes from the left hand navigation and follow the steps.  
   
-   #. Select one node as ``docker-swarm-manager`` using the checkboxes. This node is the manager for step 4 below.
+   #. Name your deployment.  If you want to review it before starting, uncheck the auto-commit.
    #. Select different node(s) as ``docker-swarm-member`` using the checkboxes
-   #. "Create" the proposal for the cluster from the Wizard
-#. "Commit" the porposal created by the Docker Swarm Wizard (Deployments...Docker Swarm page)
-#. Watch Digital Rebar build the cluster!
-#. Test using ``docker -H tcp://[ip of manager]:2475 info`` when it's done: 
+   #. Your OS is set when you create your provider (you may only have one).  System nodes are for physical deployments and will provision the OS.
+   #. Configure select options.  There may be additional options, these are the ones exposed for the Wizard.
+   #. Select your nodes and set their roles in the deployment.  Defaults are safe here.
+   #. Review the JSON that will be submitted to direct the install.  You can edit this by clicking the "pencil" button.
+#. Watch Digital Rebar build the cluster from the Deployment...Matrix tab or Annealer button (top right corner).
+#. Login to the cluster from the Master Node using ``https://[ip of master]/ui`` (admin/changeme) 
 
-   #. Get the IP of the manager from Nodes...Nodes and looking for the address of the node that is assigned as the docker-swarm-manager in step 1i.
-   #. Advanced users may try ``docker -H tcp://[ip of manager]:2475 run -it ubuntu:latest bash`` to start a container
+   #. Get the IP of the manager from Nodes and looking for the address of the node that is assigned as the cluster-master
