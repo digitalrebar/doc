@@ -33,3 +33,7 @@ Digital Rebar Documentation
 
 Find our docs at read-the-docs `online <http://digital-rebar.readthedocs.io/en/latest/BOOK.html>`_ or as a `single pdf <https://readthedocs.org/projects/digital-rebar/downloads/pdf/latest/>`_.
 
+Working on Docs?  We love you!
+------------------------------
+
+Here's the `documentation writing documentation <https://github.com/digitalrebar/doc/blob/master/development/contributing/contributing-docs.rst>`_
