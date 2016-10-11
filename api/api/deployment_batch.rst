@@ -71,10 +71,21 @@ A nested hash, the provider hash contains the name and hints used when the batch
 
 The top level provider is only used when no node level provider has been set.  This allows users to override the provider on a node by node basis.
 
+Public_Keys (optional)
+~~~~~~~~~~~~~~~~~~~~~
+
+A simple hash, the ``public_keys`` hash will add the passed keys into the Rebar Access list in the requested deployment so that users of the batch can get access to the nodes.
+
+Use the form ``"public_keys":{"name1":"publickey1", "name2":"publickey2"}``
+
 Nodes (required)
 ~~~~~~~~~~~~~~~~
 
-An array of hashs, the nodes array contains the nodes and roles being applied in the batch.  Within each node hash, 
+An array of hashs, the nodes array contains the nodes and roles being applied in the batch.
+
+NOTE: The nodes when created or moved are reassigned to use the tenant of the deployment.
+
+Within each node hash, 
 
 Required Fields in all cases:
 
@@ -97,6 +108,11 @@ Optional Fields
 the following keys are available
   * id (required for existing nodes, optional for new)
 
+Role Apply Order (optional)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Under the key, "role_apply_order", users can provide an ordered array of roles passed into the processor to override the cohort ordering. 
+
 
 JSON Example
 ------------
@@ -105,6 +121,7 @@ JSON Example
     {
       "tld":"batch.com",
       "commit": false,
+      "public_keys": false,
       "provider": {
         "name": "debug-provider",
         "hints": {}
@@ -134,5 +151,12 @@ JSON Example
             "k8s-worker"
           ]
         }
+      ],
+      "public_keys": {
+        "name1": "key1"
+      },
+      "role_apply_order": [
+        "etcd",
+        "docker"
       ]
     }     
