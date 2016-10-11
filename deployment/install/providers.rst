@@ -18,6 +18,15 @@ Configuration
 .. index::
   pair: Configuration; Google
 
+Amazon Provider
+~~~~~~~~~~~~~~~
+
+The Amazon provider uses the API key and secret as the primary.  Users must also provide the region at the provider level.
+
+Users may set a default subnet_id for the provider.  This subnet_id can be overriden at the node level.  Subnet_id must start with "subnet-" or it will be ignored.
+
+NOTE: AMI IDs are region specific!
+
 Google Provider
 ~~~~~~~~~~~~~~~
 
