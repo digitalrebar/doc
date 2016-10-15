@@ -37,8 +37,6 @@ Rebar API Actions
 +--------+-------------------------+----------------------------------------------------------+
 | GET    | api/v2/providers/:id    | Get information on a specific provider                   |
 +--------+-------------------------+----------------------------------------------------------+
-| GET    | api/v2/providers/create | Special case, returns no-db stub object for UI editing   |
-+--------+-------------------------+----------------------------------------------------------+
 | POST   | api/v2/providers        | Create a new provider for a provider.                    |
 +--------+-------------------------+----------------------------------------------------------+
 | DELETE | api/v2/providers/:id    | Delete an provider                                       |
