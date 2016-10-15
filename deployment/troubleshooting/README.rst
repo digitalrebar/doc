@@ -15,6 +15,7 @@ This section will cover troubleshooting all steps of deployment. If a problem is
 
    deploy-tools.rst
    general-install.rst
+   roles/README
    specific-environment/README
 
    
