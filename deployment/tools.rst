@@ -20,9 +20,7 @@ The choice of deployment tool options will determine where the admin node is bro
 ::
 
   cd ~
-  mkdir digitalrebar
-  git clone https://github.com/rackn/digitalrebar-deploy digitalrebar/deploy
-  ln -s digitalrebar/ digitalrebar/deploy/compose/digitalrebar
+  git clone https://github.com/digitalrebar/digitalrebar
   cd digitalrebar/deploy
   echo "Checking prerequisites"
   ./run-in-system.sh --help
