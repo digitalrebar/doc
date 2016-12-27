@@ -30,7 +30,7 @@ Note: This quick start focuses on a minimal fast path with Ubuntu 16.04.  Digita
 #. Packet.net Path:
 
    #. Create a Packet Account
-   #. Use ``ssh-keygen -t rsa ``,``cd ~/.ssh ``,``cat id_rsa.pub `` to generate a required key.
+   #. Use ``ssh-keygen -t rsa`` , ``cd ~/.ssh`` , ``cat id_rsa.pub`` to generate a required key.
    #. Use the key to create a server.
    #. Now go to Manage>[the project::servers]>[the server::overview]>Console and use the command there to ssh to the server.
    #. Provision at Type 1 Ubuntu Server then follow the B-Y-O-Server steps below.
@@ -54,6 +54,7 @@ In this section only, you need to SSH to the target install server.  This step a
 
    #. Troubleshooting Ansible Install "Prereqs" fail: You may have to upgrade Ansible to v 2.1+ yourself
    #. Troubleshooting "wait for admin convergence" fail: This is just a timeout.  The system is generally running but slower than expected.
+   #. If you save the file locally and ``chmod +x [file]`` then you can run it with parameters like ``--con-provisioner`` for local booting.
 
 #. Using node's the **public ip**, open Digital Rebar on your Server via the Digital Rebar UI on https://[public_ip]
 
@@ -76,6 +77,7 @@ In order to maintain simplicity for new users, use cloud servers, not local vms 
    #. Add a provider using AWS type and your Credentials.  
    #. Choose the same region as the admin is using.
    #. The default AMI targets us-west-2. If you choose a different region, you need to change the AMI (for demo use Centos 7.2+).
+   #. Consult :ref:`configure_providers` for detailed instructions and troubleshooting including live log review.
 #. Add a node from the "Nodes" and the add (+) button (lower right side)
 
    #. Pick a name for your node and the provider added above.
