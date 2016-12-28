@@ -22,6 +22,8 @@
  
  This link will search for it directly: https://www.broadcom.com/broadcom-search?q=8.07.14_megacli.zip
  
+ NOTE: This file may be downloaded as ``8-07-14_MegaCLI.zip`` (note the dashes) and _must_ be renamed as ``8.07.14_MegaCLI.zip``
+ 
  You must accept the EULA to download this file (that is why it cannot be packaged into the install for you).
  
  
