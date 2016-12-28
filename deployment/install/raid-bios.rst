@@ -18,7 +18,7 @@
  Downloading the BIOS Utility
  -----------------------------
  
- Visit Broadcom looking for the SAS2IRCU_P20 utility at https://www.broadcom.com
+ Visit Broadcom looking for the 8.07.14_MegaCLI.zip utility at https://www.broadcom.com
  
  This link will search for it directly: https://www.broadcom.com/broadcom-search?q=8.07.14_megacli.zip
  
