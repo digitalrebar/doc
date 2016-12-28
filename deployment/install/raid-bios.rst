@@ -11,7 +11,7 @@
  
  The locations and names in this document were updated December 2016.  Please check the RAID barclamp configuration file for the latest information: https://github.com/digitalrebar/digitalrebar/blob/master/core/barclamps/raid.yml
  
- Download the files as directed below, then copy the files to your host system under ``~/.cache/digitalrebar/tftpboot/file/raid``.  This will allow the files to managed by Digital Rebar.
+ Download the files as directed below, then copy the files to your host system under ``~/.cache/digitalrebar/tftpboot/files/raid``.  This will allow the files to managed by Digital Rebar.
  
  NOTE: This can be done AFTER installation.  Simply re-run the raid-tools-install role.
  
