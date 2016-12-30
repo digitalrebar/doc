@@ -15,7 +15,11 @@ This section will cover troubleshooting all steps of deployment. If a problem is
 
    deploy-tools.rst
    general-install.rst
-   roles/README
    specific-environment/README
 
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   roles/README
    

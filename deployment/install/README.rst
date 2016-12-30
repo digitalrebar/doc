@@ -46,3 +46,4 @@ Sometimes there are addtional sets that need to be done to complete the deployme
   :glob:
 
   attaching-to-bmc
+  raid-bios
