@@ -46,6 +46,7 @@ TODO: Define Audiences
    
    ../deployment/install/quick
    getting_started
+   videos
    community
    history
 

@@ -1,7 +1,12 @@
+.. index::
+  Getting Started
+
 .. _getting_started:
 
 Getting Started
 ---------------
+
+Don't like to read?  Try our :ref:`videos`.
 
 .. index::
   TODO; Questionnaire

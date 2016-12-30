@@ -5,6 +5,8 @@ Digital Rebar Quick Start
 
 This TL;DR only! See :ref:`install` for more options.
 
+Don't like to read?  Try our :ref:`videos`.
+
 For this quick start, we assume ssh access to the install server.  The goal is a temporary playground, not a long term install.  It is possible to install different operating systems and work by remote or fully automated.  We are keeping it very simple in this quick start.
 
 Once the server is avalible and you've run the single instal step, it should take about 20 minutes in AWS or Packet.net for the system to be ready.
