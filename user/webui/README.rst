@@ -16,7 +16,6 @@ This is the Digital Rebar Web Interface.
   overview
   annealer
   monitor
-  ready_state_wizard
   deployment
   nodes
   roles

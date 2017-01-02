@@ -36,4 +36,8 @@ Find our docs at read-the-docs `online <http://digital-rebar.readthedocs.io/en/l
 Working on Docs?  We love you!
 ------------------------------
 
-Here's the `documentation writing documentation <https://github.com/digitalrebar/doc/blob/master/development/contributing/contributing-docs.rst>`_
+It's very easy to add to these docs!
+
+* From the Generated doc, see :ref:`contributing_docs` to help us keep these updated.
+* From source look in ``development/contributing/contributing-docs``.
+* On Github, here's the `documentation writing documentation <https://github.com/digitalrebar/doc/blob/master/development/contributing/contributing-docs.rst>`_ page.
