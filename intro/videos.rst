@@ -17,7 +17,7 @@ Digital Rebar Overview & Demos
 
 https://www.youtube.com/playlist?list=PLXPBeIrpXjfhIEF7IarSubtcOPFd4e3IB
 
-Kubenetes Specific Content
+Kubernetes Specific Content
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 https://www.youtube.com/playlist?list=PLXPBeIrpXjfjabMbwYyDULOX3kZmlxEXK
