@@ -6,7 +6,7 @@
 Contributing Docs
 -----------------
 
-As always, please follow the basic git setup to start: :ref:`contrib_basic`.
+As always, please follow the basic git setup at :ref:`contrib_basic` to start.
 
 Edit Documentation
 ~~~~~~~~~~~~~~~~~~
