@@ -5,11 +5,13 @@ Digital Rebar Quick Start
 
 This is a TL;DR only! See :ref:`install` for more options.
 
-Don't like to read?  Try our :ref:`videos`.
+Don't like to read?  Try our :ref:`videos`.  Training videos `001a <https://www.youtube.com/watch?v=uYG9nstYpD4&index=1&list=PLXPBeIrpXjfgurJuwVjZkcfmatCoXYM_v>`_, `001b <https://www.youtube.com/watch?v=dHSCwifAlK8&index=2&list=PLXPBeIrpXjfgurJuwVjZkcfmatCoXYM_v>`_ and `001c <https://www.youtube.com/watch?v=3xawxPiSeJ4&index=3&list=PLXPBeIrpXjfgurJuwVjZkcfmatCoXYM_v>`_ cover all the information found in this guide in depth.
 
-For this quick start, we assume ssh access to the install server.  The goal is a temporary playground, not a long term install.  It is possible to install different operating systems and work by remote or fully automated.  We are keeping it very simple in this quick start.
+For this quick start, we will assume SSH access to the install server.  The goal is a temporary playground, not a long term install.  It is possible to install different operating systems and work by remote or fully automated.  We are keeping it very simple in this quick start.
 
-Once the server is available and you've run the single install step, it should take about 20 minutes in AWS or Packet.net for the system to be ready.
+For more on the Web UX that is used extensively throughout this quick start, see :ref:`web_ux_guide`.
+
+Once the server is available and the install step is executed, it should take about 20 minutes in AWS or Packet.net for the system to be ready.
 
 SSH to an Ubuntu Server 16.04 with 8 GB RAM
 -------------------------------------------
@@ -18,7 +20,7 @@ Note: This quick start focuses on a minimal fast path with Ubuntu 16.04.  Howeve
 
 #. AWS Path:
 
-   #. Create AWS m4.large (or larger!) Ubuntu instance. This can be done with the SSH key or by following these steps:
+   #. Create AWS `m4.large` (or larger!) Ubuntu instance. This can be done with the SSH key or by following these steps:
 
       #. Login to AWS and click on EC2 under Compute.
       #. Our AWS provider default is US West (Oregon) so that region is recommended for this quick start.
@@ -34,7 +36,7 @@ Note: This quick start focuses on a minimal fast path with Ubuntu 16.04.  Howeve
    #. Create a Packet Account
    #. Use ``ssh-keygen -t rsa`` , ``cd ~/.ssh`` , ``cat id_rsa.pub`` to generate a required key.
    #. Use the key to create a server.
-   #. Now go to Manage>[the project::servers]>[the server::overview]>Console and use the command there to ssh to the server.
+   #. Now go to Manage>[the project::servers]>[the server::overview]>Console and use the command there to SSH to the server.
    #. Provision at Type 1 Ubuntu Server then follow the B-Y-O-Server steps below.
 
 #. B-Y-O-Server Path:
@@ -46,7 +48,7 @@ Note: This quick start focuses on a minimal fast path with Ubuntu 16.04.  Howeve
 Install Digital Rebar
 ---------------------
 
-In this section only, you need to SSH to the target install server.  This step adds pre-reqs and then deploys via the ``deploy/run-in-system`` command.
+In this section only, using SSH is necessary to the target install server.  This step adds pre-reqs and then deploys via the ``deploy/run-in-system`` command.
 
 #. Run the Quick Start script
 
@@ -72,7 +74,7 @@ Add a Provider and Node
 
 In order to maintain simplicity for new users, use cloud servers instead of local VMs or physical servers.  The latter two are supported in a more complex setup. This quick start guide covers adding nodes using the New UX.
 
-#. From the client, it is possible to log on to the system using ``https://[external ip address]/ux``.  Reminders:
+#. From the client, log on to the system using ``https://[external ip address]/ux``.  Reminders:
 
    #. Use External IP. This is the same as the SSH address.
    #. Since it is HTTPS, it is required to accept the self-signed SSL certificate.
@@ -92,22 +94,22 @@ In order to maintain simplicity for new users, use cloud servers instead of loca
 
 Remember to delete used nodes from the Nodes page before taking the system down!  There is no automatic cleanup.
 
-For more on the UI, see :ref:`web_user_guide`. For instructions on how to add nodes with the UX, see :ref:`ux_nodes`.
+For instructions on how to add nodes with the UX, see :ref:`ux_nodes`.
 
-Workload Wizard to Build Cluster (using RackN UX)
+Workload Wizard to Build a Cluster with RackN UX
 -------------------------------------------------
 
 We are using a very basic Kubernetes as a reference app for this quick install.
 
-#. Select Workloads...Kubernetes from the left hand navigation and follow the steps.
+#. Select Workloads...Kubernetes from the left hand navigation and follow these steps:
 
-   #. The defaults are safe, you do not need to make any changes.
-      #. Name your deployment.  Leaving auto-commit on skips the deployment review and is recommended for quick start.
-      #. Your OS is set when you create your provider (you may only have one).  Do not try System (Physical) Nodes for quick start.
-      #. Configure select options.  There may be additional options, just key ones exposed for the Wizard.
-      #. Select your nodes and set their roles in the deployment.  Defaults are safe here.
-   #. Review the JSON that will be submitted to direct the install.  You can edit this by clicking the "pencil" button.
-#. Watch Digital Rebar build the cluster from the Deployment...Matrix tab or Annealer button (top right corner).
+   #. Name the deployment.  (These names are case sensitive!) If auto-commit is left on, deployment review is skipped.  This is recommended for quick start.
+   #. The OS is set when the provider is created. (Note: There may only be one.)  Do not try System (Physical) Nodes for quick start.
+   #. Configure select options.  There may be additional options, but only the key ones are exposed in the Wizard.  The defaults here are safe.
+   #. Select desired nodes and set their roles in the deployment.  The defaults are safe here.
+   #. Review the JSON that will be submitted to direct the install.  The JSON can be edited by clicking the pencil icon in the top right corner.
+
+#. Watch Digital Rebar build the cluster from the Matrix tab on the Deployment page or from the Annealer button in the top right corner.  For more on the Matrix tab and the Annealer, see :ref:`ux_deployment` and :ref:`ux_annealer` respectively.
 #. Login to the cluster from the Master Node using ``https://[ip of master]/ui`` (admin/changeme)
 
-   #. Get the IP of the manager from Nodes and looking for the address of the node that is assigned as the cluster-master
+   #. Get the IP of the manager from Nodes and look for the address of the node that is assigned as the cluster-master.
