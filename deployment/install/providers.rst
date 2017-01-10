@@ -118,7 +118,7 @@ If a valid IP is provided to the Debug Provider then it will be able to advance 
 Troubleshooting Tips
 --------------------
 
-It may take several attempts to get the Provider details exactly right.  This section helps resolve issues with the provider configuration.  Restarting the :ref:`arch_service_cloudwrap` container is not necessary when changing provider details: they automatically synchronize.
+It may take several attempts to get the Provider details exactly right.  This section helps resolve issues with the provider configuration.  Restarting the :ref:`arch_service_cloudwrap` container is not necessary when changing provider details, as they automatically synchronize.
 
 It is recommended to manually create nodes during the testing phase.
 
