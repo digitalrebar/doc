@@ -1,5 +1,5 @@
-Buiding Go Components
-=====================
+Building Go Components
+======================
 
 Many Digital Rebar components rely on GOLANG services.  These services must be build before they can be used by Digital Rebar.
 
@@ -13,5 +13,5 @@ Once the services have been built, you can test them into by copying them direct
 
 For example:
 
-* `docker cp ./bin/master/linux/amd64/rebar_rev_proxy compose_revproxy_1:/usr/local/bin/`
+* `docker cp ./bin/master/linux/amd64/rebar-rev-proxy compose_revproxy_1:/usr/local/bin/`
 * `docker-compose restart revproxy`
