@@ -19,8 +19,7 @@ The Digital Rebar architecture is broken down into three sections.
 .. toctree::
   :maxdepth: 1
   :glob:
-  
+
   services/README
   objects/README
   other/README
-
