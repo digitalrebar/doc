@@ -25,11 +25,7 @@ Since the Kubernetes workload uses Ansible, it does not require the nodes to acc
 Video Examples
 --------------
 
-Rob Hirschfeld has created a `number of videos <https://www.youtube.com/playlist?list=PLXPBeIrpXjfh2lXdXkNnzAuc7_SUtYJR->`_ showing how these scripts work:
-
-  * `Deploy on Multiple OpenStack Clouds from Same Platform (demo of Kubernetes) <https://www.youtube.com/watch?v=LIm6PD9c7NQ&index=2&list=PLXPBeIrpXjfjabMbwYyDULOX3kZmlxEXK>`_
-  * `Hybrid @Kubernetesio: @OpenStack #Google #AWS <https://www.youtube.com/watch?v=C4-H1DZEQFc&index=1&list=PLXPBeIrpXjfjabMbwYyDULOX3kZmlxEXK>`_
-  * `Digital Rebar Kubernetes "Easy Button" CLI - three clouds, two SDNs <https://www.youtube.com/watch?v=3qnf_OfNhHE&index=2&list=PLXPBeIrpXjfh2lXdXkNnzAuc7_SUtYJR->`_
+Rob Hirschfeld has created a series of videos demonstrating how these scripts work.  A comprehensive list of these videos can be found at :ref:`kubernetes_videos`.
 
 .. index::
   pair: Kubernetes; Workload Configuration
@@ -58,7 +54,7 @@ The following options are set by the script.  Override with caution!
   * ``--kubernetes-cloud-provider=<String>`` Is kubernetes in a cloud environment (false or type)
   * ``--kubernetes-cloud-provider-type=<String>`` Which cloud environment
 
-Prerequisites 
+Prerequisites
 ~~~~~~~~~~~~~
 
 In the future, it should be possible to use an existing Etcd cluster:
@@ -91,7 +87,7 @@ The primary ones are generally set by users:
   * ``--kubernetes-dns=<true|false>`` Use DNS add-on. Defaults to true.
   * ``--kubernetes-network-category=<category name>`` Network category to use for underlay traffic, default: admin
 
-DNS configuration: 
+DNS configuration:
 
   * ``--kubernetes-dns-domain=<Domain String>`` Domain of the internal Kubernetes DNS service
   * ``--kubernetes-dns-namespace=<Kuberetenes Namespace>`` Namespace to put the DNS service in
@@ -113,4 +109,3 @@ OpenContrail:
   * ``--kubernetes-opencontrail-public-subnet=<CIDRIP>`` Public network space for opencontrail
 
   Note: When using OpenContrail, the script will create additional nodes to handle the needed gateway services.
-

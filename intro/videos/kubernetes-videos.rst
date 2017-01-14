@@ -1,7 +1,7 @@
 .. index::
   pair: Videos; Kubernetes
 
-.. _kubernetes-videos::
+.. _kubernetes_videos:
 
 Digital Rebar Kubernetes
 -------------------------
