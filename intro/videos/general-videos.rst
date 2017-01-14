@@ -1,7 +1,7 @@
 .. index::
   Videos; General
 
-.. _general-videos::
+.. _general-videos:
 
 RackN General Videos
 --------------------

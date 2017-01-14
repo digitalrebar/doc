@@ -1,7 +1,7 @@
 .. index::
   Pair: Videos; Hybrid DevOps
 
-.. _devops-videos::
+.. _devops-videos:
 
 Digital Rebar Hybrid DevOps
 ---------------------------
