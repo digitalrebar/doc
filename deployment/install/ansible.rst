@@ -10,6 +10,8 @@ The playbook is driven by a set of scripts handle accessing the system be it Lin
 
 Check the `scripts <https://github.com/rackn/digitalrebar-deploy>`_ to see how to run the playbook.  *run-in-xxx.sh*
 
+A video guide on how to make changes to a single ansible script running in a role can be found at :ref:`training-ansible-edit`. 
+
 What's installed?
 """""""""""""""""
 Installation requires several steps. To begin with, the following is done by default:
@@ -142,7 +144,7 @@ KVM Nodes (high fidelity test)
 
 Works on Linux environments that can run KVM.  It is **not compatible** with simultaneous VirtualBox / Vagrant testing.
 
-These instructions assume that the Digital Rebar code has been linked to ~/rebar. To do this, run `-s ~/deploy/compose/components/rebar_api/digitalrebar/ rebar`
+These instructions assume that the Digital Rebar code has been linked to ~/rebar. To do this, run ``-s ~/deploy/compose/components/rebar_api/digitalrebar/ rebar``
 
 #. Install the prerequisites::
 
@@ -196,9 +198,11 @@ If the development environment is running in VMs, the steps for this are as foll
 #. Slave the eth2 to the Docker bridge.
 #. Turn on eth2 for the bridge.
 #. Create a VM with eth0
-   #. It should be attached to the dedicated host only bridge
+
+   #. It should be attached to the dedicated host only bridge.
    #. Make sure it is able to network boot
 #. Boot the VM.
+
    #. It should PXE boot.
    #. The VM should register and automatically progress in the system deployment.
    #. If there are issues, review the ``/var/log/install.log`` for details.
