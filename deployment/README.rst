@@ -23,6 +23,7 @@ Walk through each section to deploy a Digital Rebar admin node. As always, there
    tools
    config/README
    install/README
+   networks/README
    troubleshooting/README
 
 For "all in one" Workload installations, check out the :ref:`workloads_guide`.
