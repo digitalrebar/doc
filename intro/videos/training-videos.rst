@@ -67,5 +67,13 @@ It is viewable at https://www.youtube.com/watch?v=uLTA2LA4KG8
 Digital Rebar Training 005: Easily Manage SSH Keys
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+Shows how to add and maintain SSH keys post and pre installation.
 
 It is viewable at https://www.youtube.com/watch?v=XoYx5bB6an4
+
+Digital Rebar Training 006: Configure DHCP & Network
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Shows how to configure networking including DHCP
+
+It is viewable at https://youtu.be/5YWMlYYuu-s
