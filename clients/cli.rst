@@ -44,3 +44,9 @@ Environment Variables
 ---------------------
 
 The CLI uses environment variables ``REBAR_ENDPOINT`` and ``REBAR_KEY`` if set.  The key holds both user and password using the following a "user:password" format.
+
+
+Match
+-----
+
+To return a list subset, use the match instruction with json filter set.  For example: ``rebar nodes match '{"deployment_id":10}'`` will return the same JSON as ``rebar nodes list`` but only members of Deployment ID 10 will be included.
