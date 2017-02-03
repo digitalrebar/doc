@@ -21,20 +21,13 @@ To get the rebar client binary, run this:
   ::
 
     if [[ $(uname -s) == Darwin ]] ; then
-        curl -so rebar https://s3-us-west-2.amazonaws.com/rebar-cli/rebar-darwin-amd64
+        curl -so rebar http://rebar-bins.s3-website-us-west-2.amazonaws.com/master/darwin/amd64/rebar
     else
-        curl -so rebar https://s3-us-west-2.amazonaws.com/rebar-cli/rebar-linux-amd64
+        curl -so rebar http://rebar-bins.s3-website-us-west-2.amazonaws.com/master/linux/amd64/rebar
     fi
     chmod +x rebar
     mv rebar /usr/local/bin
 
-
-Build From Source
-=================
-
-To build from source, see the github `repo <https://github.com/digitalrebar/rebar-api>`_.
-
-The source also allows the embedding of the Digital Rebar API into another golang program as well.
 
 .. index::
   CLI; Running the CLI
