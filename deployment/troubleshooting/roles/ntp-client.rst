@@ -1,11 +1,11 @@
-ntp-client placeholder
-==========================
+ntp-client
+==========
 
-If you are reading this template, please take time to update your issue in the docs!
+The NTP client ensures that the time on the server is sychronized to a common standard via the NTP protocol.
 
-ISSUE NOT DEFINED YET
----------------------
+CANNOT INSTALL, MISSING PACKAGE
+-------------------------------
 
-:typical log message: ``Example Error message here``
-:cause: Cause Here
-:solution: If known, add solution
+:typical log message: ``missing packages``
+:cause: Network connectivity or timing
+:solution: Retry role.
