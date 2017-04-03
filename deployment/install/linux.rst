@@ -36,6 +36,8 @@ Sample code for a complete install with setup included is provided below.
 
 **Note**: [CIDR] in ``export IPA=[CIDR]`` must be replaced with the system's CIDR, found with the command ``ip -4 addr``. If this is not done, the install will **not** work!
 
+Debian/Ubuntu:
+
 ::
 
 	sudo apt-get update
@@ -47,3 +49,16 @@ Sample code for a complete install with setup included is provided below.
 	export IPA=[CIDR]
 	./run-in-system.sh --help
 	sudo ./run-in-system.sh --deploy-admin=local --access=host --admin-ip=$IPA
+
+Centos/Red Hat
+::
+
+	sudo yum update
+	sudo yum install -y git
+	cd 
+	git clone https://github.com/digitalrebar/digitalrebar
+	cd digitalrebal/deploy
+	ip -4 addr
+	export IPA=[CIDR]
+	sudo ./run-in-system.sh --deploy-admin=local --access=host --admin-ip=$IPA
+
