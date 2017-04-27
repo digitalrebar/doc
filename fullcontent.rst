@@ -15,9 +15,12 @@ Here is a full list of sections of this book.
    principles/README
    arch/README
    deployment/README
+   ref/README
    user/README
+   workloads/README
    contrib/README
    development/README
    faq/README
    LICENSE
+   definitions
 
