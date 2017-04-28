@@ -9,4 +9,5 @@ The license keys for the SuperMicro systems
 Documentation
 =============
 
-No Documentation
+Automatic activation of licenses for SuperMicro Update Manager has not been
+fully implemented yet.

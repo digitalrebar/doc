@@ -18,6 +18,7 @@ of a JSON object that maps the full filename of the firmware update package
 to metadata about that package. The metadata is defined as follows:
 
 ::
+
   {
     "source": "The full URL the firmware update package should be downloaded from",
     "sha256sum": "The SHA256 checksum of the firmware update package",

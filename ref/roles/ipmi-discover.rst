@@ -4,9 +4,18 @@ ipmi-discover
 
 Description
 ===========
-No Description
+Discover and inventory the local IPMI controller
 
 Documentation
 =============
 
-No Documentation
+ipmi-discover is responsible for discovering and inventorying the local
+IPMI controller for the system if one is present.  It tries to gather
+information about the IPMI controller using ipmitool in-band communication, which
+sidesteps the whole question about how you perform out-of-band discovery and
+trying to guess the appropriate default usernames and passwords.
+
+If we discover an IPMI controller, we perform a basic inventory of it and determine
+what (if any) quirks the IPMI controller has (such as requiring a delay between commands,
+whether one of the users is immutable, whether the channels used for network config
+are messed up (and how), etc).
