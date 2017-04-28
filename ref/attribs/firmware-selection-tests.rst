@@ -17,9 +17,8 @@ determine what firmware update packages (as defined by the ``firmware-packages``
 should be applied to a given system.  It consists of a lists of tests with the
 following structure:
 
-A map of firmware type: version.
-If an entry for a type is missing, the flasher will assume you want the latest version.
 ::
+
   {
     "test": "The name of the test."
     "current-version-script": "A shell script that gets the current version of the firmware in question."

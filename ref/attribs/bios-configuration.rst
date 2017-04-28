@@ -4,9 +4,11 @@ bios-configuration
 
 Description
 ===========
-The desired BIOS configuration for this node.
+The BIOS configuration sets to apply to this node.
 
 Documentation
 =============
 
-No Documentation
+bios-configuration contains a list of bios configs to apply to this node.
+This list consists of names of bios configs that were chosen as applicable for this
+system from bios-set-mapping and saved in bios-config-sets.

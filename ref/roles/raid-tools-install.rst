@@ -4,9 +4,10 @@ raid-tools-install
 
 Description
 ===========
-No Description
+Install RAID management tools on a managed node
 
 Documentation
 =============
 
-No Documentation
+The raid-tools-install role is responsible for installing all tools needed
+to manage the RAID adaptors in the system.

@@ -22,6 +22,7 @@ system.  This list contains a series of JSON objects in the following
 format:
 
 ::
+
   {
     "name": "name of the volume",
     "raid_level": "target raid level",
