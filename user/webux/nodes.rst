@@ -18,4 +18,4 @@ To add a node, click the plus icon in the bottom right hand corner of the screen
 
 This will pull up a box to set the name, provider, deployment, and O/S that the node will belong to. It also allows for multiple nodes to be made.
 
-.. image:: /images/screens/webux/add_node.png
+.. image:: /images/icons/UX/add_node.png
