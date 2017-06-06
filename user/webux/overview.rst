@@ -9,7 +9,7 @@ The new interface provides a sleek, new way to interact with server deployment, 
 
 Upon logging in, the user interface will open to the Deployments page. The top of every page is dominated by this header:
 
-.. image:: /images/screens/webux/overview.png
+.. image:: /images/screens/webux/Overview.png
 
 
 The name of the selected page is posted on the left, while the tenant is displayed to the right.

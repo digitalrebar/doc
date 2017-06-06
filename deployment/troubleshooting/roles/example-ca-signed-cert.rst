@@ -1,5 +1,5 @@
 example-ca-signed-cert placeholder
-==========================
+==================================
 
 If you are reading this template, please take time to update your issue in the docs!
 

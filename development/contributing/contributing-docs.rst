@@ -69,7 +69,7 @@ An additional tip is to run the builder repeatedly in a batch file or command te
   goto label
 
 Documentation Expectations
-~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Documentation is an integral and formal component to the development process.  All documentation should be free from spelling and grammatical errors.   Additionally, all documentation must adhere to a certain stylistic guide.
 

@@ -1,5 +1,5 @@
 .. index::
-  pair: Developer, Dev Mode
+  pair: Developer; Dev Mode
 
 .. _dev_guide_dev_env:
 
