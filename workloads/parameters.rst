@@ -34,7 +34,7 @@ The script can be interrupted while it is waiting to converge without impacting 
 Using A Running DR Admin
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-While workloads scripts often include a Digital Rebar admin setup (see :ref:`workloads_install`), it saves time if a working :ref:`arch_other_systems` is already present.  Tell the scripts to use the admin node using ``--admin-ip=[ip]``.
+While workloads scripts often include a Digital Rebar admin setup (see :ref:`workloads_installation`), it saves time if a working :ref:`arch_other_systems` is already present.  Tell the scripts to use the admin node using ``--admin-ip=[ip]``.
 
 Cleaning Up
 ~~~~~~~~~~~

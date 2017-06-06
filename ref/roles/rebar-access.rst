@@ -1,3 +1,7 @@
+.. index::
+
+.. _rebar_access:
+
 ============
 rebar-access
 ============
