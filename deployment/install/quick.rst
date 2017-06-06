@@ -27,8 +27,9 @@ Note: This quick start focuses on a minimal fast path with Ubuntu 16.04.  Howeve
       #. Click on Launch Instance. This will begin the instance set up.
       #. Select 16.04 Ubuntu Server (not 14.04!) for the AMI, then select `m4.large` or larger. A minimum of 8 Gb of RAM is required.
       #. A minimum of 20 Gb of Disk is recommended.  8 Gb is required.
-      #. Next, navigate to the Configure Security Group tab.  The "default" Security Group for this server needs Port 22 (ssh), 443 (rebar) and ICMP to be available!  This is just our recommended base. Depending on the application, additional ports might be required such as Docker, Chef and Consul.
+      #. Next, navigate to the Configure Security Group tab.  The "default" Security Group for this server needs Port 22 (ssh), 443 (rebar/HTTPS) and ICMP to be available!  This is just our recommended base. Depending on the application, additional ports might be required such as Docker, Chef and Consul.
       #. Launch the instance and save the ``.pem`` key as ``[key_name].pem`` to the home directory. This can be done by using the ``gedit`` command in the terminal, then copying and pasting the key to the new file.
+      #. Modify key permissions using ``chmod 600 [key_name].pem``.
 
    #. Connect to the server: ``ssh -i "[key_name].pem" ubuntu@[public_DNS]``.
 
@@ -114,7 +115,7 @@ We are using a basic Kubernetes as a reference app for this quick install.
    #. Select desired nodes and set their roles in the deployment.  The defaults are safe here.
    #. Review the JSON that will be submitted to direct the install.  The JSON can be edited by clicking the pencil icon in the top right corner.
 
-#. Watch Digital Rebar build the cluster from the Matrix tab on the Deployment page or from the Annealer button in the top right corner.  For more on the Matrix tab and the Annealer, see :ref:`ux_deployment` and :ref:`ux_annealer` respectively.
+#. Watch Digital Rebar build the cluster from the Deployment page or from the Annealer button in the top right corner.  For more on the Deployment page and the Annealer, see :ref:`ux_deployment` and :ref:`ux_annealer` respectively.
 #. Login to the cluster from the Master Node using ``https://[ip of master]/ui`` (admin/changeme)
 
    #. Get the IP of the manager from Nodes and look for the address of the node that is assigned as the cluster-master.
