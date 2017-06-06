@@ -110,8 +110,7 @@ The Google Compute Engine provider lets Rebar create, reboot, and
 delete GCE virtual machines. In order to use it, the following must be done:
 
 * Create a new project to use.
-* Make sure the
- project has the Google Compute Engine API enabled.
+* Make sure the project has the Google Compute Engine API enabled.
 * Create a new service account key with permission to create, delete,
   and reboot GCE instances in the project.  Be sure and save the
   generated JSON file somewhere secure where it can be accessed with

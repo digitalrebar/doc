@@ -1,4 +1,5 @@
 .. index::
+  pair: Hardware; Config
 
 .. _faq_hardware_config:
 

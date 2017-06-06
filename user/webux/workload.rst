@@ -11,7 +11,7 @@ The "workload" tab will not open a page, but will provide the options of "Instal
 .. _ux_install_wizard:
 
 O/S Installation Wizard
-----------------------
+-----------------------
 
 Install O/S helps create a set of nodes in a new deployment of a certain OS.  
 

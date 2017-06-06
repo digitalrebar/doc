@@ -72,7 +72,7 @@ A nested hash, the provider hash contains the name and hints used when the batch
 The top level provider is only used when no node level provider has been set.  This allows users to override the provider on a node by node basis.
 
 Public_Keys (optional)
-~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~
 
 A simple hash, the ``public_keys`` hash will add the passed keys into the Rebar Access list in the requested deployment so that users of the batch can get access to the nodes.
 
@@ -118,6 +118,7 @@ JSON Example
 ------------
 
   ::
+
     {
       "tld":"batch.com",
       "commit": false,
@@ -146,7 +147,7 @@ JSON Example
         {
           "count": 2,
           "prefix": "worker",
-          "roles": 
+          "roles":
           [
             "k8s-worker"
           ]
@@ -159,4 +160,4 @@ JSON Example
         "etcd",
         "docker"
       ]
-    }     
+    }

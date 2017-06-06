@@ -264,7 +264,7 @@ We then need to bind a useful set of default node roles to the node:
 
 -  API::
 
-   curl --digest -u $(cat /etc/rebar.install.key) -X POST -H "Content-Type:application/json" --url http://127.0.0.1/api/v2/node_roles     -d '{"node": "newtest.cr0wbar.com", "role": "rebar-managed-node"}'
+    curl --digest -u $(cat /etc/rebar.install.key) -X POST -H "Content-Type:application/json" --url http://127.0.0.1/api/v2/node_roles     -d '{"node": "newtest.cr0wbar.com", "role": "rebar-managed-node"}'
 
 Commit the node, which will move the newly-created node roles from
 proposed to todo or blocked, and mark the node as available:

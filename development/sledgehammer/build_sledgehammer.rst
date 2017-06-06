@@ -37,5 +37,5 @@ Failures
 If it fails to find some packages, change the mirror kickstart is using
 in ``sledgehammer\sledgehammer.ks``
 
-List of mirrors `here <http://isoredirect.centos.org/centos/7/isos/x86\_64/>`_
+List of mirrors `here <http://isoredirect.centos.org/centos/7/isos/x86_64/>`_
 

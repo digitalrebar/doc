@@ -13,6 +13,6 @@ During :ref:`simulated_annealing` operation, roles may fail for a variety of rea
    :maxdepth: 1
    :glob:
 
-   * 
+   *
 
-   
+

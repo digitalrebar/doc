@@ -1,7 +1,7 @@
 .. _heterogeneous_os_support:
 
 Heterogeneous Operating System Support
-=====================================
+======================================
 
 This section documents how to deploy multiple different operating systems
 in Digital Rebar.
