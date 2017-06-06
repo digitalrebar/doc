@@ -179,7 +179,7 @@ Messaging Barclamp as an example:
 8.  Before proceeding copy the ID of the node role being edited to be
     used later on.  This can be found by looking at the URL of the page.
     For example:
-    http://192.168.124.10:3000/node\_roles/84, shows that the node role
+    http://192.168.124.10/node\_roles/84, shows that the node role
     is 84.
 9.  Validate the form fields and labels are correct that the form
     validation is working properly.  Validation error messages should be
