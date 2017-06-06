@@ -21,9 +21,9 @@ To get the rebar client binary, run this:
   ::
 
     if [[ $(uname -s) == Darwin ]] ; then
-        curl -so rebar http://rebar-bins.s3-website-us-west-2.amazonaws.com/master/darwin/amd64/rebar
+        curl -so rebar https://s3-us-west-2.amazonaws.com/rebar-bins/master/darwin/amd64/rebar
     else
-        curl -so rebar http://rebar-bins.s3-website-us-west-2.amazonaws.com/master/linux/amd64/rebar
+        curl -so rebar https://s3-us-west-2.amazonaws.com/rebar-bins/master/linux/amd64/rebar
     fi
     chmod +x rebar
     mv rebar /usr/local/bin
