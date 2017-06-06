@@ -18,6 +18,7 @@ instructions as part of the learning process.
    contributing/contributing-docs
    contributing/mark
    dev_env/README
+   go
    ui/README
    jigs/README
    sledgehammer/build_sledgehammer

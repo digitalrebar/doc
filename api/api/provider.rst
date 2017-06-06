@@ -37,8 +37,6 @@ Rebar API Actions
 +--------+-------------------------+----------------------------------------------------------+
 | GET    | api/v2/providers/:id    | Get information on a specific provider                   |
 +--------+-------------------------+----------------------------------------------------------+
-| GET    | api/v2/providers/create | Special case, returns no-db stub object for UI editing   |
-+--------+-------------------------+----------------------------------------------------------+
 | POST   | api/v2/providers        | Create a new provider for a provider.                    |
 +--------+-------------------------+----------------------------------------------------------+
 | DELETE | api/v2/providers/:id    | Delete an provider                                       |
@@ -116,6 +114,5 @@ Creating a new provider
 The recommended way to do this is to:
 
 1. Write a shim that is a subclass of the Provider model.  It should at a handle the 4 basic
-   provider API calls that the core expects to call as part of the node lifecycle.  An example of a functional shim is `fog_provider.rb <https://github.com/digitalrebar/core/blob/develop/rails/app/models/fog_provider.rb>` in the core Rebar repo.
+   provider API calls that the core expects to call as part of the node lifecycle.  An example of a functional shim is `fog_provider.rb <https://github.com/digitalrebar/digitalrebar/blob/master/rails/app/models/fog_provider.rb>` in the core Rebar repo.
 
-2. Write an external service that the shim should use to interface with (or implement) the external provider. A good working example is the `fogwrap service<https://github.com/rackn/deploy-fogwrap/tree/master/fogwrap>`.

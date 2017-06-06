@@ -7,6 +7,8 @@
 Simulated Annealing
 -------------------
 
+See also: :ref:`ux_annealer`
+
 Simulated Annealing is a modeling strategy from computer science that
 seeks optimal or stable outcomes through iterative analysis. A
 physical analogy for this is the process of strengthening steel by repeatedly
@@ -50,3 +52,4 @@ state of the deployment.
 
 In Digital Rebar, a deployment is a combination of user and system defined state. Digital Rebar’s
 job is to stabilize the deployments and then maintain the desired configuration over time.
+

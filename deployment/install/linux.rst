@@ -28,6 +28,7 @@ Common Additional Options:
 * If direct root control is not available, add ``--login-user=[username]``.
 * For a Metal or KVM booting dev-test add: ``--con-provisioner --access=FORWARDER``.
 * For a Docker test Compose scale command add: ``--con-node``.
+* To avoid ISO downloads, you can push ISOs from your install system in the tftpboot/isos directory instead of the public repos.  You _must_ rename ``copy_isos.no`` to be ``copy_isos.yes`` for this feature to work.
 
 For troubleshooting, see :ref:`troubleshoot_run_in_system` for help.
 
@@ -35,15 +36,29 @@ Sample code for a complete install with setup included is provided below.
 
 **Note**: [CIDR] in ``export IPA=[CIDR]`` must be replaced with the system's CIDR, found with the command ``ip -4 addr``. If this is not done, the install will **not** work!
 
+Debian/Ubuntu:
+
 ::
 
 	sudo apt-get update
 	sudo apt-get install git
 	mkdir digitalrebar
-	git clone https://github.com/rackn/digitalrebar-deploy digitalrebar/deploy
-	ln -s digitalrebar/ digitalrebar/deploy/compose/digitalrebar
+	git clone https://github.com/digitalrebar/digitalrebar
 	cd digitalrebar/deploy
 	ip -4 addr
 	export IPA=[CIDR]
 	./run-in-system.sh --help
 	sudo ./run-in-system.sh --deploy-admin=local --access=host --admin-ip=$IPA
+
+Centos/Red Hat
+::
+
+	sudo yum update
+	sudo yum install -y git
+	cd 
+	git clone https://github.com/digitalrebar/digitalrebar
+	cd digitalrebal/deploy
+	ip -4 addr
+	export IPA=[CIDR]
+	sudo ./run-in-system.sh --deploy-admin=local --access=host --admin-ip=$IPA
+

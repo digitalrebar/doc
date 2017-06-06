@@ -43,9 +43,9 @@ TODO: Define Audiences
 .. toctree::
    :glob:
    :maxdepth: 1
-   
+
    ../deployment/install/quick
    getting_started
+   videos/README
    community
    history
-

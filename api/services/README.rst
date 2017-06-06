@@ -1,0 +1,9 @@
+Services API Index
+------------------
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+   
+   *
+

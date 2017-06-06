@@ -1,13 +1,15 @@
 .. index::
-  pair: Configuration; Pre-Install Configuration
-  pair: Deployment; Pre-Install Configuration
+  pair: Configuration; Post-Install Configuration
+  pair: Deployment; Post-Install Configuration
 
-.. _dg_config:
+.. _dg_post_config:
 
-Pre-Install Configuration
--------------------------
+Post-Install Configuration
+--------------------------
 
-There are a set of configuration options that can be set before running the deploy tools.  These modify the start up and options available in the running Digital Rebar admin server.  Many of these options and values can be modified post deployment. However, it is easier to set configurations initially, therefore allowing for more simple rebuilding and development in the future.
+If you have not set-up Digital Rebar yet, please check the :ref:`pre_config` for options available before the system is started.
+
+Digital Rebar has many options for adjusting the system post-installation.  In many cases, pre-configuration mistakes can also be corrected post-configuration.
 
 .. toctree::
   :maxdepth: 2

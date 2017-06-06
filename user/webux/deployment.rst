@@ -13,6 +13,7 @@ Deployments Bar
 Deployments can be seen below the header as a bar with the deployment name. There is a circular progress meters, and a symbol that indicates the status of the node. Additionally, the bars are color-coded. Green shows active, while blue, yellow, and gray show proposed, committed, and error respectively.
 
 .. image:: /images/screens/webux/deployment.png
+
 Take note of the "Nodes" and "Roles" tabs. 
  
 

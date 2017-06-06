@@ -1,5 +1,5 @@
-API Index
----------
+Core API Index
+--------------
 
 .. toctree::
    :maxdepth: 1

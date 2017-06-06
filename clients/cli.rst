@@ -18,7 +18,7 @@ Select the correct architecture to retrieve the CLI:
 * `Linux <https://s3-us-west-2.amazonaws.com/rebar-cli/rebar-linux-amd64>`_
 
     ::
-    
+
       sudo curl -o /usr/local/sbin/rebar https://s3-us-west-2.amazonaws.com/rebar-cli/rebar-linux-amd64
       sudo chmod +x /usr/local/sbin/rebar
       rebar --help
@@ -44,3 +44,9 @@ Environment Variables
 ---------------------
 
 The CLI uses environment variables ``REBAR_ENDPOINT`` and ``REBAR_KEY`` if set.  The key holds both user and password using the following a "user:password" format.
+
+
+Match
+-----
+
+To return a list subset, use the match instruction with json filter set.  For example: ``rebar nodes match '{"deployment_id":10}'`` will return the same JSON as ``rebar nodes list`` but only members of Deployment ID 10 will be included.
