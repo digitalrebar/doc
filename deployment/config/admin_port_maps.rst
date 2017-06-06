@@ -19,7 +19,6 @@ General Ports for Admin
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 -  *443* - Chef API (externally mapped by Docker)
--  *3000* - Rebar API & UI (externally mapped by Docker)
 -  4646 - Chef Server
 -  8300 - Consul
 -  8301 - Consul

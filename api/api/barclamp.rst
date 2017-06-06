@@ -26,7 +26,7 @@ List Barclamps
 
 -  CLI: ``rebar barclamps list``
 -  API:
-   ``curl -X GET         --digest -u $(cat /etc/rebar.install.key)         -H "Content-Type:application/json"         http://localhost:3000/api/v2/barclamps``
+   ``curl -X GET         --digest -u $(cat /etc/rebar.install.key)         -H "Content-Type:application/json"         http://localhost/api/v2/barclamps``
 
 Returns:
 
@@ -67,7 +67,7 @@ Show Barclamp
 
 -  CLI: ``rebar barclamps show core``
 -  API:
-   ``curl -X GET         --digest -u $(cat /etc/rebar.install.key)         -H "Content-Type:application/json"         http://localhost:3000/api/v2/barclamps/core``
+   ``curl -X GET         --digest -u $(cat /etc/rebar.install.key)         -H "Content-Type:application/json"         http://localhost/api/v2/barclamps/core``
 
 Returns:
 

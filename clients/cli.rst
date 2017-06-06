@@ -37,7 +37,7 @@ There are many commands in the CLI described in ``--help``.  The most basic is `
 Parameters
 ----------
 
-Parameters are used to set the server address ``-E`` and credentials ``-U`` & ``P``.  A typical instruction looks like ``rebar ping -E https://127.0.0.1:3000 -U rebar -P rebar1``.  To avoid passing parameters into each call, we recommend setting the environment variables.
+Parameters are used to set the server address ``-E`` and credentials ``-U`` & ``P``.  A typical instruction looks like ``rebar ping -E https://127.0.0.1 -U rebar -P rebar1``.  To avoid passing parameters into each call, we recommend setting the environment variables.
 
 
 Environment Variables
