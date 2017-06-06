@@ -15,15 +15,15 @@ The CLI is automatically created during deployment and accessible inside the Reb
 In order to download the CLI *without* a deployment, the `RackN <http://rackn.com>`_ team has it available.
 Select the correct architecture to retrieve the CLI:
 
-* `Linux <https://s3-us-west-2.amazonaws.com/rebar-cli/rebar-linux-amd64>`_
+* `Linux <https://s3-us-west-2.amazonaws.com/rebar-bins/master/linux/amd64/master>`_
 
     ::
 
-      sudo curl -o /usr/local/sbin/rebar https://s3-us-west-2.amazonaws.com/rebar-cli/rebar-linux-amd64
+      sudo curl -o /usr/local/sbin/rebar https://s3-us-west-2.amazonaws.com/rebar-bins/master/linux/amd64/rebar
       sudo chmod +x /usr/local/sbin/rebar
       rebar --help
 
-* `Mac <https://s3-us-west-2.amazonaws.com/rebar-cli/rebar-darwin-amd64>`_
+* `Mac <https://s3-us-west-2.amazonaws.com/rebar-bins/master/darwin/amd64/rebar>`_
 
 ``chmod +x`` must be entered to use the CLI.  We also recommend renaming the CLI as "rebar" and placing in the execution path.
 

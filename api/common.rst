@@ -229,12 +229,12 @@ and that there is already a Rebar-compatible operating system installed.
 
 -  API::
 
-    curl --digest -u $(cat /etc/rebar.install.key)
+    curl --insecure --digest -u 'rebar:rebar1'
     -X POST
     -d "name=newtest.cr0wbar.com"
     -d "bootenv=local"
     -H "Content-Type:application/json"
-    --url http://127.0.0.1/api/v2/nodes
+    --url https://127.0.0.1/api/v2/nodes
 
 This will return::
 
@@ -254,7 +254,7 @@ to have Rebar try and use the one it already has:
 
 -  API::
 
-    curl --digest -u $(cat /etc/rebar.install.key) -X PUT -H "Content-Type:application/json"  --url http://127.0.0.1/api/v2/nodes/newtest.cr0wbar.com/attribs/hint-admin-v4addr     -d '{"value": "192.168.124.99/24"}'
+    curl --insecure --digest -u 'rebar:rebar1' -X PUT -H "Content-Type:application/json"  --url https://127.0.0.1/api/v2/nodes/newtest.cr0wbar.com/attribs/hint-admin-v4addr     -d '{"value": "192.168.124.99/24"}'
 
 We then need to bind a useful set of default node roles to the node:
 
@@ -264,14 +264,14 @@ We then need to bind a useful set of default node roles to the node:
 
 -  API::
 
-    curl --digest -u $(cat /etc/rebar.install.key) -X POST -H "Content-Type:application/json" --url http://127.0.0.1/api/v2/node_roles     -d '{"node": "newtest.cr0wbar.com", "role": "rebar-managed-node"}'
+    curl --insecure --digest -u 'rebar:rebar1' -X POST -H "Content-Type:application/json" --url https://127.0.0.1/api/v2/node_roles     -d '{"node": "newtest.cr0wbar.com", "role": "rebar-managed-node"}'
 
 Commit the node, which will move the newly-created node roles from
 proposed to todo or blocked, and mark the node as available:
 
 -  CLI: ``rebar nodes commit newtest.cr0wbar.com``
 -  API:
-   ``curl --digest -u $(cat /etc/rebar.install.key)     -X PUT     -H "Content-Type:application/json"     --url http://127.0.0.1/api/v2/nodes/newtest.cr0wbar.com/commit``
+   ``curl --insecure --digest -u 'rebar:rebar1'     -X PUT     -H "Content-Type:application/json"     --url https://127.0.0.1/api/v2/nodes/newtest.cr0wbar.com/commit``
 
 Mark the node as alive, which will allow the Annealer to do its thing:
 
@@ -281,7 +281,7 @@ Mark the node as alive, which will allow the Annealer to do its thing:
 
 -  API::
 
-    curl --digest -u $(cat /etc/rebar.install.key)     -X PUT     -H "Content-Type:application/json"     --url http://127.0.0.1/api/v2/nodes/newtest.cr0wbar.com     -d 'alive=true'
+    curl --insecure --digest -u 'rebar:rebar1'     -X PUT     -H "Content-Type:application/json"     --url https://127.0.0.1/api/v2/nodes/newtest.cr0wbar.com     -d 'alive=true'
 
 Installing an operating system on a node
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -291,7 +291,7 @@ Get the names of the nodes for install:
 
 -  CLI: ``rebar nodes list --attributes name``
 -  API:
-   ``curl --digest -u $(cat /etc/rebar.install.key)     -X GET     -H "Content-Type:application/json"     -H 'x-return-attributes:["name"]'     --url http://127.0.0.1/api/v2/nodes``
+   ``curl --insecure --digest -u 'rebar:rebar1'     -X GET     -H "Content-Type:application/json"     -H 'x-return-attributes:["name"]'     --url https://127.0.0.1/api/v2/nodes``
 
 Returns:
 
@@ -311,7 +311,7 @@ Create a deployment to deploy the nodes into:
 
 -  CLI: ``rebar deployments create '{"name": "test1"}'``
 -  API:
-   ``curl --digest -u $(cat /etc/rebar.install.key)     -X POST     -H "Content-Type:application/json"     --url http://127.0.0.1/api/v2/deployments     -d '{"name": "test1"}'``
+   ``curl --insecure --digest -u 'rebar:rebar1'     -X POST     -H "Content-Type:application/json"     --url https://127.0.0.1/api/v2/deployments     -d '{"name": "test1"}'``
 
 Returns:
 
@@ -333,7 +333,7 @@ Update the target node with the new deployment that was just created:
 
 -  CLI: ``rebar nodes move d52-54-05-3f-00-00.smoke.test to test1``
 -  API:
-   ``curl --digest -u $(cat /etc/rebar.install.key)     -X PUT     -H "Content-Type:application/json"     --url http://127.0.0.1/api/v2/nodes/d52-54-05-3f-00-00.smoke.test     -d '{"deployment": "test1"}'``
+   ``curl --insecure --digest -u 'rebar:rebar1'     -X PUT     -H "Content-Type:application/json"     --url https://127.0.0.1/api/v2/nodes/d52-54-05-3f-00-00.smoke.test     -d '{"deployment": "test1"}'``
 
 Returns:
 
@@ -367,7 +367,7 @@ Create a node-role to bind the role to the node:
 -  CLI:
    ``rebar roles bind rebar-installed-node to d52-54-05-3f-00-00.smoke.test``
 -  API:
-   ``curl --digest -u $(cat /etc/rebar.install.key)     -X POST     -H "Content-Type:application/json"     --url http://127.0.0.1/api/v2/node_roles     -d '{"node": "d52-54-05-3f-00-00.smoke.test", "role": "rebar-installed-node"}'``
+   ``curl --insecure --digest -u 'rebar:rebar1'     -X POST     -H "Content-Type:application/json"     --url https://127.0.0.1/api/v2/node_roles     -d '{"node": "d52-54-05-3f-00-00.smoke.test", "role": "rebar-installed-node"}'``
 
 Returns:
 
@@ -395,7 +395,7 @@ Returns:
 -  CLI:
    ``rebar nodes set d52-54-05-3f-00-00.smoke.test attrib   provisioner-target_os to '{"value": "ubuntu-12.04"}'``
 -  API:
-   ``curl --digest -u $(cat /etc/rebar.install.key)     -X PUT     -H "Content-Type:application/json"     --url http://127.0.0.1/api/v2/nodes/d52-54-05-3f-00-00.smoke.test/attribs/provisioner-target_os     -d '{"value": "ubuntu-12.04"}'``
+   ``curl --insecure --digest -u 'rebar:rebar1'     -X PUT     -H "Content-Type:application/json"     --url https://127.0.0.1/api/v2/nodes/d52-54-05-3f-00-00.smoke.test/attribs/provisioner-target_os     -d '{"value": "ubuntu-12.04"}'``
 
 Returns:
 
@@ -429,7 +429,7 @@ Commit the deployment:
 
 -  CLI: ``rebar deployments commit test1``
 -  API:
-   ``curl --digest -u $(cat /etc/rebar.install.key)     -X PUT     -H "Content-Type:application/json"     --url http://127.0.0.1/api/v2/deployments/test1/commit``
+   ``curl --insecure --digest -u 'rebar:rebar1'     -X PUT     -H "Content-Type:application/json"     --url https://127.0.0.1/api/v2/deployments/test1/commit``
 
 Returns:
 

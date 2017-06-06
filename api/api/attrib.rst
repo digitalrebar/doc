@@ -59,7 +59,7 @@ List Attribs
 
 -  CLI: ``rebar attribs list``
 -  API:
-   ``curl -X GET         --digest -u $(cat /etc/rebar.install.key)         -H "Content-Type:application/json"         http://localhost/api/v2/attribs``
+   ``curl -X GET         --insecure --digest -u 'rebar:rebar1'         -H "Content-Type:application/json"         https://localhost/api/v2/attribs``
 
 Returns:
 
@@ -102,7 +102,7 @@ Show Attrib
 
 -  CLI: ``rebar attribs show hint-admin-macs``
 -  API:
-   ``curl -X GET         --digest -u $(cat /etc/rebar.install.key)         -H "Content-Type:application/json"         http://localhost/api/v2/attribs/hint-admin/macs``
+   ``curl -X GET         --insecure --digest -u 'rebar:rebar1'         -H "Content-Type:application/json"         https://localhost/api/v2/attribs/hint-admin/macs``
 
 Returns
 
