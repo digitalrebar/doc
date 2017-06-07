@@ -25,7 +25,7 @@ With physical systems, fiddling with metal is an option.  Without physical syste
 Are Metal Installs likely?
 ==========================
 
-If bare metal servers are being managed, the :ref:`arch_service_provisioner` and :ref:`arch_service_dhcp` containers will need to be included.
+If bare metal servers are being managed, the :ref:`arch_service_provisioner` and :ref:`arch_service_dhcp`  containers will need to be included.
 (See the :ref:`dhcp_or_not` for that question.)
 
 .. index:
@@ -122,6 +122,6 @@ This creates a show where Docker-compose logs and other Docker commands can be r
 
 The ``run-in-[packet|system|google|docean|aws].sh [options]`` or ``workloads\[docker-swarm|kubernetes]`` scripts will quickly build a working Digital Rebar administration system.  There are advanced workload scripts that will setup Digital Rebar and provision a workload.
 
-The :ref:`arch_service_provisioner`/:ref:`arch_service_dhcp` containers (include with ``--con-provisioner --con-dhcp``) are able to handle DHCP/PXE boot discovery of metal and KVM.  These options will lengthen the install because they download provioning ISOs from source.  ISO can automatically be updated from a local``~/digitalrebar/isos``.
+The :ref:`arch_service_provisioner`/:ref:`arch_service_dhcp` containers (include with ``--con-provisioner --con-dhcp``) are able to handle DHCP/PXE boot discovery of metal and KVM.  These options will lengthen the install because they download previsioning ISOs from source.  ISO can automatically be updated from a local``~/digitalrebar/isos``.
 
 The cloud providers require an account with the provider.  For first users AWS, Google, or Packet are recommended.

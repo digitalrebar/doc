@@ -1,7 +1,7 @@
 .. index::
   Definitions
 
-.. _defintions:
+.. _definitions:
 
 Definitions
 -----------
