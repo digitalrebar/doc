@@ -7,7 +7,7 @@
 Post-Install Configuration
 --------------------------
 
-If you have not set-up Digital Rebar yet, please check the :ref:`pre_config` for options available before the system is started.
+If you have not set-up Digital Rebar yet, please check the :ref:`dg_pre_config` for options available before the system is started.
 
 Digital Rebar has many options for adjusting the system post-installation.  In many cases, pre-configuration mistakes can also be corrected post-configuration.
 
