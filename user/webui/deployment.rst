@@ -11,13 +11,9 @@ Deployments provide functional scope for Digital Rebar.  The **system** deployme
 .. image:: /images/screens/dr_nodes_provider_enabled.png
 
 
-Create a deployment from the Deployment...Deployments (``/deployments``)
-page. Provide the name for the deployment (default is ``default``) and
-click the ``add`` button.
+Create a deployment from the Deployments page (``/deployments``). Provide the name for the deployment and click the ``add`` button.
 
-Once the deployment is created, there is the option to navigate directly to the
-deployment from the Deployment...Deployments submenu or direct using
-``/deployments/[my deployment]``.
+Once the deployment is created, clicking on its name under the the Deployment submenu will navegate directly to the deployment.
 
 Deployments are automatically set to have the system deployment as
 their parent. In the future, other parents may be set.
@@ -51,10 +47,7 @@ Adding Nodes to a Deployment
 
 Once a deployment has been created, nodes must be attached before any further actions can be taken.
 
-A node can be set into a deployment from the Nodes list drill down into
-each node page (``/nodes/[node name]``) or several at a time from the
-Nodes...Bulk Edit (``/dashboard/list``). Both methods provide a list of
-available deployments.
+From the Nodes page, one or multiple nodes can be moved between deployments by selecting the desired nodes then clicking the 'Move Nodes' button in the upper right corner.
 
 .. image:: /images/screens/dr_bulk_edit.png
 
@@ -73,6 +66,9 @@ in the system. These roles allow the network definition to be bound to
 specific nodes in later steps.
 
 Once a network is created, the assigned network cannot be changed.
+
+.. image:: /images/screens/dr_add_network.png
+
 
 Adding Roles to a Deployment
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
