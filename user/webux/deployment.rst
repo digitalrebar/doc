@@ -10,35 +10,20 @@ This page displays the deployments in progress. From this page, the nodes involv
 Deployments Bar
 ~~~~~~~~~~~~~~~
 
-Deployments can be seen below the header as a bar with the deployment name. There is a circular progress meters, and a symbol that indicates the status of the node. Additionally, the bars are color-coded. Green shows active, while blue, yellow, and gray show proposed, committed, and error respectively.
+Deployments can be seen below the header as a color-coded bar with the deployment name. A green bar represents an active deployment, blue is proposed, yellow is committed, and red has encountered an error.
 
 .. image:: /images/screens/webux/Deployment.png
 
-Take note of the "Nodes" and "Roles" tabs.
+ 
 
+Nodes and Roles
+---------------
 
-Nodes
------
-
-The "Nodes" tab is the default tab and shows all of the nodes running in the deployment. Nodes will appear color-coded like the bar and can be individually accessed by simply clicking on the node icon. 
-
-.. image:: /images/screens/webux/deploy_nodes.png
-
-Roles
------
-
-The "Roles" tab shows every node role being run by the nodes and allows them to be accessed. The tab is most useful for viewing node role deployment progress.  
-
-.. image:: /images/screens/webux/deploy_roles.png
-
-Matrix
-------
-
-The "Matrix" tab shows a composite of both the "Node" and "Roles" tabs. From there, all the nodes and node roles can be seen and accessed. 
-
+Within each drop-down bar, all of the nodes running in the deployment are shown. On the left, each node has a circular icon that displays the overall status of the node. Node roles extend horizontally from the node, with each role represented by its own circular icon. These icons all follow the same color scheme as the deployments bar, and provide access to individual nodes or roles when clicked.
 
 .. image:: /images/screens/webux/deploy_matrix.png
 
+ 
 
 Propose
 -------
@@ -48,6 +33,6 @@ These can be used to add new roles, add new nodes, and bind roles to nodes respe
 
 .. image:: /images/screens/webux/no_propose.png
 
-**Note:** When Propose is opened two new icons will appear: "add role" and "commit. These are used to add a role and save the new role to the deployment respectively.
+**Note:** When Propose is opened two new icons will appear: "add role" and "commit". These are used to add a role and save the new role to the deployment respectively.
 
 .. image:: /images/screens/webux/propose_use.png
