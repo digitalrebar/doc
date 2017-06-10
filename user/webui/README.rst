@@ -57,13 +57,11 @@ The follow table describes the states and icons used by Digital Rebar throughout
 +--------------+------------------------+-----------------------------------------------------------+
 
 
-.. |Ready (image)| image:: /images/icons/led/active.png
+.. |Ready (image)| image:: /images/icons/led/ready.png
 .. |Error (image)| image:: /images/icons/led/error.png
-.. |Blocked (image)| image:: /images/icons/led/blocked.png
-.. |Idle (image)| image:: /images/icons/led/active.png
+.. |Queue (image)| image:: /images/icons/led/queue.png
 .. |Off (image)| image:: /images/icons/led/off.png
-.. |Wait (image)| image:: /images/icons/led/wait.png
 .. |Proposed (image)| image:: /images/icons/led/proposed.png
 .. |Reserved (image)| image:: /images/icons/led/reserved.png
 .. |TODO (image)| image:: /images/icons/led/todo.png
-.. |Transition (image)| image:: /images/icons/led/transition.png
+.. |Process (image)| image:: /images/icons/led/process.png
