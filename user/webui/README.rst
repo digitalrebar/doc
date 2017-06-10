@@ -42,13 +42,10 @@ The follow table describes the states and icons used by Digital Rebar throughout
 +--------------+------------------------+-----------------------------------------------------------+
 | Error        | |Error (image)|        | Failed, Incomplete transition                             |
 +--------------+------------------------+-----------------------------------------------------------+
-| Blocked      | |Blocked (image)|      | Annealer waiting until all prereq's met                   |
-+--------------+------------------------+-----------------------------------------------------------+
-| Idle         | |Idle (image)|         | System not active                                         |
-+--------------+------------------------+-----------------------------------------------------------+
+| Queue        | |Queue (image)|        | Annealer waiting until all prereq's met                   |
++--------------+------------------------
++-----------------------------------------------------------+
 | Off          | |Off (image)|          | Power is off. No activity possible                        |
-+--------------+------------------------+-----------------------------------------------------------+
-| Wait         | |Wait (image)|         | Todo action but power is off. Waiting until power is on   |
 +--------------+------------------------+-----------------------------------------------------------+
 | Proposed     | |Proposed (image)|     | Waiting on user input                                     |
 +--------------+------------------------+-----------------------------------------------------------+
@@ -56,7 +53,7 @@ The follow table describes the states and icons used by Digital Rebar throughout
 +--------------+------------------------+-----------------------------------------------------------+
 | To do        | |TODO (image)|         | All prereq's met but not Annealer not started yet         |
 +--------------+------------------------+-----------------------------------------------------------+
-| Transition   | |Transition (image)|   | Annealer sent work to Jig                                 |
+| Process      | |Process (image)|      | Annealer sent work to Jig                                 |
 +--------------+------------------------+-----------------------------------------------------------+
 
 
