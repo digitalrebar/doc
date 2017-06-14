@@ -29,7 +29,7 @@ Returns JSON for Annealer worker queue
 Node Status
 ^^^^^^^^^^^
 
-Returns JSON for node status for AJAX calls. Includes hash of all nodes
+Returns JSON for node status for AJAX calls.  Includes hash of all nodes
 to help detect changes.
 
 **Input:**
@@ -45,7 +45,7 @@ to help detect changes.
 Inventory Status
 ^^^^^^^^^^^^^^^^
 
-Returns JSON for Ansible Inventory JSON. See
+Returns JSON for Ansible Inventory JSON.  See
 http://docs.ansible.com/developing\_inventory.html
 
 **Input:**

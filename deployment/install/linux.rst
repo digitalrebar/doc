@@ -19,7 +19,7 @@ Here are the steps:
 #. If the root login is missing, then use ``./add-from-ssh`` to fix the credentials (our advanced scripts call this automatically).
 #. ``./run-in-system.sh --help`` to make sure all of the pre-req's are in place.
 #. ``./run-in-system.sh --deploy-admin=[system|local] --admin-ip=[my CIDR ip/subnet]`` Choose ``system`` for remote install and ``local`` for the current system.
-#. Allow the system to run. Ansible progress will be visible.
+#. Allow the system to run.  Ansible progress will be visible.
 #. Follow steps to login to Digital Rebar UI.
 
 Common Additional Options:
@@ -34,7 +34,7 @@ For troubleshooting, see :ref:`troubleshoot_run_in_system` for help.
 
 Sample code for a complete install with setup included is provided below. 
 
-**Note**: [CIDR] in ``export IPA=[CIDR]`` must be replaced with the system's CIDR, found with the command ``ip -4 addr``. If this is not done, the install will **not** work!
+**Note**: [CIDR] in ``export IPA=[CIDR]`` must be replaced with the system's CIDR, found with the command ``ip -4 addr``.  If this is not done, the install will **not** work!
 
 Debian/Ubuntu:
 

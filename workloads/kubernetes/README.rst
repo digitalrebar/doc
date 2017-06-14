@@ -33,7 +33,7 @@ Rob Hirschfeld has created a series of videos demonstrating how these scripts wo
 Configuration Options
 ---------------------
 
-We've worked hard to create safe defaults. However, if defaults are changed, then the downstream consumers of those values will still get the correct values.
+We've worked hard to create safe defaults.  However, if defaults are changed, then the downstream consumers of those values will still get the correct values.
 
 General Options
 ~~~~~~~~~~~~~~~
@@ -65,7 +65,7 @@ In the future, it should be possible to use an existing Etcd cluster:
 Pod Configuration & UI
 ~~~~~~~~~~~~~~~~~~~~~~
 
-Digital Rebar is able to perform post-install configuration and testing.  These flags are used to configure pods on the Kubernetes cluster after it has been installed.  The sequence is handled by the Digital Rebar annealer. The script pre-loads all requests and does not hold work.
+Digital Rebar is able to perform post-install configuration and testing.  These flags are used to configure pods on the Kubernetes cluster after it has been installed.  The sequence is handled by the Digital Rebar annealer.  The script pre-loads all requests and does not hold work.
 
   * ``--kubernetes-dashboard=<true|false>`` Use Kubernetes-Dashboard (default UI now)
   * ``--kubernetes-dash=<true|false>`` Use Kube-Dash
@@ -84,7 +84,7 @@ There are a lot of networking options for Kubernetes, and they are constantly ev
 The primary ones are generally set by users:
 
   * ``--kubernetes-networking=<calico|flannel|opencontrail>`` Network mode to use.  Defaults to flannel.
-  * ``--kubernetes-dns=<true|false>`` Use DNS add-on. Defaults to true.
+  * ``--kubernetes-dns=<true|false>`` Use DNS add-on.  Defaults to true.
   * ``--kubernetes-network-category=<category name>`` Network category to use for underlay traffic, default: admin
 
 DNS configuration:

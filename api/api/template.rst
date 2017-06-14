@@ -79,7 +79,7 @@ the syntax can be found `here <https://golang.org/pkg/text/template/>`_.
 +---------------------+------------------------------------------------------------------+
 | .Env.Name           | The name of the boot environment.                                |
 +---------------------+------------------------------------------------------------------+
-| .Env.Kernel         | Raw partial path to the kernel for the boot environment. It      |
+| .Env.Kernel         | Raw partial path to the kernel for the boot environment.  It      |
 |                     | should  be processed into the full path appropriate to the       |
 |                     | boot protocol with .Env.PathFor                                  |
 +---------------------+------------------------------------------------------------------+
@@ -87,7 +87,7 @@ the syntax can be found `here <https://golang.org/pkg/text/template/>`_.
 |                     | These should not be used directly, instead use the               |
 |                     | .Env.JoinInitrds method.                                         |
 +---------------------+------------------------------------------------------------------+
-| .Env.BootParams     | The template for the boot parameters for this boot env. This     |
+| .Env.BootParams     | The template for the boot parameters for this boot env.  This     |
 |                     | should not be used directly, instead use the                     |
 |                     | .BootParams method.                                              |
 +---------------------+------------------------------------------------------------------+

@@ -6,15 +6,15 @@ Ops Late Binding
 In terms of computer science languages, late binding describes a class
 of 4th generation languages that do not require programmers to know all
 the details of the information they will store until the data is
-actually stored. Historically, computers required very exact and
+actually stored.  Historically, computers required very exact and
 prescriptive data models, but later generation languages embraced a more
 flexible binding.
 
 Ops is fluid and situational.
 
 Many DevOps toolings leverage eventual consistency to create stable
-deployments. This iterative approach assumes that repeated attempts of
-executing the same idemnepotent scripts do deliver this result. However,
+deployments.  This iterative approach assumes that repeated attempts of
+executing the same idemnepotent scripts do deliver this result.  However,
 they do not deliver predictable upgrades in situations where there
 are circular dependencies to resolve.
 

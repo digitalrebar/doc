@@ -38,6 +38,6 @@ The page also provides the user with the ability to examine each environment.  I
 Templates
 ---------
 
-The "Templates" page shows all of the available default templates. The page also allows for the addition of specialized templates.
+The "Templates" page shows all of the available default templates.  The page also allows for the addition of specialized templates.
 
 .. image:: /images/screens/webux/templates.png

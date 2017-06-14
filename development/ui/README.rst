@@ -8,7 +8,7 @@ small AJAX extension.
 
 While there are more sophisticated and scalable models, the development
 team feels that Rails MVC provides sufficient experience without
-additional complexity. Maintainability and simplicity of the UI are
+additional complexity.  Maintainability and simplicity of the UI are
 primary goals at this point.
 
 We expect to revisit this assumption in the future and encourage

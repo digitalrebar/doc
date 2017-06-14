@@ -7,10 +7,10 @@ At Digital Rebar, we not only strive to provide excellent deployment services, b
 The new interface provides a sleek, new way to interact with server deployment, and has been designed with efficiency in mind.  
 
 
-Upon logging in, the user interface will open to the Deployments page. The top of every page is dominated by this header:
+Upon logging in, the user interface will open to the Deployments page.  The top of every page is dominated by this header:
 
 .. image:: /images/screens/webux/Overview.png
 
 
 The name of the selected page is posted on the left, while the tenant is displayed to the right.
-The two icons are for refreshing data and viewing the :ref:`ux_annealer` respectively. Thanks to the data refresher, users should not need to refresh the page.
+The two icons are for refreshing data and viewing the :ref:`ux_annealer` respectively.  Thanks to the data refresher, users should not need to refresh the page.

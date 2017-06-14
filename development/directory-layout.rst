@@ -6,9 +6,9 @@ Digital Rebar Directory Structure
 A complete Digital Rebar installation consists of a **core** component,
 and optional workloads (such as **kubernetes**, **ceph**, **hardware**). 
 
-The workloads each have their own GIT repository. The Digital
+The workloads each have their own GIT repository.  The Digital
 Rebar **core** repository is the essential engine that drives Digital
-Rebar and can operate alone from any of the workload components. The
+Rebar and can operate alone from any of the workload components.  The
 workload components of Digital Rebar have built-in dependencies on the
 **core**.  Workloads are not required to be part of the Digital Rebar project to run on the framework.
 

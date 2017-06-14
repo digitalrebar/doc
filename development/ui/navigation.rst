@@ -18,7 +18,7 @@ the information for the menu item:
    creates a top level menu)
 -  name = the i18n path to the menu text
 -  description = the i18n path to the menu hover information
--  path = the Rails path to be followed. Unless it starts with http,
+-  path = the Rails path to be followed.  Unless it starts with http,
    ``eval`` will be applied to the path.
 -  order = the display order of the menu item
 

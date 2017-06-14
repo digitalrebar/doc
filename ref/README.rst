@@ -5,6 +5,8 @@ Reference Guide
 
 The Reference Guide maintains a generated set of documentation for attributes and roles.
 
+.. _object_role:
+
 Roles
 =====
 

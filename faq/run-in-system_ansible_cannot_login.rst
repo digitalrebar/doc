@@ -8,7 +8,7 @@ Ansible Run Fails with Login Issue?
 
 Background: Digital Rebar uses root login for control.  On some clouds (e.g. AWS), permission to use root must be added from another credential set.  This is done automatically by Digital Rebar using the existing key(s) on the system and name matches the local and remote keys.
 
-Issue: The local privarte and remote public key do not match.
+Issue: The local private and remote public key do not match.
 
 Typical Error Message
 

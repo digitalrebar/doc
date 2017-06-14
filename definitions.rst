@@ -18,7 +18,7 @@ Definitions
 + Managed Node      | Any node that is managed by Digital Rebar.  Can be VM or Physical                   |
 +-------------------+-------------------------------------------------------------------------------------+
 | Node              | A VM or physical system that Digital Rebar may manage or is managing.  It is        |
-|                   | represented by an :ref:`object_node`.                                               |
+|                   | represented by an object node.                                                      |
 +-------------------+-------------------------------------------------------------------------------------+
 | Node Role         | An instance of a role on a specific node.  These are sequenced into a directed      |
 |                   | graph and annealed to completion.                                                   |

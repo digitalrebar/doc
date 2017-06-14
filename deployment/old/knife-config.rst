@@ -3,7 +3,7 @@ Interact with Chef
 
 First, sync local date and time with that on the target system -
 especially if running in a development environment and did not do so on
-installation (chef protects agains replay attacks and needs a correct
+installation (chef protects against replay attacks and needs a correct
 time setting)
 
 Get the local time

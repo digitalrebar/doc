@@ -31,4 +31,4 @@ Note: when using ``--access HOST`` the IP of the node must be supplied as an inp
 Omitting Containers
 ~~~~~~~~~~~~~~~~~~~
 
-There are ``--no-$$$`` flags such as ``--no-dhcp`` can be added to omit containers from the start process. This is handy when in HOST mode with a competing DHCP server or when trying to skip the time it takes to spin up a provisioner.
+There are ``--no-$$$`` flags such as ``--no-dhcp`` can be added to omit containers from the start process.  This is handy when in HOST mode with a competing DHCP server or when trying to skip the time it takes to spin up a provisioner.

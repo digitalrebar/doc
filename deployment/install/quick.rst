@@ -20,15 +20,15 @@ Note: This quick start focuses on a minimal fast path with Ubuntu 16.04.  Howeve
 
 #. AWS Path:
 
-   #. Create AWS `m4.large` (or larger!) Ubuntu instance. This can be done with the SSH key or by following these steps:
+   #. Create AWS `m4.large` (or larger!) Ubuntu instance.  This can be done with the SSH key or by following these steps:
 
       #. Login to AWS and click on EC2 under Compute.
       #. Our AWS provider default is US West (Oregon) so that region is recommended for this quick start.
-      #. Click on Launch Instance. This will begin the instance set up.
-      #. Select 16.04 Ubuntu Server (not 14.04!) for the AMI, then select `m4.large` or larger. A minimum of 8 Gb of RAM is required.
+      #. Click on Launch Instance.  This will begin the instance set up.
+      #. Select 16.04 Ubuntu Server (not 14.04!) for the AMI, then select `m4.large` or larger.  A minimum of 8 Gb of RAM is required.
       #. A minimum of 20 Gb of Disk is recommended.  8 Gb is required.
-      #. Next, navigate to the Configure Security Group tab.  The "default" Security Group for this server needs Port 22 (ssh), 443 (rebar/HTTPS) and ICMP to be available!  This is just our recommended base. Depending on the application, additional ports might be required such as Docker, Chef and Consul.
-      #. Launch the instance and save the ``.pem`` key as ``[key_name].pem`` to the home directory. This can be done by using the ``gedit`` command in the terminal, then copying and pasting the key to the new file.
+      #. Next, navigate to the Configure Security Group tab.  The "default" Security Group for this server needs Port 22 (ssh), 443 (rebar/HTTPS) and ICMP to be available!  This is just our recommended base.  Depending on the application, additional ports might be required such as Docker, Chef and Consul.
+      #. Launch the instance and save the ``.pem`` key as ``[key_name].pem`` to the home directory.  This can be done by using the ``gedit`` command in the terminal, then copying and pasting the key to the new file.
       #. Modify key permissions using ``chmod 600 [key_name].pem``.
 
    #. Connect to the server: ``ssh -i "[key_name].pem" ubuntu@[public_DNS]``.
@@ -68,11 +68,11 @@ In this section only, using SSH is necessary to the target install server.  This
 Add a Provider and Node
 -----------------------
 
-In order to maintain simplicity for new users, use cloud servers instead of local VMs or physical servers.  The latter two are supported in a more complex setup. This quick start guide covers adding nodes using the New UX.
+In order to maintain simplicity for new users, use cloud servers instead of local VMs or physical servers.  The latter two are supported in a more complex setup.  This quick start guide covers adding nodes using the New UX.
 
 #. From the client, log on to the system using ``https://[external ip address]``.  Reminders:
 
-   #. Use External IP. This is the same as the SSH address.
+   #. Use External IP.  This is the same as the SSH address.
    #. Since it is HTTPS, it is required to accept the self-signed SSL certificate.
 #. Add a AWS Provider from the "Providers" page by clicking the add (+) button, located in the bottom right corner:
 
@@ -87,7 +87,7 @@ In order to maintain simplicity for new users, use cloud servers instead of loca
    #. To Manually Add AWS Key (similar steps for Packet or Google)
 
       #. Add a provider using AWS type and your Credentials.
-      #. Choose the same region as the admin is using. Note that the default AMI targets us-west-2. Thus, if a different region is selected, the AMI must also be changed to match (for demo use Centos 7.2+).
+      #. Choose the same region as the admin is using.  Note that the default AMI targets us-west-2.  Thus, if a different region is selected, the AMI must also be changed to match (for demo use Centos 7.2+).
       #. Consult :ref:`configure_providers` for detailed instructions and troubleshooting including live log review.
 #. Add a node from the "Nodes" and the add (+) button (lower right side)
 

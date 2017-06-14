@@ -27,14 +27,14 @@ operating systems from the following ISO images:
 -  ``centos-7.2.1511``: ``CentOS-7-x86_64-Minimal-1511.iso``
 -  ``redhat-6.5``: ``RHEL6.5-20131111.0-Server-x86_64-DVD1.iso``
 -  ``redhat-7.0``: ``rhel-server-7.0-x86_64-dvd.iso``
--  ``debian-7``: ``debian-7-mini-amd64.iso`` (*NOTE*: This is really the netboot mini.iso renamed. It can be found
+-  ``debian-7``: ``debian-7-mini-amd64.iso`` (*NOTE*: This is really the netboot mini.iso renamed.  It can be found
    `here <http://ftp.nl.debian.org/debian/dists/wheezy/main/installer-amd64/current/images/netboot/mini.iso>`__.)
--  ``debian-8`` : ``debian-8-mini-amd64.iso`` (*NOTE* This is really the netboot mini.iso renamed. It can be found
+-  ``debian-8`` : ``debian-8-mini-amd64.iso`` (*NOTE* This is really the netboot mini.iso renamed.  It can be found
    `here <http://ftp.nl.debian.org/debian/dists/jessie/main/installer-amd64/current/images/netboot/mini.iso>`__.)
 -  ``ESXi 6.0``:
    ``VMware-VMvisor-Installer-6.0.0.update02-3620759.x86_64.iso``
 
-This list is subject to change. For the latest list, consult `Provisioner Default Boot Environments <https://github.com/rackn/digitalrebar-deploy/tree/master/containers/provisioner/update-nodes/bootenvs>`__
+This list is subject to change.  For the latest list, consult `Provisioner Default Boot Environments <https://github.com/rackn/digitalrebar-deploy/tree/master/containers/provisioner/update-nodes/bootenvs>`__
 
 To make these environments available after installation, see :ref:`ug_uc_base_os_bootenv`.
 

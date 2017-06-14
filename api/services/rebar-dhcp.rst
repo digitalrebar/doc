@@ -4,15 +4,15 @@ Rebar DHCP
 ==========
 
 This is a Simple DHCP server that provides enough for what DigitalRebar
-needs to operate an environment. It also provides a managemenet
+needs to operate an environment.  It also provides a management
 interface that allows for the alteration of leases and mapping data on
-the fly. This requires no-restarts of the server.
+the fly.  This requires no-restarts of the server.
 
 API
 ---
 
-The service responses, by default, to https requests on 6755. The
-following URLs and formats are used. The service is controlled by a
+The service responses, by default, to https requests on 6755.  The
+following URLs and formats are used.  The service is controlled by a
 username and password.
 
 List Subnets
@@ -132,7 +132,7 @@ Data is in the format:
 All fields are optional expect name and subnet.
 
 Active start/end specifies a free range of DHCP addresses given to
-anyone. If none is specified, then only bound addresses will be given
+anyone.  If none is specified, then only bound addresses will be given
 out.
 
 Update Subnet
@@ -168,7 +168,7 @@ Bind Mac/IP in Subnet
 | Errors: 404 if subnet name not found
 | 400 if data is not valid
 
-This call updates or creates a binding of a mac to an ip. The binding
+This call updates or creates a binding of a mac to an ip.  The binding
 object may also contain options for the device.
 
 The bind object looks like:

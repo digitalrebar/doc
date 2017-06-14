@@ -7,15 +7,15 @@ External Services Configuration
   installed or managed by Digital Rebar) services.
 | These configurations are made in the following file: 
   /opt/digitalrebar/core/rebar-config.sh and must be made *PRIOR* to
-  running production.sh to install the system. Users can configure any
+  running production.sh to install the system.  Users can configure any
   combination of of these services.
 
 DNS (Domain Name Server)
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 By default Digital Rebar will utilize Bind (named) on the Admin Node
-when you install Digital Rebar. All clients will be configured to use
-this system when they are installed. DNS entries are automatically
+when you install Digital Rebar.  All clients will be configured to use
+this system when they are installed.  DNS entries are automatically
 updated as new nodes are configured or removed from Digital Rebar.
 Digital Rebar can be configured to use an already existing DNS however
 it becomes the responsability of the user to ensure that entries are
@@ -39,7 +39,7 @@ Rebar (Typically MAC address of the primary interface)
    uncomment it by removing the # from the front of the line.
 -  Find the line '233 #curl -X PUT -d 'POWERDNS'
    http://127.0.0.1:8500/v1/kv/digitalrebar/private/dns/system/type?token=$CONSUL\_MACL'
-   and uncomment it by removing the # from the front of the link. Change
+   and uncomment it by removing the # from the front of the link.  Change
    the POWERDNS to BIND if you aren't running POWERDNS.
 -  If you are running POWERDNS, uncomment the three curl lines right
    below the previous curl command and update the -d parameters for your
@@ -75,8 +75,8 @@ DHCP (Dynamic Host Configuration Protocol)
 
 By default Digital Rebar will configure DHCP (dhcpd) on the Admin node
 and utilize it to preform boot sequences to nodes as they transition
-from discovery to OS installation. Additionally it will direct a system
-to use it's local drives to boot once an OS has been installed. Digital Rebar
+from discovery to OS installation.  Additionally it will direct a system
+to use it's local drives to boot once an OS has been installed.  Digital Rebar
 can be configured to use an already existing DHCP Server however it
 becomes the responsability of the user to ensure that nodes keep the
 same IP address.
@@ -87,7 +87,7 @@ same IP address.
 -  Save the file and continue on with the remainder of the installation
    steps.
 -  On the DHCP server the user must redirect the node which is booting
-   to the Digital Rebar Admin server. To do this add the following
+   to the Digital Rebar Admin server.  To do this add the following
    stanza to /etc/dhcpd/dhcpd.conf
 
 ::
@@ -124,10 +124,10 @@ Proxy Server
 
 By default, Digital Rebar will install a Proxy server on the Admin server
 in order to facilitate access to packages on the internet by the target
-nodes. After installation Digital Rebar will install various packages
-based on the roles that are assigned to these devices. As Digital Rebar
+nodes.  After installation Digital Rebar will install various packages
+based on the roles that are assigned to these devices.  As Digital Rebar
 caches the packages as they are downloaded from the internet (Note: they are only
-pulled down once even if multiple systems will be accessing them). It is
+pulled down once even if multiple systems will be accessing them).  It is
 possible for a user to define a different proxy server if one already
 exists in the enviornment.
 
@@ -149,9 +149,9 @@ AMQP Server and Service
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 Optionally, Digital Rebar can be configured to send events to an AMQP
-server through the AMQP service. To do this, either Digital Rebar should
+server through the AMQP service.  To do this, either Digital Rebar should
 run its own RabbitMQ server or an AMQP service can be injected into
-Digital Rebar. The system currently assumes a user of *rebar*, a
+Digital Rebar.  The system currently assumes a user of *rebar*, a
 password of *rebar*, and a virtual host of */digitalrebar*.
 
 To run a RabbitMQ service, uncomment the rabbitmq-server line in
@@ -160,11 +160,11 @@ rebar-config.sh.
 To inject an AMQP service instead, uncomment the curl line for consul.
 It is next to the rabbitmq-server line.
 
-In either case, the amqp-service needs to be enabled. Uncomment the
+In either case, the amqp-service needs to be enabled.  Uncomment the
 amqp-service rebar bind command.
 
 Once the system is operational and the services configured, you will
-need to start the audit-to-event program. To do this, you will need to
+need to start the audit-to-event program.  To do this, you will need to
 run the following command as *rebar* from the
 */opt/digitalrebar/core/rails* directory: RAILS\_ENV=production bundle
 exec rake audits.to\_amqp &
@@ -173,5 +173,5 @@ To see events as they happen, a sample client can be run as *rebar* from
 the */opt/digitalrebar/core/rails* directory: RAILS\_ENV=production
 bundle exec scripts/event\_client.rb #
 
-The command line arguments are filters. # means all. Node.create will
-return events when nodes are created. Other options are available.
+The command line arguments are filters. # means all.  Node.create will
+return events when nodes are created.  Other options are available.

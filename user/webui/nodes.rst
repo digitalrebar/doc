@@ -38,16 +38,16 @@ Physical Nodes
 
 Once the Digital Rebar Admin is running, simply booting VMs or physical nodes
 onto the management network will engage the discovery process (using
-:ref:`arch_service_dhcp` and PXE). Digital Rebar does not event hook the PXE service (to maintain
-separation of duties), so please be patient. The default discovery
+:ref:`arch_service_dhcp` and PXE).  Digital Rebar does not event hook the PXE service (to maintain
+separation of duties), so please be patient.  The default discovery
 process requires the system to boot the Sledgehammer image, which
 takes time.
 
 Once the node is booted, Digital Rebar automatically adds the node into the
-system deployment. The system deployment is a special purpose deployment
-used for discovery and base management. Users have limited options to
+system deployment.  The system deployment is a special purpose deployment
+used for discovery and base management.  Users have limited options to
 change it; however, the discovery process can be easily monitored by
-watching the :ref:`ui_annealer` or :ref:`webui_deployment` screens. They will show
+watching the :ref:`ui_annealer` or :ref:`webui_deployment` screens.  They will show
 exactly which steps of the discovery progress are pending, acting and
 completed.
 
@@ -55,5 +55,5 @@ A node is completely discovered when all the system deployment steps
 (aka "node roles") are complete with green checks.
 
 It is acceptable to configure nodes (the next steps) even before the
-discovery is complete. Digital Rebar will figure out the correct order of
+discovery is complete.  Digital Rebar will figure out the correct order of
 operations and perform actions in sequence.

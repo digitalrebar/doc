@@ -3,7 +3,7 @@
 Contributing to Digital Rebar Core
 ----------------------------------
 
-Before `submitting pull requests <https://help.github.com/articles/using-pull-requests>`_, please make sure to read and understood the Apache license. Submitting a pull is considered to be accepting the project's license terms.
+Before `submitting pull requests <https://help.github.com/articles/using-pull-requests>`_, please make sure to read and understood the Apache license.  Submitting a pull is considered to be accepting the project's license terms.
 
 .. index::
   TODO; code_tree_usage
@@ -11,14 +11,14 @@ Before `submitting pull requests <https://help.github.com/articles/using-pull-re
 TODO: This isn't what we do as much.  It is still true-ish, but may change shortly.
 
 We are using this `style <http://nvie.com/posts/a-successful-git-branching-model/>`__
-branching model. The main goal is not to develop in *master*, but in the
+branching model.  The main goal is not to develop in *master*, but in the
 *develop* branch so that *master* is the latest validated code.
 *develop* should be stable and tests should have been run against it,
 but hasn't necessarily been regression tested for production release
-stability. Feature branches are encouraged for shared work. Large
+stability.  Feature branches are encouraged for shared work.  Large
 features requiring multiple items or multiple individual participation
-can be created in the Digital Rebar repo. This should be discussed in
-the weekly Digital Rebar meetings. Once complete, these features would
+can be created in the Digital Rebar repository.  This should be discussed in
+the weekly Digital Rebar meetings.  Once complete, these features would
 be merged into *develop*.
 
 Guidelines for Pull Requests
@@ -48,7 +48,7 @@ Timing
 ^^^^^^
 
 -  Accept no non-bug fix push requests within 2 weeks of a release fork
--  No SLA - code accepted at PTLs discretion. No commitment to accept
+-  No SLA - code accepted at PTLs discretion.  No commitment to accept
    changes.
 
 Coding Expectations

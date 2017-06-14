@@ -72,5 +72,5 @@ Advanced Options
 These options provide extra control for the Digital Rebar installation.
 
   * ``--dns-domain`` Domain name setting is important if nodes need to be joined to a larger DNS infrastructure.  Defaults to ``neode.local``
-  * ``--dr_tag=<TAG>`` if running stable or special branches, then pick a build tag to use for digitalrebar. default: ``latest``
+  * ``--dr_tag=<TAG>`` if running stable or special branches, then pick a build tag to use for digitalrebar.  default: ``latest``
   * ``--id-file=<file>`` picks the SSH Identity file to use to log into the node to ensure keys are in place.  This is useful if multiple SSH identities are in use.
