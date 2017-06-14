@@ -6,7 +6,7 @@
 Group APIs
 ~~~~~~~~~~
 
-Group APIs are used to manage groups. Groups are used to organize
+Group APIs are used to manage groups.  Groups are used to organize
 things.
 
 Group CRUD

@@ -14,14 +14,14 @@ System Jigs
 
 Digital Rebar has three built-in jigs
 
--  Script - uses SSH to perform operations on nodes. This is used for
-   bootstrapping actions that install the agents for other Jigs. Not
+-  Script - uses SSH to perform operations on nodes.  This is used for
+   bootstrapping actions that install the agents for other Jigs.  Not
    activated in development mode.
 -  Noop (no operation) - takes internal actions in Digital Rebar only.
    Used when database updates or coordination points are needed that
    have no external action.
 -  Test - used by the test infrastructure to validate Digital Rebar
-   logic when no physical infrastructure is available. Not activated in
+   logic when no physical infrastructure is available.  Not activated in
    production mode.
 
 API Actions
