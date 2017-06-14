@@ -15,7 +15,7 @@ Install the Docker Swarm workload from the ``digitalrebar/deploy`` directory usi
 Installation
 ------------
 
-This section is specific to Docker-Swarm. See :ref:`workloads_guide` for general install tips.
+This section is specific to Docker-Swarm.  See :ref:`workloads_guide` for general install tips.
 
    :: 
 
