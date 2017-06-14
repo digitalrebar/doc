@@ -10,7 +10,7 @@ What is the Current State of UEFI?
 This file documents the current state of UEFI booting in Digital Rebar.
 
 Right now, we have basic support for network booting systems running in
-UEFI mode. We are able to netboot Sledgehammer and the OS install
+UEFI mode.  We are able to netboot Sledgehammer and the OS install
 kernel/initrd pairs and have gotten to the point where we have an installed
 operating system on the compute nodes.
 
@@ -20,7 +20,7 @@ operating system on the compute nodes.
 How To Use UEFI?
 ----------------
 
-#.  Switch the system to operate in UEFI mode. How this is done varies from system to system.
+#.  Switch the system to operate in UEFI mode.  How this is done varies from system to system.
 #. Once the system is in UEFI mode, configure it to network boot off the
    first nic.
 #.  The rebar framework will handle things from there.
@@ -57,9 +57,9 @@ The following changes have been made:
 
 -  We now generate per-node OS installation scripts and UEFI/PXE config
    files on the fly instead of having per-OS install scripts and config
-   files. This was needed to support network installation of Redhat and
+   files.  This was needed to support network installation of Redhat and
    CentOS due to anaconda not being able to find out what NIC it booted
-   from when installing in UEFI mode. For consistency between the UEFI
+   from when installing in UEFI mode.  For consistency between the UEFI
    and PXE netboot codepaths, the per-machine UEFI and PXE config files
    are now IP address specific instead of MAC address specific.
 
@@ -69,9 +69,9 @@ The following changes have been made:
 Each of the OS flavors we support uses a different bootloader for UEFI (CentOS
 and Redhat use grub1, and Ubuntu uses grub2), and they do not have the
 right intersection of being able to netboot, being able to chainload,
-and operating reliably in a network environment to be useful. Instead we
+and operating reliably in a network environment to be useful.  Instead we
 use elilo, and we grab the precompiled EFI app from Sourceforge instead
-of trying to compile things ourselves by either playing packaging shennanigans to
+of trying to compile things ourselves by either playing packaging shenanigans to
 keep our admin node bootable while juggling multiple bootloaders or
 having the provisioner handle messing with boot templates for multiple
 different bootloaders.
@@ -79,21 +79,21 @@ different bootloaders.
 However, none of the UEFI capable bootloaders have been found have the
 ability to hand control back to UEFI to try the next thing in the boot
 sequence, which means that we can no longer assume that we will always
-netboot. Instead, efibootmgr has been added to Sledgehammer and the
+netboot.  Instead, efibootmgr has been added to Sledgehammer and the
 default package installs for the operating systems, and a piece of
 code that can change
-the boot order to be either nics-first or nics-last has been added to the rebar-hacks recipe in the deployer. This is
+the boot order to be either nics-first or nics-last has been added to the rebar-hacks recipe in the deployer.  This is
 based on the PXE state machine: if it is in execute state, it will set
 things to nics-last, otherwise it will set things to nics-first.
 
 In order to make this work reliably, the community modifies the provisioner
 state machine to run chef-client on every node that is transitioning out
 of the execute state in order to ensure that the boot sequence gets
-updated. This failed when transitioning into reset or delete because
-those states deallocate all IP addresses to the nodes. To cope with
+updated.  This failed when transitioning into reset or delete because
+those states deallocate all IP addresses to the nodes.  To cope with
 that, the network barclamp recognizes when the admin network is being
 removed and arranges for the system to run dhcplient on all the
-interfaces until it gets an IP address. Since we run chef-client on the
+interfaces until it gets an IP address.  Since we run chef-client on the
 nodes before running it on the admin node, this should result in the
 system getting the same IP address it had before, which will let the
 chef-client run continue.
