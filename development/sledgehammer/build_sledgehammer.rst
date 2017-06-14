@@ -8,7 +8,7 @@ bootstrapping tool to perform initial node discovery and register its
 discovered state within the Digital Rebar node provisioning framework.
 After it has been discovered, Sledehammer can be controlled to prepare
 the hardware, lay down the operating system, and assure correct
-node configuration. It consists of a slightly modified Centos 7 live
+node configuration.  It consists of a slightly modified Centos 7 live
 environment.
 
 By default, setup will now download golden sledgehammers and this step

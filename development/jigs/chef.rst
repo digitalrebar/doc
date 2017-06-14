@@ -24,12 +24,12 @@ Rebar and Berkshelf
 ~~~~~~~~~~~~~~~~~~~
 
 For each workload (core, openstack, hardware, etc.) Rebar uses
-a centralized Berkshelf file for all of the cookbooks. The
+a centralized Berkshelf file for all of the cookbooks.  The
 Berksfile is in ``digitalrebar/<workload>/chef/cookbooks/Berksfile``.
 Rebar ignores Berksfiles in individual cookbooks.
 
 Berkshelf resolves cookbook dependencies by following the Berksfile
-instructions for local and remote dependent cookbooks.  Dependencies are stored in the Berkshelf (path.) If using a Chef Server, Berkshelf can upload them to the Chef Server. If using chef-solo or
+instructions for local and remote dependent cookbooks.  Dependencies are stored in the Berkshelf (path.) If using a Chef Server, Berkshelf can upload them to the Chef Server.  If using chef-solo or
 chef-client -x, Berkshelf packages them on the filesystem and delivers them to
 the nodes.
 
@@ -63,7 +63,7 @@ Developing Cookbooks
        $ cd <digitalrebar_root>/<workload>/[barclamp]/chef/cookbooks/
        $ berks install
 
--  Optional: If having the cookbooks that were indicated as dependents and the cookbooks that were added for reference, or for running Chef-Solo while developing. The following example will download 
+-  Optional: If having the cookbooks that were indicated as dependents and the cookbooks that were added for reference, or for running Chef-Solo while developing.  The following example will download 
    them and place them in the correct places.
 
    ::
@@ -71,7 +71,7 @@ Developing Cookbooks
        $ cd <digitalrebar_root>/<workload>/[barclamp]/chef/cookbooks/
        $ berks install -p ./somewhere/else/to/look/at/
 
--  If using Chef-Solo: Package up cookbooks for delivery. Once
+-  If using Chef-Solo: Package up cookbooks for delivery.  Once
    satisfied with the cookbooks, package them for Rebar to
    distribute to the nodes (even the Rebar admin node)
 
@@ -94,6 +94,6 @@ TODO: Script this, possibly under 'tools'
 
 FUTURE:
 
--  Rebar can help integrate normal testing patterns. We're
+-  Rebar can help integrate normal testing patterns.  We're
    considering ``test-kitchen`` integration.
 
