@@ -16,11 +16,11 @@ principles areas.
 Using the API
 ~~~~~~~~~~~~~
 
-The Digital Rebar API is RESTful and accepts/returns JSON. XML output is
+The Digital Rebar API is RESTful and accepts/returns JSON.  XML output is
 not supported.
 
-The Digital Rebar API is versioned. API urls include the Digital Rebar
-version of the API (e.g.: 1.0 or v2). Please use the most recent version
+The Digital Rebar API is versioned.  API urls include the Digital Rebar
+version of the API (e.g.: 1.0 or v2).  Please use the most recent version
 available!
 
 Legacy Note: routes with 1.0 are deprecated!
@@ -38,7 +38,7 @@ The Digital Rebar API sticks to the following behavior patterns.
 Expectations:
 ^^^^^^^^^^^^^
 
--  Core objects can be referenced equally by name or ID. This means that
+-  Core objects can be referenced equally by name or ID.  This means that
    objects with natural key names are NOT allowed to start with a number
    (similar to FQDN restrictions)
 -  JSON is the API serialization model
@@ -46,8 +46,8 @@ Expectations:
 Digest Authentication
 ^^^^^^^^^^^^^^^^^^^^^
 
-API callers use digest authentication for all requests. User accounts
-need to be specifically configured for API only access. A user account
+API callers use digest authentication for all requests.  User accounts
+need to be specifically configured for API only access.  A user account
 with API access will still be able to log in normally.
 
 To get the digest, make a HEAD or GET request to /api/v2/digest
@@ -58,8 +58,8 @@ To get the digest, make a HEAD or GET request to /api/v2/digest
 Common API URL Patterns:
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
-Digital Rebar uses a versioned URL pattern. By convention, resource
-names are pluralized in the API. For example, the API will use ``nodes``
+Digital Rebar uses a versioned URL pattern.  By convention, resource
+names are pluralized in the API.  For example, the API will use ``nodes``
 instead of ``node`` in paths.
 
 -  Base Form: ``[workload | api]/[version]/[resources]/[id]``
@@ -87,7 +87,7 @@ instead of ``node`` in paths.
 
 -  CRUD Operations:
 
-   -  id: name or database ID of the item. Items that do not have natural keys are not expected to honor use of name instead of database ID. When possible, either will be allowed.
+   -  id: name or database ID of the item.  Items that do not have natural keys are not expected to honor use of name instead of database ID.  When possible, either will be allowed.
 
 -  RESTful Verbs for CRUD:
 
@@ -122,7 +122,7 @@ By convention, most Digital Rebar models have the same fields:
 -  description: user definable content
 -  created\_at: when object was created
 -  updated\_at: when object was last updated
--  object\_id: cross reference id to an object. In most cases, the name
+-  object\_id: cross reference id to an object.  In most cases, the name
    of the object can be used instead of the API
 
     Some of the information stored in objects is maintained as json and
@@ -145,7 +145,7 @@ If only certain attributes need to be returned for an API
 call, the ``x-return-attributes`` header can be to a JSON array of
 the attributes that need to be returned.
 
--  [type] is the object type being returned. E.g.: node, deployment,
+-  [type] is the object type being returned.  E.g.: node, deployment,
    jig, etc
 -  [form] describes how the objects are formed
 -  obj = single obj
