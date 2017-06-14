@@ -15,7 +15,7 @@ Overview
 The :ref:`arch_service_provisioner` provides the roles and recipes needed to set up the
 provisioning server and a base environment for all provisioned nodes.
 The Provisioner also provides the transition entry point for nodes that
-require DHCP transitions completed. The Provisioner assumes that
+require DHCP transitions completed.  The Provisioner assumes that
 addressing will be handled outside of this barclamp.
 
 Roles
@@ -40,13 +40,13 @@ The following node roles are defined:
 Workflow
 --------
 
-The provisioner provides the Sledgehammer discovery image. It is
+The provisioner provides the Sledgehammer discovery image.  It is
 expected that there is a DHCP server (provided by Digital Rebar or external
 to Digital Rebar) that will allocate an address and point to the
 provisioner.
 
 The Sledgehammer discovery image will register the node in Digital Rebar
-and allocate an admin address. Once the node is created, the database
+and allocate an admin address.  Once the node is created, the database
 roles will update the provisioner and DHCP server to enable future
 control for operating system installation, local booting, or other boot
 environments as needed.
@@ -55,6 +55,6 @@ New operating systems can be seen `Adding Operating
 Systems <../deployment-guide/adding-operating-systems.md>`__.
 
 After an operating system is installed, the system injects code to
-update Digital Rebar and informs it that the node has completed installation. The
+update Digital Rebar and informs it that the node has completed installation.  The
 database roles will update the provisioner and DHCP servers to automatically boot from
 local drives.
