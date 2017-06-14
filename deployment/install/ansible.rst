@@ -14,7 +14,7 @@ A video guide on how to make changes to a single ansible script running in a rol
 
 What's installed?
 """""""""""""""""
-Installation requires several steps. To begin with, the following is done by default:
+Installation requires several steps.  To begin with, the following is done by default:
 
 * All prerequisites including the latest Docker with correct permissions (instructions for some of these are included, just in case)
 * Latest Digital Rebar code from develop branch
