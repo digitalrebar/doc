@@ -6,7 +6,7 @@
 Training Videos
 ---------------
 
-This series of training videos covers the basics of Digital Rebar and how to use it. It can be found at https://www.youtube.com/playlist?list=PLXPBeIrpXjfgurJuwVjZkcfmatCoXYM_v
+This series of training videos covers the basics of Digital Rebar and how to use it.  It can be found at https://www.youtube.com/playlist?list=PLXPBeIrpXjfgurJuwVjZkcfmatCoXYM_v
 
 The documentation on the Digital Rebar Web UX used throughout this video series can be found in the :ref:`web_ux_guide`.
 
@@ -18,7 +18,7 @@ It is viewable at https://www.youtube.com/watch?v=uYG9nstYpD4
 
 Digital Rebar Training 001b: Quick Start Add Provider
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-This video continues covering the :ref:`quick_start` from where video 001a left off. It walks through how to add a provider and create a node.  It also briefly demonstrates some features of the Web UX.
+This video continues covering the :ref:`quick_start` from where video 001a left off.  It walks through how to add a provider and create a node.  It also briefly demonstrates some features of the Web UX.
 
 It is viewable at https://www.youtube.com/watch?v=dHSCwifAlK8
 
@@ -26,7 +26,7 @@ See the :ref:`web_ux_guide` for more on the UX.
 
 Digital Rebar Training 001c: Quick Start Workload
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-This video covers the final part of the :ref:`quick_start`.  It walks through how to use the Workload Wizard to build a cluster in the UX. It also briefly delves into roles, provides an example of editing the JSON in the API Call Helper, and shows what happens when auto-commit is turned off during workload deployment.
+This video covers the final part of the :ref:`quick_start`.  It walks through how to use the Workload Wizard to build a cluster in the UX.  It also briefly delves into roles, provides an example of editing the JSON in the API Call Helper, and shows what happens when auto-commit is turned off during workload deployment.
 
 It is viewable at https://www.youtube.com/watch?v=3xawxPiSeJ4&t=696s
 

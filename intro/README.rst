@@ -12,7 +12,7 @@ TODO: Define Audiences
 
 #. CTO/Explore - principles what and how
 #. Installer/IT - Deploy guide to install DR/RN
-#. Operater/IT - User guide - how to use DR to solve problems.
+#. Operator/IT - User guide - how to use DR to solve problems.
 #. Contributer Workloads - Workload Guide - new workloads
 #. Contributer Coder/Doc - Development Guide - DR code and docs.
 

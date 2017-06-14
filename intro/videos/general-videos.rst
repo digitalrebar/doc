@@ -6,7 +6,7 @@
 RackN General Videos
 --------------------
 
-This video series provides a quick overview and demo of Digital Rebar. It can be found at https://www.youtube.com/playlist?list=PLXPBeIrpXjfhIEF7IarSubtcOPFd4e3IB
+This video series provides a quick overview and demo of Digital Rebar.  It can be found at https://www.youtube.com/playlist?list=PLXPBeIrpXjfhIEF7IarSubtcOPFd4e3IB
 
 RackN Fast Intro
 ~~~~~~~~~~~~~~~~
