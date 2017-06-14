@@ -14,4 +14,4 @@ There is also a search feature for finding errors that may have been drowned in 
 
 .. image:: /images/screens/webux/error.png
 
-If an error is discovered, please report it on our github page. We will resolve it as quickly as possible. 
+If an error is discovered, please report it on our github page.  We will resolve it as quickly as possible. 
