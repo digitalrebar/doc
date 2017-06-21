@@ -22,8 +22,8 @@ This section will cover how to set up a server on Amazon and prime it for the in
 	
 	#. After logging in to AWS, click on EC2 under Compute. 
 	#. Click on the button that says Launch Instance. This will begin the initial setup for the server.
-	#. Select Ubuntu Serer for the AMI, then select ``m4.large`` or larger.
-	#. Navigate to the Configure Security Group tab. The recommended default Security Group for this server is Port 22 (ssh), 443 (rebar), 2375 & 2475 (docker), 4646 (chef), 8300 & 8301 (consul), 8888 (certificate signing service) and ICMP! However, this is just our recommended base. Depending on the application, additional ports might be required, or Docker, Chef, and Consul may be omitted. For more on this, see :ref:`dg_config`.
+	#. Select Ubuntu Server for the AMI, then select ``m4.large`` or larger.
+	#. Navigate to the Configure Security Group tab. The recommended default Security Group for this server is Port 22 (ssh), 443 (rebar/HTTPS), 2375 & 2475 (docker), 4646 (chef), 8300 & 8301 (consul), 8888 (certificate signing service) and ICMP! However, this is just our recommended base. Depending on the application, additional ports might be required, or Docker, Chef, and Consul may be omitted. For more on this, see :ref:`dg_config`.
 	#. Launch the instance and save the ``.pem`` key as ``[key_name].pem`` to the home directory. This can be done by using the ``gedit`` command, then copying and pasting the key to the new file. 
 
 #. Once the server is launched, it can be connected to via the following command::
