@@ -116,6 +116,7 @@ We are using a basic Kubernetes as a reference app for this quick install.
    #. Review the JSON that will be submitted to direct the install.  The JSON can be edited by clicking the pencil icon in the top right corner.
 
 #. Watch Digital Rebar build the cluster from the Deployment page or from the Annealer button in the top right corner.  For more on the Deployment page and the Annealer, see :ref:`ux_deployment` and :ref:`ux_annealer` respectively.
+   #. `Troubleshooting <http://digital-rebar.readthedocs.io/en/latest/deployment/troubleshooting/roles/etcd-install.html>`_ for ``etcd-install`` fail.
 #. Login to the cluster from the Master Node using ``https://[ip of master]/ui`` (admin/changeme)
 
    #. Get the IP of the manager from Nodes and look for the address of the node that is assigned as the cluster-master.
