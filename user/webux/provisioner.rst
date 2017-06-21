@@ -3,7 +3,7 @@
 Provisioner
 ===========
 
-Similarly to :ref:`ux_workload`, the "Provisioner" tab will not open a page, rather it will give three options: "Machines", "Boot Environment", and "Templates".
+Similarly to :ref:`ux_app_catalog`, the "Provisioner" tab will not open a page, rather it will give three options: "Machines", "Boot Environment", and "Templates".
 
 
 .. _ux_machines:
