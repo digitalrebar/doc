@@ -1,9 +1,6 @@
 Using the `Ansible <http://ansible.com>`_ Playbook
 ##################################################
 
-.. contents:: Table of Contents
-  :depth: 6
-
 The Digital Rebar playbook starts in `digitalrebar.yml <https://github.com/digitalrebar/digitalrebar/deploy/digitalrebar.yml>`_ and uses the `tasks <https://github.com/digitalrebar/digitalrebar/deploy/digitalrebar.yml/tasks>`_ and `group vars <https://github.com/digitalrebar/digitalrebar/deploy/group_vars/all.yml>`_ to drive configuration.
 
 The playbook is driven by a set of "run-in-FOO" scripts handle accessing the system be it Linux-based (remote or local), Mac OSX, or in a metal provider (Packet).
@@ -13,7 +10,7 @@ Check the `scripts <https://github.com/digitalrebar/digitalrebar/deploy>`_ to se
 A video guide on how to make changes to a single ansible script running in a role can be found at :ref:`training-ansible-edit`. 
 
 What's installed?
-"""""""""""""""""
+=================
 Installation requires several steps. To begin with, the following is done by default:
 
 * All prerequisites including the latest Docker with correct permissions (instructions for some of these are included, just in case)
@@ -28,6 +25,6 @@ Configuration settings are managed under ``deploy/compose/config-dir``
 
 
 Housekeeping Notes
-------------------
+==================
 
 To remove Docker image cruft, we suggest running ``docker ps -q -a | xargs docker rm`` on a regular basis.
