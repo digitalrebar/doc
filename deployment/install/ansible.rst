@@ -1,7 +1,7 @@
-Using the `Ansible <http://ansible.com>`_ Playbook
-##################################################
+Using the Ansible Playbook
+--------------------------
 
-The Digital Rebar playbook starts in `digitalrebar.yml <https://github.com/digitalrebar/digitalrebar/deploy/digitalrebar.yml>`_ and uses the `tasks <https://github.com/digitalrebar/digitalrebar/deploy/digitalrebar.yml/tasks>`_ and `group vars <https://github.com/digitalrebar/digitalrebar/deploy/group_vars/all.yml>`_ to drive configuration.
+The Digital Rebar `ansible <http://ansible.com>`_ playbook starts in `digitalrebar.yml <https://github.com/digitalrebar/digitalrebar/deploy/digitalrebar.yml>`_ and uses the `tasks <https://github.com/digitalrebar/digitalrebar/deploy/digitalrebar.yml/tasks>`_ and `group vars <https://github.com/digitalrebar/digitalrebar/deploy/group_vars/all.yml>`_ to drive configuration.
 
 The playbook is driven by a set of "run-in-FOO" scripts handle accessing the system be it Linux-based (remote or local), Mac OSX, or in a metal provider (Packet).
 
