@@ -25,7 +25,7 @@ The Amazon provider uses the API key and secret as the primary.  Users must also
 
 Users may set a default subnet_id for the provider.  This subnet_id can be overriden at the node level.  Subnet_id must start with "subnet-" or it will be ignored.
 
-NOTE: AMI IDs are region specific!
+**Note**: AMI IDs are region specific!
 
 Google Provider
 ~~~~~~~~~~~~~~~
@@ -45,7 +45,7 @@ The project ID for Packet is a full GUID.  This GUID can be found on the URL pat
 OpenStack Provider(s)
 ~~~~~~~~~~~~~~~~~~~~~
 
-NOTE: If there is no private network one should be created.  Ideally, it is named "private" or "internal"
+**Note**: If there is no private network one should be created.  Ideally, it is named "private" or "internal"
 
 In the Horizon Dashboard, the provider details can be quickly obtained from Download RC file.
 
@@ -98,7 +98,7 @@ Rackspace:
 * public network: ``none``
 * private network: ``none``
 
-Note: Rackspace networking DOES create public and private networks but they do not show up in neutron.  Cloudwrap will handle the none-none case correctly here.
+**Note**: Rackspace networking DOES create public and private networks but they do not show up in neutron.  Cloudwrap will handle the none-none case correctly here.
 
 .. index::
   pair: Debugging; Provider

@@ -26,7 +26,7 @@ By default, Docker Admin will start in forwarder mode.  Forwarder mode keeps all
 
 Host mode is needed when attaching external services like Vagrant VMs to the Docker Admin or use the Reverse Proxy (this may be addressed by updates to the forwarder!).
 
-Note: when using ``--access HOST`` the IP of the node must be supplied as an input for the command: ``EXTERNAL_IP=[CIDR] tools/docker-admin access HOST``.  This will set the correct information in the ``access.env`` file.
+**Note**: when using ``--access HOST`` the IP of the node must be supplied as an input for the command: ``EXTERNAL_IP=[CIDR] tools/docker-admin access HOST``.  This will set the correct information in the ``access.env`` file.
 
 Omitting Containers
 ~~~~~~~~~~~~~~~~~~~

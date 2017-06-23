@@ -10,7 +10,7 @@ This includes IPv4 A records and IPv6 AAAA records.
 
 
 
-**Note:** By default, only the admin network has entrance. 
+**Note**: By default, only the admin network has entrance. 
 
 .. image:: /images/screens/webux/dns.png
 

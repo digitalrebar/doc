@@ -108,4 +108,4 @@ OpenContrail:
   * ``--kubernetes-opencontrail-private-subnet=<CIDRIP>`` Private network space for opencontrail
   * ``--kubernetes-opencontrail-public-subnet=<CIDRIP>`` Public network space for opencontrail
 
-  Note: When using OpenContrail, the script will create additional nodes to handle the needed gateway services.
+  **Note**: When using OpenContrail, the script will create additional nodes to handle the needed gateway services.

@@ -21,7 +21,7 @@ Installation requires several steps. To begin with, the following is done by def
 
 Configuration settings are managed under ``deploy/compose/config-dir``
 
-**Note:** It is strongly recommended to review the actively maintained `deploy scripts <https://github.com/digitalrebar/digitalrebar/deploy/>`_ to see the latest install process.
+**Note**: It is strongly recommended to review the actively maintained `deploy scripts <https://github.com/digitalrebar/digitalrebar/deploy/>`_ to see the latest install process.
 
 
 Housekeeping Notes

@@ -16,7 +16,7 @@ Once the server is available and the install step is executed, it should take ab
 SSH to an Ubuntu Server 16.04 with 8 GB RAM
 -------------------------------------------
 
-Note: This quick start focuses on a minimal fast path with Ubuntu 16.04.  However, Digital Rebar will run on Centos, RHEL and other distros.
+**Note**: This quick start focuses on a minimal fast path with Ubuntu 16.04.  However, Digital Rebar will run on Centos, RHEL and other distros.
 
 #. AWS Path:
 
@@ -110,7 +110,7 @@ We are using a basic Kubernetes as a reference app for this quick install.
 #. Select App Catalog...Kubernetes from the left hand navigation and follow these steps:
 
    #. Name the deployment.  (These names are case sensitive!) If auto-commit is left on, deployment review is skipped.  This is recommended for quick start.
-   #. The OS is set when the provider is created. (Note: There may only be one.)  Do not try System (Physical) Nodes for quick start.
+   #. The OS is set when the provider is created. (**Note**: There may only be one.)  Do not try System (Physical) Nodes for quick start.
    #. Configure select options.  There may be additional options, but only the key ones are exposed in the Wizard.  The defaults here are safe.
    #. Select desired nodes and set their roles in the deployment.  The defaults are safe here.
    #. Review the JSON that will be submitted to direct the install.  The JSON can be edited by clicking the pencil icon in the top right corner.

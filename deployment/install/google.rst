@@ -11,7 +11,7 @@ This is for install in linux systems that are already out provisioned or to take
 
 Follow the ../install.rst steps to checkout the DigitalRebar code and RackN deploy from ``digitalrebar/deploy`` directory.
 
-NOTE: There must be a key based SSH access to the target system.  The install process logs into the system as root AND will fix that access if there is a non-root account (specify with ``--login-user``).
+**Note**: There must be a key based SSH access to the target system.  The install process logs into the system as root AND will fix that access if there is a non-root account (specify with ``--login-user``).
 
 Here are the steps:
 
@@ -31,7 +31,7 @@ Common Additional Options:
 
 Install tip: It is possible to connect to a Google VM via the Compute Engine page. Doing this will pull up a terminal in the web browser that is already connected to the VM. This makes connecting to the system simply and allows the install to be run with ``local``. 
 
-Sample install code for a Ubuntu system connected to via the Compute Engine page, including tool set up, is provided below. **Note:** It is necessary to replace [CIDR] in ``export IPA=[CIDR]`` with the system's CIDR, found in ``ip -4 addr``. If this is not done, the install will **not** work!
+Sample install code for a Ubuntu system connected to via the Compute Engine page, including tool set up, is provided below. **Note**: It is necessary to replace [CIDR] in ``export IPA=[CIDR]`` with the system's CIDR, found in ``ip -4 addr``. If this is not done, the install will **not** work!
 ::
 
 	sudo apt-get update
