@@ -15,10 +15,6 @@ Digital Rebar Full Metal DevOps Provisioning: PXE, DHCP, O/S Install
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 https://www.youtube.com/watch?v=Zb16qk0l3Xw
 
-Digital Rebar Automatic Docker Swarm (multi-cloud)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-https://www.youtube.com/watch?v=eunvkN7gmM8
-
 How @DigitalRebar auto installs Kubernetes with @OpenContrail (deep dive)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 https://www.youtube.com/watch?v=wdZLmPMxrwo
