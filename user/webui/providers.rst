@@ -19,7 +19,7 @@ When a node has been created with a provider, it will appear in the :ref:`ui_nod
 
 .. image:: /images/screens/dr_cloud_provider_working.png
 
-WARNING: It is possible for node create and destroy to fail in such a way that the resources have been created on the IaaS provider but do not appear in Digital Rebar!  This can create unexpected costs with providers.
+**WARNING**: It is possible for node create and destroy to fail in such a way that the resources have been created on the IaaS provider but do not appear in Digital Rebar!  This can create unexpected costs with providers.
 
 Adding Providers
 ----------------

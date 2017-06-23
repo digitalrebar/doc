@@ -20,7 +20,7 @@ Next, to install the Kubernetes workload, run the workload script:
   	cd ~/digitalrebar/deploy
   	workloads/kubernetes.sh --deploy-admin=google --provider=aws --deployment-name=kubeup
 
-Since the Kubernetes workload uses Ansible, it does not require the nodes to access an Admin node.  This allows users to run a local Admin node and provision Kubernetes to external nodes.  **WARNING:** A local admin requires consistent connectivity to the nodes to work! It cannot disconnect, even when the script changes to waiting to anneal mode.
+Since the Kubernetes workload uses Ansible, it does not require the nodes to access an Admin node.  This allows users to run a local Admin node and provision Kubernetes to external nodes.  **WARNING**: A local admin requires consistent connectivity to the nodes to work! It cannot disconnect, even when the script changes to waiting to anneal mode.
 
 Video Examples
 --------------

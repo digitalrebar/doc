@@ -28,7 +28,7 @@ recommend using the golden sledgehammer.
    #. warning: might need a better literal mirror in
       sledgehammer/sledgehammer.ks - see below.
 
-WARNING: Option step! Usually requires multiple retries.
+**WARNING**: Option step! Usually requires multiple retries.
 
 
 Failures

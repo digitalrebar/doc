@@ -8,7 +8,7 @@ Configuring Providers
 
 The following information applies to the cloud :ref:`ui_providers` in the UI.
 
-WARNING: Provider configurations contain keys and tokens that allow users to request cloud resources.  This information should **not** be shared.  Do not screencast or share provider configuration unless the information is intended for the public.
+**WARNING**: Provider configurations contain keys and tokens that allow users to request cloud resources.  This information should **not** be shared.  Do not screencast or share provider configuration unless the information is intended for the public.
 
 Protip: See :ref:`ug_add_provider` to upload providers from a CLI.
 
