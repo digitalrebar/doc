@@ -27,7 +27,7 @@ SSH to an Ubuntu Server 16.04 with 8 GB RAM
       #. Click on Launch Instance. This will begin the instance set up.
       #. Select 16.04 Ubuntu Server (not 14.04!) for the AMI, then select `m4.large` or larger. A minimum of 8 Gb of RAM is required.
       #. A minimum of 20 Gb of Disk is recommended.  8 Gb is required.
-      #. Next, navigate to the Configure Security Group tab.  The "default" Security Group for this server needs Port 22 (ssh), 443 (rebar/HTTPS) and ICMP to be available!  This is just our recommended base. Depending on the application, additional ports might be required such as Docker, Chef and Consul.
+      #. Next, navigate to the Configure Security Group tab.  The "default" Security Group for this server needs Port 22 (ssh), 443 (rebar/HTTPS) and ICMP to be available!  This is just our recommended base. Depending on the application, additional ports might be required such as Docker, Chef and Consul. For more on this, see :ref:`port_mapping`.
       #. Launch the instance and save the ``.pem`` key as ``[key_name].pem`` to the home directory. This can be done by using the ``gedit`` command in the terminal, then copying and pasting the key to the new file.
       #. Modify key permissions using ``chmod 600 [key_name].pem``.
 
