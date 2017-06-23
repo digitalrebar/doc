@@ -5,7 +5,9 @@
 
 Digital Rebar Hybrid DevOps
 ---------------------------
-https://www.youtube.com/playlist?list=PLXPBeIrpXjfh2lXdXkNnzAuc7_SUtYJR-
+`https://www.youtube.com/playlist?list=PLXPBeIrpXjfh2lXdXkNnzAuc7_SUtYJR- <https://www.youtube.com/playlist?list=PLXPBeIrpXjfh2lXdXkNnzAuc7_SUtYJR->`_
+
+.. This syntax is necessary here because Sphinx doesn't recognize the hyphen at the end of the URL
 
 Digital Rebar AWS Quick Start
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
