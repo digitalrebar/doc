@@ -17,7 +17,6 @@ Workloads are groups of roles that deliver specific functionality such as platfo
 
    installation
    kubernetes/README
-   swarm/README
    mesos/README
    parameters
    troubleshooting
