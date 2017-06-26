@@ -9,21 +9,37 @@ Digital Rebar Hybrid DevOps
 
 .. This syntax is necessary here because Sphinx doesn't recognize the hyphen at the end of the URL
 
-Digital Rebar AWS Quick Start
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-https://www.youtube.com/watch?v=LQI8GRPDeEg
+RackN Demo: Mesophere DC/OS Multi-Deployment with Digital Rebar
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+https://www.youtube.com/watch?v=azGMWtddUbo
 
-Digital Rebar Full Metal DevOps Provisioning: PXE, DHCP, O/S Install
+RackN Demo: Use Ansible Kargo to Deploy Kubernetes & Workloads
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+https://www.youtube.com/watch?v=eAiF1v6Kj_o
+
+RackN Enterprise/DigitalRebar Overview in 30 Minutes
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+https://www.youtube.com/watch?v=1L5eiwiYbCA
+
+RackN Demo: Digital Rebar one click OpenStack on Kubernetes (Hybrid)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-https://www.youtube.com/watch?v=Zb16qk0l3Xw
+https://www.youtube.com/watch?v=6xuVm9PJ2ck
 
-How @DigitalRebar auto installs Kubernetes with @OpenContrail (deep dive)
+RackN Demo: Multi-Cluster Creation via One Command with Digital Rebar
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+https://www.youtube.com/watch?v=2qtxVIhhhWc
+
+RackN Demo: Incremental and Live Upgrade of Kubernetes with Digital Rebar
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-https://www.youtube.com/watch?v=wdZLmPMxrwo
+https://www.youtube.com/watch?v=5mpY8Oaec2M
 
-Digital Rebar Dev Tour
-~~~~~~~~~~~~~~~~~~~~~~
-https://www.youtube.com/watch?v=aWEdydk4QyE
+RackN Demo: Kubernetes v1.5 Hybrid & Parallel Install via Digital Rebar & Kargo (Part 1)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+https://www.youtube.com/watch?v=By8P2eS4DeQ
+
+RackN Demo: Kubernetes v1.5 Hybrid & Parallel Install via Digital Rebar & Kargo (Part 2)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+https://www.youtube.com/watch?v=wZ0vMrdx4a4
 
 RackN Google K8s FAST Demo
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
