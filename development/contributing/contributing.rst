@@ -17,7 +17,7 @@ The following instructions assume a clone of ``https://github.com/digitalrebar/c
 
    #. Fork the code in order to be able to submit changes
    #. Rename the fork in Github to something like 'rebar-core' to make
-      it easier to track. We'll assume that these proceedures were followed in these
+      it easier to track.  We'll assume that these proceedures were followed in these
       directions
    #. Remember to update any public SSH key to github
 
@@ -50,7 +50,7 @@ To Create a Pull Request
 Work On a Branch
 ~~~~~~~~~~~~~~~~
 
-It's good practice to work on a branch instead of trunk. That allows for several isolated 
+It's good practice to work on a branch instead of trunk.  That allows for several isolated 
 changes into distinct pulls instead of co-mingling
 changes.
 
@@ -66,6 +66,6 @@ Switching between branches is possible at any time.
 Switching allows work to be done on master or for work to be done on multiple pull requests.  
 This flow is especially handy if pull may take a few days to be accepted because work can still be done on
 the next item while the community does the review.  It also isolates the branch 
-from changes in master. If changes from master are required, use
+from changes in master.  If changes from master are required, use
 ``git merge master`` from a branch.
 

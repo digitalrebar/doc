@@ -10,13 +10,13 @@ Digital Rebar uses its API to creates nodes and bind their initial node roles
 (generally No-Op roles).
 
 Use the following steps to register a new node in the system and add
-under Digital Rebar management. These steps are automatically used by the PXE
+under Digital Rebar management.  These steps are automatically used by the PXE
 discovery image (Sledgehammer) when Nodes are detected during their
 initial boot.
 
-#. POST to ``/api/v2/nodes`` to create a basic Node object. This will
+#. POST to ``/api/v2/nodes`` to create a basic Node object.  This will
    not have any roles bound to it nor will it have any addresses from
-   the admin network assigned to it. The node will neither be alive nor
+   the admin network assigned to it.  The node will neither be alive nor
    available.
 
 #. In the CLI, use ``rebar nodes create ...``

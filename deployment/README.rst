@@ -13,7 +13,7 @@ The deployment guide provides four parts:
 #. Tweaking configuration for initial bring up and beyond
 #. Running tools to do deployment
 
-Walk through each section to deploy a Digital Rebar admin node. As always, there is a  ``tl;dr`` found at :ref:`quick_start`.
+Walk through each section to deploy a Digital Rebar admin node.  As always, there is a  ``tl;dr`` found at :ref:`quick_start`.
 
 .. toctree::
    :maxdepth: 2

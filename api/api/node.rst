@@ -46,7 +46,7 @@ Details:
 
 Hints:
 
-Uesrs can provide shortcuts to the hint data. The following hints have
+Uesrs can provide shortcuts to the hint data.  The following hints have
 been defined as optional parameters for the Node API
 
 -  ip - requests a specific network-admin IP

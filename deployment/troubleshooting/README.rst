@@ -7,7 +7,7 @@
 Deployment Troubleshooting
 ==========================
 
-This section will cover troubleshooting all steps of deployment. If a problem is not covered here, see :ref:`faq` for more problems and their solutions.  
+This section will cover troubleshooting all steps of deployment.  If a problem is not covered here, see :ref:`faq` for more problems and their solutions.  
 
 .. toctree::
    :maxdepth: 2

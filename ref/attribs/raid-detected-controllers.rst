@@ -10,7 +10,7 @@ Documentation
 =============
 
 The raid-detected-controllers attrib holds information on all of the
-hardware raid controllers Rebar is able to manage on a node. It consists
+hardware raid controllers Rebar is able to manage on a node.  It consists
 of a list of objects that describe the detected information for each controller.
 
 A sample is below::

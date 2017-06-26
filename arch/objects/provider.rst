@@ -59,7 +59,7 @@ Amazon EC2
 ~~~~~~~~~~
 
 The Amazon EC2 provider is used to let Rebar create, reboot, and
-delete Amazon EC2 virtual machines. In order to use it the following must be done:
+delete Amazon EC2 virtual machines.  In order to use it the following must be done:
 
 * Create a new IAM user on Amazon.
 * Make sure that IAM user has the rights to create, reboot, and delete EC2
@@ -107,7 +107,7 @@ Google Compute Engine
 ~~~~~~~~~~~~~~~~~~~~~
 
 The Google Compute Engine provider lets Rebar create, reboot, and
-delete GCE virtual machines. In order to use it, the following must be done:
+delete GCE virtual machines.  In order to use it, the following must be done:
 
 * Create a new project to use.
 * Make sure the project has the Google Compute Engine API enabled.

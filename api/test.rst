@@ -1,10 +1,10 @@
 Test APIs
 =========
 
-Digital Rebar provides a comprehensive testing framework. While we make
+Digital Rebar provides a comprehensive testing framework.  While we make
 every effort to use the API for all test functions, some activities
-require specialized testing hooks. It is not desired to change primary
-APIs to serve testing use-cases. Consequently, the API has a reserved
+require specialized testing hooks.  It is not desired to change primary
+APIs to serve testing use-cases.  Consequently, the API has a reserved
 area for specialized test interfaces.
 
 **WARNING**: The Test APIs (=/api/test/...=) are considered to be tightly
@@ -23,5 +23,5 @@ Load Node Data from File (api/test/nodes/[:id]?source)
 | PUT    | /api/test/node/[:id]   | returns Node json   |
 +--------+------------------------+---------------------+
 
-Options \* source = specify the file to be loaded. All files should be
+Options \* source = specify the file to be loaded.  All files should be
 in the =[app base]/test/data= path.

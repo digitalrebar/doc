@@ -21,7 +21,7 @@ are maintained on related NodeRoleDatum mode.
 4. discovery data (node.wall) is stored on the node instead of in node role
    because it reflects node information aggregated from all the jigs.
    This information is available using the node.attrib\_[name] and
-   Attrib model. Please see the node API docs for more about this type
+   Attrib model.  Please see the node API docs for more about this type
    of data
 
 NodeRole does not have a natural key, so they must be referenced by
@@ -113,5 +113,5 @@ Node\_Error
 True if any of the NodeRoles on the associated Node are in an error
 state.  This allows API users to monitor the status of a target role and
 know if there was an error that will block progress without having to
-inspect other NodeRoles. Instead of looking at all parents (which could
+inspect other NodeRoles.  Instead of looking at all parents (which could
 span nodes), Node provides a more limited scope.

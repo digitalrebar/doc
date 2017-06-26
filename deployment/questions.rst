@@ -33,7 +33,7 @@ If bare metal servers are being managed, the :ref:`arch_service_provisioner` and
   TODO; arch_network_layout
   TODO; arch_providers_cloud
 
-When managing metal, Digital Rebar uses the :ref:`chef_jig` for some actions. Therefore, it is required that nodes be able to communicate with the admin node.  If this is not possible, the network layout and  :ref:`arch_network_layout` will need to be rethought.
+When managing metal, Digital Rebar uses the :ref:`chef_jig` for some actions.  Therefore, it is required that nodes be able to communicate with the admin node.  If this is not possible, the network layout and  :ref:`arch_network_layout` will need to be rethought.
 
 Are Cloud Instances Going to be Managed?
 ========================================
@@ -77,7 +77,7 @@ For AWS or Packet, look at the *run-in-[aws|packet]* scripts.  They will automat
 What Access Mode Should I Use?
 """"""""""""""""""""""""""""""
 
-There are two access modes for Digital Rebar: HOST or FORWADER.  Most tools take a --host (or --access host) to specify host mode.  Forwarder mode is the default for all tools except run-in-mac.sh which has a --no-host flag to set forwarder mode.  Macs work best in HOST mode.  The mode can also be chosen in the group_vars/all.yml file. The ansible playbook is used to deploy the system. (or tools that use the playbook, which is all of them).
+There are two access modes for Digital Rebar: HOST or FORWADER.  Most tools take a --host (or --access host) to specify host mode.  Forwarder mode is the default for all tools except run-in-mac.sh which has a --no-host flag to set forwarder mode.  Macs work best in HOST mode.  The mode can also be chosen in the group_vars/all.yml file.  The ansible playbook is used to deploy the system. (or tools that use the playbook, which is all of them).
 
 .. index::
   pair: Access Mode; Forwarder Mode

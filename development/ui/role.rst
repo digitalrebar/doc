@@ -17,7 +17,7 @@ The steps for building the UI (view) to edit and display node role
 attributes are as follows
 
 1. Define the attributes for the Role in the Barclamp's rebar.yml if
-   they are not already present. These definitions will create Attrib
+   they are not already present.  These definitions will create Attrib
    objects for the Role in Rebar.
 
    Sample attributes: \`\`\`yaml roles:
@@ -25,7 +25,7 @@ attributes are as follows
 -  name: messaging-server jig: chef-solo requires:
 
    -  openstack-base attribs: # name used as id field in haml input
-      tags. Needs to follow this convention:
+      tags.  Needs to follow this convention:
       [barclamp]-[role]*rest*\ of\_id
 
       -  name: 'messaging-openstack\_endpoints\_mq\_host' # Plain
@@ -57,7 +57,7 @@ attributes are as follows
        messaging/rebar_engine/barclamp_messaging/app/views/barclamp_messaging/node_roles/_messaging-server.name.html.haml
 
    The partial is made up of four main components, the form, the
-   validation rules, the validation messages and the read-only view. The
+   validation rules, the validation messages and the read-only view.  The
    template for the overall partial should follow this pattern:
 
 \`\`\`haml - data\_nil\_empty = (data.nil? \|\| data=={}) - if
@@ -93,7 +93,7 @@ data["map"]["to"]["value"] , :size => 30 ... = hidden\_field\_tag
 -  *IMPORTANT*: The ids used in the form fields *MUST* match the ids
    used to build the rules and messages javascript arrays.
 
-3. Add localization for all labels and validation messages. This follows
+3. Add localization for all labels and validation messages.  This follows
    the conventions mentioned in the `localization <localization.md>`__
    documentation and the general localization pattern for the view above
    is as follows:
@@ -116,7 +116,7 @@ data["map"]["to"]["value"] , :size => 30 ... = hidden\_field\_tag
 
    For example in the messaging barclamp an encrypted databag needs to
    be created on the admin node populated with the user and password
-   from the form. The data bag is then copied downstream to the node
+   from the form.  The data bag is then copied downstream to the node
    prior to a chef run.
 
    Create a class that extends Role and use the following name/location
@@ -141,7 +141,7 @@ data["map"]["to"]["value"] , :size => 30 ... = hidden\_field\_tag
    *on\_todo* hook which is called when the node role is moved into the
    to\_do state once all, if any, blocking parent roles make it to
    active state, but before the data is pushed down to the target node,
-   so this hook is ideal for this use case. Sample code from Messaging
+   so this hook is ideal for this use case.  Sample code from Messaging
    Barclamp below:
 
    .. code:: ruby
@@ -234,16 +234,16 @@ Messaging Barclamp as an example:
                 password: the_password
 
 21. If the information looks correct in the model commit of the Deployment
-    UI. While the parent node is executing, such as
+    UI.  While the parent node is executing, such as
     installing the operating system etc, the read-only node role view can be
     accessed by clicking the gray circle icon
     (indicating blocked state) at the intersection of the node and role.
-    This will open the read-only node role view. Validate the
+    This will open the read-only node role view.  Validate the
     fields and data correct.
 22. When the Deployment is finished and active, the last step is to
     verify the settings in the UI actually made it to the target
-    node and configured the service correctly. The validation steps will
-    be different for each role. For the Messaging Server role the
+    node and configured the service correctly.  The validation steps will
+    be different for each role.  For the Messaging Server role the
     following should be verified:
 23. SSH into the target node and verify that the service is running
     ``:~$ sudo rabbitmqctl status``

@@ -11,7 +11,7 @@ possible causes.
 
 Problem: outbound network access is not working. 
 Cause: Likely cause is that the squid proxy is not configured
-Solution: set the http\_proxy (\`export http\_proxy="http://127.0.0.1:8123") and attempt to access google.com from the admin server. if that worked, try the same thing after ssh'ing to the node
+Solution: set the http\_proxy (\`export http\_proxy="http://127.0.0.1:8123") and attempt to access google.com from the admin server.  if that worked, try the same thing after ssh'ing to the node
 
 Problem: The /tftboot/files path is missing
 Cause: This can be caused when the ISOs has not been staged

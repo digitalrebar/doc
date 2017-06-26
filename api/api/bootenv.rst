@@ -86,7 +86,7 @@ proper workflow progress during the bring-up process.
 | Attribute          | Type            | Settable   | Note                                           |
 +====================+=================+============+================================================+
 | BootParams         | Template String | Yes        | String expanded and available as variable      |
-|                    |                 |            | .BootParams in templates. Often used to        |
+|                    |                 |            | .BootParams in templates.  Often used to        |
 |                    |                 |            | represent the boot parameters passed to the    |
 |                    |                 |            | initial boot kernel.                           |
 +--------------------+-----------------+------------+------------------------------------------------+
@@ -104,7 +104,7 @@ proper workflow progress during the bring-up process.
 |                    |                 |            | OS to install                                  |
 +--------------------+-----------------+------------+------------------------------------------------+
 | RequiredParams     | List of Strings | Yes        | A list of attributes that the bootenv requires |
-|                    |                 |            | to fill in templates. The node object is       |
+|                    |                 |            | to fill in templates.  The node object is       |
 |                    |                 |            | for these values and provided to all the       |
 |                    |                 |            | templates during expansion.                    |
 +--------------------+-----------------+------------+------------------------------------------------+
@@ -155,7 +155,7 @@ used when the isos are not complete or the install method is not ISO-based.  For
 +--------------------+-----------------+------------+----------------------------------------------------+
 | Name               | String          | Yes        | Name of the file to place in the install directory |
 +--------------------+-----------------+------------+----------------------------------------------------+
-| ValidationURL      | String          | Yes        | Can be null. Location of checksum or signature     |
+| ValidationURL      | String          | Yes        | Can be null.  Location of checksum or signature     |
 +--------------------+-----------------+------------+----------------------------------------------------+
 | ValidationMethod   | String          | Yes        | Can be null, Method to use for validation.         |
 +--------------------+-----------------+------------+----------------------------------------------------+
