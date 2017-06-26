@@ -57,7 +57,7 @@ Adding Networks to a Deployment
 
 Generally, deployments also configure one or more networks.
 
-To create a network, visit the Network...Networks page (``/networks``)
+To create a network, visit the Networks page (``/networks``)
 and fill out the table row for the network making sure to select the
 deployment.  Click ``add`` to create the network.
 
