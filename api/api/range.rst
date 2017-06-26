@@ -6,7 +6,7 @@
 Range API
 ~~~~~~~~~
 
-The Range API is used to manage networks. It must be a child of a
+The Range API is used to manage networks.  It must be a child of a
 specific network.
 
 Range CRUD

@@ -19,7 +19,7 @@ Here are the steps:
 #. If the root login is missing, then use ``./add-from-ssh`` to fix the credentials (our advanced scripts call this automatically).
 #. ``./run-in-system.sh --help`` to make sure all of the pre-req's are in place.
 #. ``./run-in-system.sh --deploy-admin=[system|local] --admin-ip=[my CIDR ip/subnet]``. Choose ``system`` for remote install and ``local`` for the current system.
-#. Allow the system to run. Ansible progress will be visible.
+#. Allow the system to run.  Ansible progress will be visible.
 #. Follow steps to login to Digital Rebar UI.
 
 Common Additional Options:
@@ -29,9 +29,9 @@ Common Additional Options:
 * For a Metal or KVM booting dev-test add: ``--con-provisioner --access=FORWARDER``.
 * For a Docker test Compose scale command add: ``--con-node``.
 
-Install tip: It is possible to connect to a Google VM via the Compute Engine page. Doing this will pull up a terminal in the web browser that is already connected to the VM. This makes connecting to the system simply and allows the install to be run with ``local``. 
+Install tip: It is possible to connect to a Google VM via the Compute Engine page.  Doing this will pull up a terminal in the web browser that is already connected to the VM.  This makes connecting to the system simply and allows the install to be run with ``local``. 
 
-Sample install code for a Ubuntu system connected to via the Compute Engine page, including tool set up, is provided below. **Note**: It is necessary to replace [CIDR] in ``export IPA=[CIDR]`` with the system's CIDR, found in ``ip -4 addr``. If this is not done, the install will **not** work!
+Sample install code for a Ubuntu system connected to via the Compute Engine page, including tool set up, is provided below.  **Note**: It is necessary to replace [CIDR] in ``export IPA=[CIDR]`` with the system's CIDR, found in ``ip -4 addr``.  If this is not done, the install will **not** work!
 ::
 
 	sudo apt-get update

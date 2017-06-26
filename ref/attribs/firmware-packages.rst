@@ -15,7 +15,7 @@ Firmware Package Information
 The firmware-packages attrib contains all of the firmware packages that
 Digital Rebar knows how to flash, regardless of system type.  It consists
 of a JSON object that maps the full filename of the firmware update package
-to metadata about that package. The metadata is defined as follows:
+to metadata about that package.  The metadata is defined as follows:
 
 ::
 

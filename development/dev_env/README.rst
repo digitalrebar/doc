@@ -7,7 +7,7 @@ Dev Environment
 ---------------
 
 Our development environments include a *working* administrative server
-for testing. It is very important in our process that developers are
+for testing.  It is very important in our process that developers are
 able to run deployments in their environment as part of the testing
 cycle.
 

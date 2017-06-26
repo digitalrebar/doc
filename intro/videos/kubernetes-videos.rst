@@ -6,7 +6,7 @@
 Digital Rebar Kubernetes
 -------------------------
 
-This video series covers (). It can be found at https://www.youtube.com/playlist?list=PLXPBeIrpXjfjabMbwYyDULOX3kZmlxEXK
+This video series covers ().  It can be found at https://www.youtube.com/playlist?list=PLXPBeIrpXjfjabMbwYyDULOX3kZmlxEXK
 
 Digital Rebar Quick Start to K8s
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

@@ -7,7 +7,7 @@
 Attribute (aka Attrib) APIs
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Attribute APIs are used to manage attributes used by the jigs. Roles,
+Attribute APIs are used to manage attributes used by the jigs.  Roles,
 Nodes, NodeRoles, and DeploymentRoles all work with Attribs.
 
     To prevent Rails name collisions, Digital Rebar uses 'Attrib'

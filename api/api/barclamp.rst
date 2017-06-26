@@ -6,7 +6,7 @@
 Barclamp APIs
 ~~~~~~~~~~~~~
 
-Barclamps are the core modulization for Digital Rebar. For that reason,
+Barclamps are the core modulization for Digital Rebar.  For that reason,
 the API for barclamps is more limited because changes to barclamps can
 cause breaking changes to the framework.
 

@@ -3,7 +3,7 @@
 Web UX Guide
 ============
 
-This is the Digital Rebar Web Experience. Both the UX and the documentation are still under construction.
+This is the Digital Rebar Web Experience.  Both the UX and the documentation are still under construction.
 
 .. toctree::
   :maxdepth: 1

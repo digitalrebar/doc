@@ -3,7 +3,7 @@
 Mark Use
 ========
 
-The Digital Rebar name and mark are maintained by RackN until the project goverance moves to an independant body.  Users of the project are welcome to use the name and mark.  For future project management purposes, RackN requests vendors obtain permission for commercial uses.
+The Digital Rebar name and mark are maintained by RackN until the project goverance moves to an independent body.  Users of the project are welcome to use the name and mark.  For future project management purposes, RackN requests vendors obtain permission for commercial uses.
 
 Name
 ----
@@ -15,7 +15,7 @@ Digital Rebar usage options are as follows:
 
   * digital\_rebar
   * DigitalRebar (avoid in written text in favor of Digital Rebar)
-  * rebar.digital (the . is required in this format)
+  * rebar.digital (the "." is required in this format)
   * dR or DR  (do not use Dr)
   * Internally within the project, it is acceptable to just say "Rebar"
 
@@ -41,9 +41,9 @@ Dr. Mo is the Digital Rebar mascot.
 .. image:: /images/dr_bunny.png
 	:height: 100px
 
-It is accepable to: 
+It is acceptable to: 
 
-* add clothing and accoutrements 
+* add clothing and accouterments 
 * change Dr. Mo's expression
 
 Dr. Mo has no gender and should not be referenced with gender specific
