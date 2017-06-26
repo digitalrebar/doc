@@ -26,7 +26,7 @@ Limitations: The batch is not smart enough (yet) to create nodes if a name is re
 Prerequisites
 -------------
 
-The batch requires the user to have created a deployment as a target for the batch operation.  That deployment must be in _proposed_ mode for these changes to be accepted.  It is important to realize that the changes will not be automatically processed, the user is required to commit the deployment after batching before Digital Rebar will start processing.
+The batch requires the user to have created a deployment as a target for the batch operation.  That deployment must be in *proposed* mode for these changes to be accepted.  It is important to realize that the changes will not be automatically processed, the user is required to commit the deployment after batching before Digital Rebar will start processing.
 
 API
 ---
