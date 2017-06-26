@@ -40,13 +40,10 @@ The follow table describes the states and icons used by Digital Rebar throughout
 +--------------+------------------------+-----------------------------------------------------------+
 | Error        | |Error (image)|        | Failed, Incomplete transition                             |
 +--------------+------------------------+-----------------------------------------------------------+
-| Blocked      | |Blocked (image)|      | Annealer waiting until all prereq's met                   |
-+--------------+------------------------+-----------------------------------------------------------+
-| Idle         | |Idle (image)|         | System not active                                         |
-+--------------+------------------------+-----------------------------------------------------------+
+| Queue        | |Queue (image)|        | Annealer waiting until all prereq's met                   |
++--------------+------------------------
++-----------------------------------------------------------+
 | Off          | |Off (image)|          | Power is off. No activity possible                        |
-+--------------+------------------------+-----------------------------------------------------------+
-| Wait         | |Wait (image)|         | Todo action but power is off. Waiting until power is on   |
 +--------------+------------------------+-----------------------------------------------------------+
 | Proposed     | |Proposed (image)|     | Waiting on user input                                     |
 +--------------+------------------------+-----------------------------------------------------------+
@@ -54,17 +51,15 @@ The follow table describes the states and icons used by Digital Rebar throughout
 +--------------+------------------------+-----------------------------------------------------------+
 | To do        | |TODO (image)|         | All prereq's met but not Annealer not started yet         |
 +--------------+------------------------+-----------------------------------------------------------+
-| Transition   | |Transition (image)|   | Annealer sent work to Jig                                 |
+| Process      | |Process (image)|      | Annealer sent work to Jig                                 |
 +--------------+------------------------+-----------------------------------------------------------+
 
 
-.. |Ready (image)| image:: /images/icons/led/active.png
+.. |Ready (image)| image:: /images/icons/led/ready.png
 .. |Error (image)| image:: /images/icons/led/error.png
-.. |Blocked (image)| image:: /images/icons/led/blocked.png
-.. |Idle (image)| image:: /images/icons/led/active.png
+.. |Queue (image)| image:: /images/icons/led/queue.png
 .. |Off (image)| image:: /images/icons/led/off.png
-.. |Wait (image)| image:: /images/icons/led/wait.png
 .. |Proposed (image)| image:: /images/icons/led/proposed.png
 .. |Reserved (image)| image:: /images/icons/led/reserved.png
 .. |TODO (image)| image:: /images/icons/led/todo.png
-.. |Transition (image)| image:: /images/icons/led/transition.png
+.. |Process (image)| image:: /images/icons/led/process.png
