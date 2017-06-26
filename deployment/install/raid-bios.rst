@@ -12,7 +12,7 @@ The locations and names in this document were updated December 2016.  Please che
 
 Download the files as directed below, then copy the files to your host system under ``~/.cache/digitalrebar/tftpboot/files/raid``.  This will allow the files to managed by Digital Rebar.
 
-NOTE: This can be done AFTER installation.  Simply re-run the raid-tools-install role.
+**Note**: This can be done AFTER installation.  Simply re-run the raid-tools-install role.
 
 Downloading the MegaCLI RAID Utility
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -23,7 +23,7 @@ This link will search for it directly: https://www.broadcom.com/broadcom-search?
 
 Should resolve to this link: https://docs.broadcom.com/docs/12351587
 
-NOTE: This file may be downloaded as ``8-07-14_MegaCLI.zip`` (note the dashes) and _must_ be renamed as ``8.07.14_MegaCLI.zip``
+**Note**: This file may be downloaded as ``8-07-14_MegaCLI.zip`` (note the dashes) and _must_ be renamed as ``8.07.14_MegaCLI.zip``
 
 You must accept the EULA to download this file (that is why it cannot be packaged into the install for you).
 

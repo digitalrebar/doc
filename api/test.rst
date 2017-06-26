@@ -7,7 +7,7 @@ require specialized testing hooks.  It is not desired to change primary
 APIs to serve testing use-cases.  Consequently, the API has a reserved
 area for specialized test interfaces.
 
-WARNING: The Test APIs (=/api/test/...=) are considered to be tightly
+**WARNING**: The Test APIs (=/api/test/...=) are considered to be tightly
 coupled to the code base and have *no contract* for consistency between
 versions.
 

@@ -120,7 +120,7 @@ Using the deploy tools, the environment should be setup for development as well.
 This creates a show where Docker-compose logs and other Docker commands can be run in order to inspect the containers.  Exiting this shell will remove and kill the containers.  *Docker-admin* takes an --access flag with a value of either HOST or FORWARDER and a very helpful ``--no-pull`` flag that prevents a pull update to increase iteration speeds.
 
 
-The ``run-in-[packet|system|google|docean|aws].sh [options]`` or ``workloads\[docker-swarm|kubernetes]`` scripts will quickly build a working Digital Rebar administration system.  There are advanced workload scripts that will setup Digital Rebar and provision a workload.
+The ``run-in-[packet|system|google|docean|aws].sh [options]`` or ``workloads\[kubernetes]`` scripts will quickly build a working Digital Rebar administration system.  There are advanced workload scripts that will setup Digital Rebar and provision a workload.
 
 The :ref:`arch_service_provisioner`/:ref:`arch_service_dhcp` containers (include with ``--con-provisioner --con-dhcp``) are able to handle DHCP/PXE boot discovery of metal and KVM.  These options will lengthen the install because they download previsioning ISOs from source.  ISO can automatically be updated from a local``~/digitalrebar/isos``.
 

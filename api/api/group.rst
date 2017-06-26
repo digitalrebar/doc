@@ -19,7 +19,7 @@ List
 
 Returns list of group id:names in the system
 
-    Note: Category is not included in this list
+    **Note**: Category is not included in this list
 
 **Input:**
 

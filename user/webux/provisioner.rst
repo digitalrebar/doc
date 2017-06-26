@@ -3,7 +3,7 @@
 Provisioner
 ===========
 
-Similarly to :ref:`ux_workload`, the "Provisioner" tab will not open a page, rather it will give three options: "Machines", "Boot Environment", and "Templates".
+Similarly to :ref:`ux_app_catalog`, the "Provisioner" tab will not open a page, rather it will give three options: "Machines", "Boot Environment", and "Templates".
 
 
 .. _ux_machines:
@@ -18,7 +18,7 @@ The "Machines" page shows all of the physical machines that the user has access 
 .. image:: /images/screens/webux/machines.png
 
 
-**Note:** The bar color of the machine corresponds to it's level of activeness: Blue is 100% responsive, yellow is partially responsive, and black is off.
+**Note**: The bar color of the machine corresponds to it's level of activeness: Blue is 100% responsive, yellow is partially responsive, and black is off.
 
 .. _ux_boot_environment:
 

@@ -14,4 +14,4 @@ When opened, the Annealer shows the progress of node role deployment:
 * Todo shows nodes that are about to be processed.
 * Queue shows nodes that are waiting to enter Todo.
 
-**Note:** Error has a retry button that will send all erroneous node roles back to the queue.
+**Note**: Error has a retry button that will send all erroneous node roles back to the queue.

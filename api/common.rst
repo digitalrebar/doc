@@ -23,7 +23,7 @@ The Digital Rebar API is versioned.  API urls include the Digital Rebar
 version of the API (e.g.: 1.0 or v2).  Please use the most recent version
 available!
 
-Legacy Note: routes with 1.0 are deprecated!
+**Legacy Note**: routes with 1.0 are deprecated!
 
 .. index::
   pair: API; Behavior Pattern

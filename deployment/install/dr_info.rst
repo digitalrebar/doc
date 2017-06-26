@@ -8,7 +8,7 @@ DR Info File (.dr_info)
 
 For regular uses, :ref:`ui_providers` credentials can be stored in the ``~/.dr_info`` file.
 
-There is a ``.dr_info.example`` file in the `DigitalRebar-Deployment root <https://github.com/rackn/digitalrebar-deploy/blob/master/.dr_info.example>`_ that can be used as a template via ``cp ~/digitalrebar/deploy/.dr_info.example ~/.dr_info``
+There is a ``.dr_info.example`` file in the `DigitalRebar-Deployment root <https://github.com/digitalrebar/digitalrebar/blob/master/deploy/.dr_info.example>`_ that can be used as a template via ``cp ~/digitalrebar/deploy/.dr_info.example ~/.dr_info``
 
 Sample ``.dr_info``:
 

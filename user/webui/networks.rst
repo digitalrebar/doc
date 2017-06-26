@@ -29,7 +29,7 @@ Editing Networks
 
 Once created, the edit screen allows users to make changes to the network configuration.
 
-NOTE: These changes will not take effect until the matching node-roles are executed!
+**Note**: These changes will not take effect until the matching node-roles are executed!
 
 .. image:: /images/screens/dr_network_detail.png
 
@@ -51,7 +51,7 @@ To cope with NIC enumeration differences between systems, it is possible to defi
 
 .. image:: /images/screens/dr_bus_interfaces.png
 
-Developer Note: If creating a general mapping for new hardware types, please submit a pull request so that the mapping is included in the default list.
+**Developer Note**: If creating a general mapping for new hardware types, please submit a pull request so that the mapping is included in the default list.
 
 DNS Filters
 -----------

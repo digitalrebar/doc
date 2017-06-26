@@ -11,7 +11,7 @@ This guide is to install in Linux systems that are already out provisioned or to
 
 Follow the ../install.rst steps to checkout the DigitalRebar code and RackN deploy from ``digitalrebar/deploy`` directory.
 
-*NOTE*: There must be a key based SSH access to the target system.  The install process logs into the system as root AND will fix that access if there is a non-root account (specify with ``--login-user``)
+**Note**: There must be a key based SSH access to the target system.  The install process logs into the system as root AND will fix that access if there is a non-root account (specify with ``--login-user``)
 
 Here are the steps:
 

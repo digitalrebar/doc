@@ -46,15 +46,6 @@ Kubernetes Specific
 
 
 .. index::
-  Specific Ports; Docker Swarm
-  Docker Swarm; Ports
-
-Docker Swarm Specific
-~~~~~~~~~~~~~~~~~~~~~
-
-- 2375 & 2475 (Docker)
-
-.. index::
   pair: Ports; Physical Infrastructure
 
 Physical Infrastructure Ports

@@ -33,6 +33,6 @@ These can be used to add new roles, add new nodes, and bind roles to nodes respe
 
 .. image:: /images/screens/webux/no_propose.png
 
-**Note:** When Propose is opened two new icons will appear: "add role" and "commit".  These are used to add a role and save the new role to the deployment respectively.
+**Note**: When Propose is opened two new icons will appear: "add role" and "commit".  These are used to add a role and save the new role to the deployment respectively.
 
 .. image:: /images/screens/webux/propose_use.png

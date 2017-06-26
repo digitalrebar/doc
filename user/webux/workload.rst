@@ -1,12 +1,12 @@
 .. index::
   pair: Workload; UX
 
-.. _ux_workload:
+.. _ux_app_catalog:
 
-Workload
-========
+App Catalog
+===========
 
-The "workload" tab will not open a page, but will provide the options of "Install O/S," "Kompos8 K8s," "Docker Swarm," and "Kubespray."
+The "App Catalog" tab will not open a page, but will provide the options of "Install O/S," "Docker Swarm," "DC/OS," "Kubernetes," and "Openstack."
 
 .. _ux_install_wizard:
 
@@ -18,14 +18,6 @@ Install O/S helps create a set of nodes in a new deployment of a certain OS.
 From the "Install O/S Wizard" page, nodes can be selected and redeployed under a new OS.
 
 .. image:: /images/screens/webux/oswiz.png
-
-
-Kompos8 K8s
------------
-
-Kompos8 K8s is another workload, which assists in the deployment of virtual nodes.
-
-.. image:: /images/screens/webux/kompos.png
 
 
 .. _ux_docker_swarm:
@@ -44,13 +36,27 @@ The master and member nodes can easily be specified using the wizard.
 .. image:: /images/screens/webux/docker.png
 
 
-=======
+DC/OS Wizard
+------------
+
+DC/OS Wizard helps with the creattion of a distributed operating system across a set of nodes.
 
 
-Kubespray
----------
-
-Kubespray is another workload, similar to Kompos8, which also helps with virtual node deployment. 
+.. image:: /images/screens/webux/dcos.png
 
 
-.. image:: /images/screens/webux/kubespray.png
+Kubernetes Wizard
+-----------------
+
+Kubernetes assists in the deployment of virtual nodes.
+
+.. image:: /images/screens/webux/kompos.png
+
+
+Openstack Wizard
+----------------
+
+OpenStack also helps with virtual node deployment and management. 
+
+
+.. image:: /images/screens/webux/openstack.png

@@ -126,7 +126,7 @@ By default, Digital Rebar will install a Proxy server on the Admin server
 in order to facilitate access to packages on the internet by the target
 nodes.  After installation Digital Rebar will install various packages
 based on the roles that are assigned to these devices.  As Digital Rebar
-caches the packages as they are downloaded from the internet (Note: they are only
+caches the packages as they are downloaded from the internet (**Note**: they are only
 pulled down once even if multiple systems will be accessing them).  It is
 possible for a user to define a different proxy server if one already
 exists in the enviornment.
