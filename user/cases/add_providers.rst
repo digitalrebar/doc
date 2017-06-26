@@ -15,7 +15,7 @@ populate the provider in question.
   	cd ~/digitalrebar/deploy
     workloads/add-provider.sh --admin-ip=[rebar ip] --provider=[google|aws|packet|debug]
 
-Note: For AWS or Google the scripts will attempt to install their CLIs
+**Note**: For AWS or Google the scripts will attempt to install their CLIs
 
 The :ref:`ui_providers` UI can also be used interactively.
 

@@ -6,7 +6,7 @@
 Workload Parameters 
 -------------------
 
-*Note: These parameters are optional!*
+**Note**: *These parameters are optional!*
 
 The following options are common for all workload scripts:
 

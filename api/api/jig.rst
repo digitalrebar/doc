@@ -45,4 +45,4 @@ API Actions
 | VARIOUS   | api/v2/jigs/:id/extra   | Special Ops                       |
 +-----------+-------------------------+-----------------------------------+
 
-Note: Flush is not implemented in all Jigs.  The Ansible Playbook jig does implement this feature.
+**Note**: Flush is not implemented in all Jigs.  The Ansible Playbook jig does implement this feature.

@@ -13,9 +13,7 @@ This is the Digital Rebar Web Interface.
   :glob:
 
   login
-  overview
   annealer
-  monitor
   deployment
   nodes
   roles

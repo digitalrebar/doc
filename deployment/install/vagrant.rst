@@ -6,7 +6,7 @@
 Vagrant and  Digital Rebar
 ==========================
 
-`Note`: While workable, this is not an advisable path for building an admin node!  It works very well adding local vm nodes to an existing admin node.  Unlike the ``kvm_slave`` approach, Vagrant bypasses the "bare metal" sledgehammer discovery process.
+**Note**: While workable, this is not an advisable path for building an admin node!  It works very well adding local vm nodes to an existing admin node.  Unlike the ``kvm_slave`` approach, Vagrant bypasses the "bare metal" sledgehammer discovery process.
 
 Vagrant File
 ------------

@@ -16,7 +16,7 @@ Once the server is available and the install step is executed, it should take ab
 SSH to an Ubuntu Server 16.04 with 8 GB RAM
 -------------------------------------------
 
-Note: This quick start focuses on a minimal fast path with Ubuntu 16.04.  However, Digital Rebar will run on Centos, RHEL and other distros.
+**Note**: This quick start focuses on a minimal fast path with Ubuntu 16.04.  However, Digital Rebar will run on Centos, RHEL and other distros.
 
 #. AWS Path:
 
@@ -27,7 +27,7 @@ Note: This quick start focuses on a minimal fast path with Ubuntu 16.04.  Howeve
       #. Click on Launch Instance. This will begin the instance set up.
       #. Select 16.04 Ubuntu Server (not 14.04!) for the AMI, then select `m4.large` or larger. A minimum of 8 Gb of RAM is required.
       #. A minimum of 20 Gb of Disk is recommended.  8 Gb is required.
-      #. Next, navigate to the Configure Security Group tab.  The "default" Security Group for this server needs Port 22 (ssh), 443 (rebar/HTTPS) and ICMP to be available!  This is just our recommended base. Depending on the application, additional ports might be required such as Docker, Chef and Consul.
+      #. Next, navigate to the Configure Security Group tab.  The "default" Security Group for this server needs Port 22 (ssh), 443 (rebar/HTTPS) and ICMP to be available!  This is just our recommended base. Depending on the application, additional ports might be required such as Docker, Chef and Consul. For more on this, see :ref:`port_mapping`.
       #. Launch the instance and save the ``.pem`` key as ``[key_name].pem`` to the home directory. This can be done by using the ``gedit`` command in the terminal, then copying and pasting the key to the new file.
       #. Modify key permissions using ``chmod 600 [key_name].pem``.
 
@@ -110,12 +110,13 @@ We are using a basic Kubernetes as a reference app for this quick install.
 #. Select App Catalog...Kubernetes from the left hand navigation and follow these steps:
 
    #. Name the deployment.  (These names are case sensitive!) If auto-commit is left on, deployment review is skipped.  This is recommended for quick start.
-   #. The OS is set when the provider is created. (Note: There may only be one.)  Do not try System (Physical) Nodes for quick start.
+   #. The OS is set when the provider is created. (**Note**: There may only be one.)  Do not try System (Physical) Nodes for quick start.
    #. Configure select options.  There may be additional options, but only the key ones are exposed in the Wizard.  The defaults here are safe.
    #. Select desired nodes and set their roles in the deployment.  The defaults are safe here.
    #. Review the JSON that will be submitted to direct the install.  The JSON can be edited by clicking the pencil icon in the top right corner.
 
 #. Watch Digital Rebar build the cluster from the Deployment page or from the Annealer button in the top right corner.  For more on the Deployment page and the Annealer, see :ref:`ux_deployment` and :ref:`ux_annealer` respectively.
+   #. `Troubleshooting <http://digital-rebar.readthedocs.io/en/latest/deployment/troubleshooting/roles/etcd-install.html>`_ for ``etcd-install`` fail.
 #. Login to the cluster from the Master Node using ``https://[ip of master]/ui`` (admin/changeme)
 
    #. Get the IP of the manager from Nodes and look for the address of the node that is assigned as the cluster-master.

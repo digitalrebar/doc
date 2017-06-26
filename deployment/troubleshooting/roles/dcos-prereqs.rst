@@ -1,11 +1,10 @@
-dcos-prereqs placeholder
-========================
+dcos-prereqs
+============
 
-If you are reading this template, please take time to update your issue in the docs!
 
-ISSUE NOT DEFINED YET
----------------------
+Device not found Error
+----------------------
 
-:typical log message: ``Example Error message here``
-:cause: Cause Here
-:solution: If known, add solution
+:typical log message: ``Device /dev/. not found (or ignored by filtering).``
+:cause: DC/OS install expects multiple disk drives
+:solution: Create disk drive partition or use multiple drives

@@ -5,7 +5,7 @@ Network Deployment Guide
 
 Configuring networks in Digital Rebar requires knowledge of the desired networking environment.
 
-> Note: networks automatically create roles with matching names.  These roles much be attached to the nodes for the network to be configured on the node.
+**Note**: networks automatically create roles with matching names.  These roles much be attached to the nodes for the network to be configured on the node.
 
 Need Details? Watch the Video! https://youtu.be/5YWMlYYuu-s
 

@@ -60,7 +60,7 @@ Attribs (optional)
 
 A simple hash, the attribs hash contains a list of the attributes that should be set for this batch processing.  The values will be passed in as provided, so it is possible to provide multiple types or complex json inputs if needed.
 
-Note: the batch process will not add new attributes; consequently, the attribs in Digital Rebar must exist before the batch is called.  
+**Note**: the batch process will not add new attributes; consequently, the attribs in Digital Rebar must exist before the batch is called.  
 
 Side-effect: The batch will add the attribute's roles to the deployment.
 
@@ -83,7 +83,7 @@ Nodes (required)
 
 An array of hashs, the nodes array contains the nodes and roles being applied in the batch.
 
-NOTE: The nodes when created or moved are reassigned to use the tenant of the deployment.
+**Note**: The nodes when created or moved are reassigned to use the tenant of the deployment.
 
 Within each node hash, 
 

@@ -160,7 +160,7 @@ used when the isos are not complete or the install method is not ISO-based.  For
 | ValidationMethod   | String          | Yes        | Can be null, Method to use for validation.         |
 +--------------------+-----------------+------------+----------------------------------------------------+
 
-NOTE: Validation is not currently implemented in the provisioner.
+**Note**: Validation is not currently implemented in the provisioner.
 
 
 Template Object
