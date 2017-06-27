@@ -41,8 +41,7 @@ The follow table describes the states and icons used by Digital Rebar throughout
 | Error        | |Error (image)|        | Failed, Incomplete transition                             |
 +--------------+------------------------+-----------------------------------------------------------+
 | Queue        | |Queue (image)|        | Annealer waiting until all prereq's met                   |
-+--------------+------------------------
-+-----------------------------------------------------------+
++--------------+------------------------+-----------------------------------------------------------+
 | Off          | |Off (image)|          | Power is off. No activity possible                        |
 +--------------+------------------------+-----------------------------------------------------------+
 | Proposed     | |Proposed (image)|     | Waiting on user input                                     |
