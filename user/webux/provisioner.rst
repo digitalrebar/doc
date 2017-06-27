@@ -3,7 +3,7 @@
 Provisioner
 ===========
 
-Similarly to :ref:`ux_app_catalog`, the "Provisioner" tab will not open a page, rather it will give three options: "Machines", "Boot Environment", and "Templates".
+Similarly to :ref:`ux_app_catalog`, the "Provisioner" tab will not open a page, rather it will give three options: "Machines", "Boot Environments", and "Templates".
 
 
 .. _ux_machines:
@@ -22,10 +22,10 @@ The "Machines" page shows all of the physical machines that the user has access 
 
 .. _ux_boot_environment:
 
-Boot Environment
-----------------
+Boot Environments
+-----------------
 
-The "Boot Environment" page logs the available boot environments.
+The "Boot Environments" page logs the available boot environments.
 
 .. image:: /images/screens/webux/boot_env.png
 

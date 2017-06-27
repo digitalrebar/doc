@@ -13,4 +13,4 @@ Upon logging in, the user interface will open to the Deployments page.  The top 
 
 
 The name of the selected page is posted on the left, while the tenant is displayed to the right.
-The two icons are for refreshing data and viewing the :ref:`ux_annealer` respectively.  Thanks to the data refresher, users should not need to refresh the page.
+The three icons are for refreshing data, viewing the :ref:`ux_annealer`, and viewing the welcome screen documentation respectively.  Thanks to the data refresher, users should not need to refresh the page.
