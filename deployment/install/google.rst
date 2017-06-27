@@ -37,8 +37,7 @@ Sample install code for a Ubuntu system connected to via the Compute Engine page
 	sudo apt-get update
 	sudo apt-get install git
 	mkdir digitalrebar
-	git clone https://github.com/rackn/digitalrebar-deploy digitalrebar/deploy
-	ln -s digitalrebar/ digitalrebar/deploy/compose/digitalrebar
+	git clone https://github.com/digitalrebar/digitalrebar digitalrebar/deploy
 	cd digitalrebar/deploy
 	./run-in-system.sh --help
 	ip -4 addr

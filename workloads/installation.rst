@@ -16,7 +16,7 @@ To install the required workloads, the Digital Rebar Deploy infrastructure is ne
 
   	mkdir ~/digitalrebar
   	cd ~/digitalrebar
-  	git clone https://github.com/rackn/digitalrebar-deploy deploy
+  	git clone https://github.com/digitalrebar/digitalrebar digitalrebar/deploy
 
 Make sure to open the correct port, see :ref:`port_mapping`.
 
