@@ -51,4 +51,4 @@ This sections deals with the following task::
 
 The install has been known to get stuck on this particular task. If this happens, the task will eventually timeout and fail. However, pressing `ctrl` and `c` simultaneously can force the task to halt. This is recommended if the step takes longer than 15 or so minutes, as it will save time.
 
-The UX will not be accessible if this occurs. Please contact support should this error occur.
+The UX will not be accessible if this occurs. Please `contact support <https://gitter.im/digitalrebar/core?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge>`_ should this error occur.
