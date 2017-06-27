@@ -79,9 +79,7 @@ deployment.  The deployment can be managed using special purpose milestone
 roles (aka "noop") that represent target states.  Digital Rebar tracks the
 subroles needed to achieve the milestone and automatically adds them.
 
-To add a milestone role, select it from the list at the top of the
-screen and click ``add role``.  For these instructions, use the
-``O/S Installed`` role to install an operating system.
+To add a milestone role, first click the ``propose`` button at the bottom of the deployment. Next, click the ``add role`` button and choose the desired role.
 
 Once a role is added to a deployment, Digital Rebar will add it an it's
 dependencies as columns into the deployment matrix.
@@ -95,9 +93,8 @@ Installing an OS on a Node
 To install an operating system on a node, attach the
 ``O/S Installed`` milestone role to the node.
 
-To attach the O/S role to the node, click the green plus
-button.  This will automatically add both the ``O/S Installed`` and
-``Install O/S`` role.
+To attach a role to a node, first select ``propose`` then click ``bind node roles``. After choosing the desired role, click the plus button beside the node you wish to modify.  In this case, both the ``O/S Installed`` and
+``Install O/S`` roles will be automatically added.
 
 Once the O/S role is attached, the icon changes to a wrench.  Clicking
 the wrench on the ``Install O/S`` role allows choice over which
