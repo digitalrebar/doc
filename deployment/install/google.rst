@@ -9,7 +9,7 @@ Run-In-Google
 
 This is for install in linux systems that are already out provisioned or to take over an existing Linux system.
 
-Follow the ../install.rst steps to checkout the DigitalRebar code and RackN deploy from ``digitalrebar/deploy`` directory.
+See :ref:`initial_install_setup` for steps to checkout the DigitalRebar code and RackN deploy from ``digitalrebar/deploy`` directory.
 
 **Note**: There must be a key based SSH access to the target system.  The install process logs into the system as root AND will fix that access if there is a non-root account (specify with ``--login-user``).
 
@@ -37,8 +37,7 @@ Sample install code for a Ubuntu system connected to via the Compute Engine page
 	sudo apt-get update
 	sudo apt-get install git
 	mkdir digitalrebar
-	git clone https://github.com/rackn/digitalrebar-deploy digitalrebar/deploy
-	ln -s digitalrebar/ digitalrebar/deploy/compose/digitalrebar
+	git clone https://github.com/digitalrebar/digitalrebar digitalrebar/deploy
 	cd digitalrebar/deploy
 	./run-in-system.sh --help
 	ip -4 addr

@@ -7,7 +7,7 @@
 Troubleshooting Run-in-AWS 
 --------------------------
 
-This section will cover troubleshooting tips and solutions for installing onto an AWS Server. If an issue is not covered here, please contact support.
+This section will cover troubleshooting tips and solutions for installing onto an AWS Server. If an issue is not covered here, please `contact support <https://gitter.im/digitalrebar/core?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge>`_.
 
 General Tips
 ============

@@ -9,7 +9,7 @@ Troubleshooting Run-in-Packet
 
 This section will cover troubleshooting tips and solutions for 
 installing onto a Packet Server. If an issue is not covered here, 
-please contact support.
+please `contact support <https://gitter.im/digitalrebar/core?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge>`_.
 
 General Tips
 ============
