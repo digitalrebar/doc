@@ -35,30 +35,5 @@ Once created, the edit screen allows users to make changes to the network config
 
 To create a team, use a comma between the conduit codes.  E.g.: ``10g0, 10g1``
 
-Network Node Map
-----------------
-
-To help track network assignment, the network-node page helps show which nodes are assigned to each network.
-
-.. image:: /images/screens/dr_network_node.png
-
-This is a read only display.
-
-Bus Interfaces
---------------
-
-To cope with NIC enumeration differences between systems, it is possible to define custom bus mappings in Digital Rebar.
-
-.. image:: /images/screens/dr_bus_interfaces.png
-
-**Developer Note**: If creating a general mapping for new hardware types, please submit a pull request so that the mapping is included in the default list.
-
-DNS Filters
------------
-
-Digital Rebar will automatically create DNS entries for nodes when they are created and remove them when they are destroyed.  The DNS filters allows users to define additional naming patterns based on the matcher patterns and templates.
-
-.. image:: /images/screens/dr_dns_filters.png
-
 .. index:
   TODO; DNS_Filters
