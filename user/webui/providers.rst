@@ -35,4 +35,4 @@ And then exiting the appropriate fields.
 Developer Notes
 ---------------
 
-Provider activity can be monitored by watching the Cloudwrap container logs.  See ref:`configure_providers` for details.
+Provider activity can be monitored by watching the Cloudwrap container logs.  See :ref:`configure_providers` for details.

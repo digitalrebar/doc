@@ -29,7 +29,7 @@ operating systems from the following ISO images:
 -  ``redhat-7.0``: ``rhel-server-7.0-x86_64-dvd.iso``
 -  ``debian-7``: ``debian-7-mini-amd64.iso`` (**Note**: This is really the netboot mini.iso renamed.  It can be found
    `here <http://ftp.nl.debian.org/debian/dists/wheezy/main/installer-amd64/current/images/netboot/mini.iso>`__.)
--  ``debian-8`` : ``debian-8-mini-amd64.iso`` (**Note** This is really the netboot mini.iso renamed.  It can be found
+-  ``debian-8`` : ``debian-8-mini-amd64.iso`` (**Note**: This is really the netboot mini.iso renamed.  It can be found
    `here <http://ftp.nl.debian.org/debian/dists/jessie/main/installer-amd64/current/images/netboot/mini.iso>`__.)
 -  ``ESXi 6.0``:
    ``VMware-VMvisor-Installer-6.0.0.update02-3620759.x86_64.iso``

@@ -6,7 +6,7 @@
 Providing RAID and BIOS Utilities
 ---------------------------------
 
-This step is _required_ to use the provisioner even if the utliities are not needed for the system in question.
+This step is *required* to use the provisioner even if the utliities are not needed for the system in question.
 
 The locations and names in this document were updated December 2016.  Please check the RAID barclamp configuration file for the latest information: https://github.com/digitalrebar/digitalrebar/blob/master/core/barclamps/raid.yml
 
@@ -23,7 +23,7 @@ This link will search for it directly: https://www.broadcom.com/broadcom-search?
 
 Should resolve to this link: https://docs.broadcom.com/docs/12351587
 
-**Note**: This file may be downloaded as ``8-07-14_MegaCLI.zip`` (note the dashes) and _must_ be renamed as ``8.07.14_MegaCLI.zip``
+**Note**: This file may be downloaded as ``8-07-14_MegaCLI.zip`` (note the dashes) and *must* be renamed as ``8.07.14_MegaCLI.zip``
 
 You must accept the EULA to download this file (that is why it cannot be packaged into the install for you).
 
