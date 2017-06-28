@@ -24,6 +24,7 @@ This is the Digital Rebar Web Experience.  Both the UX and the documentation are
   access
   settings
   errors
+  roles
 
 State Image Key
 ~~~~~~~~~~~~~~~
