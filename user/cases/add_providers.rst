@@ -17,6 +17,6 @@ populate the provider in question.
 
 **Note**: For AWS or Google the scripts will attempt to install their CLIs
 
-The :ref:`ui_providers` UI can also be used interactively.
+The :ref:`ux_providers` UI can also be used interactively.
 
 See :ref:`configure_providers` for specific details.

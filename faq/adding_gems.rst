@@ -11,4 +11,4 @@ Add gems  in ``rebar.yml`` under ``gems: required_pkgs:``.  This is where gems a
 Gems in ``gems: pkgs:`` will
 be cached when "offline" mode is enabled (TBD).
 
-For more on barclamps, see :ref:`ui_barclamps`.
+For more on barclamps, see :ref:`ux_barclamps`.
