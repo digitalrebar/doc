@@ -10,7 +10,6 @@ This section focuses on using Digital Rebar directly via the Web UI, API and CLI
   :glob:
 
   webux/README
-  webui/README
   cases/README
   backup-restore
   ../api/README

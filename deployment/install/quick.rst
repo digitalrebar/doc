@@ -61,7 +61,7 @@ In this section only, using SSH is necessary to the target install server.  This
    #. Troubleshooting ``Ansible Install "Prereqs"`` fail: You may have to upgrade Ansible to v 2.1+ yourself
    #. Troubleshooting ``wait for admin convergence`` fail: This is just a timeout.  The system is generally running but slower than expected.
 
-#. Using the node's public IP, open Digital Rebar on your Server via the Digital Rebar UI on https://[public_ip]
+#. Using the node's public IP, open Digital Rebar on your Server via the Digital Rebar UX on https://[public_ip]
 
    #. The default username and password are ``rebar`` and ``rebar1`` respectively.
 
@@ -117,6 +117,6 @@ We are using a basic Kubernetes as a reference app for this quick install.
 
 #. Watch Digital Rebar build the cluster from the Deployment page or from the Annealer button in the top right corner.  For more on the Deployment page and the Annealer, see :ref:`ux_deployment` and :ref:`ux_annealer` respectively.
    #. `Troubleshooting <http://digital-rebar.readthedocs.io/en/latest/deployment/troubleshooting/roles/etcd-install.html>`_ for ``etcd-install`` fail.
-#. Login to the cluster from the Master Node using ``https://[ip of master]/ui`` (admin/changeme)
+#. Login to the cluster from the Master Node using ``https://[ip of master]/ux`` (admin/changeme)
 
    #. Get the IP of the manager from Nodes and look for the address of the node that is assigned as the cluster-master.

@@ -21,7 +21,7 @@ Digital Rebar runs all of its the infrastructure management functions in Docker 
 +---------------------------------+--------------------------------------------------------+
 | :ref:`arch_service_goiardi`     | Chef-like Server                                       |
 +---------------------------------+--------------------------------------------------------+
-| :ref:`arch_service_rebar_api`   | API and UI Server; Also containers job runners         |
+| :ref:`arch_service_rebar_api`   | API and UX Server; Also containers job runners         |
 +---------------------------------+--------------------------------------------------------+
 | :ref:`arch_service_ntp`         | NTP Server                                             |
 +---------------------------------+--------------------------------------------------------+
@@ -35,7 +35,7 @@ Digital Rebar runs all of its the infrastructure management functions in Docker 
 +---------------------------------+--------------------------------------------------------+
 | :ref:`arch_service_logging`     | Logging Target for Nodes                               |
 +---------------------------------+--------------------------------------------------------+
-| :ref:`arch_service_ux`          | New Single Page Web-UI                                 |
+| :ref:`arch_service_ux`          | New Single Page Web-UX                                 |
 +---------------------------------+--------------------------------------------------------+
 | :ref:`arch_service_revproxy`    | Reverse Proxy that provides single endpoint for system |
 +---------------------------------+--------------------------------------------------------+

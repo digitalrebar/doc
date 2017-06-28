@@ -35,10 +35,10 @@ POST /api/v2/deployments
 
 If successful, the call will return the deployment targeted by the batch
 
-UI
+UX
 --
 
-Users can batch templates using the UI path ``/deployments/[id]/batch`` or using the RackN UX Wizard process
+Users can batch templates using the RackN UX Wizard process
 
 
 JSON Structure

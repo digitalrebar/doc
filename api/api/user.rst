@@ -88,10 +88,10 @@ Details:
 -  email - well formed unique and valid email address
 -  password - password field (must meet password strength requirement)
 -  password\_confirmation - password confirmation field
--  remember\_me - when user logs into UI will a cookie be set so
+-  remember\_me - when user logs into UX will a cookie be set so
    username field is prepopulated.
 -  is\_admin - will user have admin privileges, (create new update
-   existing users in ui)
+   existing users in ux)
 
 **Output:**
 
@@ -135,10 +135,10 @@ Details:
 -  username - unique username (must be letters and numbers, and must
    start with a letter)
 -  email - well formed unique and valid email address
--  remember\_me - when user logs into UI will a cookie be set so
+-  remember\_me - when user logs into UX will a cookie be set so
    username field is prepopulated.
 -  is\_admin - will user have admin privileges, (create new update
-   existing users in ui)
+   existing users in ux)
 
 **Output:**
 

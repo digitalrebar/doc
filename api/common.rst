@@ -65,7 +65,7 @@ instead of ``node`` in paths.
 -  Base Form: ``[workload | api]/[version]/[resources]/[id]``
 -  Version: version of Digital Rebar framework being used (v2 for this
    guide)
--  Workload: Workload (aka :ref:`ui_barclamps`) that owns the requested activity.
+-  Workload: Workload (aka :ref:`ux_barclamps`) that owns the requested activity.
    Framework uses 'api'
 -  bc\_version: the version of the barclamp being used.
 -  key\_word: groups the API into different categories
