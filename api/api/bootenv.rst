@@ -78,7 +78,7 @@ the reference ISO exploded from its ISO file into a live filesystem image.  The 
 from the ``.Env.OS.InstallURL`` path.
 
 For the install process to work correctly, the bootenv used to install an OS must end in ``-install``.
-The roles used to install OSes uses the the ``-install`` form to limit choices in the UI and to ensure
+The roles used to install OSes uses the the ``-install`` form to limit choices in the UX and to ensure
 proper workflow progress during the bring-up process.
 
 

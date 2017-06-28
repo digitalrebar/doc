@@ -31,9 +31,9 @@ they are assigned on from 192.168.128.21, so ``ping 192.168.128.21``
 should work.
 
 The IPs for the BMC network should be visible on the ``/network_map``
-page in the UI and node detail page.
+page in the UX and node detail page.
 
-Remote Manage Web UI
+Remote Manage Web UX
 ~~~~~~~~~~~~~~~~~~~~
 
 Once aware of the node's BMC IP address and have network access to that

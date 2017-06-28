@@ -87,7 +87,7 @@ Returns JSON for Deployment status
 Heartbeat Status
 ^^^^^^^^^^^^^^^^
 
-Used by UI to track backlog on menu bar.
+Used by UX to track backlog on menu bar.
 
 **Input:**
 

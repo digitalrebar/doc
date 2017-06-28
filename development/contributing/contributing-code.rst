@@ -27,7 +27,7 @@ Guidelines for Pull Requests
 -  Must be Apache 2 license
 -  For bugs & minor items (20ish lines), we can accept the request at
    our discretion
--  UI strings are localized (only EN file needs to be updated)
+-  UX strings are localized (only EN file needs to be updated)
 -  Does not inject vendor information (Name or Product) into Digital
    Rebar expect where relevant to explain utility of push (e.g.: help
    documentation & descriptions).

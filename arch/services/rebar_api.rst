@@ -9,7 +9,7 @@ Rebar API
 ---------
 
 The Rebar API container runs the core application that is the brains of the system.  The application
-provides the RestFUL API for the :ref:`arch_objects` and the basic UI (see :ref:`web_ux_guide`).
+provides the RestFUL API for the :ref:`arch_objects` and the basic UX (see :ref:`web_ux_guide`).
 
 Within the container, the job runners execute as well.  These use the database to handle object node role
 execution.

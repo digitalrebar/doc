@@ -62,12 +62,12 @@ In the future, it should be possible to use an existing Etcd cluster:
   * ``--kubernetes-etcd-client-port=<Int>`` Default etcd client port: 2379
   * ``--kubernetes-etcd-peer-port=<Int>`` Default etcd peer port: 2380
 
-Pod Configuration & UI
+Pod Configuration & UX
 ~~~~~~~~~~~~~~~~~~~~~~
 
 Digital Rebar is able to perform post-install configuration and testing.  These flags are used to configure pods on the Kubernetes cluster after it has been installed.  The sequence is handled by the Digital Rebar annealer.  The script pre-loads all requests and does not hold work.
 
-  * ``--kubernetes-dashboard=<true|false>`` Use Kubernetes-Dashboard (default UI now)
+  * ``--kubernetes-dashboard=<true|false>`` Use Kubernetes-Dashboard (default UX now)
   * ``--kubernetes-dash=<true|false>`` Use Kube-Dash
   * ``--kubernetes-fabric8=<true|false>`` Use Fabric8 console
   * ``--kubernetes-guestbook=<true|false>`` Add the guestbook role to start a guestbook app
