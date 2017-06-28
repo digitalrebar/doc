@@ -16,6 +16,7 @@ This is the Digital Rebar Web Experience.  Both the UX and the documentation are
   workload
   providers
   nodes
+  profiles
   networks
   dns
   dhcp
