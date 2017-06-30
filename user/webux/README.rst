@@ -18,14 +18,11 @@ This is the Digital Rebar Web Experience.  Both the UX and the documentation are
   nodes
   profiles
   networks
-  dns
-  dhcp
+  services
   provisioner
   access
-  settings
   errors
-  barclamps
-  roles
+  advanced/README
 
 State Image Key
 ~~~~~~~~~~~~~~~

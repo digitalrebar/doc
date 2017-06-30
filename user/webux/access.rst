@@ -20,3 +20,12 @@ From the "Tenants" page the available tenants are visible and can be altered and
 Additionally child tenants can also be seen.
 
 .. image:: /images/screens/webux/tenant.png
+
+Capabilities
+------------
+
+The "Capabilities" page displays existing capabilities and allows for the creation of new capabilities.
+
+.. image:: /images/screens/webux/capabilities.png
+
+

@@ -18,7 +18,7 @@ The "Machines" page shows all of the physical machines that the user has access 
 .. image:: /images/screens/webux/machines.png
 
 
-**Note**: The bar color of the machine corresponds to it's level of activeness: Blue is 100% responsive, yellow is partially responsive, and black is off.
+**Note**: The bar color of the machine corresponds to it's level of activeness: Green is 100% responsive, yellow is partially responsive, and black is off.
 
 .. _ux_boot_environment:
 
