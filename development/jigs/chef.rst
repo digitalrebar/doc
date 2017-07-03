@@ -33,7 +33,7 @@ instructions for local and remote dependent cookbooks.  Dependencies are stored 
 chef-client -x, Berkshelf packages them on the filesystem and delivers them to
 the nodes.
 
-We encourage cloning from the Digital Rebar github repos and submitting
+We encourage cloning from the `Digital Rebar github repos <https://github.com/digitalrebar>`_ and submitting
 pull requests.
 
 Developing Cookbooks

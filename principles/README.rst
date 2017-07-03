@@ -29,8 +29,8 @@ resilient over time.
 Background
 ----------
 
-When Greg Althaus (github @Galthaus) and Rob "zehicle" Hirschfeld
-(github @Zehicle) started the project, we had some very specific
+When Greg Althaus (github `@Galthaus <https://github.com/galthaus>`_) and Rob "zehicle" Hirschfeld
+(github `@Zehicle <https://github.com/zehicle>`_) started the project, we had some very specific
 targets in mind.  We’d been working towards using organic emergent
 swarming (think ants) to model continuous application deployment.  We had
 also been struggling with the most routine foundational tasks (bios,

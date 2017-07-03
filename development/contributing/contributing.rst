@@ -11,9 +11,9 @@ While the following use ``core`` as an example, all the trees can be managed the
 Fork the Code
 ~~~~~~~~~~~~~
 
-The following instructions assume a clone of ``https://github.com/digitalrebar/core`` has already been created.
+The following instructions assume a clone of ``https://github.com/digitalrebar/digitalrebar`` has already been created.
 
-#. Create a personal fork of the ``https://github.com/digitalrebar/core``
+#. Create a personal fork of the ``https://github.com/digitalrebar/digitalrebar``
 
    #. Fork the code in order to be able to submit changes
    #. Rename the fork in Github to something like 'rebar-core' to make
