@@ -77,7 +77,7 @@ For AWS or Packet, look at the *run-in-[aws|packet]* scripts.  They will automat
 What Access Mode Should I Use?
 """"""""""""""""""""""""""""""
 
-There are two access modes for Digital Rebar: HOST or FORWADER.  Most tools take a --host (or --access host) to specify host mode.  Forwarder mode is the default for all tools except run-in-mac.sh which has a --no-host flag to set forwarder mode.  Macs work best in HOST mode.  The mode can also be chosen in the group_vars/all.yml file.  The ansible playbook is used to deploy the system. (or tools that use the playbook, which is all of them).
+There are two access modes for Digital Rebar: HOST or FORWARDER.  Most tools take a --host (or --access host) to specify host mode.  Forwarder mode is the default for all tools except run-in-mac.sh which has a --no-host flag to set forwarder mode.  Macs work best in HOST mode.  The mode can also be chosen in the group_vars/all.yml file.  The ansible playbook is used to deploy the system. (or tools that use the playbook, which is all of them).
 
 .. index::
   pair: Access Mode; Forwarder Mode
