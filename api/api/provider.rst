@@ -114,5 +114,5 @@ Creating a new provider
 The recommended way to do this is to:
 
 1. Write a shim that is a subclass of the Provider model.  It should at a handle the 4 basic
-   provider API calls that the core expects to call as part of the node lifecycle.  An example of a functional shim is `fog_provider.rb <https://github.com/digitalrebar/digitalrebar/blob/master/rails/app/models/fog_provider.rb>` in the core Rebar repo.
+   provider API calls that the core expects to call as part of the node lifecycle.  An example of a functional shim is `aws_provider.rb <https://github.com/digitalrebar/digitalrebar/blob/master/core/rails/app/models/aws_provider.rb>`_ in the core Rebar repo.
 
