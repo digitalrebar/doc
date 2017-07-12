@@ -35,7 +35,7 @@ Returns:
     [
       {
         "name": "core",
-        "source_url": "https://github.com/digitalrebar/core",
+        "source_url": "https://github.com/digitalrebar/digitalrebar/core",
         "created_at": "2014-03-03T05:18:01.330Z",
         "id": 1,
         "source_path": "/opt/digitalrebar/core",
@@ -48,7 +48,7 @@ Returns:
       },
       {
         "name": "rebar",
-        "source_url": "http://github/digitalrebar/unknown",
+        "source_url": "http://github/digitalrebar/digitalrebar/unknown",
         "created_at": "2014-03-03T05:18:01.709Z",
         "id": 2,
         "source_path": "/opt/digitalrebar/core",

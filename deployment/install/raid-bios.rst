@@ -19,7 +19,7 @@ Downloading the MegaCLI RAID Utility
 
 Visit Broadcom looking for the 8.07.14_MegaCLI.zip utility at https://www.broadcom.com
 
-This link will search for it directly: https://www.broadcom.com/broadcom-search?q=8.07.14_megacli.zip
+This link will search for it directly: https://www.broadcom.com//site-search?q=8.07.14_megacli.zip
 
 Should resolve to this link: https://docs.broadcom.com/docs/12351587
 
@@ -33,7 +33,7 @@ Downloading the SAS2IRCU RAID Utility
 
 Visit Broadcom looking for the SAS2IRCU_P20 utility at https://www.broadcom.com
 
-This link will search for it directly: https://www.broadcom.com/broadcom-search?q=sas2ircu_p20.zip
+This link will search for it directly: https://www.broadcom.com//site-search?q=sas2ircu_p20.zip
 
 Should resolve to this link: https://docs.broadcom.com/docs/SAS2IRCU_P20.zip
 
