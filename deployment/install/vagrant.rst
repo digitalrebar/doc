@@ -11,7 +11,7 @@ Vagrant and  Digital Rebar
 Vagrant File
 ------------
 
-The `Vagrant file <https://raw.githubusercontent.com/rackn/digitalrebar-deploy/master/Vagrantfile>`_ is the only required file for these instructions, and the repo does not need to be cloned.
+The `Vagrantfile <https://raw.githubusercontent.com/digitalrebar/digitalrebar/master/deploy/Vagrantfile>`_ is the only required file for these instructions, and the repo does not need to be cloned.
 
 Save the file and run Vagrant from that location.
 
@@ -23,9 +23,9 @@ Prereqs
 
   * Virtualbox (or similar) (e.g.: `sudo apt-get install virtualbox`)
 
-  * The Vagrant install uses the `rebar cli <../cli/README.rst>`_ for actions.  Therefore, it must be accessible from the Vagrant path.
+  * The Vagrant install uses the :ref:`rebar_cli` for actions.  Therefore, it must be accessible from the Vagrant path.
 
-  * The ``vagrant-trigger`` plugin is also required.
+  * The `vagrant-triggers <https://github.com/emyl/vagrant-triggers>`_ plugin is also required. (e.g. `vagrant plugin install vagrant-triggers`)
 
 Admin Node
 ----------
