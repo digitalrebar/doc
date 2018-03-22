@@ -1,3 +1,6 @@
+
+.. note:: WARNING WARNING WARNING:  This is the Digital Rebar v2 product documentation.  That product line is EOL as of September 2017.  Please refer to the new Digital Rebar Provision v3 documentation:  http:\/\/provision.readthedocs.io\/en\/tip\/README.html
+
 .. Copyright (c) 2016 RackN Inc.
 .. Licensed under the Apache License, Version 2.0 (the "License");
 .. Digital Rebar documentation master file, created by
